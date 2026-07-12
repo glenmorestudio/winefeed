@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import html, datetime, re, os, json
 
-FONTS = open('/Users/guidocattabianchi/winefeed/fonts.css').read().strip()
+_HERE = os.path.dirname(os.path.abspath(__file__))
+FONTS = open(os.path.join(_HERE, 'fonts.css')).read().strip()
 
 # ---- real, sourced news data (from research agent; all real URLs) ----
 DATA = {
@@ -415,7 +416,7 @@ BODY = f'''<div class="frame">
 
 # ---- Artifact version (content only; host wraps in doctype/head/body) ----
 artifact = f'<title>Winefeed — a daily wine-news digest</title>\n{STYLE}\n{BODY}\n'
-open('/Users/guidocattabianchi/winefeed/winefeed_artifact.html','w').write(artifact)
+open(os.path.join(_HERE, 'winefeed_artifact.html'),'w').write(artifact)
 
 # ---- Standalone version for GoDaddy ----
 standalone = f'''<!doctype html>
@@ -434,7 +435,7 @@ standalone = f'''<!doctype html>
 </body>
 </html>
 '''
-open('/Users/guidocattabianchi/winefeed/index.html','w').write(standalone)
+open(os.path.join(_HERE, 'index.html'),'w').write(standalone)
 
 print("Dateline:", DATELINE)
 print("artifact bytes:", len(artifact))
