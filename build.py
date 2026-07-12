@@ -310,7 +310,8 @@ body{
 a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
 
 /* ---------- footer ---------- */
-.foot{margin-top:42px; border-top:1px solid var(--line); padding-top:32px; padding-bottom:54px; color:var(--meta);}
+.foot{margin-top:42px; padding-bottom:54px; color:var(--meta);}
+.foot-box{border:1px solid var(--line); border-radius:14px; padding:22px 24px;}
 .foot p{margin:0 0 10px; font-size:13.5px; line-height:1.6; max-width:52ch;}
 .foot .fine{font-family:var(--mono); font-size:10.5px; letter-spacing:0.07em; text-transform:uppercase; color:var(--faint);}
 .foot a{color:var(--meta); text-decoration:none; border-bottom:1px solid var(--line-2); transition:color 160ms ease, border-color 160ms ease;}
@@ -354,8 +355,10 @@ BODY = f'''<div class="frame">
         </div>
 
         <footer class="foot pad">
-          <p>Winefeed summarizes reporting from independent wine journalists and trade publications. We do not republish full articles. Read a summary, then click through and support the writers doing the work.</p>
-          <p class="fine">Made by Guido Cattabianchi &middot; <a href="mailto:guido.catta@gmail.com">guido.catta@gmail.com</a></p>
+          <div class="foot-box">
+            <p>Winefeed summarizes reporting from independent wine journalists and trade publications. We do not republish full articles. Read a summary, then click through and support the writers doing the work.</p>
+            <p class="fine">Made by Guido Cattabianchi &middot; <a href="mailto:guido.catta@gmail.com">guido.catta@gmail.com</a></p>
+          </div>
         </footer>
       </main>
     </div>

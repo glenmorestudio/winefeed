@@ -15,8 +15,21 @@ import subprocess, re, html, json, os, sys, datetime
 from email.utils import parsedate_to_datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FRESH_DAYS = 30          # ignore anything older than this
+FRESH_DAYS = 30          # pool: ignore anything older than this
+NEWS_FRESH_DAYS = 90     # newsletters publish less often, allow a longer window
 PER_TOPIC = 5
+
+# item must read as WINE (pool feeds like VinePair/PUNCH also cover spirits/beer)
+WINE_TERMS = ["wine", "winer", "vineyard", "vigneron", "winemak", "grape", "vintage",
+              "sommelier", "cellar", "appellation", "terroir", "champagne", "prosecco",
+              "cava", "rose", "rosé", "riesling", "cabernet", "chardonnay", "sauvignon",
+              "pinot", "merlot", "syrah", "shiraz", "grenache", "tempranillo", "nebbiolo",
+              "sangiovese", "bordeaux", "burgundy", "barolo", "rioja", "napa", "sonoma",
+              "chianti", "mosel", "port ", "sherry", "madeira", "chablis", "amarone",
+              "grand cru", "en primeur", "vino", "vin ", "wein"]
+def is_wine(item):
+    t = (item["title"] + " " + item["summary"]).lower()
+    return any(w in t for w in WINE_TERMS)
 
 # ---- feeds -------------------------------------------------------------------
 # General reputable pool -> keyword-bucketed into MARKET / CULTURE / SCIENCE.
@@ -27,7 +40,11 @@ POOL = [
     ("Vino Joy News",         "https://vino-joy.com/feed/"),
     ("SevenFifty Daily",      "https://daily.sevenfifty.com/feed/"),
     ("Decanter",              "https://www.decanter.com/feed/"),
-    ("Meininger's",           "https://www.meiningers-international.com/rss.xml"),
+    ("The Buyer",             "https://www.the-buyer.net/feed/"),
+    ("VinePair",              "https://vinepair.com/feed/"),
+    ("PUNCH",                 "https://punchdrink.com/feed/"),
+    ("Wine Spectator",        "https://www.winespectator.com/rss/news"),
+    ("Club Oenologique",      "https://cluboenologique.com/feed/"),
 ]
 # Independent wine writers / Substacks -> NEWSLETTERS tab (source, url, author).
 NEWSLETTERS = [
@@ -181,27 +198,30 @@ def main():
         print(f"  {src}: {len(items)} items")
         pool += items
 
-    # keep fresh + dated, newest first
-    pool = [i for i in pool if i["date"] and i["date"] >= cutoff]
+    # keep fresh + dated + wine-relevant, newest first
+    pool = [i for i in pool if i["date"] and i["date"] >= cutoff and is_wine(i)]
     pool.sort(key=lambda i: i["date"], reverse=True)
 
-    used = set()
-    tabs = {}
-    # primary: keyword bucket
-    for topic in TOPICS:
-        tabs[topic] = []
+    used = set()                 # urls used anywhere (no article twice)
+    tabs = {t: [] for t in TOPICS}
+    used_src = {t: set() for t in TOPICS}   # sources used per tab (one each)
+
+    def take(topic, it):
+        tabs[topic].append(it)
+        used.add(it["url"])
+        used_src[topic].add(it["source"])
+
+    # primary: keyword bucket, one source per tab
     for it in pool:
         b = bucket(it)
-        if b and len(tabs[b]) < PER_TOPIC and it["url"] not in used:
-            tabs[b].append(it)
-            used.add(it["url"])
-    # backfill any short topic from remaining freshest pool items
+        if b and len(tabs[b]) < PER_TOPIC and it["url"] not in used and it["source"] not in used_src[b]:
+            take(b, it)
+    # backfill short topics from freshest remaining items, still one source per tab
     for topic in TOPICS:
         if len(tabs[topic]) < PER_TOPIC:
             for it in pool:
-                if it["url"] not in used:
-                    tabs[topic].append(it)
-                    used.add(it["url"])
+                if it["url"] not in used and it["source"] not in used_src[topic]:
+                    take(topic, it)
                     if len(tabs[topic]) >= PER_TOPIC:
                         break
 
@@ -210,12 +230,21 @@ def main():
     for src, url, author in NEWSLETTERS:
         items = parse(fetch(url), src)
         print(f"  {src}: {len(items)} items")
-        for it in items[:2]:            # up to 2 latest per writer for variety
+        for it in items:
             it["author"] = author
             news.append(it)
-    news = [i for i in news if i["date"] and i["date"] >= cutoff]
+    news_cutoff = today - datetime.timedelta(days=NEWS_FRESH_DAYS)
+    news = [i for i in news if i["date"] and i["date"] >= news_cutoff]
     news.sort(key=lambda i: i["date"], reverse=True)
-    tabs["NEWSLETTERS"] = news[:PER_TOPIC]
+    # one post per writer, freshest first
+    picked, seen_src = [], set()
+    for it in news:
+        if it["source"] not in seen_src:
+            picked.append(it)
+            seen_src.add(it["source"])
+        if len(picked) >= PER_TOPIC:
+            break
+    tabs["NEWSLETTERS"] = picked
 
     # ---- assemble feed_data.json --------------------------------------------
     out = {"date": today.isoformat(), "items": {}}
