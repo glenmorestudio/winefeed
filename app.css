@@ -125,6 +125,8 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
   .tabs-outer{ padding:0 10px; } .tablist{ gap:6px; } .tab{ font-size:9.5px; letter-spacing:0.02em; padding:10px 3px 11px; }
   .slide-inner{ padding:20px 20px; } .head{ font-size:18.5px; }
   .sub-label{ display:none; }
+  .subscribe{ justify-content:center; }
+  .sub-field{ flex:0 1 260px; max-width:260px; margin:0 auto; }
 }
 @media (prefers-reduced-motion: reduce){
   *{ transition-duration:0.001ms !important; }
