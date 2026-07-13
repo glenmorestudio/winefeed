@@ -1,23 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
   <defs>
-    <radialGradient id="sky" cx="72%" cy="24%" r="78%">
-      <stop offset="0%" stop-color="#DEE7FF"/>
-      <stop offset="100%" stop-color="#DEE7FF" stop-opacity="0"/>
+    <radialGradient id="cc" cx="20" cy="18" r="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E7ABE0"/>
+      <stop offset="0.5" stop-color="#7C88DC"/>
+      <stop offset="1" stop-color="#2743C9"/>
     </radialGradient>
-    <radialGradient id="pink" cx="28%" cy="30%" r="82%">
-      <stop offset="0%" stop-color="#FFD6EF"/>
-      <stop offset="100%" stop-color="#FFD6EF" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="accent" cx="74%" cy="82%" r="95%">
-      <stop offset="0%" stop-color="#2743C9"/>
-      <stop offset="72%" stop-color="#2743C9" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="clip"><circle cx="24" cy="24" r="24"/></clipPath>
   </defs>
-  <g clip-path="url(#clip)">
-    <rect width="48" height="48" fill="#AEC0FF"/>
-    <rect width="48" height="48" fill="url(#sky)"/>
-    <rect width="48" height="48" fill="url(#pink)"/>
-    <rect width="48" height="48" fill="url(#accent)"/>
-  </g>
+  <circle cx="24" cy="24" r="24" fill="url(#cc)"/>
 </svg>
