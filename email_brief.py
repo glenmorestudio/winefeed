@@ -66,13 +66,11 @@ def story(row, wi, is_newsletter, first):
                      f'font-family:{SANS}; font-size:16.5px; font-weight:500; line-height:1.34;">{e(head)}</a>')
         credit = ""
     else:
-        # our own brief: unlinked headline + tiny credit line, no outbound link
+        # our own brief: original summary of public facts, no credit, no outbound link
         meta = f'<span style="color:{ACCENT};">{wi:02d}</span> &middot; {e(fmt(date))}'
         head_html = (f'<span style="color:{TITLE}; font-family:{SANS}; font-size:16.5px; '
                      f'font-weight:500; line-height:1.34;">{e(head)}</span>')
-        srcs = row.get("sources") or []
-        credit = (f'<p style="margin:8px 0 0; font-family:{MONO}; font-size:9px; letter-spacing:0.05em; '
-                  f'text-transform:uppercase; color:{META};">Reported by {e(", ".join(srcs))}</p>') if srcs else ""
+        credit = ""
     return f'''
     <tr><td style="padding:{pad}; {sep}">
       <p style="margin:0 0 6px; font-family:{MONO}; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:{META};">

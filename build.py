@@ -80,11 +80,11 @@ def build_slides():
                 head_html = f'<h3 class="head"><a href="{esc(url)}" target="_blank" rel="noopener">{esc(head)}</a></h3>'
                 tail = f'<a class="read" href="{esc(url)}" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true">{ARROW_R}</span></a>'
             else:
-                # our own brief: unlinked headline, tiny non-linked credit line, no read-more
+                # our own brief: it's original research/summary of public facts, not any
+                # outlet's scoop -> unlinked headline, NO credit line, no read-more
                 meta = f'<span class="idx">{wi:02d}</span><time class="date">{esc(fmt_date(date))}</time>'
                 head_html = f'<h3 class="head">{esc(head)}</h3>'
-                srcs = row.get("sources") or []
-                tail = f'<p class="credit">Reported by {esc(", ".join(srcs))}</p>' if srcs else ''
+                tail = ''
             slides.append(f'''<article class="slide" data-tab="{ti}" role="group" aria-roledescription="slide" aria-label="{name} {wi} of {count}">
               <div class="slide-inner">
                 <div class="meta">{meta}</div>

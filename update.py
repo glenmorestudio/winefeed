@@ -47,6 +47,9 @@ POOL = [
     ("PUNCH",                 "https://punchdrink.com/feed/"),
     ("Wine Spectator",        "https://www.winespectator.com/rss/news"),
     ("Club Oenologique",      "https://cluboenologique.com/feed/"),
+    ("Grape Collective",      "https://grapecollective.com/rss"),
+    ("The Wine Economist",    "https://wineeconomist.com/feed/"),
+    ("Dr Vino",               "https://www.drvino.com/feed/"),
 ]
 # Independent wine writers / Substacks -> NEWSLETTERS tab (source, url, author).
 NEWSLETTERS = [
@@ -56,6 +59,9 @@ NEWSLETTERS = [
     ("wineanorak",          "https://wineanorak.com/feed/",                 "Jamie Goode"),
     ("Not Drinking Poison", "https://notdrinkingpoison.substack.com/feed",  "Aaron Ayscough"),
     ("Jancis Robinson",     "https://www.jancisrobinson.com/articles/feed", "Jancis Robinson"),
+    ("Tim Atkin",           "https://www.timatkin.com/feed/",               "Tim Atkin MW"),
+    ("Vinography",          "https://www.vinography.com/index.xml",         "Alder Yarrow"),
+    ("SpitBucket",          "https://spitbucket.net/feed/",                 "Amber LeBeau"),
 ]
 
 # ---- keyword buckets for the pool -------------------------------------------
