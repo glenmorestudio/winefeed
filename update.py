@@ -106,11 +106,23 @@ def clean(t):
     t = t.replace("—", ", ").replace("–", "-")
     return WS.sub(" ", t).strip()
 
+def strip_boiler(t):
+    t = re.sub(r"(?i)^\s*website:\s*\S+\s*", "", t)        # wineanorak "Website: <url> ..."
+    t = re.sub(r"^\s*https?://\S+\s*", "", t)              # any other leading bare URL
+    # cut common RSS/WordPress footer boilerplate (always trailing)
+    t = re.sub(r"(?is)\bthe post\b.*$", "", t)              # "The post X appeared first on Y."
+    t = re.sub(r"(?is)\bread more\b.*$", "", t)             # "... Read More ..."
+    t = re.sub(r"(?is)\bcontinue reading\b.*$", "", t)
+    t = re.sub(r"(?is)\bappeared first on\b.*$", "", t)
+    t = re.sub(r"(?is)\bthis (article|post) (first )?appeared\b.*$", "", t)
+    t = re.sub(r"(?is)\b(related|read also|see also|read next)\s*:.*$", "", t)
+    t = re.sub(r"\[[^\]]*\]\s*$", "", t)                    # trailing [...]
+    return t.strip(" .–-\t\n…")
+
 def summarize(desc, title):
-    txt = clean(desc)
+    txt = strip_boiler(clean(desc))
     if not txt or len(txt) < 40:
-        return clean(title)
-    # first 2-3 sentences, capped
+        return ""          # no real description -> item gets filtered out (never echo the title)
     out, n = "", 0
     for sent in re.split(r"(?<=[.!?])\s+", txt):
         if not sent:
@@ -122,6 +134,22 @@ def summarize(desc, title):
     if len(out) > 340:
         out = out[:330].rsplit(" ", 1)[0] + "..."
     return out
+
+_ALNUM = re.compile(r"[^a-z0-9]+")
+def usable(item):
+    """True only if there's a genuine summary that isn't just the headline echoed."""
+    s, title = item.get("summary", ""), item.get("title", "")
+    if len(s) < 60:
+        return False
+    low = s.lower()
+    if "appeared first on" in low or "read more" in low or low.startswith("the post"):
+        return False
+    ns, nt = _ALNUM.sub("", low), _ALNUM.sub("", title.lower())
+    if not ns or ns == nt:
+        return False
+    if ns.startswith(nt) and (len(ns) - len(nt)) < 40:   # title + trivial tail
+        return False
+    return True
 
 def parse_date(s):
     s = (s or "").strip()
@@ -198,8 +226,8 @@ def main():
         print(f"  {src}: {len(items)} items")
         pool += items
 
-    # keep fresh + dated + wine-relevant, newest first
-    pool = [i for i in pool if i["date"] and i["date"] >= cutoff and is_wine(i)]
+    # keep fresh + dated + wine-relevant + with a real summary, newest first
+    pool = [i for i in pool if i["date"] and i["date"] >= cutoff and is_wine(i) and usable(i)]
     pool.sort(key=lambda i: i["date"], reverse=True)
 
     used = set()                 # urls used anywhere (no article twice)
@@ -234,7 +262,7 @@ def main():
             it["author"] = author
             news.append(it)
     news_cutoff = today - datetime.timedelta(days=NEWS_FRESH_DAYS)
-    news = [i for i in news if i["date"] and i["date"] >= news_cutoff]
+    news = [i for i in news if i["date"] and i["date"] >= news_cutoff and usable(i)]
     news.sort(key=lambda i: i["date"], reverse=True)
     # one post per writer, freshest first
     picked, seen_src = [], set()
