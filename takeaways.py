@@ -30,31 +30,44 @@ def get_key():
 
 TAG = re.compile(r"<[^>]+>")
 def fetch_body(url):
-    """Best-effort article body text from <p> tags; '' on failure."""
+    """Readability-ish article body extraction; '' on failure."""
+    import html as _html
     try:
         r = subprocess.run(["curl", "-sL", "--max-time", "20", "-A", UA, url],
                            capture_output=True, timeout=30)
         htmlt = r.stdout.decode("utf-8", "replace")
     except Exception:
         return ""
-    paras = re.findall(r"<p[^>]*>(.*?)</p>", htmlt, re.S | re.I)
-    text = " ".join(TAG.sub(" ", p) for p in paras)
-    import html as _html
-    text = _html.unescape(text)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text[:6000]
+    # drop non-content regions before extracting paragraphs
+    for tag in ("script", "style", "nav", "header", "footer", "aside", "form", "figure", "noscript"):
+        htmlt = re.sub(rf"<{tag}\b[^>]*>.*?</{tag}>", " ", htmlt, flags=re.S | re.I)
+    # prefer the main article region if the page marks one
+    region = htmlt
+    for pat in (r"<article\b[^>]*>(.*?)</article>", r"<main\b[^>]*>(.*?)</main>",
+                r'<div[^>]*class="[^"]*(?:article|post|entry|content)[^"]*"[^>]*>(.*?)</div>'):
+        m = re.search(pat, htmlt, re.S | re.I)
+        if m and len(m.group(1)) > 400:
+            region = m.group(1)
+            break
+    paras = re.findall(r"<p[^>]*>(.*?)</p>", region, re.S | re.I)
+    kept = []
+    for p in paras:
+        t = re.sub(r"\s+", " ", _html.unescape(TAG.sub(" ", p))).strip()
+        if len(t) >= 40 and "cookie" not in t.lower() and "subscribe" not in t.lower():
+            kept.append(t)
+    return " ".join(kept)[:8000]
 
 PROMPT = """You are the editor of Winefeed, a wine-news brief read by wine lovers and trade.
-From the source article below, write 2-3 KEY TAKEAWAY bullets: the most important facts a reader should know.
+From the source article below, write 4-5 KEY TAKEAWAY bullets: the most important facts a reader should know so they can skip the full article.
 
 Hard rules:
 - Use ONLY facts explicitly stated in the source. Never invent or infer numbers, names, dates, or claims.
-- If the source is too thin for even 1 solid fact, return {"takeaways": []}. Empty is correct and expected.
+- Aim for 4-5 bullets when the source supports it. If the source is thin, return fewer (even 1). If there are zero real facts, return {"takeaways": []}.
 - NEVER write ABOUT the article, source, paywall, subscribers, metadata, or missing content. Output wine facts or nothing.
-- Each bullet: one sentence, under 18 words, plain and factual. No marketing, no "the article says", no fluff.
-- Neutral, information-dense. Lead with the concrete fact (who/what/number).
+- Each bullet: one sentence, under 20 words, plain and factual. No marketing, no "the article says", no fluff.
+- Neutral, information-dense. Lead with the concrete fact (who/what/number). No two bullets should repeat the same fact.
 
-Return STRICT JSON only: {"takeaways": ["...", "..."]}
+Return STRICT JSON only: {"takeaways": ["...", "...", "..."]}
 
 TITLE: %(title)s
 SOURCE: %(source)s
@@ -65,7 +78,7 @@ ARTICLE:
 def call_haiku(key, title, source, body):
     payload = json.dumps({
         "model": MODEL,
-        "max_tokens": 350,
+        "max_tokens": 550,
         "messages": [{"role": "user", "content": PROMPT % {"title": title, "source": source, "body": body}}],
     })
     try:
@@ -89,9 +102,9 @@ def call_haiku(key, title, source, body):
     except Exception:
         return []
     outs = []
-    for t in data.get("takeaways", [])[:3]:
+    for t in data.get("takeaways", [])[:5]:
         t = re.sub(r"\s+", " ", str(t)).strip(" .–-").strip()
-        if 8 <= len(t) <= 160 and not is_meta(t):
+        if 8 <= len(t) <= 180 and not is_meta(t):
             outs.append(t + ".")
     return outs
 

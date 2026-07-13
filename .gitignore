@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .impeccable/
+winefeed-email-preview.html
+winefeed-email-artifact.html
+_nr400.ttf
