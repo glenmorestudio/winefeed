@@ -2,7 +2,6 @@
   var root = document.documentElement;
   var app = document.querySelector('.app');
   var TABS = ['MARKET','CULTURE','SCIENCE','NEWSLETTERS'];
-  var PER = 5;
 
   /* ---- theme ---- */
   var toggle = document.getElementById('themeToggle');
@@ -20,19 +19,33 @@
   var deck = document.getElementById('deck');
   var slides = track ? [].slice.call(track.querySelectorAll('.slide')) : [];
   var tabs = [].slice.call(document.querySelectorAll('.tab'));
-  var dots = [].slice.call(document.querySelectorAll('.dot-i'));
+  var dotsWrap = document.querySelector('.dots');
   var counter = document.getElementById('counter');
   var tabname = document.getElementById('tabname');
   var N = slides.length;
   var idx = 0;
 
-  function tabOf(i){ return Math.floor(i / PER); }
+  // tabs can hold a variable number of stories (>=1, up to 5) -> derive everything
+  // from each slide's data-tab instead of assuming a fixed count per tab.
+  var tabIdx = slides.map(function(s){ return parseInt(s.getAttribute('data-tab'), 10) || 0; });
+  function tabOf(i){ return tabIdx[i] || 0; }
+  function firstOfTab(t){ var k = tabIdx.indexOf(t); return k < 0 ? 0 : k; }
+  function countOfTab(t){ var c = 0; for(var k=0;k<tabIdx.length;k++){ if(tabIdx[k]===t) c++; } return c; }
+  function withinOf(i){ var t = tabIdx[i], c = 0; for(var k=0;k<=i;k++){ if(tabIdx[k]===t) c++; } return c - 1; }
+  function pad2(n){ return String(n).padStart(2,'0'); }
+
   function render(){
     track.style.transform = 'translateX(' + (-idx * 100) + '%)';
-    var ti = tabOf(idx), within = idx % PER;
+    var ti = tabOf(idx), within = withinOf(idx), cnt = countOfTab(ti);
     tabs.forEach(function(t,k){ var on = k === ti; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true':'false'); });
-    dots.forEach(function(d,k){ d.classList.toggle('on', k === within); });
-    if(counter) counter.textContent = String(within+1).padStart(2,'0') + ' / 0' + PER;
+    if(dotsWrap){
+      if(dotsWrap.children.length !== cnt){
+        dotsWrap.innerHTML = '';
+        for(var q=0;q<cnt;q++){ var s = document.createElement('span'); s.className = 'dot-i'; dotsWrap.appendChild(s); }
+      }
+      for(var d=0;d<dotsWrap.children.length;d++){ dotsWrap.children[d].classList.toggle('on', d === within); }
+    }
+    if(counter) counter.textContent = pad2(within+1) + ' / ' + pad2(cnt);
     if(tabname) tabname.textContent = TABS[ti] || '';
   }
   function go(i){ if(!N) return; idx = ((i % N) + N) % N; render(); }
@@ -40,7 +53,7 @@
   var prev = document.getElementById('prevBtn'), next = document.getElementById('nextBtn');
   if(prev) prev.addEventListener('click', function(){ go(idx-1); });
   if(next) next.addEventListener('click', function(){ go(idx+1); });
-  tabs.forEach(function(t,k){ t.addEventListener('click', function(){ go(k*PER); }); });
+  tabs.forEach(function(t,k){ t.addEventListener('click', function(){ go(firstOfTab(k)); }); });
   document.addEventListener('keydown', function(e){
     if(e.key === 'ArrowRight'){ go(idx+1); }
     else if(e.key === 'ArrowLeft'){ go(idx-1); }

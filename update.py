@@ -3,10 +3,12 @@
 """
 winefeed auto-updater
 =====================
-Pulls live RSS from reputable wine outlets + independent Substacks, buckets items
-into the four winefeed topics, writes a 2-3 sentence summary taken from each
-outlet's OWN excerpt (never invented), keeps the 5 freshest per topic, writes
-feed_data.json, then runs build.py to regenerate index.html.
+Pulls live RSS from reputable wine outlets + independent Substacks. For the news
+topics (MARKET/CULTURE/SCIENCE) it CLUSTERS the day's coverage into distinct
+stories and hands each cluster to takeaways.py, which writes ONE original,
+fact-grounded brief per event (our headline + key-takeaway bullets, credited to
+the outlets that covered it, but not linked). NEWSLETTERS keep their link + byline.
+Writes feed_data.json, then runs build.py to regenerate index.html.
 
 Run:  python3 update.py         (then deploy index.html)
 Fully self-contained: only stdlib + curl. No API key, no external packages.
@@ -206,14 +208,64 @@ def score(text, words):
     t = text.lower()
     return sum(t.count(w) for w in words)
 
-def bucket(item):
-    text = item["title"] + " " + item["summary"]
-    best, bs = None, 0
-    for topic in TOPICS:
-        s = score(text, KW[topic])
-        if s > bs:
-            best, bs = topic, s
-    return best  # may be None
+# On ties, the narrower topics win so CULTURE doesn't swallow science/market stories.
+_TOPIC_PRIORITY = ["SCIENCE", "MARKET", "CULTURE"]
+def bucket_text(text):
+    """Best topic for a blob of text; CULTURE is the catch-all when nothing scores."""
+    scores = {t: score(text, KW[t]) for t in TOPICS}
+    best = max(_TOPIC_PRIORITY, key=lambda t: (scores[t], -_TOPIC_PRIORITY.index(t)))
+    return best if scores[best] > 0 else "CULTURE"
+
+# ---- cluster same-event coverage --------------------------------------------
+# Two articles are the same story if their distinctive tokens overlap enough.
+# Generic wine words are stripped so overlap means shared NAMES/PLACES/EVENTS.
+_STOP = set((
+    "the a an and or of to in on for with from at by is are was were be been has have had "
+    "this that these those will would can could it its as new more most amid over into than "
+    "then out up down off about after before your you our their his her they them we us not "
+    "how why what when who which says said report reports year years day days week weeks "
+    "wine wines winery wineries vineyard vineyards grape grapes vintage bottle bottles drink "
+    "drinks industry market world first best top says "
+    # generic headline verbs/nouns that otherwise cause coincidental same-story merges
+    "takes take helm joins join launches launch names named appointed reveals reveal "
+    "announces announced wins win sells sold offers offer brings bring make makes making "
+    "things ways reasons guide know meet sees see gets get set launch back adds add").split())
+_TOKEN = re.compile(r"[a-z][a-z0-9'&-]{3,}")
+def keytokens(item):
+    # TITLE ONLY, on purpose: summaries are broad and cause false merges (a Sam Neill
+    # obit whose blurb mentions "Pinot/Otago" would swallow every Pinot article).
+    # Headlines are focused, so shared headline tokens are a far better same-story signal.
+    toks = _TOKEN.findall(item["title"].lower())
+    return set(t for t in toks if t not in _STOP)
+
+def cluster_items(items, min_shared=3):
+    """Greedy, seed-anchored clustering, intentionally CONSERVATIVE. An article joins
+    an existing story only if it shares >= min_shared distinctive HEADLINE tokens with
+    that story's lead article. Token overlap is a weak proxy for "same event", so we
+    set the bar high: most stories stay singletons (one clean original brief, one
+    credited outlet) and only genuine near-duplicate headlines merge. This avoids
+    fusing unrelated stories, which would manufacture false associations in synthesis.
+    `items` is expected freshest-first, so the lead of each cluster is its newest."""
+    clusters = []   # each: {"seed": set(tokens), "members": [item, ...]}
+    for it in items:
+        toks = keytokens(it)
+        for c in clusters:
+            if len(toks & c["seed"]) >= min_shared:
+                c["members"].append(it)
+                break
+        else:
+            clusters.append({"seed": toks, "members": [it]})
+    return [c["members"] for c in clusters]
+
+def cluster_topic(members):
+    return bucket_text(" ".join(m["title"] + " " + m["summary"] for m in members))
+
+def dedupe_sources(members):
+    seen, out = set(), []
+    for m in members:
+        if m["source"] not in seen:
+            seen.add(m["source"]); out.append(m["source"])
+    return out
 
 def main():
     today = datetime.date.today()
@@ -230,28 +282,56 @@ def main():
     pool = [i for i in pool if i["date"] and i["date"] >= cutoff and is_wine(i) and usable(i)]
     pool.sort(key=lambda i: i["date"], reverse=True)
 
-    used = set()                 # urls used anywhere (no article twice)
-    tabs = {t: [] for t in TOPICS}
-    used_src = {t: set() for t in TOPICS}   # sources used per tab (one each)
+    # cluster the day's coverage into distinct STORIES, then bucket each to a topic.
+    # winefeed no longer maps one article -> one card; it writes ONE original brief
+    # per real event, crediting whichever outlets covered it.
+    tab_clusters = {t: [] for t in TOPICS}
+    for members in cluster_items(pool):
+        members.sort(key=lambda i: i["date"], reverse=True)   # freshest member leads
+        tab_clusters[cluster_topic(members)].append(members)
+    # editorial order within a topic: freshest first, then better-covered stories
+    def freshness(m):
+        return (m[0]["date"], len(m))
+    for t in TOPICS:
+        tab_clusters[t].sort(key=freshness, reverse=True)
 
-    def take(topic, it):
-        tabs[topic].append(it)
-        used.add(it["url"])
-        used_src[topic].add(it["source"])
+    # Over-select candidates: takeaways.py synthesizes in order and keeps the first
+    # PER_TOPIC that yield a real brief (dropping fact-less promos + same-tab dupes),
+    # so a couple of spares keep tabs full without backfilling weak items.
+    CAND = PER_TOPIC + 2
+    chosen = {t: tab_clusters[t][:CAND] for t in TOPICS}
+    leftover = [m for t in TOPICS for m in tab_clusters[t][CAND:]]
+    leftover.sort(key=freshness, reverse=True)
+    # a genuinely thin topic (esp. SCIENCE) should still show fresh news, never blank
+    used_urls = {m[0]["url"] for t in TOPICS for m in chosen[t]}
+    for t in TOPICS:
+        if chosen[t]:
+            continue
+        # fill an empty tab with the most topically-relevant leftover, then freshness
+        pref = sorted(leftover,
+                      key=lambda m: (score(m[0]["title"] + " " + m[0]["summary"], KW[t]),
+                                     m[0]["date"]),
+                      reverse=True)
+        for m in pref:
+            if m[0]["url"] not in used_urls:
+                chosen[t].append(m)
+                used_urls.add(m[0]["url"])
+                leftover.remove(m)
+                break
 
-    # primary: keyword bucket, one source per tab
-    for it in pool:
-        b = bucket(it)
-        if b and len(tabs[b]) < PER_TOPIC and it["url"] not in used and it["source"] not in used_src[b]:
-            take(b, it)
-    # backfill short topics from freshest remaining items, still one source per tab
-    for topic in TOPICS:
-        if len(tabs[topic]) < PER_TOPIC:
-            for it in pool:
-                if it["url"] not in used and it["source"] not in used_src[topic]:
-                    take(topic, it)
-                    if len(tabs[topic]) >= PER_TOPIC:
-                        break
+    def story_from(members):
+        # the synthesis pass (takeaways.py) rewrites `head` and fills `takeaways`
+        # from the COMBINED bodies of `urls`; the seeds keep the card valid if it can't.
+        return {
+            "head":      members[0]["title"],
+            "date":      members[0]["date"].isoformat(),
+            "sources":   dedupe_sources(members),      # tiny credit line, not links
+            "summ":      members[0]["summary"],         # fallback body if no synthesis
+            "urls":      [m["url"] for m in members][:4],  # internal grounding only
+            "takeaways": [],
+        }
+
+    tabs = {t: [story_from(m) for m in chosen[t]] for t in TOPICS}
 
     print("Fetching newsletters...")
     news = []
@@ -264,32 +344,31 @@ def main():
     news_cutoff = today - datetime.timedelta(days=NEWS_FRESH_DAYS)
     news = [i for i in news if i["date"] and i["date"] >= news_cutoff and usable(i)]
     news.sort(key=lambda i: i["date"], reverse=True)
-    # one post per writer, freshest first
+    # one post per writer, freshest first — newsletters keep their link + byline
     picked, seen_src = [], set()
     for it in news:
         if it["source"] not in seen_src:
-            picked.append(it)
+            picked.append({
+                "source": it["source"], "url": it["url"], "date": it["date"].isoformat(),
+                "head": it["title"], "summ": it["summary"],
+                "author": it.get("author", ""), "takeaways": [],
+            })
             seen_src.add(it["source"])
         if len(picked) >= PER_TOPIC:
             break
     tabs["NEWSLETTERS"] = picked
 
     # ---- assemble feed_data.json --------------------------------------------
-    out = {"date": today.isoformat(), "items": {}}
     order = ["MARKET", "CULTURE", "SCIENCE", "NEWSLETTERS"]
-    ok = True
+    out = {"date": today.isoformat(), "items": {t: tabs.get(t, []) for t in order}}
+    thin = []
     for topic in order:
-        rows = []
-        for it in tabs.get(topic, []):
-            row = [it["source"], it["url"], it["date"].isoformat(),
-                   it["title"], it["summary"]]
-            if topic == "NEWSLETTERS":
-                row.append(it.get("author", ""))
-            rows.append(row)
-        out["items"][topic] = rows
-        print(f"{topic}: {len(rows)}/{PER_TOPIC}")
-        if len(rows) < PER_TOPIC:
-            ok = False
+        n = len(out["items"][topic])
+        tag = "" if topic == "NEWSLETTERS" else " candidates"
+        print(f"{topic}: {n}{tag}")
+        if n == 0:
+            thin.append(topic)                 # empty is the only real failure now
+    ok = not thin
 
     with open(os.path.join(HERE, "feed_data.json"), "w") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
@@ -309,7 +388,7 @@ def main():
         sys.exit(1)
     print("Rebuilt index.html")
     if not ok:
-        print("WARNING: at least one topic had fewer than 5 fresh stories.", file=sys.stderr)
+        print(f"WARNING: no fresh stories for: {', '.join(thin)}.", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

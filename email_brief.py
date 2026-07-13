@@ -42,11 +42,10 @@ _wm_png = os.path.join(HERE, "wordmark-light.png")
 WM_DATA = ("data:image/png;base64," + base64.b64encode(open(_wm_png, "rb").read()).decode()) if os.path.exists(_wm_png) else WM_URL
 WM_W, WM_H = 100, 19
 
-def story(row, wi, is_news, first):
-    src, url, date, head = row[0], row[1], row[2], row[3]
-    author = row[5] if len(row) > 5 else ""
-    tks = (row[6] if len(row) > 6 else [])[:BULLETS_IN_EMAIL]
-    by = f' &middot; <span style="color:{META};">{e(author)}</span>' if (is_news and author) else ""
+def story(row, wi, is_newsletter, first):
+    date = row.get("date", "")
+    head = row.get("head", "")
+    tks = (row.get("takeaways") or [])[:BULLETS_IN_EMAIL]
     if tks:
         lis = "".join(
             f'<tr><td valign="top" style="padding:0 9px 7px 0;"><span style="color:{ACCENT};">&bull;</span></td>'
@@ -54,22 +53,40 @@ def story(row, wi, is_news, first):
             for b in tks)
         body = f'<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:8px 0 0;">{lis}</table>'
     else:
-        body = f'<p style="margin:8px 0 0; font-family:{SANS}; font-size:14px; line-height:1.55; color:{BODY};">{e(row[4])}</p>'
+        body = f'<p style="margin:8px 0 0; font-family:{SANS}; font-size:14px; line-height:1.55; color:{BODY};">{e(row.get("summ",""))}</p>'
     sep = "" if first else f"border-top:1px solid {LINE};"
     pad = "16px 0 18px" if first else "18px 0 18px"
+    if is_newsletter:
+        # independent piece: source + byline in meta, linked headline
+        author = row.get("author", "")
+        by = f' &middot; <span style="color:{META};">{e(author)}</span>' if author else ""
+        meta = (f'<span style="color:{ACCENT};">{wi:02d}</span> &middot; '
+                f'<span style="color:{INK};">{e(row.get("source",""))}</span>{by} &middot; {e(fmt(date))}')
+        head_html = (f'<a href="{e(row.get("url",""))}" style="text-decoration:none; color:{TITLE}; '
+                     f'font-family:{SANS}; font-size:16.5px; font-weight:500; line-height:1.34;">{e(head)}</a>')
+        credit = ""
+    else:
+        # our own brief: unlinked headline + tiny credit line, no outbound link
+        meta = f'<span style="color:{ACCENT};">{wi:02d}</span> &middot; {e(fmt(date))}'
+        head_html = (f'<span style="color:{TITLE}; font-family:{SANS}; font-size:16.5px; '
+                     f'font-weight:500; line-height:1.34;">{e(head)}</span>')
+        srcs = row.get("sources") or []
+        credit = (f'<p style="margin:8px 0 0; font-family:{MONO}; font-size:9px; letter-spacing:0.05em; '
+                  f'text-transform:uppercase; color:{META};">Reported by {e(", ".join(srcs))}</p>') if srcs else ""
     return f'''
     <tr><td style="padding:{pad}; {sep}">
       <p style="margin:0 0 6px; font-family:{MONO}; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:{META};">
-        <span style="color:{ACCENT};">{wi:02d}</span> &middot; <span style="color:{INK};">{e(src)}</span>{by} &middot; {e(fmt(date))}
+        {meta}
       </p>
-      <a href="{e(url)}" style="text-decoration:none; color:{TITLE}; font-family:{SANS}; font-size:16.5px; font-weight:500; line-height:1.34;">{e(head)}</a>
+      {head_html}
       {body}
+      {credit}
     </td></tr>'''
 
 def topic_block(name, ti):
     rows = ITEMS.get(name, [])
-    is_news = name == "NEWSLETTERS"
-    stories = "".join(story(r, i, is_news, first=(i == 1)) for i, r in enumerate(rows, 1))
+    is_newsletter = name == "NEWSLETTERS"
+    stories = "".join(story(r, i, is_newsletter, first=(i == 1)) for i, r in enumerate(rows, 1))
     sep = "" if ti == 0 else f"border-top:1px solid {LINE};"
     return f'''
     <tr><td style="padding:{'20px' if ti == 0 else '28px'} 0 4px; {sep}">

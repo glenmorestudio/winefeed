@@ -3,12 +3,20 @@
 """
 winefeed takeaways
 ==================
-Turns the borrowed RSS excerpt into ORIGINAL, scannable key-takeaway bullets,
-strictly grounded in the source article (no invented facts). Reads feed_data.json,
-enriches each item with a `takeaways` list, writes it back.
+Turns the day's clustered coverage into ORIGINAL, scannable briefs, strictly
+grounded in the source articles (no invented facts). Reads feed_data.json, enriches
+each story in place, writes it back.
+
+- News topics (MARKET/CULTURE/SCIENCE): each row is a CLUSTER of URLs covering the
+  same event. We fetch every member's body (falling back to archive.ph for
+  paywalled/thin pages, to lift one or two extra facts), combine them, and have
+  Claude write OUR OWN headline + 4-5 key-takeaway bullets. Facts are public; the
+  phrasing is ours, which is what keeps it copyright-safe. No outbound link.
+- NEWSLETTERS: single article, per-piece bullets, headline + link kept (we credit
+  and point to the independent writer).
 
 Model: Claude Haiku (cheap). Key from env ANTHROPIC_API_KEY or ~/.primal_wine_club/config.json.
-Called by update.py when a key is present; skipped (excerpt fallback) when not.
+Called by update.py; if no key, cards fall back to the freshest excerpt.
 """
 import json, os, re, subprocess, sys
 
@@ -29,19 +37,13 @@ def get_key():
     return None
 
 TAG = re.compile(r"<[^>]+>")
-def fetch_body(url):
-    """Readability-ish article body extraction; '' on failure."""
+def _extract(htmlt):
+    """Readability-ish: pull the article paragraphs out of a raw HTML page."""
     import html as _html
-    try:
-        r = subprocess.run(["curl", "-sL", "--max-time", "20", "-A", UA, url],
-                           capture_output=True, timeout=30)
-        htmlt = r.stdout.decode("utf-8", "replace")
-    except Exception:
+    if not htmlt:
         return ""
-    # drop non-content regions before extracting paragraphs
     for tag in ("script", "style", "nav", "header", "footer", "aside", "form", "figure", "noscript"):
         htmlt = re.sub(rf"<{tag}\b[^>]*>.*?</{tag}>", " ", htmlt, flags=re.S | re.I)
-    # prefer the main article region if the page marks one
     region = htmlt
     for pat in (r"<article\b[^>]*>(.*?)</article>", r"<main\b[^>]*>(.*?)</main>",
                 r'<div[^>]*class="[^"]*(?:article|post|entry|content)[^"]*"[^>]*>(.*?)</div>'):
@@ -49,13 +51,31 @@ def fetch_body(url):
         if m and len(m.group(1)) > 400:
             region = m.group(1)
             break
-    paras = re.findall(r"<p[^>]*>(.*?)</p>", region, re.S | re.I)
     kept = []
-    for p in paras:
+    for p in re.findall(r"<p[^>]*>(.*?)</p>", region, re.S | re.I):
         t = re.sub(r"\s+", " ", _html.unescape(TAG.sub(" ", p))).strip()
         if len(t) >= 40 and "cookie" not in t.lower() and "subscribe" not in t.lower():
             kept.append(t)
     return " ".join(kept)[:8000]
+
+def _curl(url, t=20):
+    try:
+        r = subprocess.run(["curl", "-sL", "--max-time", str(t), "-A", UA, url],
+                           capture_output=True, timeout=t + 10)
+        return r.stdout.decode("utf-8", "replace")
+    except Exception:
+        return ""
+
+def fetch_body(url, allow_archive=True):
+    """Article body; if the live page is thin/paywalled, try archive.ph for a
+    couple more grounded facts. Best-effort — archive can rate-limit CI, so the
+    brief must stand on whatever it returns."""
+    body = _extract(_curl(url))
+    if len(body) < 400 and allow_archive:
+        arc = _extract(_curl("https://archive.ph/newest/" + url, t=25))
+        if len(arc) > len(body):
+            body = arc
+    return body
 
 PROMPT = """You are the editor of Winefeed, a wine-news brief read by wine lovers and trade.
 From the source article below, write 4-5 KEY TAKEAWAY bullets: the most important facts a reader should know so they can skip the full article.
@@ -117,6 +137,105 @@ def is_meta(b):
     low = b.lower()
     return any(p in low for p in _META)
 
+# ---- synthesis: our own headline + bullets from the COMBINED coverage ---------
+SYNTH_PROMPT = """You are the editor of Winefeed, an independent wine-news desk. One or more outlets have covered the same story; their reporting is combined below.
+Write Winefeed's OWN brief on this story.
+
+Return STRICT JSON only: {"headline": "...", "takeaways": ["...", "..."]}
+
+headline: an original, specific headline IN YOUR OWN WORDS. Under 12 words, concrete (who/what), no clickbait, no outlet names, no "Winefeed".
+takeaways: 4-5 KEY TAKEAWAY bullets a reader can skim to know the story.
+
+Hard rules:
+- Use ONLY facts explicitly stated in the source material. Never invent or infer numbers, names, dates, quotes, or claims.
+- Write facts in your OWN words. Do NOT copy sentences from the sources.
+- If several outlets agree on a fact, state it once. If they conflict, keep the specific/attributed version.
+- Each bullet: one sentence, under 20 words, plain and factual. Lead with the concrete fact. No two bullets repeat the same fact.
+- NEVER write ABOUT the articles, outlets, paywalls, or missing content. Output wine facts or nothing.
+- If there are no real facts, return {"headline": "", "takeaways": []}.
+
+STORY (working title): %(title)s
+SOURCE MATERIAL:
+%(body)s
+"""
+
+def _call(key, prompt, max_tokens=650):
+    payload = json.dumps({
+        "model": MODEL, "max_tokens": max_tokens,
+        "messages": [{"role": "user", "content": prompt}],
+    })
+    try:
+        r = subprocess.run(
+            ["curl", "-s", "--max-time", "50", "https://api.anthropic.com/v1/messages",
+             "-H", "x-api-key: " + key,
+             "-H", "anthropic-version: 2023-06-01",
+             "-H", "content-type: application/json",
+             "-d", payload],
+            capture_output=True, timeout=70)
+        text = json.loads(r.stdout.decode("utf-8", "replace"))["content"][0]["text"]
+    except Exception as e:
+        print(f"    ! haiku call failed: {e}", file=sys.stderr)
+        return None
+    m = re.search(r"\{.*\}", text, re.S)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(0))
+    except Exception:
+        return None
+
+def _clean_bullets(raw):
+    outs = []
+    for t in (raw or [])[:5]:
+        t = re.sub(r"\s+", " ", str(t)).strip(" .–-").strip()
+        if 8 <= len(t) <= 180 and not is_meta(t):
+            outs.append(t + ".")
+    return outs
+
+def synthesize(key, title, body):
+    """Return (headline, takeaways). headline '' if the model wrote nothing usable."""
+    data = _call(key, SYNTH_PROMPT % {"title": title, "body": body})
+    if not data:
+        return "", []
+    head = re.sub(r"\s+", " ", str(data.get("headline", ""))).strip().strip('"').strip()
+    if is_meta(head) or len(head) < 8:
+        head = ""
+    return head, _clean_bullets(data.get("takeaways", []))
+
+def combined_body(urls, seed=""):
+    """Fetch + concatenate every cluster member's body (archive.ph fallback)."""
+    parts, seen = [], set()
+    for u in urls:
+        b = fetch_body(u)
+        if len(b) >= 200:
+            parts.append(b)
+            seen.add(u)
+    combo = "\n\n---\n\n".join(parts)
+    if len(combo) < 200 and seed:      # everything paywalled/JS -> lean on the excerpt
+        combo = seed
+    return combo[:12000]
+
+# post-synthesis same-tab near-duplicate guard. Two outlets can cover one event with
+# different headlines that conservative clustering won't merge; their BULLETS give it
+# away. We compare the content bag (headline + bullets) and drop a later story only when
+# it both shares many tokens AND is largely contained in a kept one (calibrated: true
+# twins land ~0.31 containment / 19 shared, distinct-but-related stories stay <0.30).
+_DSTOP = set(("the a an and or of to in on for with from at by as is are was were be new "
+              "amid over into than then out up its it also more most this that these those "
+              "wine wines winery grape grapes vintage bottle producers producer region regions").split())
+_DTOKEN = re.compile(r"[a-z][a-z0-9'-]{3,}")
+NEARDUP_OVERLAP = 12
+NEARDUP_CONTAIN = 0.30
+def _content_bag(row):
+    text = (row.get("head", "") + " " + " ".join(row.get("takeaways", []))).lower()
+    return set(t for t in _DTOKEN.findall(text) if t not in _DSTOP)
+def _is_near_dup(bag, kept_bags):
+    for kb in kept_bags:
+        ov = len(bag & kb)
+        if ov >= NEARDUP_OVERLAP and ov / max(1, min(len(bag), len(kb))) >= NEARDUP_CONTAIN:
+            return True
+    return False
+
 def enrich(path=None):
     path = path or os.path.join(HERE, "feed_data.json")
     key = get_key()
@@ -127,19 +246,43 @@ def enrich(path=None):
     total = 0
     for tab, rows in d["items"].items():
         print(f"{tab}:")
+        if tab == "NEWSLETTERS":
+            # single independent piece: per-article bullets, keep their headline + link
+            for row in rows:
+                body = fetch_body(row.get("url", ""))
+                if len(body) < 200:
+                    body = row.get("summ", "")
+                row["takeaways"] = call_haiku(key, row.get("head", ""), row.get("source", ""), body)
+                total += 1
+                print(f"  {row.get('source','')}: {row.get('head','')[:44]} -> {len(row['takeaways'])} bullets")
+            continue
+        # news topic: synthesize ONE original brief per cluster of URLs, keeping the
+        # first KEEP_PER good ones (spares cover dropped promos/dupes without backfill)
+        KEEP_PER = 5
+        kept, kept_bags = [], []
         for row in rows:
-            src, url, date, head, summ = row[0], row[1], row[2], row[3], row[4]
-            author = row[5] if len(row) > 5 else ""
-            body = fetch_body(url)
-            if len(body) < 200:
-                body = summ           # fall back to the excerpt we already have
-            tk = call_haiku(key, head, src, body)
-            # normalize row to [src,url,date,head,summ,author,takeaways]
-            row[:] = [src, url, date, head, summ, author, tk]
+            if len(kept) >= KEEP_PER:
+                break
+            body = combined_body(row.get("urls", []), row.get("summ", ""))
+            head, tk = synthesize(key, row.get("head", ""), body)
+            if head:
+                row["head"] = head          # our headline replaces the seeded one
+            row["takeaways"] = tk
             total += 1
-            print(f"  {src}: {head[:44]} -> {len(tk)} bullets")
+            n_src = len(row.get("sources", []))
+            if not tk:
+                # no real facts -> no original brief; drop rather than show a junk excerpt
+                print(f"  [{n_src} src] {row.get('head','')[:44]} -> 0 bullets (dropped)")
+                continue
+            bag = _content_bag(row)
+            if _is_near_dup(bag, kept_bags):
+                print(f"  [{n_src} src] {row.get('head','')[:44]} -> near-dup (dropped)")
+                continue
+            kept.append(row); kept_bags.append(bag)
+            print(f"  [{n_src} src] {row.get('head','')[:44]} -> {len(tk)} bullets")
+        d["items"][tab] = kept
     json.dump(d, open(path, "w"), indent=2, ensure_ascii=False)
-    print(f"Enriched {total} items with takeaways.")
+    print(f"Enriched {total} stories.")
     return True
 
 if __name__ == "__main__":
