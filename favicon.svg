@@ -1,10 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
   <defs>
-    <linearGradient id="cc" x1="4" y1="2" x2="44" y2="46" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFCDEA"/>
-      <stop offset="0.52" stop-color="#A9BEFF"/>
-      <stop offset="1" stop-color="#2743C9"/>
-    </linearGradient>
+    <radialGradient id="sky" cx="72%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#DEE7FF"/>
+      <stop offset="100%" stop-color="#DEE7FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pink" cx="28%" cy="30%" r="82%">
+      <stop offset="0%" stop-color="#FFD6EF"/>
+      <stop offset="100%" stop-color="#FFD6EF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="accent" cx="74%" cy="82%" r="95%">
+      <stop offset="0%" stop-color="#2743C9"/>
+      <stop offset="72%" stop-color="#2743C9" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip"><circle cx="24" cy="24" r="24"/></clipPath>
   </defs>
-  <circle cx="24" cy="24" r="24" fill="url(#cc)"/>
+  <g clip-path="url(#clip)">
+    <rect width="48" height="48" fill="#AEC0FF"/>
+    <rect width="48" height="48" fill="url(#sky)"/>
+    <rect width="48" height="48" fill="url(#pink)"/>
+    <rect width="48" height="48" fill="url(#accent)"/>
+  </g>
 </svg>
