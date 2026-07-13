@@ -156,7 +156,7 @@ standalone = f'''<!doctype html>
 <title>winefeed — a daily wine-news digest</title>
 <meta name="description" content="The wine world, summarized. Original, fact-based daily briefs across Market, Culture, Science, and independent Newsletters.">
 <meta name="author" content="Guido Cattabianchi">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8D%B7%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 {STYLE}
 </head>
 <body>
