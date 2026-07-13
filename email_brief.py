@@ -2,9 +2,10 @@
 """
 winefeed daily brief -> email (Klaviyo), mirroring the winefeed.co website style.
 feed_data.json -> header (winefeed by Primal Wine, left-aligned) -> the brief
-(4 topics x 5 stories, key takeaways, hairline-separated) -> Wine of the Day
-(featured-product format, no pill) -> Shop All / Join Club band -> footer.
-Palette + type match the site (paper/ink/blue accent, Geist + Newsreader).
+(4 topics x top-3 stories, 2 key takeaways each, hairline-separated) -> Wine of
+the Day (featured-product merge slot) -> Shop All / Join Club band -> footer.
+News briefs are our own summaries of public facts (no source link/credit);
+newsletters keep byline + link. Palette + type match the site.
 """
 import html, datetime, os, json, re, base64
 
@@ -12,7 +13,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = json.load(open(os.path.join(HERE, "feed_data.json")))
 ITEMS = DATA.get("items", {})
 TAB_ORDER = ["MARKET", "CULTURE", "SCIENCE", "NEWSLETTERS"]
-BULLETS_IN_EMAIL = 3
+BULLETS_IN_EMAIL = 2
+STORIES_IN_EMAIL = 3      # top 3 per topic in the email; full set lives on the site
 
 MONTHS_FULL = ["", "JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 MONTHS = ["", "JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
@@ -82,7 +84,7 @@ def story(row, wi, is_newsletter, first):
     </td></tr>'''
 
 def topic_block(name, ti):
-    rows = ITEMS.get(name, [])
+    rows = ITEMS.get(name, [])[:STORIES_IN_EMAIL]
     is_newsletter = name == "NEWSLETTERS"
     stories = "".join(story(r, i, is_newsletter, first=(i == 1)) for i, r in enumerate(rows, 1))
     sep = "" if ti == 0 else f"border-top:1px solid {LINE};"
@@ -159,7 +161,7 @@ body{{margin:0; background:{PAGE};}}
         </td>
         <td valign="baseline" align="right" style="font-family:{MONO}; font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.72); white-space:nowrap;">{DATELINE}</td>
       </tr></table>
-      <p style="margin:17px 0 0; font-family:{SANS}; font-size:14.5px; line-height:1.55; color:rgba(255,255,255,0.92);">The wine world, summarized. Five stories per topic, the key facts pulled out, every link to the outlet that reported it. Read this and you are caught up.</p>
+      <p style="margin:17px 0 0; font-family:{SANS}; font-weight:400; font-size:14.5px; line-height:1.55; color:rgba(255,255,255,0.82);">The wine world, summarized. The day's most important stories across the trade, culture, and science of wine, with the key facts pulled out.</p>
     </td></tr>
 
     <tr><td class="card-inner" style="padding:2px 38px 30px;">
@@ -184,7 +186,14 @@ FOOTER_PREVIEW = f'''<table cellpadding="0" cellspacing="0" border="0" width="10
   <p style="margin:0; font-family:{SANS}; font-size:11px; line-height:1.6; color:{META};">You are receiving this because you subscribed at winefeed.co.<br>Primal Wine, Los Angeles CA &middot; <span style="color:{META};">Unsubscribe</span></p>
 </td></tr></table>'''
 
-open(os.path.expanduser("~/primal_claude/klaviyo/winefeed-daily-brief.html"), "w").write(page(FOOTER_KLAVIYO, WM_URL))
+KLAVIYO_HTML = page(FOOTER_KLAVIYO, WM_URL)
+# repo-local send file — this is what email_push.py reads (works on CI, where
+# ~/primal_claude is absent). Not committed (see .gitignore).
+open(os.path.join(HERE, "winefeed-email-klaviyo.html"), "w").write(KLAVIYO_HTML)
+# local source-of-truth mirror (email-local-first) when that dir exists
+_kdir = os.path.expanduser("~/primal_claude/klaviyo")
+if os.path.isdir(_kdir):
+    open(os.path.join(_kdir, "winefeed-daily-brief.html"), "w").write(KLAVIYO_HTML)
 open(os.path.join(HERE, "winefeed-email-preview.html"), "w").write(page(FOOTER_PREVIEW, WM_DATA))
 
 # content-only for the Artifact preview (strip doctype/html/head/body)
