@@ -151,7 +151,12 @@ def build_panels():
         for idx, item in enumerate(d["items"], 1):
             src, url, date, head, summ = item[:5]
             author = item[5] if len(item) > 5 else None
+            takeaways = item[6] if len(item) > 6 else None
             byline = f'<span class="dot">&middot;</span><span class="by">{esc(author)}</span>' if author else ''
+            if takeaways:
+                body_html = '<ul class="takeaways">' + "".join(f'<li>{esc(b)}</li>' for b in takeaways) + '</ul>'
+            else:
+                body_html = f'<p class="summary">{esc(summ)}</p>'
             cards.append(f'''<article class="card" style="--i:{idx-1}">
             <div class="meta">
               <span class="idx">{idx:02d}</span>
@@ -162,7 +167,7 @@ def build_panels():
             </div>''')
             cards[-1] += f'''
             <h3 class="head"><a href="{esc(url)}" target="_blank" rel="noopener">{esc(head)}</a></h3>
-            <p class="summary">{esc(summ)}</p>
+            {body_html}
             <a class="read" href="{esc(url)}" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
           </article>'''
         panel = f'''<section class="panel{'' if pi==0 else ' '}" role="tabpanel" id="panel-{name.lower()}" aria-labelledby="tab-{name.lower()}"{hidden}>
@@ -299,6 +304,10 @@ body{
 .head a{color:var(--title); text-decoration:none; background-image:linear-gradient(var(--accent),var(--accent)); background-size:0% 1.5px; background-repeat:no-repeat; background-position:0 100%; transition:background-size 260ms var(--ease-out), color 180ms ease;}
 .head a:hover{color:var(--accent); background-size:100% 1.5px;}
 .summary{margin:0 0 16px; color:var(--body); font-size:15.75px; line-height:1.62; text-wrap:pretty;}
+.takeaways{list-style:none; margin:0 0 16px; padding:0;}
+.takeaways li{position:relative; padding-left:19px; margin:0 0 8px; color:var(--body); font-size:15.5px; line-height:1.5; text-wrap:pretty;}
+.takeaways li:last-child{margin-bottom:0;}
+.takeaways li::before{content:""; position:absolute; left:2px; top:0.6em; width:5px; height:5px; border-radius:50%; background:var(--accent);}
 .read{
   display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:10.5px;
   letter-spacing:0.09em; text-transform:uppercase; color:var(--meta); text-decoration:none;

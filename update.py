@@ -295,6 +295,13 @@ def main():
         json.dump(out, f, indent=2, ensure_ascii=False)
     print("Wrote feed_data.json")
 
+    # ---- original key-takeaways (LLM), grounded; excerpt fallback if no key --
+    try:
+        import takeaways
+        takeaways.enrich(os.path.join(HERE, "feed_data.json"))
+    except Exception as e:
+        print(f"takeaways step skipped: {e}", file=sys.stderr)
+
     # ---- regenerate the site -------------------------------------------------
     r = subprocess.run([sys.executable, "build.py"], cwd=HERE)
     if r.returncode != 0:

@@ -4,8 +4,7 @@ name: winefeed auto-update
 # GitHub Pages then serves the repo (Settings -> Pages -> deploy from main / root).
 on:
   schedule:
-    - cron: "30 6 * * *"    # 06:30 UTC (~morning)
-    - cron: "30 18 * * *"   # 18:30 UTC (~evening)
+    - cron: "30 6 * * *"    # once daily, 06:30 UTC
   workflow_dispatch: {}      # allow manual "Run workflow"
 
 permissions:
@@ -25,7 +24,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch feeds and regenerate site
+      - name: Fetch feeds, draft takeaways, regenerate site
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 update.py
 
       - name: Commit refreshed page
