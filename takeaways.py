@@ -189,6 +189,7 @@ Hard rules:
 - If several outlets agree on a fact, state it once. If they conflict, keep the specific/attributed version.
 - Lead each bullet with the concrete fact. No two bullets repeat the same fact. No bullet may merely restate the headline.
 - NEVER write ABOUT the articles, outlets, paywalls, or missing content. Output wine facts or nothing.
+- NEVER use an em-dash or an en-dash as punctuation. Use a comma, a full stop, or brackets. A dash between two numbers in a range (2003-2004) is fine and is the only dash allowed.
 - If there are no real facts, return {"headline": "", "takeaways": []}.
 
 STORY (working title): %(title)s
@@ -227,10 +228,28 @@ def _call(key, prompt, max_tokens=650):
 # brief opening mid-story with no context, which is the exact failure it should prevent.
 MAX_BULLET = 260
 
+# The em-dash parenthetical is the clearest tell that a machine wrote the line, and
+# these bullets are republished to the site, the daily email and social. The prompt
+# now forbids them; this is the backstop for when it does it anyway.
+#
+# An en-dash BETWEEN DIGITS is a correct number range (2003-2004) and must survive --
+# a blanket strip would mangle every vintage span and drought year we publish. Only a
+# dash used as PUNCTUATION becomes a comma.
+_EN_RANGE = re.compile(r"(?<=\d)\s*[–—]\s*(?=\d)")
+_DASH_PUNCT = re.compile(r"\s*[—–]\s*")
+_DUP_PUNCT = re.compile(r",\s*([,.;:])")
+
+def _dedash(t):
+    t = _EN_RANGE.sub("\x00", t)            # park the legitimate ranges
+    t = _DASH_PUNCT.sub(", ", t)            # everything else reads as a comma
+    t = _DUP_PUNCT.sub(r"\1", t)            # ", ." -> "."
+    return t.replace("\x00", "–")      # restore the ranges as en-dashes
+
 def _clean_bullets(raw, head=""):
     outs = []
     for t in (raw or [])[:5]:
         t = re.sub(r"\s+", " ", str(t)).strip(" .–-").strip()
+        t = _dedash(t)
         if len(t) < 8:
             continue
         if len(t) > MAX_BULLET:
@@ -249,6 +268,7 @@ def synthesize(key, title, body):
     if not data:
         return "", []
     head = re.sub(r"\s+", " ", str(data.get("headline", ""))).strip().strip('"').strip()
+    head = _dedash(head)
     if is_meta(head) or len(head) < 8:
         head = ""
     return head, _clean_bullets(data.get("takeaways", []), head or title)
