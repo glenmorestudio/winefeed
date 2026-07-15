@@ -12,6 +12,20 @@ each story in place, writes it back.
   paywalled/thin pages, to lift one or two extra facts), combine them, and have
   Claude write OUR OWN headline + 4-5 key-takeaway bullets. Facts are public; the
   phrasing is ours, which is what keeps it copyright-safe. No outbound link.
+
+  WE ALSO FILE THE STORY HERE. The tab update.py routed a candidate into is a pile,
+  not a label -- it reads the outlet's RSS blurb, and the brief we publish is written
+  afterward, so the two drifted apart for 38% of stories (10 of 26 on 2026-07-15:
+  "half of Napa lost money" under SCIENCE, "English production surges 55%" under
+  CULTURE). synthesize() now returns the tab too, decided from the brief itself.
+
+  THE CRITERION IS THE CONSEQUENCE, NOT THE INGREDIENT. Every story mentions a
+  drought, a price, a sommelier; what decides the tab is what CHANGED and for whom.
+  Drought kills vines -> SCIENCE. Same drought lifts grape prices -> MARKET. On a
+  genuine tie, file on whatever bullet 1 is about: it is the setup, so it is the
+  frame the reader gets, and the pill must match the frame. enrich() regroups on
+  that answer AFTER synthesis, which is also when near-dup can finally catch twins
+  that were split across two piles.
 - NEWSLETTERS: single article, per-piece bullets, headline + link kept (we credit
   and point to the independent writer).
 
@@ -161,10 +175,32 @@ def is_echo(b, head):
 SYNTH_PROMPT = """You are the editor of Winefeed, an independent wine-news desk. One or more outlets have covered the same story; their reporting is combined below.
 Write Winefeed's OWN brief on this story.
 
-Return STRICT JSON only: {"headline": "...", "takeaways": ["...", "..."]}
+Return STRICT JSON only: {"headline": "...", "topic": "...", "why": "...", "takeaways": ["...", "..."]}
 
 headline: an original, specific headline IN YOUR OWN WORDS. Under 12 words, concrete (who/what), no clickbait, no outlet names, no "Winefeed".
+topic: exactly one of MARKET, CULTURE, SCIENCE. See FILING below.
+why: one short clause naming the consequence you filed it on. For the editor, never published.
 takeaways: 4-5 KEY TAKEAWAY bullets a reader can skim to know the story.
+
+FILING. Pick the tab by THE CONSEQUENCE, NOT THE INGREDIENT. Every story mentions a drought, a price, a sommelier; what matters is what actually CHANGED and for whom. Ask what the news IS, not what words are in it.
+
+  MARKET  -- money or the terms of trade changed. The actor is a company, a regulator, an investor, a trader. Prices, tariffs, sales volumes, profits, ownership, lawsuits, listings.
+  SCIENCE -- how wine is grown or made changed. The actor is the vine, the cellar, the climate, a researcher. Viticulture, winemaking technique, disease, heat damage, soil, yeast, health findings.
+  CULTURE -- what people drink, or what wine means, changed. The actor is a drinker, a sommelier, a restaurant, a critic. Taste and style shifts, restaurants, awards, rituals, who is drinking and why.
+
+The SAME ingredient files differently depending on what it did:
+  "Three-year drought killed old Monastrell vines in Jumilla" -> SCIENCE. The consequence lands on the vines.
+  "Three-year drought pushed Monastrell grape prices up 30%%" -> MARKET. Same drought, but the consequence is money.
+  "Paris banned public drinking through a record heatwave" -> CULTURE. It says heatwave, but nothing happened to a vine or a balance sheet; it changed how people drink.
+
+TIE-BREAK: if two consequences are genuinely co-equal, file it under WHATEVER BULLET 1 IS ABOUT. Bullet 1 is the setup, so it is the frame the reader is handed; the pill must match the frame. Never file on a word that appears in passing.
+
+Worked filings, these are real and were all filed WRONG by keywords:
+  "Half of Napa vineyards lost money last year; profitable peers lean on hospitality" -> MARKET (revenue and profit changed), NOT SCIENCE. It says vineyard, but no vine did anything.
+  "English wine production surged 55%% in 2025 as still wines gain ground" -> MARKET (volumes and trade), NOT CULTURE.
+  "Fifteen sommeliers name the expensive Bordeaux worth the price" -> CULTURE (what people choose to drink and why), NOT MARKET. It is full of prices, but no price changed; it is a taste story.
+  "France's INAO approved back-sweetening to 9g/l" -> CULTURE. There is a regulator (market) and a cellar technique (science) in it, but bullet 1 sets up a shift in what ends up in the glass.
+  "Osaka researchers bred a high-ornithine yeast strain" -> SCIENCE (how it is made).
 
 THE BRIEF MUST STAND ALONE. The reader cannot click through to any article — your bullets are the entire story they will ever see. Someone who knows nothing about this must finish the bullets understanding what happened, who it happened to, and why it matters. Assume no prior context.
 
@@ -262,16 +298,38 @@ def _clean_bullets(raw, head=""):
         outs.append(t + ".")
     return outs
 
+TOPICS = ("MARKET", "CULTURE", "SCIENCE")
+NEWS_TABS = TOPICS      # every tab except NEWSLETTERS, which is a source not a subject
+
+# %-FORMATTING LANDMINE. These prompts are built with `%`, so a literal percent in an
+# example ("prices up 30%") reads as a format spec and raises ValueError at call time --
+# which is every synthesis, i.e. the whole edition, and only when the fetch has already
+# happened. Escape literal percents as %%. Checked here so a bad prompt fails on import
+# instead of at 06:30 UTC.
+for _n, _p in (("SYNTH_PROMPT", SYNTH_PROMPT), ("PROMPT", PROMPT)):
+    try:
+        _p % {"title": "t", "body": "b", "source": "s"}
+    except (ValueError, KeyError) as _e:
+        raise SystemExit(f"{_n} is malformed ({_e}); escape any literal % as %%")
+
 def synthesize(key, title, body):
-    """Return (headline, takeaways). headline '' if the model wrote nothing usable."""
+    """Return (headline, takeaways, topic, why).
+
+    headline '' if the model wrote nothing usable; topic '' if it did not return a
+    tab we recognise, in which case the caller keeps the router's guess.
+    """
     data = _call(key, SYNTH_PROMPT % {"title": title, "body": body})
     if not data:
-        return "", []
+        return "", [], "", ""
     head = re.sub(r"\s+", " ", str(data.get("headline", ""))).strip().strip('"').strip()
     head = _dedash(head)
     if is_meta(head) or len(head) < 8:
         head = ""
-    return head, _clean_bullets(data.get("takeaways", []), head or title)
+    topic = str(data.get("topic", "")).strip().upper()
+    if topic not in TOPICS:
+        topic = ""
+    why = re.sub(r"\s+", " ", str(data.get("why", ""))).strip()
+    return head, _clean_bullets(data.get("takeaways", []), head or title), topic, why
 
 # A brief is only as good as the reporting under it. Below this much real article text
 # the model has nothing to summarize and pads by rephrasing the headline, so we would
@@ -320,7 +378,8 @@ def enrich(path=None):
         return False
     d = json.load(open(path))
     total = 0
-    for tab, rows in d["items"].items():
+    survivors = []          # (filed topic, row) for every news brief that clears the gates
+    for tab, rows in list(d["items"].items()):
         print(f"{tab}:")
         if tab == "NEWSLETTERS":
             # single independent piece: per-article bullets, keep their headline + link
@@ -335,7 +394,12 @@ def enrich(path=None):
         # news topic: synthesize ONE original brief per cluster of URLs. Every candidate
         # update.py hands us gets a shot; how many survive is decided by the quality gates
         # below, not by a fixed quota -- a rich news day publishes more, a thin one fewer.
-        kept, kept_bags = [], []
+        #
+        # The tab update.py routed this into is only a CANDIDATE PILE. The published tab
+        # comes back from synthesize(), which reads the whole article and files on the
+        # consequence. So survivors are collected flat here and regrouped after the loop;
+        # near-dup is deferred with them, because reassignment can land two twins that
+        # were split across piles into the same tab, where the guard can finally see them.
         for row in rows:
             n_src = len(row.get("sources", []))
             body = combined_body(row.get("urls", []))
@@ -344,7 +408,7 @@ def enrich(path=None):
                 # brief off the RSS blurb is how vague, nameless cards get made.
                 print(f"  [{n_src} src] {row.get('head','')[:44]} -> no article body (dropped)")
                 continue
-            head, tk = synthesize(key, row.get("head", ""), body)
+            head, tk, topic, why = synthesize(key, row.get("head", ""), body)
             if head:
                 row["head"] = head          # our headline replaces the seeded one
             row["takeaways"] = tk
@@ -353,15 +417,36 @@ def enrich(path=None):
                 # too few real facts survived -> no brief worth publishing
                 print(f"  [{n_src} src] {row.get('head','')[:44]} -> {len(tk)} bullets (dropped)")
                 continue
+            # Validate at the point of use, not just in synthesize(). news[dest] would
+            # raise KeyError on anything unexpected and take the whole edition down; a
+            # story filed somewhere strange is worth one bad pill, never a lost day.
+            dest = topic if topic in NEWS_TABS else tab
+            moved = f"  {tab} -> {dest} ({why})" if dest != tab else ""
+            print(f"  [{n_src} src] {row.get('head','')[:44]} -> {len(tk)} bullets{moved}")
+            survivors.append((dest, row))
+
+    # regroup on the filed topic, then dedup and order WITHIN each final tab
+    news = {t: [] for t in NEWS_TABS}
+    for dest, row in survivors:
+        news[dest].append(row)
+
+    import update                          # lazy: update imports us at call time
+    for t in NEWS_TABS:
+        # wine first, then freshest -- the site leads on wine and lets the rest follow
+        news[t].sort(key=lambda r: (update.is_wine(update.row_as_item(r)), r.get("date", "")),
+                     reverse=True)
+        kept, bags = [], []
+        for row in news[t]:
             bag = _content_bag(row)
-            if _is_near_dup(bag, kept_bags):
-                print(f"  [{n_src} src] {row.get('head','')[:44]} -> near-dup (dropped)")
+            if _is_near_dup(bag, bags):
+                print(f"  near-dup in {t} (dropped): {row.get('head','')[:52]}")
                 continue
-            kept.append(row); kept_bags.append(bag)
-            print(f"  [{n_src} src] {row.get('head','')[:44]} -> {len(tk)} bullets")
-        d["items"][tab] = kept
+            kept.append(row); bags.append(bag)
+        d["items"][t] = kept
+
     json.dump(d, open(path, "w"), indent=2, ensure_ascii=False)
-    print(f"Enriched {total} stories.")
+    counts = " / ".join(f"{t} {len(d['items'][t])}" for t in NEWS_TABS)
+    print(f"Enriched {total} stories. Filed: {counts}")
     return True
 
 if __name__ == "__main__":

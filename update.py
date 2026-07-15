@@ -264,13 +264,38 @@ def score(text, words):
     t = text.lower()
     return sum(t.count(w) for w in words)
 
-# On ties, the narrower topics win so CULTURE doesn't swallow science/market stories.
+# On ties, the narrower topics win so CULTURE doesn't hoover up everything.
 _TOPIC_PRIORITY = ["SCIENCE", "MARKET", "CULTURE"]
-def bucket_text(text):
-    """Best topic for a blob of text; CULTURE is the catch-all when nothing scores."""
+
+def route_text(text):
+    """Which topic's candidate pile does this belong in?
+
+    THIS IS A ROUTER, NOT A LABEL. It decides which stories are worth spending a
+    synthesis call on, and nothing else. The tab a story is PUBLISHED under is
+    decided later by takeaways.synthesize(), from the brief we actually write.
+
+    It used to be the label, and it was wrong for 38% of stories (10 of 26 on
+    2026-07-15): it reads the outlet's RSS blurb, not our brief, so the pill
+    described text we never published. Bag-of-words also cannot tell a mention
+    from a subject, so "half of Napa lost money" filed under SCIENCE and "English
+    production surges 55%" under CULTURE. Do not promote this back to a label.
+
+    Being roughly right is enough here: it only has to keep all three piles fed so
+    no tab starves for candidates.
+    """
     scores = {t: score(text, KW[t]) for t in TOPICS}
     best = max(_TOPIC_PRIORITY, key=lambda t: (scores[t], -_TOPIC_PRIORITY.index(t)))
     return best if scores[best] > 0 else "CULTURE"
+
+
+def row_as_item(row):
+    """Score a PUBLISHED row (head/takeaways) with the raw-item scorers above.
+
+    is_wine() and friends read an RSS item (title/summary); a published row is
+    head/takeaways. Reshape rather than re-implement the scoring.
+    """
+    return {"title": row.get("head", ""),
+            "summary": " ".join(row.get("takeaways") or []) or row.get("summ", "")}
 
 # ---- cluster same-event coverage --------------------------------------------
 # Two articles are the same story if their distinctive tokens overlap enough.
@@ -313,8 +338,9 @@ def cluster_items(items, min_shared=3):
             clusters.append({"seed": toks, "members": [it]})
     return [c["members"] for c in clusters]
 
-def cluster_topic(members):
-    return bucket_text(" ".join(m["title"] + " " + m["summary"] for m in members))
+def route_cluster(members):
+    """Candidate pile for a cluster. See route_text: a router, never the label."""
+    return route_text(" ".join(m["title"] + " " + m["summary"] for m in members))
 
 def dedupe_sources(members):
     seen, out = set(), []
@@ -344,7 +370,7 @@ def main():
     tab_clusters = {t: [] for t in TOPICS}
     for members in cluster_items(pool):
         members.sort(key=lambda i: i["date"], reverse=True)   # freshest member leads
-        tab_clusters[cluster_topic(members)].append(members)
+        tab_clusters[route_cluster(members)].append(members)
     # Editorial order within a topic: wine first, then the other drinks; within each,
     # freshest, then better-covered stories. winefeed is a wine brief that also carries
     # spirits and beer, so a tab opens on wine and moves on to the rest.
