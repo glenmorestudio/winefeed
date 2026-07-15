@@ -3,7 +3,25 @@
   "items": {
     "MARKET": [
       {
-        "head": "15 Sommeliers Name Expensive Bordeaux Worth the Premium Price",
+        "head": "Grace Vineyard pivots to baijiu under new ownership, abandoning wine focus",
+        "date": "2026-07-14",
+        "sources": [
+          "Vino Joy News"
+        ],
+        "summ": "Hong Kong-listed Grace Vineyard has taken another step away from its roots as one of China's best-known boutique wineries, investing in a historic baijiu producer as its new controlling shareholder accelerates plans to build a broader alcohol business",
+        "urls": [
+          "https://vino-joy.com/2026/07/14/grace-vineyard-acquires-baijiu-brand-following-1919-takeover/"
+        ],
+        "takeaways": [
+          "Hong Kong-listed Grace Vineyard, China's first boutique winery to list publicly in 2018, has acquired a stake in Wang Defang Baijiu, a sauce-aroma baijiu producer based in Maotai Town, Guizhou province.",
+          "The investment follows Yang Lingjiang, founder of alcohol retailer 1919 Group, acquiring a 73.63% controlling stake in Grace Vineyard in December 2025 for approximately HK$156 million.",
+          "Grace Vineyard established six subsidiaries in Chengdu in March 2025 and plans to expand beyond wine into baijiu, beer, imported spirits and low-alcohol beverages as part of a diversified alcohol business strategy.",
+          "Industry observers question the timing and brand fit, warning that leveraging Grace Vineyard's wine reputation to market baijiu risks damaging its premium positioning as the sauce-aroma baijiu market enters a competitive contraction phase.",
+          "Wang Defang traces its origins to the late Qing Dynasty and is regarded as one of the founding brands of Ronghe Distillery, which helped establish Maotai Town as China's sauce-aroma baijiu centre."
+        ]
+      },
+      {
+        "head": "Fifteen sommeliers name pricey Bordeaux bottles worth the investment",
         "date": "2026-07-14",
         "sources": [
           "VinePair"
@@ -13,11 +31,11 @@
           "https://vinepair.com/articles/wa-somms-expensive-bordeaux-worth-the-splurge/"
         ],
         "takeaways": [
-          "Château Palmer, a third-growth classified as a 'Super Second,' offers emotional complexity with violet and graphite notes that justify premium pricing.",
-          "Château Lafleur, a tiny family-run Pomerol estate, commands high prices but rewards buyers with power and elegance rooted in meticulous vineyard farming.",
-          "La Mission Haut-Brion delivers first-growth quality from Graves terroir at lower cost than its famous neighbor Haut-Brion across the road.",
-          "Château Pontet-Canet, a fifth growth using biodynamic farming, undercuts quality peers on price while maintaining purity of fruit and balanced structure.",
-          "Super Second estates like Ducru-Beaucaillou and Cos d'Estournel offer savory complexity and aging potential comparable to first growths at more accessible prices."
+          "A panel of 15 US sommeliers identified expensive Bordeaux bottles they consider justified splurges, citing emotional complexity, family stewardship, and terroir over brand prestige.",
+          "Château Palmer (third growth), Château Lafleur (Pomerol), and La Mission Haut-Brion (Graves) emerged as frequently cited choices for delivering quality beyond their classification rank.",
+          "Several sommeliers favored 'Super Seconds'—second-tier estates like Château Pontet-Canet and Château Ducru-Beaucaillou—over first growths, noting comparable quality at lower price points.",
+          "Château Le Puy 'Barthélemy' and Pensées de Lafleur were highlighted as relative values: premium bottles where consumers pay for vineyard craftsmanship and family heritage rather than marketing.",
+          "Château d'Yquem, Bordeaux's flagship dessert wine, was nominated despite being outside the red-wine category, valued for three centuries of consistent production."
         ]
       },
       {
@@ -31,14 +49,35 @@
           "https://wineeconomist.com/2026/07/14/sicilia-doc/"
         ],
         "takeaways": [
-          "Sicilia DOC, established in 2011 after years of negotiation, simplifies consumer choice by offering a broad regional identity rather than competing sub-appellations like Etna DOC.",
-          "The designation struggled for adoption initially because producers preferred their own sub-regional brands, but now functions as an important force in Sicilian wine.",
-          "American tourism to Sicily, amplified by The White Lotus TV series and post-COVID travel, drives demand for specific Sicilian grapes like Grillo, Nero d'Avola, and Inzolia.",
-          "Sicilia DOC wines are now imported to the U.S., with Heritage Collection distributing Tasca d'Almerita bottlings at accessible price points."
+          "Sicily established the Sicilia DOC appellation in 2011 after years of negotiation, creating a broad regional identity to simplify consumer choice amid competing sub-regional designations like Etna DOC.",
+          "The designation struggled initially as producers prioritized their own sub-regional brands, but has grown into an important force by balancing complexity and accessibility.",
+          "Sicilia DOC has capitalized on Sicily's rising tourism profile, including The White Lotus television series effect and post-COVID travel boom, as Americans seek wines from grapes discovered on the island.",
+          "Consumers now actively hunt for indigenous Sicilian varieties—Grillo, Lucido, Nero d'Avola, Inzolia—rather than generic Italian wine, reflecting deeper engagement with the region's diverse terroir.",
+          "Producers like Tasca d'Almerita leverage Sicilia DOC to showcase Sicily's range, from Pantelleria dessert wines to Mount Etna minerality, all under a unified regional banner."
         ]
       },
       {
-        "head": "Breaky Bottom, England's pioneer vineyard, sells for first time since 1974",
+        "head": "China's alcohol industry group demands stricter online spirits sales regulation",
+        "date": "2026-07-13",
+        "sources": [
+          "The Drinks Business",
+          "Vino Joy News"
+        ],
+        "summ": "China's alcohol industry has called for stronger regulation of online liquor purchases, claiming that existing rules have failed to keep pace with the rapid growth of e-commerce platforms",
+        "urls": [
+          "https://www.thedrinksbusiness.com/2026/07/china-alcohol-industry-group-urges-tougher-regulation-of-online-spirits-sales/",
+          "https://vino-joy.com/2026/07/07/china-brings-alcohol-free-wine-under-alcohol-rules-bars-sales-to-minors/"
+        ],
+        "takeaways": [
+          "The China Alcoholic Drinks Association called for tougher oversight of e-commerce platforms, citing price distortions, high commissions, and unfair competition harming producers and distributors.",
+          "The group urged regulators to enforce antitrust rules and strengthen oversight of pricing, commissions, and platform traffic allocation to level the playing field.",
+          "The association asked platforms to adopt blockchain traceability, AI consumer analytics, and supply chain systems while supporting smaller producers and cross-border expansion.",
+          "Chinese alcohol brands are valued at $123.4 billion in 2025, but IWSR forecasts a challenging 2026 with Baijiu struggling as consumers shift toward casual drinking over gifting occasions.",
+          "Consumption patterns are shifting toward younger, value-conscious drinkers embracing home and on-demand delivery, while older consumers remain cautious and selective amid economic uncertainty."
+        ]
+      },
+      {
+        "head": "Breaky Bottom, England's pioneering vineyard, listed for sale at £4 million",
         "date": "2026-07-13",
         "sources": [
           "The Drinks Business"
@@ -48,11 +87,11 @@
           "https://www.thedrinksbusiness.com/2026/07/breaky-bottom-one-of-englands-oldest-and-most-revered-vineyards-goes-on-sale-for-first-time/"
         ],
         "takeaways": [
-          "Peter Hall's Breaky Bottom near Lewes, Sussex, founded in 1974, listed at £4 million following Hall's death in October 2025.",
-          "The 15-acre estate produces around 10,000 bottles annually, focusing on sparkling wines from Seyval Blanc and Chardonnay-Pinot blends.",
-          "Hall's wines were served at King Charles III's coronation, Queen Elizabeth II's Platinum Jubilee, and London 2012 Olympics.",
-          "Knight Frank expects international interest, citing resilient demand for small-scale, terroir-driven producers despite broader wine market challenges.",
-          "The sale reflects growing investor interest in English wine as 2025 production surged 39% to 16.5 million bottles."
+          "Breaky Bottom Vineyard near Lewes, Sussex, founded by Peter Hall in 1974, has been listed for sale for the first time following Hall's death in October 2025.",
+          "The 15-acre estate, one of seven English vineyards when established, is guided at £4 million and includes six acres under vine, a farmhouse, barn winery, and production facilities.",
+          "Hall's sparkling wines from Seyval Blanc and a Chardonnay-Pinot blend were served at King Charles III's coronation, Queen Elizabeth II's Platinum Jubilee, and the 2012 London Olympics.",
+          "Knight Frank's viticulture team expects international buyer interest, citing growing demand for small-scale, terroir-driven producers despite broader wine market challenges.",
+          "The sale occurs as English wine production surged 39 percent year-on-year in 2025 and vineyard sales accelerate across the sector."
         ]
       },
       {
@@ -66,11 +105,10 @@
           "https://vino-joy.com/2026/07/13/how-four-generations-built-one-of-new-zealands-last-great-family-wineries/"
         ],
         "takeaways": [
-          "Josip Babich, a Croatian immigrant, founded the winery in 1916 with hand-filled oak barrels; it now exports to 60+ countries.",
-          "WWII American servicemen provided crucial cash flow in the 1940s, ending decades of financial struggle and enabling growth.",
-          "Second-generation brothers Peter and Joe modernised operations and built winemaking excellence; third-generation David expanded internationally starting in 2001.",
-          "Babich owns 14 vineyards across Marlborough and Hawke's Bay, producing 750,000 cases annually while remaining wholly family-owned.",
-          "Fourth generation now active: David's son Peter participated in his first vintage in 2025, continuing 110-year family winemaking tradition."
+          "Croatian immigrant Josip Babich founded the winery in 1916 with hand-filled barrels; it now exports to 60+ countries and remains wholly family-owned across four generations.",
+          "American servicemen stationed in New Zealand during World War II bought Babich wines in U.S. dollars, providing crucial cash flow that ended decades of financial struggle.",
+          "Export sales surpassed domestic sales in 1997 after a German merchant's advance order catalyzed overseas growth; Babich now operates 14 vineyards across Marlborough and Hawke's Bay, producing 750,000 cases annually.",
+          "In 2025, David Babich's son Peter participated in his first vintage, continuing a winemaking tradition spanning over a century in an industry marked by consolidation and multinational ownership."
         ]
       },
       {
@@ -84,15 +122,15 @@
           "https://vino-joy.com/2026/07/13/an-american-wine-without-american-wine-how-tariffs-forced-franzia-to-reinvent-itself-in-china/"
         ],
         "takeaways": [
-          "Franzia, owned by The Wine Group, now ships Australian bulk wine to China for local bottling instead of importing finished U.S. boxes due to nearly 80% total tax burden.",
-          "The brand entered China years ago with aggressive pricing—three-litre boxes under RMB100—but tariffs made that model unsustainable for affordable American wine.",
-          "Chinese products now list origin as China with Australian base wine noted separately, a shift that risks prestige but preserves Franzia's price advantage in e-commerce.",
-          "Local bottling enables faster customisation for Chinese promotions and seasonal packaging, benefits beyond tariff avoidance that the distributor says improve competitiveness.",
-          "Resumption of U.S. imports depends on tariff reduction; current policy makes American-packaged Franzia uncompetitive on Chinese shelves."
+          "Franzia, the world's largest boxed-wine brand owned by The Wine Group, now sources Australian wine for China instead of importing finished products from California.",
+          "China imposed tariffs totaling approximately 75% on U.S. wine, making the brand's original affordable pricing model unsustainable for the Chinese market.",
+          "Australian wine is now shipped to China in bulk, bottled locally, and labeled with China as country of origin—a shift from Franzia's previous direct U.S. imports.",
+          "Tao Xin, general manager of Shanghai Fuga Wines (Franzia's distributor), said local packaging offers flexibility for market-specific changes and faster response to consumer trends.",
+          "The tariff-driven restructuring mirrors Franzia's earlier bulk-import model in Japan and could reverse if U.S.-China trade policy changes."
         ]
       },
       {
-        "head": "Japanese award-winning wines struggle to convert accolades into export sales",
+        "head": "Japanese wine awards boost awareness, but small producers remain unmoved by accolades",
         "date": "2026-07-10",
         "sources": [
           "The Drinks Business"
@@ -102,14 +140,15 @@
           "https://www.thedrinksbusiness.com/2026/07/do-global-awards-actually-drive-japanese-wine-sales/"
         ],
         "takeaways": [
-          "Takahiko, a Hokkaido family winery, increased exports from 12 to 180 bottles annually after its 2017 pinot noir appeared on Noma's wine list in 2020, not awards.",
-          "Around 70 percent of Japan's 400+ wineries are family-owned operations too focused on domestic sales to pursue costly export processes and award submissions.",
-          "Kenneth Lee, a Hong Kong importer, says awards drive awareness but tastings and restaurant placements matter more for sales; he questions whether awards truly convert to revenue.",
-          "Japan's mountainous terrain requires handpicked harvests and costly special trellising, making wines expensive overseas where price remains the largest barrier to uptake."
+          "Decanter World Wide Awards, International Wine & Spirit Competition, and other global competitions have recognized Japanese wines since 2010, including Suntory's 2024 Best in Show win.",
+          "Around 70 percent of Japan's 400-plus wineries are family-operated and too focused on domestic supply to pursue costly exports and award submissions, according to Kenneth Lee, a Japanese wine importer in Hong Kong.",
+          "Large producers like Château Mercian, owned by Kirin Group, and Katsunuma Jyozo have leveraged award wins—Katsunuma's 2003–2004 Vinalies medals secured a distribution deal with Bernard Magrez Group in France.",
+          "Kenneth Lee says restaurant listings and tastings now drive sales more than awards alone; exposure at high-profile events like the 2016 G7 Summit matters more than competition medals.",
+          "High production costs from Japan's mountainous terrain, humidity, and typhoons keep Japanese wines expensive overseas, remaining the primary barrier to export growth despite growing international recognition."
         ]
       },
       {
-        "head": "China's top supermarkets expand wine push amid sector slowdown",
+        "head": "China's top supermarkets double down on wine to reach mainstream shoppers",
         "date": "2026-07-08",
         "sources": [
           "Vino Joy News"
@@ -119,16 +158,34 @@
           "https://vino-joy.com/2026/07/08/chinas-top-10-supermarkets-in-2026/"
         ],
         "takeaways": [
-          "Walmart China led 2025 supermarket rankings with RMB 195.86 billion revenue; Freshippo rose to second place, both prioritizing wine via direct sourcing.",
-          "Costco China ranked 15th despite only seven stores, generating RMB 10 billion in sales, signaling wine's premium appeal in Chinese retail.",
-          "ALDI China jumped 26 places to No. 35 with 88 stores and doubled annual revenue to RMB 4 billion, partly via RMB 99 six-bottle wine bundles.",
-          "Among China's top 100 supermarkets, 52 reported declining revenue as traditional hypermarkets lose ground to value-focused direct sourcing and omnichannel rivals."
+          "China Chain-Store & Franchise Association ranked China's top 100 supermarket operators by 2025 revenue; Walmart China led with RMB 195.86 billion, Alibaba's Freshippo second.",
+          "Walmart and Freshippo are expanding wine selection through direct sourcing and efficient supply chains to grow consumption among everyday Chinese consumers.",
+          "Costco China ranked 15th despite operating only seven stores with RMB 10 billion revenue; ALDI China jumped to 35th with 88 stores, doubling sales year-on-year.",
+          "ALDI previously offered RMB 99 six-bottle packs of imported wine bottled domestically, signaling competitive pricing strategies in the sector.",
+          "Among top 100 supermarkets, 52 reported declining revenue as traditional hypermarket models lose ground to direct-sourced products, private labels, and online-offline integration."
+        ]
+      },
+      {
+        "head": "Champagne houses mapped by flavor profile and texture",
+        "date": "2026-07-01",
+        "sources": [
+          "VinePair"
+        ],
+        "summ": "Wineries of all types strive to develop an estate identity through their liquid, but nowhere is that brand recognition as important as it is in Champagne. The flagship product for most Champagne maisons is the “house style,” a proprietary blend of grapes from assorted plots and vintages. No two non-vintage recipes are the same.",
+        "urls": [
+          "https://vinepair.com/articles/champagne-flavor-map-infographic/"
+        ],
+        "takeaways": [
+          "Champagne maisons build brand identity through nonproprietary blends of Chardonnay, Pinot Noir, and Pinot Meunier in varying ratios.",
+          "Chardonnay-dominant blends taste mineral and light; Pinot Noir-heavy blends yield richer body and fruit-forward flavor.",
+          "Lees aging duration—minimum 12 months, often longer—determines final flavor: longer contact produces brioche, almond, buttery, creamy notes.",
+          "Winemakers control house style through grape selection, fermentation timing, and lees contact length before disgorgement."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Michelin debuts Burgundy winery ratings; Arnoux-Lachaux demands removal",
+        "head": "Michelin launches first Burgundy winery ratings; producer immediately rejects classification",
         "date": "2026-07-15",
         "sources": [
           "Vino Joy News"
@@ -138,14 +195,15 @@
           "https://vino-joy.com/2026/07/15/michelins-first-winery-ratings-spark-backlash-in-burgundy/"
         ],
         "takeaways": [
-          "Michelin launched its first winery classification in Burgundy, awarding one to three 'Michelin Grapes' to 94 estates based on agronomy, technique, identity, balance and consistency.",
-          "Domaine Arnoux-Lachaux publicly rejected its one-grape rating, stating it halted wine submissions to critics in 2020 and requested removal from the guide.",
-          "Michelin evaluates entire estates rather than individual wines, emphasizing long-term consistency and vineyard management over vintage-by-vintage scoring.",
-          "The entry challenges established wine media including Wine Advocate, which Michelin acquired outright in 2019 after initially buying a 40% stake in 2017."
+          "Michelin Guide unveiled its inaugural Michelin Grape Selection, rating 94 Burgundy wineries on one to three grapes based on overall estate quality rather than individual wines.",
+          "Nine estates earned three grapes, including Domaine de la Romanée-Conti, Domaine Leroy, and Domaine Cécile Tremblay; 20 received two grapes and 33 received one grape.",
+          "Domaine Arnoux-Lachaux in Vosne-Romanée publicly rejected its one-grape rating, noting it stopped submitting wines to critics in 2020 and asked Michelin for removal.",
+          "Michelin evaluates wineries using five criteria: agronomy quality, technical mastery, identity, balance and consistency, emphasizing long-term vineyard management over individual vintage scores.",
+          "The expansion marks Michelin's entry into wine ratings, a market long dominated by Wine Advocate, Wine Spectator and Decanter; Michelin owns Wine Advocate since 2019."
         ]
       },
       {
-        "head": "Champagne Barons de Rothschild releases two grand cru single-vineyard cuvées",
+        "head": "Champagne Barons de Rothschild releases two grand-cru single-vineyard cuvées",
         "date": "2026-07-14",
         "sources": [
           "The Drinks Business",
@@ -157,10 +215,11 @@
           "https://wineindustryadvisor.com/2026/07/14/champagne-barons-de-rothschild-launches-cuvees-parcellaires/"
         ],
         "takeaways": [
-          "Les Maladries and Le Bateau, both 2021 blanc de blancs from Avize and Cramant respectively, mark the maison's second foray into single-site Champagnes.",
-          "Les Maladries uses 80-year-old vines from a 0.3-hectare plot fermented half in concrete eggs, half in barrels, with 3g/l dosage.",
-          "Le Bateau, from 50-year-old vines on pure chalk soil, ferments entirely in wood with just 2g/l dosage, yielding a very dry style.",
-          "Cellar master Guillaume Lété confirmed the series will release annually from grand cru Chardonnay vineyards owned by the maison, with 2022 vintage expected richer."
+          "Champagne Barons de Rothschild, founded in 2005 by three Rothschild family branches, launched Les Maladries and Le Bateau, blanc de blancs from 2021 harvests in Avize and Cramant.",
+          "Les Maladries is pure Chardonnay from a 0.3-hectare north-facing plot in Avize with vines over 80 years old, fermented half in concrete eggs and half in barrels, dosed at 3g/l.",
+          "Le Bateau comes from a 50-year-old Cramant vineyard on pure chalk soil, fermented and aged entirely in wood, with 2g/l dosage, creating a very dry style.",
+          "Cellar master Guillaume Lété said the single-harvest expressions, made only from maison-owned vineyards managed without herbicides, will continue annually with 2022 Champagnes expected to be richer due to warmer conditions.",
+          "These releases follow Le Grand Clos 2019, a single-plot Chardonnay from Vertus released June 2025 for the maison's 20th anniversary."
         ]
       },
       {
@@ -174,15 +233,15 @@
           "https://www.thedrinksbusiness.com/2026/07/how-one-port-powerhouse-is-pushing-beyond-fortified/"
         ],
         "takeaways": [
-          "The Fladgate Partnership, which owns Taylor's, Fonseca and Croft Port houses, acquired unfortified wines from Bairrada, Dão, and Vinhos Verdes starting in 2023.",
-          "The company will rebrand as Fladgate Family Wines to reflect its portfolio shift toward table and sparkling wines alongside fortified offerings.",
-          "Quinta de Bella in Dão grows Pinot Noir alongside native Touriga Nacional, with Pinot Noir showing age-worthiness comparable to Burgundy.",
-          "Quinta Colinas de São Lourenço in Bairrada produces sparkling wines and blends native varieties with international grapes in Bordeaux style.",
-          "Paço de Palmeira and Quinta da Pedra in Vinhos Verdes focus on single varietals—Loureiro and Alvarinho—proving the region's fine-wine potential."
+          "The Fladgate Partnership, which owns Port houses Taylor's, Fonseca and Croft, has acquired still and sparkling wines from Bairrada, Vinhos Verdes and Dão since 2023.",
+          "The company will rebrand as Fladgate Family Wines to reflect its expanding portfolio beyond fortified wines across Portugal's diverse regions.",
+          "Douro red and white table wines called Silica and Croft Pink demonstrate the region's versatility; Croft Pink's light, refreshing style appeals beyond Port traditionalists.",
+          "Dão's Quinta de Bella blends native Touriga Nacional with international varieties including Pinot Noir, which shows age-worthiness comparable to Burgundy.",
+          "Bairrada's Quinta Colinas de São Lourenço produces sparkling wines and blends native and international grapes in Bordeaux-style assemblages; Vinhos Verdes properties focus on single-varietal Alvarinho and Loureiro that age beyond typical expectations."
         ]
       },
       {
-        "head": "Wine Hub integrates Wine Collector platform for private collector inventory access",
+        "head": "Wine Hub integrates private collector marketplace to expand trading options",
         "date": "2026-07-14",
         "sources": [
           "The Drinks Business"
@@ -192,15 +251,15 @@
           "https://www.thedrinksbusiness.com/2026/07/wine-hub-extends-reach-to-new-customers-with-latest-partnership/"
         ],
         "takeaways": [
-          "Wine Hub, owned by Wine Owners, partnered with The Wine Collector (Nickolls & Perks) to connect professional traders with private collector wines.",
-          "Wine Hub users can now bid on and purchase bonded, professionally stored wines from private collectors directly through their trading dashboard.",
-          "The integration allows Wine Hub traders to list client consigned wines on Wine Collector Exchange and access real-time inventory transparency.",
-          "Similar to Wine Hub's existing Liv-Ex integration, the partnership aims to improve market liquidity and reduce double-selling risks for traders.",
-          "The deal follows Wine Hub's recent LiveTrade integration with Bordeaux Index, part of a broader trend toward ecosystem-building among wine industry platforms."
+          "Wine Hub, a software platform owned Wine Owners, partnered with The Wine Collector, a management exchange run by Nickolls & Perks, to connect fine wine businesses with private collectors' inventory.",
+          "Wine Hub users can now bid on mature and rare wines stored in bonded warehouses, inspect them instantly, and transfer ownership between bond accounts without physical movement or duty complications.",
+          "The integration lets Wine Hub traders see collector offerings alongside their own stock, pricing, and margins in a single dashboard, similar to the existing Liv-Ex connection.",
+          "Will Gardener, managing director of Nickolls & Perks, said the move mirrors benefits from Wine Hub's established Liv-Ex integration and reduces double-selling risk through real-time stock control.",
+          "This follows Wine Hub's recent connection to LiveTrade, powered by Bordeaux Index, as fine wine software platforms build integrated ecosystems to deepen market liquidity and trading opportunities."
         ]
       },
       {
-        "head": "Mendoza winery restaurants claim two more Michelin stars in 2026 guide",
+        "head": "Mendoza winery restaurants claim two new Michelin stars in 2026 guide",
         "date": "2026-07-14",
         "sources": [
           "The Drinks Business"
@@ -210,15 +269,14 @@
           "https://www.thedrinksbusiness.com/2026/07/mendoza-winery-restaurants-win-more-michelin-stars/"
         ],
         "takeaways": [
-          "La VidA at Susana Balbo Winemaker's House and Cal at Sitio La Estocada earned Michelin stars on July 13, 2026.",
-          "Winery and winemaker-led restaurants now represent six of Argentina's 14 Michelin-starred establishments.",
-          "Mendoza dominates Argentina's starred dining scene with nine of 14 restaurants; Cal also received a Green Star for sustainability.",
-          "Chef Enzo González Petra, 28, won the Michelin Young Chef Award; sommelier Camila Torta won the Sommelier Award.",
-          "Michelin Guide Argentina launched in 2024; winery restaurants strengthen Mendoza's international wine and gastronomy reputation amid tourism recovery efforts."
+          "La VidA at Susana Balbo Winemaker's House and Cal at Sitio La Estocada earned Michelin stars in Argentina's third guide edition announced 13 July, bringing winery-restaurant total to six of fourteen starred establishments.",
+          "Cal, led by chef Enzo González Petra aged 28, also received a Michelin Green Star for sustainability commitment and seasonal sourcing; González Petra won the Young Chef Award for Argentina 2026.",
+          "Mendoza province now hosts nine of Argentina's fourteen Michelin-starred restaurants, cementing its status as South America's leading wine and gastronomy region.",
+          "Winery and winemaker-led restaurants account for nearly half of Argentina's Michelin-starred establishments since the guide's 2024 launch, with over a dozen more featured among recommended establishments."
         ]
       },
       {
-        "head": "English wine production surges 55% in 2025 as still wines gain ground",
+        "head": "English wine production surges 55% in 2025, driven by record heat and still-wine growth",
         "date": "2026-07-14",
         "sources": [
           "The Drinks Business"
@@ -228,13 +286,13 @@
           "https://www.thedrinksbusiness.com/2026/07/england-2026-a-vintage-of-the-ages/"
         ],
         "takeaways": [
-          "UK wine production reached 124,377 hectolitres in 2025, equivalent to 16.5 million bottles, with white wine production jumping 131% year-on-year.",
-          "Essex's Crouch Valley emerged as English still wine heartland, attracting major investments including a joint venture between Danbury Ridge and Burgundy's Domaine Duroché.",
-          "The sector now comprises 1,158 registered vineyards employing over 10,000 people, valued at £14 billion, with export volumes growing 35% in 2024."
+          "UK wine production reached 124,377 hectolitres in 2025, equivalent to 16.5 million bottles—a 55% increase on 2024, with white wine output jumping 131%, according to Food Standards Agency data confirmed in March 2026.",
+          "Still wine production is accelerating, with Essex's Crouch Valley emerging as a centre for Pinot Noir and Chardonnay; Danbury Ridge Wine Estate announced a joint venture with Burgundy's Domaine Duroché, signalling international recognition of English quality.",
+          "The sector now comprises 1,158 registered vineyards across 4,357 hectares, employing over 10,000 people and valued at approximately £14 billion; UK wine exports grew 35% in 2024 to reach 9% of total sales."
         ]
       },
       {
-        "head": "Asia's drinks industry convenes across Hong Kong, Seoul, Tokyo in June",
+        "head": "Asia's drinks industry celebrates craftsmanship across Hong Kong, Seoul, Tokyo in June",
         "date": "2026-07-14",
         "sources": [
           "The Drinks Business"
@@ -244,16 +302,17 @@
           "https://www.thedrinksbusiness.com/2026/07/db-asia-june-in-pictures-2/"
         ],
         "takeaways": [
-          "The Bitter Truth founder Stephan Berg hosted a masterclass in Hong Kong for bartenders during the brand's 20th-anniversary Asia Tour at Bar Tincture.",
-          "Wines of Hungary held its inaugural Bor Camp in Seoul on June 23-24, bringing sommeliers and buyers together to explore Hungarian wine regions and distribution opportunities.",
-          "Sake Fair returned to Tokyo on June 19-20 with 5,600 visitors, showcasing 1,200 sakes from 45 prefectures and 400 award-winning selections from Japan Sake Awards 2026.",
-          "Lemsecco launched in China with Lemon and Blood Orange Spritz now stocked across 400+ Freshippo stores and premium chains including Ole, Apio and Citysuper."
+          "Stephan Berg, founder of The Bitter Truth bitters and liqueur producer, hosted a masterclass for Hong Kong bartenders at Bar Tincture as part of the brand's 20th-anniversary Asia Tour.",
+          "Wines of Hungary held its inaugural Bor Camp on 23–24 June at Mondrian Seoul Itaewon hotel, bringing together sommeliers, buyers and educators to explore Hungarian wine regions and grape varieties for South Korean market integration.",
+          "Tokyo's Sake Fair on 19–20 June drew 5,600 visitors to taste approximately 1,200 sakes from 45 Japanese prefectures, organised by the Japan Sake and Sochu Makers Association.",
+          "Lemsecco launched in China with Lemon and Blood Orange Spritz now stocked in over 400 Freshippo stores and premium supermarket chains including Ole, Apio and Citysuper.",
+          "The brand supported its Chinese launch with summer activations from May to August, including in-store tastings and partnership events with ASC Fine Wine."
         ]
       }
     ],
     "SCIENCE": [
       {
-        "head": "Half of Napa vineyards lost money last year; profitable peers pivot to hospitality",
+        "head": "Half of Napa vineyards lost money last year; profitable ones pivot to hospitality",
         "date": "2026-07-14",
         "sources": [
           "Wine Industry Advisor",
@@ -265,14 +324,15 @@
           "https://vinepair.com/articles/half-of-napa-vineyards-lost-money-what-happened-to-other-half/"
         ],
         "takeaways": [
-          "Napa Valley's 2024 survey found 50% of vineyards saw revenue declines and 51% experienced profit losses, threatening long-term viability.",
-          "Tasting room visits dropped since 2022 as costs soared—average tasting now $75+ plus $400+ hotel nights—forcing wineries to lower prices and offer unique experiences.",
-          "Profitable wineries prioritize direct-to-consumer channels and flexible club models with multiple membership tiers to lower entry barriers and boost retention.",
-          "Access to premium grapes like Beckstoffer and Hyde has improved due to oversupply, creating opportunity for quality-focused producers during the industry downturn."
+          "WineBusiness Monthly's annual survey found 50% of Napa Valley vineyards reported declining revenue and 51% saw profit drops in the past two vintages, with 2026 expected as a pivotal year.",
+          "The remaining 49% of profitable growers are succeeding through direct-to-consumer sales, flexible club memberships, and immersive tasting experiences rather than relying on walk-in tasting room traffic.",
+          "Napa's average tasting fee exceeds $75 and hotel costs surpass $400 per night, driving visitation down since 2022; successful wineries address this by lowering tasting prices and offering unique experiences.",
+          "Profitable producers like Chateau Montelena, Domaine Carneros, and Baldacci Family Vineyards prioritize member relationships, exclusive gatherings, and community-building to increase loyalty and referrals.",
+          "Grape oversupply has lowered prices, giving profitable wineries access to premium fruit from sought-after vineyards like Beckstoffer and Hyde that previously had years-long waitlists."
         ]
       },
       {
-        "head": "Grape sunburn damage spreads as heat waves reach cooler wine regions",
+        "head": "Climate change brings grape sunburn to new regions; growers reverse leaf-removal practices",
         "date": "2026-07-13",
         "sources": [
           "SevenFifty Daily"
@@ -282,14 +342,15 @@
           "https://daily.sevenfifty.com/preventing-grape-sunburn-wine/"
         ],
         "takeaways": [
-          "Sunburned grapes show sensory markers: flattened fruit, rubber, asphalt, creosote notes, plus cooked flavors, brown rims, high alcohol, and flabby acid.",
-          "Direct sun pushes berry surface temps 22–27°F above air temperature; Chardonnay shows damage within five minutes above 104–109°F under high light.",
-          "Leaf removal timing is critical: defoliation at flowering builds photoprotective compounds; defoliation at veraison or before heat waves increases sunburn risk significantly.",
-          "Vintage strategy has shifted: Chêne Bleu in Ventoux eliminated summer leaf removal after 2023 heat wave; Tyrrell's in Hunter Valley relies on kaolin since 2014."
+          "Grape sunburn is a stress response to excess light, UV radiation, and berry-surface heat; direct sun can push berries 22–27°F above air temperature, causing cellular damage and flavor degradation.",
+          "Chris Tanghe, MS, director of education for GuildSomm, identifies sunburned grapes by flattened fruit, oxidized bitterness, and notes of rubber, asphalt, and creosote; the damage is distinct from simple overripeness.",
+          "Joanna Gambetta, Ph.D., wine scientist at University of Newcastle, Australia, found that Chardonnay berries show symptoms within five minutes at surface temperatures of 104–109°F under high light.",
+          "Producers in Provence and Napa—including Chêne Bleu, Tyrrell's, and Matthiasson Wines—have abandoned mid-summer defoliation and now use kaolin clay sprays, earlier leaf removal, or canopy management to protect fruit.",
+          "Heat waves arriving earlier and further into traditionally cool regions are forcing vineyards worldwide to prioritize shade over sun exposure, fundamentally reversing decades of leaf-removal orthodoxy."
         ]
       },
       {
-        "head": "France's heatwave cuts grape yields across Champagne, Bordeaux, Burgundy",
+        "head": "France's heatwave cuts harvests across Champagne, Bordeaux, Burgundy",
         "date": "2026-07-10",
         "sources": [
           "Vino Joy News"
@@ -299,15 +360,15 @@
           "https://vino-joy.com/2026/07/10/frances-heatwave-cuts-wine-harvest-as-growers-brace-for-smaller-vintage/"
         ],
         "takeaways": [
-          "Champagne expects 10% production decline; Bordeaux forecasts 20% or steeper drops due to extreme heat and drought.",
-          "Prolonged water stress during critical growth stage threatens grape quality: delayed phenolic maturity, excessive alcohol, reduced acidity.",
-          "French regions harvesting 3–4 weeks earlier than historical norms; Champagne may pick around August 15, potentially earliest on record.",
-          "Widespread oversupply in entry-level Bordeaux means lower yields unlikely to trigger shortages, but premium whites and Sauternes face steeper losses.",
-          "Some Bordeaux estates irrigating illegally to save vines; Pauillac now authorized irrigation as growers adapt to climate stress."
+          "Extreme heat and drought in France are reducing grape yields significantly in major wine regions, with Champagne expecting 10% lower production and Bordeaux potentially facing 20% or greater declines.",
+          "High temperatures accelerate ripening and raise alcohol levels, risking grape imbalance; some estates are irrigating despite AOC restrictions to save vines as ground temperatures approach 50°C.",
+          "French regions are harvesting earlier than ever—Champagne around August 15, potentially the earliest on record—adapting to climate change that has steadily shifted the growing cycle earlier over the past decade.",
+          "Global wine shortages are unlikely due to weak demand and excess inventory, but premium Burgundy whites and Sauternes face tighter supplies as Pinot Noir and entry-level Bordeaux remain oversupplied.",
+          "Quality remains uncertain until grapes are tasted; small berry size and potential incomplete phenolic maturation could compromise wines despite apparent ripeness if drought persists."
         ]
       },
       {
-        "head": "Mourvèdre struggles as southern France temperatures surge past historic records",
+        "head": "Heat-Tolerant Mourvèdre Struggles as Southern France Temperatures Rise",
         "date": "2026-07-09",
         "sources": [
           "SevenFifty Daily"
@@ -317,15 +378,15 @@
           "https://daily.sevenfifty.com/mourvedre-was-made-for-heat-rising-temperatures-are-testing-it/"
         ],
         "takeaways": [
-          "France recorded its highest average temperature on June 23, with harvests advancing, sugar rising, and acidity falling across southern regions.",
-          "Mourvèdre, traditionally dominant in Bandol's coastal reds and rosés, evolved from a late-ripening liability to a heat-tolerant asset as climate warmed.",
-          "Bandol producers employ canopy management, higher pruning, and ground cover to shade vines and retain soil moisture amid intensifying heat and drought.",
-          "Jumilla's vineyard surface halved in 20 years as lower-altitude sites abandoned; irrigation once rejected now deemed essential for vine survival in severe droughts.",
-          "Bandol risks shifting from 75 percent rosé production toward reds as cooler sites warm, while irrigation debates threaten the region's dry-farming identity."
+          "Mourvèdre, traditionally grown in Bandol on France's southern coast, was chosen for its ability to ripen in hot climates, but rising temperatures and drought are now pushing it beyond sustainable limits.",
+          "Even heat-loving Mourvèdre requires moderation: the saying 'head in the sun, feet in the sea' reflects that coastal and high-altitude sites moderate extreme heat that would otherwise damage grapes.",
+          "Producers including Jean-François Ott at Château Romassan and the Gueissards at Domaine Gueissard are adapting canopy management and planting shade trees to prevent sunburn and slow ripening cycles.",
+          "Drought poses a greater threat than heat alone: Jumilla's surface area halved in 20 years as southern parcels were abandoned, and irrigation—once taboo for dry-farmed Bandol—is now considered essential for vine survival.",
+          "Bandol's rosé production, which accounts for 75 percent of output, may decline as cooler sites traditionally reserved for rosé are converted to red wine as growers shift to climate-resilient parcels."
         ]
       },
       {
-        "head": "Organic Sauvignon Blanc challenges growers but rewards biodynamic farming",
+        "head": "Organic Sauvignon Blanc gaining ground despite challenging vineyard conditions",
         "date": "2026-07-08",
         "sources": [
           "Decanter"
@@ -335,10 +396,66 @@
           "https://www.decanter.com/wine/sauvignon-blanc/seven-organic-sauvignon-blanc-for-summer-sipping"
         ],
         "takeaways": [
-          "Sauvignon Blanc is difficult to grow organically because it's highly susceptible to powdery and downy mildew, requiring frequent fungicide treatment.",
-          "Jonathan Pabiot, a biodynamic winemaker in Pouilly-Fumé, says copper-based fungicides damage the vine's flowers, forcing organic growers to find alternative disease management.",
-          "Biodynamic farming helps overcome Sauvignon's climate sensitivities by building living soil, according to winemakers including Pabiot and the Bertonis of Languedoc.",
-          "Nearly 20 years of organic farming at Domaine les Eminades has made their Sauvignon notably resilient to disease in Languedoc's favorable climate."
+          "Sauvignon Blanc is difficult to grow organically because the vine is sensitive to powdery and downy mildew, which require frequent fungicide treatment in humid years.",
+          "Jonathan Pabiot, a biodynamic winemaker in Pouilly-Fumé, says copper-based fungicides—the main organic option—harm the vine's flowers, forcing growers to find alternative solutions.",
+          "Andreas Tscheppe farms Sauvignon Blanc biodynamically at 500m altitude in south Styria, Austria, using natural yeasts and minimal sulphur to produce textured, wildflower-forward wines aged two years in large barrels.",
+          "Patricia and Luc Bertoni of Domaine les Eminades in Languedoc credit nearly 20 years of organic farming and the region's mild climate with building disease resilience in their vines.",
+          "Despite challenges, organic Sauvignon Blanc production is expanding as winemakers worldwide develop sustainable methods to manage disease while preserving the grape's aromatic complexity."
+        ]
+      },
+      {
+        "head": "Ten lesser-known Scotch brands offer diverse styles beyond mainstream names",
+        "date": "2026-07-14",
+        "sources": [
+          "VinePair"
+        ],
+        "summ": "Scotch is a simple beverage at its core. The whisky consists of three ingredients: barley, water, and yeast. The elements beyond this base are significantly more complex.",
+        "urls": [
+          "https://vinepair.com/articles/less-popular-scotch-brands-to-try/"
+        ],
+        "takeaways": [
+          "VinePair curated ten underrated Scotch brands spanning blended and single-malt styles to challenge the misconception that all Scotch is heavily peated.",
+          "Monkey Shoulder, a blended Speyside Scotch, dominates cocktail bars for its balanced honey, vanilla, and citrus profile suited to mixed drinks.",
+          "Glenglassaugh's Sandend and Bruichladdich's The Classic Laddie are unpeated or lightly peated Islay options that introduce novices to the region without overwhelming smoke.",
+          "Dr. Rachel Barrie, master blender at Glendronach, Glenglassaugh, and Benriach, crafts Scotches emphasizing sense of place; her Glendronach 12 Year matures in sherry casks.",
+          "Glengoyne's White Oak, Compass Box's Artist Blend, Mortlach 12 Year, and Auchentoshan American Oak represent overlooked regional styles from Speyside and Lowland distilleries."
+        ]
+      },
+      {
+        "head": "Osaka scientists breed high-ornithine yeast for functional craft beer",
+        "date": "2026-07-10",
+        "sources": [
+          "The Drinks Business",
+          "VinePair"
+        ],
+        "summ": "Researchers in Japan say they have developed a naturally derived yeast strain capable of producing significantly higher levels of ornithine, an amino acid commonly used in health supplements, in a bid to tap into the trend for value-added fermented drinks",
+        "urls": [
+          "https://www.thedrinksbusiness.com/2026/07/osaka-scientists-develop-wild-yeast-that-boosts-ornithine-in-craft-beer/",
+          "https://vinepair.com/articles/trendy-craft-beer-yeast-kveik-thriving-in-norway/"
+        ],
+        "takeaways": [
+          "Researchers led by Hiroshi Takagi at Osaka universities developed ADHorn49, a yeast strain producing nine times more ornithine than standard brewer's yeast, using conventional breeding rather than genetic modification.",
+          "Ornithine is an amino acid marketed in health supplements for reducing fatigue and improving sleep; the new yeast allows brewers to create value-added beers containing the compound without gene editing.",
+          "Laboratory tests showed ADHorn49 fermented brewing wort normally while releasing 7.0mg ornithine per litre; 10 Fields Factory brewed a prototype ale with 19.0mg per litre versus 6.1mg in standard beer.",
+          "The team developed ADHorn49 from naturally occurring yeast via chemical mutagenesis and selective breeding, appealing to consumers seeking non-genetically modified products."
+        ]
+      },
+      {
+        "head": "Paris bans public drinking as record heat strains hospitals",
+        "date": "2026-06-26",
+        "sources": [
+          "VinePair"
+        ],
+        "summ": "Paris again banned public drinking this weekend in response to the record-breaking heatwave engulfing parts of Europe. First responders and hospitals are already fighting a weather-induced influx of patients, Paris police chief Patrice Faure says, and the drinking ban is a move to prevent further hospitalizations, according to...",
+        "urls": [
+          "https://vinepair.com/booze-news/paris-bans-public-drinking-during-heatwave/"
+        ],
+        "takeaways": [
+          "Paris police chief Patrice Faure suspended public alcohol consumption from noon Friday through 7 a.m. Saturday, repeating the ban Saturday into Sunday, citing heat-related hospitalizations.",
+          "Separate restrictions prohibit selling or purchasing takeaway alcohol from 6 p.m. Friday to 7 a.m. Saturday and again Saturday evening to Sunday morning; bars and restaurants operate normally.",
+          "Paris hospitals recorded four times more cardiac arrests than typical on Wednesday and Thursday, according to health minister Stéphanie Rist, prompting the emergency measure.",
+          "Faure also suspended sporting events and postponed Paris Pride from June to September due to heat; he warns alcohol intensifies heat exhaustion but says violators face fines, not detention.",
+          "This marks the second public drinking ban in a week—France also prohibited alcohol at Fête de la Musique music festival last weekend despite cleanup finding discarded bottles."
         ]
       }
     ],
@@ -351,11 +468,11 @@
         "summ": "There are many parallels between speciality coffee and wine, and that’s one of the reasons I was really excited about",
         "author": "Jamie Goode",
         "takeaways": [
-          "Brazil produces 3.5 million tonnes of coffee annually, approximately one-third of global production.",
-          "Fazenda Mió spans 2,000+ hectares with 665 hectares of coffee plants in Minas Gerais, 200 miles north of São Paulo.",
-          "Coffee bushes yield after 3 years, are actively productive for 20 years, and Mió maintains bushes over 70 years old.",
-          "Harvest at Mió runs May to August; owners deliberately cultivate early, medium, and late varieties to spread harvest across the season.",
-          "Coffee processing—dry, washed, or semi-dry methods—is the critical stage for developing flavor compounds in the bean."
+          "Brazil produces 3.5 million tonnes of coffee annually, about one-third of global production, with Minas Gerais as the heart of production.",
+          "Fazenda Mió spans over 2,000 hectares with 665 hectares of coffee plants; the farm employs precision agriculture mapping to match coffee varieties to specific plots.",
+          "Coffee bushes yield after 3 years, are pruned every few years, have a 20-year active lifespan, and Mió maintains bushes over 70 years old.",
+          "Unlike wine (fermented juice), coffee processing extracts seeds from the cherry; fermentation plays a less direct role in coffee flavor than in wine.",
+          "Fazenda Mió deliberately cultivates early, medium, and late coffee varieties to spread the May-to-August harvest; the dry season (June-August) provides ideal conditions for drying."
         ]
       },
       {
@@ -366,8 +483,8 @@
         "summ": "The allure of clickbait and reasons to support the real writers",
         "author": "Tom Wark",
         "takeaways": [
-          "An article titled 'The Absolute Best Winery in Every U.S. State' received more clicks than any other article in The Spill newsletter this entire year.",
-          "The story appeared designed for SEO success with clickbait headline tactics rather than traditional wine journalism."
+          "An article titled \"The Absolute Best Winery in Every U.S. State\" generated more clicks than any other story in a curated wine newsletter throughout an entire year.",
+          "Wine publications increasingly rely on SEO-optimized clickbait headlines and AI-generated content to drive engagement."
         ]
       },
       {
@@ -388,9 +505,9 @@
         "author": "Meg Maker",
         "takeaways": [
           "Troon Vineyard released 2025 Vermentino and 2023 Syrah from Oregon's Applegate Valley.",
-          "Troon Vineyard, located in Grant's Pass, farms using certified biodynamic and regenerative organic principles.",
-          "Troon ferments with ambient cultures, uses minimal sulfite at bottling, and avoids new oak aging.",
-          "Applegate Valley's high latitude brings long summer days with heat, but overnight cooling from Siskiyou Mountain winds."
+          "Troon Vineyard farms biodynamic and regenerative organic, using only ambient cultures for fermentation and minimal sulfites.",
+          "Troon ages wines in neutral barrels, concrete, qvevri, and stainless steel—never new oak.",
+          "Applegate Valley's high latitude, overnight temperature drops from Siskiyou Mountains, and alluvial soils suit Mediterranean grapes."
         ]
       },
       {
@@ -401,28 +518,11 @@
         "summ": "The fading appetite for structured reds, and what it says about the way we drink now",
         "author": "George Nordahl",
         "takeaways": [
-          "French beef consumption fell 13% and pork fell 11% between 2000 and 2021, while poultry consumption increased 31%, reducing occasions for structured, tannic reds.",
-          "Traditional French meals have become shorter, less formal, and less centered on family dining, removing a primary setting where structured red wine was served."
-        ]
-      },
-      {
-        "source": "The Burnt Cream",
-        "url": "https://emmabentleyvino.substack.com/p/veneto-wedding-traditions",
-        "date": "2026-07-11",
-        "head": "Veneto Wedding Traditions",
-        "summ": "Our friends are getting married this afternoon so I got thinking about some of the things that I've discovered which have surprised me",
-        "author": "Emma Bentley",
-        "takeaways": []
-      },
-      {
-        "source": "The Feiring Line",
-        "url": "https://feiring.substack.com/p/portland-maine-come-hungry",
-        "date": "2026-07-10",
-        "head": "Portland, Maine: Come Hungry",
-        "summ": "Hey, just a small catch-up after a few sweltering days at Pinewoods Dance Camp, where there was at least one day it was just too damned hot to leave Long Pond and balance and swing",
-        "author": "Alice Feiring",
-        "takeaways": [
-          "Alice Feiring recently visited Portland, Maine and recommends ordering cabbage dishes at local restaurants."
+          "An OIV 2023 study shows sustained red wine consumption decline relative to white and rosé since 2007, with earlier peaks around 2000 in Germany, France, Italy, and Spain.",
+          "French beef consumption fell 13% and pork 11% between 2000-2021, while poultry rose 31%, creating fewer occasions for structured, tannic red wines.",
+          "Modern French meals are shorter, less formal, and increasingly eaten away from the family table, reducing traditional settings for wine consumption.",
+          "Contemporary diets feature more sushi, Thai curries, Mediterranean mezze, and lighter preparations that pair more naturally with white, rosé, and sparkling wines than structured reds.",
+          "Wine increasingly consumed separately from meals—as social beverages before/after dinner or while watching television—where tannic reds often taste drying and heavy rather than complementary."
         ]
       },
       {
@@ -442,23 +542,53 @@
         "summ": "Calabria might be known as the land of wine, but it depends where you go",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "Calabria has nine scattered DOCs; only Cirò in the east has achieved fame, while western mountain areas remain wine-obscure.",
-          "Magliocco exists in two variants: Magliocco Dolce (eastern, more tannic) and Magliocco Canino (western, possibly Sangiovese-related, retains acidity).",
-          "Casa Comerci, certified organic since 2009 with 15 hectares of vines, grows only Magliocco Canino and Greco Bianco near Nicotera on the Tyrrhenian coast.",
-          "Rosa and Michela Comerci use exclusively stainless steel fermentation and aging, avoiding barrels, yielding wines with strong fruit focus and plummy perfumes.",
-          "Cirò winery Librandi dominates coastal wine lists despite being 200km and three hours' drive north-east; artisanal producers from western Calabria remain hard to find."
+          "Casa Comerci, run by sisters Rosa and Michela Comerci near Nicotera, produces organic wines from Magliocco Canino and Greco Bianco on 15 hectares certified organic since 2009.",
+          "Magliocco Canino, possibly related to Sangiovese, retains high acidity and ripens extremely late—Casa Comerci's 2017 rosé was harvested in early December.",
+          "Casa Comerci ferments and ages wines exclusively in stainless steel tanks, never barrels, producing fruit-focused wines with plummy perfumes.",
+          "Calabria's Cirò region, dominated by large producer Librandi, remains far more commercially prominent than the Tyrrhenian coastal areas despite being 200km away."
         ]
       },
       {
-        "source": "Tim Atkin",
-        "url": "https://timatkin.com/too-difficult/",
+        "source": "Drinking Culture",
+        "url": "https://henryjeffreys.substack.com/p/andrew-jefford-the-master-of-wine",
         "date": "2026-07-08",
-        "head": "Too Difficult?",
-        "summ": "Yeats entitled one of his mid-life poems ‘The Fascination of What’s Difficult’. The poem is mainly a complaint, about the tangled business of running a theatre (the Abbey in Dublin) and the infuriating difficulty of “management of men”, as opposed to the pure delight of writing poetry. But the title points to something which has",
-        "author": "Tim Atkin MW",
+        "head": "Andrew Jefford: the master of wine writing",
+        "summ": "\"He’s like a learned clergyman from the 19th century, composing poetry, cataloguing wines, observing nature and taking an interest in everything around him\"",
+        "author": "Henry Jeffreys",
         "takeaways": [
-          "Nebbiolo-based reds of Piedmont combine pale color with tannic structure and earth/smoke notes that challenge conventional expectations shaped by French red wines.",
-          "Sherry's deliberate oxidation and high acetaldehyde levels make it difficult for many drinkers, similar to how 12-tone music challenges conventional listeners."
+          "Andrew Jefford's book 'The New France' (2004) is now 20 years old and remains his last in-depth wine book due to poor publishing economics.",
+          "A new collection of Jefford's essays, 'Drinking with the Valkyries', has been published by Academie du Vin.",
+          "Jefford argues wine scoring systems are 'foolish' and 'philosophically untenable', and that grape variety focus oversimplifies wine appreciation.",
+          "Jefford studied creative writing at UEA alongside Kazuo Ishiguro and is noted for poetic, intellectually rigorous wine writing comparable to Victoria Moore."
+        ]
+      },
+      {
+        "source": "A View from My Table",
+        "url": "https://aviewfrommytable.substack.com/p/my-450-plastic-bottle-wine-shame",
+        "date": "2026-07-08",
+        "head": "My €4.50 plastic-bottle wine shame",
+        "summ": "Or why local cheap plonk can be perfectly good enough in holiday sunshine. Plus: the best places I've eaten in Greece in the past fortnight",
+        "author": "Andy Neather",
+        "takeaways": [
+          "Author purchased local Lefkadan white and rosé wines in plastic litre bottles for €4.50 and €4.70 on Greek islands.",
+          "Taverna house whites and rosés in Greece cost around €7 per litre carafe; glass-bottled local Lefkadan wine costs €13.",
+          "Local Greek whites are typically light (11-12.5% ABV), fresh, citrussy with herbal notes, likely Roditis or Robola grapes.",
+          "Context—setting, company, food, and mood—matters as much as wine quality; holiday wines often taste worse at home despite unchanged content."
+        ]
+      },
+      {
+        "source": "Italy Matters",
+        "url": "https://robertcamuto.substack.com/p/the-ghosts-of-california-vino",
+        "date": "2026-07-04",
+        "head": "The Ghosts of California Vino",
+        "summ": "Why is America’s greatest wine monument just lying there dormant?",
+        "author": "Robert Camuto",
+        "takeaways": [
+          "Italian Swiss Colony, founded in 1881 by Genovese immigrant Andrea Sbarbaro near Cloverdale, Sonoma County, was California's most important winery before Napa's rise and the Judgment of Paris.",
+          "Sbarbaro built the world's largest wine cistern holding 500,000 gallons and planted Italian varietals including Nebbiolo, Grignolino, Barbera, and Sangiovese in the colony's vineyards.",
+          "Pre-Prohibition, Italian Swiss Colony produced millions of gallons from nine California wineries and exported globally, hiring French Champagne master Charles Jadeau in 1909 to make Golden State Extra Dry Champagne.",
+          "Prohibition shifted the colony from wine production to selling grapes and dried grape bricks for home use; post-Prohibition, Americans demanded high-alcohol sweet wines over Sbarbaro's dry European-style wines, causing the market to shrink.",
+          "E & J Gallo purchased Italian Swiss Colony in 2015; today it produces mostly Gallo brands like Orin Swift, Ravenswood, and Souverain in a fraction of its original space."
         ]
       }
     ]

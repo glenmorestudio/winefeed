@@ -275,7 +275,7 @@ def render_archive_index(days):
           {"".join(rows)}
         </div>
       </main>
-      <footer class="controls">
+      <footer class="controls is-sheet">
         {subscribe_html()}
       </footer>
     </div>'''

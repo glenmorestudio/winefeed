@@ -3,6 +3,10 @@
   --paper:#FBFBFA; --bg:#EDEEF1; --raise:#F1F2F4; --ink:#16181D; --title:#08090C;
   --body:#64686F; --meta:#6B6F78; --faint:#A6A9B1; --line:#E6E7EA; --line-2:#DADCE0;
   --accent:#2743C9; --accent-hover:#1B33A6;
+  /* height of the deck's footer: nav-row (34px button + 2x12 pad) + subscribe (40px
+     field + 16 pad). The archive footer has no nav-row and matches this so the
+     separator lands at the same height on every page. */
+  --controls-h:114px;
   --ease-out:cubic-bezier(0.23,1,0.32,1);
   --serif:'Geist',system-ui,sans-serif; --mono:'Geist Mono',ui-monospace,monospace; --display:'Newsreader',Georgia,serif;
 }
@@ -102,6 +106,10 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
 
 /* ---------- controls ---------- */
 .controls{ flex:0 0 auto; border-top:1px solid var(--line); }
+/* the archive index has no story-nav row, so reserve the deck's footer height and centre
+   the form in it: the separator then lands at the same place on every page */
+.controls.is-sheet{ min-height:var(--controls-h); display:flex; flex-direction:column; justify-content:center; }
+.controls.is-sheet .subscribe{ padding-bottom:0; }
 .nav-row{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px 18px; }
 .nav-btn{ display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; padding:0; color:var(--ink);
   background:var(--raise); border:1px solid var(--line); border-radius:999px; cursor:pointer;

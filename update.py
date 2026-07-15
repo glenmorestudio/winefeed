@@ -25,9 +25,10 @@ NEWS_FRESH_DAYS = 90     # newsletters publish less often, allow a longer window
 CAND_PER_TOPIC = 12
 MAX_NEWSLETTERS = 10
 
-# The item must read as WINE. Our pool covers all drinks, so this gate does real work --
-# and it has to match on WORD boundaries: a plain substring test let a tequila story lead
-# the brief because it name-dropped an investment fund called "WineFi".
+# Does this read as WINE? This RANKS, it does not filter: spirits/beer coverage is welcome
+# in the brief, it just runs after the wine. Matching is on WORD boundaries because a plain
+# substring test scored a tequila story as wine (it name-dropped a fund called "WineFi") and
+# put it top of the brief, which is the one thing this must never do.
 _WINE_STEMS = ["winer", "winemak", "viticultur", "vinicultur", "oenolog", "enolog", "vinif",
                "sommelier", "vigneron"]
 _WINE_WORDS = ["wine", "wines", "vineyard", "vineyards", "grape", "grapes", "vintage",
@@ -54,14 +55,11 @@ def _score_item(rx, item):
     return 2 * len(rx.findall(item.get("title", ""))) + len(rx.findall(item.get("summary", "")))
 
 def is_wine(item):
-    """Reads as a wine story: real wine signal, and not dominated by another drink."""
+    """Reads as a wine story: real wine signal, not dominated by another drink."""
     return _score_item(WINE_RE, item) > 0 and _score_item(WINE_RE, item) >= _score_item(OFF_RE, item)
 
-def is_offtopic(item):
-    """Lighter gate for the newsletter writers we already trust: we don't demand wine
-    signal, we just veto a post plainly about something else (wineanorak's coffee
-    plantation video led the tab)."""
-    return _score_item(OFF_RE, item) > _score_item(WINE_RE, item)
+def cluster_is_wine(members):
+    return any(is_wine(m) for m in members)
 
 # ---- feeds -------------------------------------------------------------------
 # General reputable pool -> keyword-bucketed into MARKET / CULTURE / SCIENCE.
@@ -336,9 +334,9 @@ def main():
         print(f"  {src}: {len(items)} items")
         pool += items
 
-    # keep fresh + dated + wine-relevant + with a real summary, newest first
-    pool = [i for i in pool if i["date"] and i["date"] >= cutoff and is_wine(i) and usable(i)]
-    pool.sort(key=lambda i: i["date"], reverse=True)
+    # keep fresh + dated + with a real summary. Wine leads, other drinks follow.
+    pool = [i for i in pool if i["date"] and i["date"] >= cutoff and usable(i)]
+    pool.sort(key=lambda i: (is_wine(i), i["date"]), reverse=True)
 
     # cluster the day's coverage into distinct STORIES, then bucket each to a topic.
     # winefeed no longer maps one article -> one card; it writes ONE original brief
@@ -347,9 +345,11 @@ def main():
     for members in cluster_items(pool):
         members.sort(key=lambda i: i["date"], reverse=True)   # freshest member leads
         tab_clusters[cluster_topic(members)].append(members)
-    # editorial order within a topic: freshest first, then better-covered stories
+    # Editorial order within a topic: wine first, then the other drinks; within each,
+    # freshest, then better-covered stories. winefeed is a wine brief that also carries
+    # spirits and beer, so a tab opens on wine and moves on to the rest.
     def freshness(m):
-        return (m[0]["date"], len(m))
+        return (cluster_is_wine(m), m[0]["date"], len(m))
     for t in TOPICS:
         tab_clusters[t].sort(key=freshness, reverse=True)
 
@@ -401,10 +401,11 @@ def main():
     news_cutoff = today - datetime.timedelta(days=NEWS_FRESH_DAYS)
     # a mis-dated feed shouldn't be able to pin itself to the top of the tab forever
     horizon = today + datetime.timedelta(days=2)
-    news = [i for i in news if i["date"] and news_cutoff <= i["date"] <= horizon
-            and usable(i) and not is_offtopic(i)]
-    news.sort(key=lambda i: i["date"], reverse=True)
-    # one post per writer, freshest first — newsletters keep their link + byline
+    news = [i for i in news if i["date"] and news_cutoff <= i["date"] <= horizon and usable(i)]
+    # wine first here too, so a writer's wine piece is preferred over their off-topic one
+    # (wineanorak's coffee-plantation video once led the tab) and coffee lands at the back
+    news.sort(key=lambda i: (is_wine(i), i["date"]), reverse=True)
+    # one post per writer — newsletters keep their link + byline
     picked, seen_src = [], set()
     for it in news:
         if it["source"] not in seen_src:

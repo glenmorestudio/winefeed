@@ -84,7 +84,7 @@ Hard rules:
 - Use ONLY facts explicitly stated in the source. Never invent or infer numbers, names, dates, or claims.
 - Aim for 4-5 bullets when the source supports it. If the source is thin, return fewer (even 1). If there are zero real facts, return {"takeaways": []}.
 - NEVER write ABOUT the article, source, paywall, subscribers, metadata, or missing content. Output wine facts or nothing.
-- Each bullet: one sentence, under 20 words, plain and factual. No marketing, no "the article says", no fluff.
+- Each bullet: one sentence, 25 words or fewer, plain and factual. No marketing, no "the article says", no fluff.
 - Neutral, information-dense. Lead with the concrete fact (who/what/number). No two bullets should repeat the same fact.
 - NAME the people, producers, estates and regions involved. Never write that the author "explores", "examines" or "reflects on" a subject: say what they actually found or claimed. No bullet may merely restate the headline.
 
@@ -168,17 +168,22 @@ takeaways: 4-5 KEY TAKEAWAY bullets a reader can skim to know the story.
 
 THE BRIEF MUST STAND ALONE. The reader cannot click through to any article — your bullets are the entire story they will ever see. Someone who knows nothing about this must finish the bullets understanding what happened, who it happened to, and why it matters. Assume no prior context.
 
-LENGTH IS A HARD LIMIT: each bullet MUST be one sentence of 20 words or fewer. This is not in tension with being specific — it is the skill. Cut the throat-clearing, not the facts. A bullet over 20 words is rejected outright, so tighten it rather than let it run long.
+LENGTH IS A HARD LIMIT: each bullet MUST be one sentence of 25 words or fewer. This is not in tension with being specific — it is the skill. Cut the throat-clearing, not the facts. A bullet that runs long is rejected outright and its facts are lost, so tighten it rather than let it run.
+
+BULLET 1 IS THE SETUP. Before any detail, say what this actually is: the occasion, the event, the survey, the announcement, and who is involved. A reader must never meet a name, a list or a number before they know what they are reading about. If the story is "fifteen sommeliers name Bordeaux worth the price", bullet 1 says who the sommeliers are and what they were asked; the picks come after.
+
+IDENTIFY EVERY PERSON AND GROUP ON FIRST MENTION: give the role and the place. "Julie Dalton, master sommelier at Stella's Wine Bar in Houston" — never a bare surname, never "a sommelier", never "experts". If the source doesn't say who someone is, describe them only as far as it does.
 
 Study these, they are the whole job:
   GOOD (14 words, names + number): "Sussex vineyard founded by Peter Hall in 1974 listed at £4 million guide price."
+  GOOD (setup bullet, 15 words): "Fifteen US restaurant sommeliers were asked which three-figure Bordeaux bottles justify their price."
   BAD, too vague (says nothing): "The piece explores the estate's long history and its place in English wine."
-  BAD, too long (34 words, same facts as GOOD but bloated): "Breaky Bottom Vineyard near Lewes in Sussex, which was founded by Peter Hall back in 1974, has now been listed for sale for the first time at a guide price of £4 million."
+  BAD, no context (a pick with no frame — we never learn who chose it, or why the list exists): "Château Palmer offers emotional complexity with violet and graphite notes that justify premium pricing."
+  BAD, too long (34 words, same facts as the first GOOD but bloated): "Breaky Bottom Vineyard near Lewes in Sussex, which was founded by Peter Hall back in 1974, has now been listed for sale for the first time at a guide price of £4 million."
 
 Hard rules:
-- NAME the people, producers, estates, companies and regions, and give the numbers and dates. A brief without names is a failed brief. Fit them inside 20 words.
+- NAME the people, producers, estates, companies and regions, and give the numbers and dates. A brief without names is a failed brief. Fit them inside 25 words.
 - Never write that someone "explores", "examines", "discusses", "highlights" or "reflects on" a subject. That describes an article instead of reporting it. Say what they actually found, claimed, or did. If the source only muses and states no findings, return {"headline": "", "takeaways": []}.
-- The first bullet must establish who/what/where — the spine of the story.
 - Use ONLY facts explicitly stated in the source material. Never invent or infer numbers, names, dates, quotes, or claims.
 - Write facts in your OWN words. Do NOT copy sentences from the sources.
 - If several outlets agree on a fact, state it once. If they conflict, keep the specific/attributed version.
@@ -216,7 +221,11 @@ def _call(key, prompt, max_tokens=650):
     except Exception:
         return None
 
-MAX_BULLET = 180   # ~26 words; bullets must stay scannable on a phone-sized card
+# A backstop against a model dumping a paragraph, NOT a style rule -- length discipline
+# belongs in the prompt (which asks for 25 words), because dropping a bullet here loses
+# the fact entirely. Twice now a tighter cap silently ate the setup bullet and left a
+# brief opening mid-story with no context, which is the exact failure it should prevent.
+MAX_BULLET = 260
 
 def _clean_bullets(raw, head=""):
     outs = []

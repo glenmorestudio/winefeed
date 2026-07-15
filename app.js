@@ -27,7 +27,9 @@
 
   // Past this many stories a row of dots stops being countable at a glance and starts
   // overflowing the footer on a phone, so the progress readout becomes a slim bar and
-  // the "03 / 12" counter carries the number instead.
+  // the "03 / 12" counter carries the number instead. The choice is made ONCE for the
+  // whole edition off the biggest tab, never per tab: dots on three tabs and a bar on
+  // the fourth reads as a bug, and the footer shouldn't change shape as you swipe.
   var DOTS_MAX = 8;
 
   // tabs hold a variable number of stories (the engine publishes what it can ground) ->
@@ -39,18 +41,21 @@
   function withinOf(i){ var t = tabIdx[i], c = 0; for(var k=0;k<=i;k++){ if(tabIdx[k]===t) c++; } return c - 1; }
   function pad2(n){ return String(n).padStart(2,'0'); }
 
+  var maxTabCount = 0;
+  for(var t=0;t<TABS.length;t++){ maxTabCount = Math.max(maxTabCount, countOfTab(t)); }
+  var USE_BAR = maxTabCount > DOTS_MAX;
+
   function render(){
     if(!track) return;   // the archive index is a list, not a deck: no track to move
     track.style.transform = 'translateX(' + (-idx * 100) + '%)';
     var ti = tabOf(idx), within = withinOf(idx), cnt = countOfTab(ti);
     tabs.forEach(function(t,k){ var on = k === ti; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true':'false'); });
     if(dotsWrap){
-      var asBar = cnt > DOTS_MAX;
-      if(dotsWrap.classList.contains('as-bar') !== asBar){
-        dotsWrap.classList.toggle('as-bar', asBar);
-        dotsWrap.innerHTML = asBar ? '<span class="dot-fill"></span>' : '';
+      if(dotsWrap.classList.contains('as-bar') !== USE_BAR){
+        dotsWrap.classList.toggle('as-bar', USE_BAR);
+        dotsWrap.innerHTML = USE_BAR ? '<span class="dot-fill"></span>' : '';
       }
-      if(asBar){
+      if(USE_BAR){
         dotsWrap.firstChild.style.transform = 'scaleX(' + ((within+1) / cnt) + ')';
       } else {
         if(dotsWrap.children.length !== cnt){
