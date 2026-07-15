@@ -79,15 +79,15 @@ def pretty_date(iso):
     return f"{months[m-1]} {d}, {y}"
 
 
-# The engine's bullets end in a period and are written for a card. On a slide the
-# trailing period is noise, and an em-dash parenthetical reads as machine-written.
-# En-dashes inside number ranges (2003-2004) are correct typography and stay.
-EM_PAREN = re.compile(r"\s*—\s*")
-
 def slide_text(b):
-    t = b.strip().rstrip(".")
-    t = EM_PAREN.sub(", ", t)
-    return t
+    """The engine's bullets end in a period and are written for a card; on a slide
+    that trailing period is noise. The dash rule lives in takeaways._dedash and is
+    reused, not restated: it is the one place that knows a dash between digits is a
+    number range worth keeping. Editions published before that fix still carry
+    em-dashes, so this still has work to do."""
+    sys.path.insert(0, HERE)
+    import takeaways
+    return takeaways._dedash(b.strip().rstrip("."))
 
 
 # ---------------------------------------------------------------- chrome
@@ -156,160 +156,6 @@ def credit_of(tab, row):
     return f"via {a}" if tab == "NEWSLETTERS" and a else ""
 
 
-# ---------------------------------------------------------------- template: DECK
-# A literal port of the site card: tinted bg, paper panel, accent-dot bullets.
-# Maximum brand recognition -- someone who has seen winefeed.co knows this instantly.
-
-DECK_CSS = """
-body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:40px;}
-.app{width:100%;height:100%;background:var(--paper);border:1px solid var(--line-2);
-  border-radius:44px;box-shadow:0 34px 90px -30px rgba(10,12,20,.30);
-  display:flex;flex-direction:column;overflow:hidden;}
-.bar{display:flex;align-items:baseline;justify-content:space-between;
-  padding:44px 52px 30px;flex:0 0 auto;}
-.brand{display:flex;align-items:baseline;gap:16px;}
-.wordmark{font-family:var(--display);font-weight:400;font-size:50px;letter-spacing:-0.012em;color:var(--ink);line-height:1;}
-.byline{font-family:var(--mono);font-size:16px;letter-spacing:0.11em;text-transform:uppercase;color:var(--meta);}
-.dateline{font-family:var(--mono);font-size:17px;letter-spacing:0.13em;text-transform:uppercase;color:var(--meta);}
-.tabrow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 34px;flex:0 0 auto;}
-.tab{display:flex;align-items:center;justify-content:center;padding:20px 4px;
-  border:1px solid var(--line);border-bottom:0;border-radius:16px 16px 0 0;background:var(--raise);
-  color:var(--faint);font-family:var(--mono);font-size:14px;letter-spacing:0.03em;text-transform:uppercase;}
-.tab.on{background:var(--paper);color:var(--ink);box-shadow:inset 0 4px 0 0 var(--accent);}
-.card{flex:1 1 auto;border-top:1px solid var(--line);padding:56px 52px;display:flex;flex-direction:column;min-height:0;}
-/* Centre the story block: bullet counts vary, and top-aligning leaves a dead
-   slab above the footer on a short slide. */
-.body{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;min-height:0;}
-.head{font-weight:400;color:var(--title);letter-spacing:-0.02em;line-height:1.18;}
-.cred{margin-top:22px;font-family:var(--mono);font-size:19px;letter-spacing:0.11em;
-  text-transform:uppercase;color:var(--accent);}
-.tk{list-style:none;margin-top:44px;display:flex;flex-direction:column;gap:28px;}
-.tk li{position:relative;padding-left:34px;color:var(--body);font-size:29px;line-height:1.5;}
-.tk li::before{content:"";position:absolute;left:0;top:14px;width:11px;height:11px;
-  border-radius:50%;background:var(--accent);}
-.foot{margin-top:auto;padding-top:40px;display:flex;justify-content:space-between;align-items:center;
-  border-top:1px solid var(--line);}
-.foot span{font-family:var(--mono);font-size:19px;letter-spacing:0.11em;text-transform:uppercase;color:var(--meta);}
-.foot .url{color:var(--accent);}
-.cover{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;padding:0 52px;}
-.cover .big{font-family:var(--display);font-weight:400;font-size:104px;line-height:1.02;
-  letter-spacing:-0.03em;color:var(--title);}
-.cover .sub{margin-top:36px;font-size:34px;line-height:1.45;color:var(--body);max-width:80%;}
-.rule{height:1px;background:var(--line);margin:0 52px;}
-"""
-
-def deck_shell(inner, tab=None):
-    tabs = "".join(
-        f'<div class="tab{" on" if t == tab else ""}">{t}</div>'
-        for t in TABS)
-    return f"""<body><div class="app">
-  <div class="bar"><div class="brand"><div class="wordmark">winefeed</div>
-    <div class="byline">by Primal Wine</div></div></div>
-  <div class="tabrow">{tabs}</div>
-  {inner}
-</div></body>"""
-
-
-def deck_cover(data):
-    body = deck_shell(f"""<div class="card" style="justify-content:center">
-      <div class="cover" style="padding:0">
-        <div class="big">The wine<br>world,<br>summarized.</div>
-        <div class="sub">{len(sum(data['items'].values(), []))} stories from today, in about two minutes.</div>
-      </div>
-      <div class="foot"><span>{pretty_date(data['date'])}</span><span class="url">winefeed.co</span></div>
-    </div>""")
-    return page(DECK_CSS, body)
-
-
-def deck_story(tab, row, idx, total):
-    head = row["head"]
-    size = fit(head, 60, 52, 44)
-    lis = "".join(f"<li>{esc(slide_text(b))}</li>" for b in row["takeaways"][:3])
-    cred = credit_of(tab, row)
-    body = deck_shell(f"""<div class="card">
-      <div class="body">
-        <div class="head" style="font-size:{size}px">{esc(head)}</div>
-        {f'<div class="cred">{esc(cred)}</div>' if cred else ''}
-        <ul class="tk">{lis}</ul>
-      </div>
-      <div class="foot"><span>{tab} &middot; {idx:02d} / {total:02d}</span><span class="url">winefeed.co</span></div>
-    </div>""", tab=tab)
-    return page(DECK_CSS, body)
-
-
-def deck_cta(data):
-    body = deck_shell(f"""<div class="card" style="justify-content:center">
-      <div class="cover" style="padding:0">
-        <div class="big" style="font-size:88px">Read the<br>rest today.</div>
-        <div class="sub">Every story, every morning. Free at winefeed.co</div>
-      </div>
-      <div class="foot"><span>by Primal Wine</span><span class="url">winefeed.co</span></div>
-    </div>""")
-    return page(DECK_CSS, body)
-
-
-# ---------------------------------------------------------------- template: STATEMENT
-# Editorial. One fact per slide at display size. Built to stop a thumb, not to
-# inform -- the depth lives on the site. Accent used as a full field on the cover.
-
-STMT_CSS = """
-body{background:var(--paper);padding:82px;display:flex;flex-direction:column;}
-.kicker{font-family:var(--mono);font-size:20px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);}
-.big{font-family:var(--display);font-weight:400;letter-spacing:-0.032em;line-height:1.03;color:var(--title);}
-.body{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;min-height:0;}
-.sub{margin-top:44px;font-size:31px;line-height:1.5;color:var(--body);max-width:88%;}
-.foot{margin-top:auto;padding-top:44px;border-top:1px solid var(--line);
-  display:flex;justify-content:space-between;align-items:baseline;}
-.wm{font-family:var(--display);font-size:36px;color:var(--ink);}
-.url{font-family:var(--mono);font-size:20px;letter-spacing:0.11em;text-transform:uppercase;color:var(--accent);}
-/* cover: inverted, accent field */
-body.inv{background:var(--accent);}
-body.inv .big,body.inv .wm{color:#fff;}
-body.inv .kicker{color:rgba(255,255,255,.72);}
-body.inv .sub{color:rgba(255,255,255,.86);}
-body.inv .foot{border-top-color:rgba(255,255,255,.28);}
-body.inv .url{color:#fff;}
-.stat{font-family:var(--display);font-size:250px;line-height:.9;letter-spacing:-0.04em;color:var(--accent);}
-"""
-
-def stmt_cover(data):
-    n = len(sum(data["items"].values(), []))
-    return page(STMT_CSS, f"""<body class="inv">
-      <div class="kicker">{pretty_date(data['date'])}</div>
-      <div class="body">
-        <div class="big" style="font-size:112px">The wine world,<br>summarized.</div>
-        <div class="sub">{n} stories from today. Read them in about two minutes.</div>
-      </div>
-      <div class="foot"><div class="wm">winefeed</div><div class="url">winefeed.co</div></div>
-    </body>""")
-
-
-def stmt_story(tab, row, idx, total):
-    head = row["head"]
-    size = fit(head, 82, 68, 56, t1=44, t2=80)
-    lead = slide_text(row["takeaways"][0])
-    cred = credit_of(tab, row)
-    return page(STMT_CSS, f"""<body>
-      <div class="kicker">{tab}{f' &middot; {esc(cred)}' if cred else ''}</div>
-      <div class="body">
-        <div class="big" style="font-size:{size}px">{esc(head)}</div>
-        <div class="sub">{esc(lead)}</div>
-      </div>
-      <div class="foot"><div class="wm">winefeed</div><div class="url">winefeed.co</div></div>
-    </body>""")
-
-
-def stmt_cta(data):
-    return page(STMT_CSS, f"""<body class="inv">
-      <div class="kicker">Every morning</div>
-      <div class="body">
-        <div class="big" style="font-size:104px">Read the rest<br>today.</div>
-        <div class="sub">Free, and it takes two minutes. winefeed.co</div>
-      </div>
-      <div class="foot"><div class="wm">winefeed</div><div class="url">by Primal Wine</div></div>
-    </body>""")
-
-
 # ---------------------------------------------------------------- template: BRIEF
 # The hybrid: an accent pill for topic, a Geist headline at a readable size, and
 # hairline-separated bullets. Less literal than DECK, more informative than STATEMENT.
@@ -373,10 +219,12 @@ def brief_cta(data):
     </body>""")
 
 
+# Three directions were rendered from a real day's feed and reviewed side by side;
+# brief won. Deck (a literal port of the site card) read as busy at thumbnail size and
+# spent room on the panel frame; statement (one fact per slide at display size) was the
+# better single image but carried too little to be worth a swipe.
 TEMPLATES = {
-    "deck":      (deck_cover, deck_story, deck_cta),
-    "statement": (stmt_cover, stmt_story, stmt_cta),
-    "brief":     (brief_cover, brief_story, brief_cta),
+    "brief": (brief_cover, brief_story, brief_cta),
 }
 
 
@@ -384,7 +232,7 @@ def build_carousel(data, name):
     cover, story, cta = TEMPLATES[name]
     d = os.path.join(OUT, name)
     os.makedirs(d, exist_ok=True)
-    rows = leads(data)
+    rows = leads(data, SLIDE_PER_TAB)
     total = len(rows)
     files = []
 
@@ -468,8 +316,7 @@ def x_drafts(data, per_tab=1):
             continue
         drafts = []
         for d in res["drafts"]:
-            t = re.sub(r"\s+", " ", str(d.get("text", ""))).strip()
-            t = EM_PAREN.sub(", ", t).replace("—", ", ").replace("–", "-")
+            t = takeaways._dedash(re.sub(r"\s+", " ", str(d.get("text", ""))).strip())
             if not t:
                 continue
             n = x_cost(t, credit)
@@ -512,11 +359,20 @@ def write_x(drafts):
 
 # ---------------------------------------------------------------- main
 
+# One carousel a day: cover + the lead wine story per tab + CTA.
+SLIDE_PER_TAB = 1
+# X wants volume, especially early on, so the queue goes deeper than the leads: the
+# top N wine stories per tab, three angles each. No angle is committed to yet -- the
+# voice still needs tuning, so the drafts stay a menu rather than an autopilot.
+X_PER_TAB = 2
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--template", choices=list(TEMPLATES) + ["all"], default="all")
     ap.add_argument("--no-x", action="store_true")
     ap.add_argument("--no-slides", action="store_true")
+    ap.add_argument("--x-per-tab", type=int, default=X_PER_TAB,
+                    help=f"stories per tab to draft X posts for (default {X_PER_TAB})")
     a = ap.parse_args()
 
     data = load_feed()
@@ -524,13 +380,14 @@ def main():
     print(f"winefeed repurpose -- {data['date']}")
 
     if not a.no_slides:
-        names = list(TEMPLATES) if a.template == "all" else [a.template]
-        for n in names:
+        for n in TEMPLATES:
             build_carousel(data, n)
 
     if not a.no_x:
-        write_x(x_drafts(data))
-        print(f"  x drafts -> {OUT}/x_drafts.txt")
+        d = x_drafts(data, per_tab=a.x_per_tab)
+        write_x(d)
+        n = sum(len(s["drafts"]) for s in d)
+        print(f"  {n} drafts across {len(d)} stories -> {OUT}/x_drafts.txt")
 
 
 if __name__ == "__main__":
