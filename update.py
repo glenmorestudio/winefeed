@@ -19,19 +19,49 @@ from email.utils import parsedate_to_datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 FRESH_DAYS = 30          # pool: ignore anything older than this
 NEWS_FRESH_DAYS = 90     # newsletters publish less often, allow a longer window
-PER_TOPIC = 5
+# How many stories a topic can publish is decided by QUALITY, not a quota: these are the
+# candidates handed to the synthesis pass, which drops anything it can't ground properly
+# (see takeaways.MIN_BODY/MIN_BULLETS). A rich news day runs long, a thin one runs short.
+CAND_PER_TOPIC = 12
+MAX_NEWSLETTERS = 10
 
-# item must read as WINE (pool feeds like VinePair/PUNCH also cover spirits/beer)
-WINE_TERMS = ["wine", "winer", "vineyard", "vigneron", "winemak", "grape", "vintage",
-              "sommelier", "cellar", "appellation", "terroir", "champagne", "prosecco",
-              "cava", "rose", "rosé", "riesling", "cabernet", "chardonnay", "sauvignon",
-              "pinot", "merlot", "syrah", "shiraz", "grenache", "tempranillo", "nebbiolo",
-              "sangiovese", "bordeaux", "burgundy", "barolo", "rioja", "napa", "sonoma",
-              "chianti", "mosel", "port ", "sherry", "madeira", "chablis", "amarone",
-              "grand cru", "en primeur", "vino", "vin ", "wein"]
+# The item must read as WINE. Our pool covers all drinks, so this gate does real work --
+# and it has to match on WORD boundaries: a plain substring test let a tequila story lead
+# the brief because it name-dropped an investment fund called "WineFi".
+_WINE_STEMS = ["winer", "winemak", "viticultur", "vinicultur", "oenolog", "enolog", "vinif",
+               "sommelier", "vigneron"]
+_WINE_WORDS = ["wine", "wines", "vineyard", "vineyards", "grape", "grapes", "vintage",
+               "vintages", "cellar", "cellars", "appellation", "appellations", "terroir",
+               "champagne", "prosecco", "cava", "rose", "rosé", "riesling", "cabernet",
+               "chardonnay", "sauvignon", "pinot", "merlot", "syrah", "shiraz", "grenache",
+               "tempranillo", "nebbiolo", "sangiovese", "bordeaux", "burgundy", "barolo",
+               "rioja", "napa", "sonoma", "chianti", "mosel", "sherry", "madeira", "chablis",
+               "amarone", "douro", "porto", "vino", "vin", "wein", "varietal", "varietals",
+               "harvest", "en primeur", "grand cru", "premier cru", "somm"]
+WINE_RE = re.compile(r"\b(?:" + "|".join([s + r"\w*" for s in _WINE_STEMS] + _WINE_WORDS) + r")\b", re.I)
+
+# ...and a story dominated by another drink category is not ours, however many times the
+# word "wine" happens to appear in it.
+_OFF_STEMS = ["whisk", "brewer", "brewing", "distiller"]
+_OFF_WORDS = ["tequila", "mezcal", "agave", "bourbon", "scotch", "rum", "gin", "vodka",
+              "beer", "beers", "ale", "lager", "cider", "coffee", "cocktail", "cocktails",
+              "spirits", "seltzer", "kombucha", "absinthe", "liqueur", "liqueurs", "soju"]
+OFF_RE = re.compile(r"\b(?:" + "|".join([s + r"\w*" for s in _OFF_STEMS] + _OFF_WORDS)
+                    + r"|sake\b(?!\s+of))\b", re.I)   # "sake" the drink, not "for the sake of"
+
+def _score_item(rx, item):
+    """The headline carries the subject, so it counts double."""
+    return 2 * len(rx.findall(item.get("title", ""))) + len(rx.findall(item.get("summary", "")))
+
 def is_wine(item):
-    t = (item["title"] + " " + item["summary"]).lower()
-    return any(w in t for w in WINE_TERMS)
+    """Reads as a wine story: real wine signal, and not dominated by another drink."""
+    return _score_item(WINE_RE, item) > 0 and _score_item(WINE_RE, item) >= _score_item(OFF_RE, item)
+
+def is_offtopic(item):
+    """Lighter gate for the newsletter writers we already trust: we don't demand wine
+    signal, we just veto a post plainly about something else (wineanorak's coffee
+    plantation video led the tab)."""
+    return _score_item(OFF_RE, item) > _score_item(WINE_RE, item)
 
 # ---- feeds -------------------------------------------------------------------
 # General reputable pool -> keyword-bucketed into MARKET / CULTURE / SCIENCE.
@@ -52,6 +82,14 @@ POOL = [
     ("Dr Vino",               "https://www.drvino.com/feed/"),
 ]
 # Independent wine writers / Substacks -> NEWSLETTERS tab (source, url, author).
+# One post per writer per day, freshest first, capped at MAX_NEWSLETTERS -- so a deep bench
+# is a feature: it rotates voices and regions and covers for whoever is quiet that week.
+# Every feed here was health-tested against this engine's real requirements (valid XML,
+# dated items, a genuine summary that isn't just the title echoed, fresh within 90 days).
+# Do NOT re-add without a working feed: The Buyer, Wine Spectator, Club Oenologique,
+# Meininger's, Harpers, Wine Business, Wine-Searcher, Just Drinks, Terroirist, Wine For
+# Normal People, Winemag SA (malformed XML), Hawk Wakawaka / Steve Heimoff / The Wine
+# Detective / Naturally Wine (all stale), Andrew Jefford + Levi Dalton (no Substack).
 NEWSLETTERS = [
     ("Everyday Drinking",   "https://www.everydaydrinking.com/feed",        "Jason Wilson"),
     ("The Feiring Line",    "https://feiring.substack.com/feed",            "Alice Feiring"),
@@ -62,6 +100,20 @@ NEWSLETTERS = [
     ("Tim Atkin",           "https://www.timatkin.com/feed/",               "Tim Atkin MW"),
     ("Vinography",          "https://www.vinography.com/index.xml",         "Alder Yarrow"),
     ("SpitBucket",          "https://spitbucket.net/feed/",                 "Amber LeBeau"),
+    ("Drinking Culture",    "https://henryjeffreys.substack.com/feed",      "Henry Jeffreys"),
+    ("Fermentation",        "https://tomwark.substack.com/feed",            "Tom Wark"),
+    ("Drinks Insider",      "https://www.drinksinsider.com/feed",           "Felicity Carter"),
+    ("A View from My Table","https://aviewfrommytable.substack.com/feed",   "Andy Neather"),
+    ("Down The Rabbit Hole","https://georgenordahl.substack.com/feed",      "George Nordahl"),
+    ("Terroir Champagne",   "https://terroirchampagne.substack.com/feed",   "Caroline Henry"),
+    ("Eat This, Drink That","https://fionabeckett.substack.com/feed",       "Fiona Beckett"),
+    ("The Burnt Cream",     "https://emmabentleyvino.substack.com/feed",    "Emma Bentley"),
+    ("Dave McIntyre",       "https://dmwineline.substack.com/feed",         "Dave McIntyre"),
+    ("Maker's Table",       "https://www.makerstable.com/feed",             "Meg Maker"),
+    ("Wineterroirs",        "https://wineterroirs.substack.com/feed",       "Bertrand Celce"),
+    ("Italy Matters",       "https://robertcamuto.substack.com/feed",       "Robert Camuto"),
+    ("Be Wine Curious",     "https://newsletter.hudin.com/feed",            "Miquel Hudin"),
+    ("Grape Wall of China", "https://www.grapewallofchina.com/feed",        "Jim Boyce"),
 ]
 
 # ---- keyword buckets for the pool -------------------------------------------
@@ -301,12 +353,11 @@ def main():
     for t in TOPICS:
         tab_clusters[t].sort(key=freshness, reverse=True)
 
-    # Over-select candidates: takeaways.py synthesizes in order and keeps the first
-    # PER_TOPIC that yield a real brief (dropping fact-less promos + same-tab dupes),
-    # so a couple of spares keep tabs full without backfilling weak items.
-    CAND = PER_TOPIC + 2
-    chosen = {t: tab_clusters[t][:CAND] for t in TOPICS}
-    leftover = [m for t in TOPICS for m in tab_clusters[t][CAND:]]
+    # Hand the synthesis pass a deep candidate list and let it publish everything it can
+    # actually ground. There is no fixed quota: it drops what it can't report properly,
+    # so the day's story count reflects the day's news rather than a magic number.
+    chosen = {t: tab_clusters[t][:CAND_PER_TOPIC] for t in TOPICS}
+    leftover = [m for t in TOPICS for m in tab_clusters[t][CAND_PER_TOPIC:]]
     leftover.sort(key=freshness, reverse=True)
     # a genuinely thin topic (esp. SCIENCE) should still show fresh news, never blank
     used_urls = {m[0]["url"] for t in TOPICS for m in chosen[t]}
@@ -348,7 +399,10 @@ def main():
             it["author"] = author
             news.append(it)
     news_cutoff = today - datetime.timedelta(days=NEWS_FRESH_DAYS)
-    news = [i for i in news if i["date"] and i["date"] >= news_cutoff and usable(i)]
+    # a mis-dated feed shouldn't be able to pin itself to the top of the tab forever
+    horizon = today + datetime.timedelta(days=2)
+    news = [i for i in news if i["date"] and news_cutoff <= i["date"] <= horizon
+            and usable(i) and not is_offtopic(i)]
     news.sort(key=lambda i: i["date"], reverse=True)
     # one post per writer, freshest first — newsletters keep their link + byline
     picked, seen_src = [], set()
@@ -360,7 +414,7 @@ def main():
                 "author": it.get("author", ""), "takeaways": [],
             })
             seen_src.add(it["source"])
-        if len(picked) >= PER_TOPIC:
+        if len(picked) >= MAX_NEWSLETTERS:
             break
     tabs["NEWSLETTERS"] = picked
 

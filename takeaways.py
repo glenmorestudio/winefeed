@@ -86,6 +86,7 @@ Hard rules:
 - NEVER write ABOUT the article, source, paywall, subscribers, metadata, or missing content. Output wine facts or nothing.
 - Each bullet: one sentence, under 20 words, plain and factual. No marketing, no "the article says", no fluff.
 - Neutral, information-dense. Lead with the concrete fact (who/what/number). No two bullets should repeat the same fact.
+- NAME the people, producers, estates and regions involved. Never write that the author "explores", "examines" or "reflects on" a subject: say what they actually found or claimed. No bullet may merely restate the headline.
 
 Return STRICT JSON only: {"takeaways": ["...", "...", "..."]}
 
@@ -121,12 +122,7 @@ def call_haiku(key, title, source, body):
         data = json.loads(m.group(0))
     except Exception:
         return []
-    outs = []
-    for t in data.get("takeaways", [])[:5]:
-        t = re.sub(r"\s+", " ", str(t)).strip(" .–-").strip()
-        if 8 <= len(t) <= 180 and not is_meta(t):
-            outs.append(t + ".")
-    return outs
+    return _clean_bullets(data.get("takeaways", []), title)
 
 # reject bullets that talk about the article/source instead of the wine facts
 _META = ["paywall", "subscriber", "not provided", "cannot be extracted", "editorial standard",
@@ -137,6 +133,30 @@ def is_meta(b):
     low = b.lower()
     return any(p in low for p in _META)
 
+# News cards carry no outbound link, so a brief is the whole story a reader ever gets.
+# A bullet saying someone "explores"/"focuses on" a subject, with no fact attached, is
+# ABOUTNESS: it describes an article instead of reporting it, and leaves the reader with
+# nothing (this is what produced "MacNeil examines prestige and pricing tensions", a card
+# nobody could understand). Only reject when there's no concrete anchor, so real reporting
+# like "Neill rejected the label, arguing it diminished the work" survives.
+_ABOUT = re.compile(r"\b(?:explores?|examines?|discusses?|delves?|considers?|reflects? on|"
+                    r"focuses? on|centers? on|centres? on|looks? at|highlights?|touches? on|"
+                    r"is about|weighs? in|muses?)\b", re.I)
+_ANCHOR = re.compile(r"\d|[$£€%]|\bper cent\b|\bpercent\b", re.I)
+def is_vague(b):
+    return bool(_ABOUT.search(b)) and not _ANCHOR.search(b)
+
+# a bullet whose every distinctive word already appears in the headline adds nothing
+_ECHO_CONTAIN = 0.75
+def is_echo(b, head):
+    if not head:
+        return False
+    hb = set(t for t in _DTOKEN.findall(head.lower()) if t not in _DSTOP)
+    bb = set(t for t in _DTOKEN.findall(b.lower()) if t not in _DSTOP)
+    if not bb or not hb:
+        return False
+    return len(bb & hb) / len(bb) >= _ECHO_CONTAIN
+
 # ---- synthesis: our own headline + bullets from the COMBINED coverage ---------
 SYNTH_PROMPT = """You are the editor of Winefeed, an independent wine-news desk. One or more outlets have covered the same story; their reporting is combined below.
 Write Winefeed's OWN brief on this story.
@@ -146,11 +166,23 @@ Return STRICT JSON only: {"headline": "...", "takeaways": ["...", "..."]}
 headline: an original, specific headline IN YOUR OWN WORDS. Under 12 words, concrete (who/what), no clickbait, no outlet names, no "Winefeed".
 takeaways: 4-5 KEY TAKEAWAY bullets a reader can skim to know the story.
 
+THE BRIEF MUST STAND ALONE. The reader cannot click through to any article — your bullets are the entire story they will ever see. Someone who knows nothing about this must finish the bullets understanding what happened, who it happened to, and why it matters. Assume no prior context.
+
+LENGTH IS A HARD LIMIT: each bullet MUST be one sentence of 20 words or fewer. This is not in tension with being specific — it is the skill. Cut the throat-clearing, not the facts. A bullet over 20 words is rejected outright, so tighten it rather than let it run long.
+
+Study these, they are the whole job:
+  GOOD (14 words, names + number): "Sussex vineyard founded by Peter Hall in 1974 listed at £4 million guide price."
+  BAD, too vague (says nothing): "The piece explores the estate's long history and its place in English wine."
+  BAD, too long (34 words, same facts as GOOD but bloated): "Breaky Bottom Vineyard near Lewes in Sussex, which was founded by Peter Hall back in 1974, has now been listed for sale for the first time at a guide price of £4 million."
+
 Hard rules:
+- NAME the people, producers, estates, companies and regions, and give the numbers and dates. A brief without names is a failed brief. Fit them inside 20 words.
+- Never write that someone "explores", "examines", "discusses", "highlights" or "reflects on" a subject. That describes an article instead of reporting it. Say what they actually found, claimed, or did. If the source only muses and states no findings, return {"headline": "", "takeaways": []}.
+- The first bullet must establish who/what/where — the spine of the story.
 - Use ONLY facts explicitly stated in the source material. Never invent or infer numbers, names, dates, quotes, or claims.
 - Write facts in your OWN words. Do NOT copy sentences from the sources.
 - If several outlets agree on a fact, state it once. If they conflict, keep the specific/attributed version.
-- Each bullet: one sentence, under 20 words, plain and factual. Lead with the concrete fact. No two bullets repeat the same fact.
+- Lead each bullet with the concrete fact. No two bullets repeat the same fact. No bullet may merely restate the headline.
 - NEVER write ABOUT the articles, outlets, paywalls, or missing content. Output wine facts or nothing.
 - If there are no real facts, return {"headline": "", "takeaways": []}.
 
@@ -184,12 +216,22 @@ def _call(key, prompt, max_tokens=650):
     except Exception:
         return None
 
-def _clean_bullets(raw):
+MAX_BULLET = 180   # ~26 words; bullets must stay scannable on a phone-sized card
+
+def _clean_bullets(raw, head=""):
     outs = []
     for t in (raw or [])[:5]:
         t = re.sub(r"\s+", " ", str(t)).strip(" .–-").strip()
-        if 8 <= len(t) <= 180 and not is_meta(t):
-            outs.append(t + ".")
+        if len(t) < 8:
+            continue
+        if len(t) > MAX_BULLET:
+            # Loud on purpose. A silent length drop once cost us most of a day's bullets:
+            # a prompt tweak pushed the model to 30-word bullets and they all vanished here.
+            print(f"    ! bullet over {MAX_BULLET} chars ({len(t)}), dropped: {t[:60]}...", file=sys.stderr)
+            continue
+        if is_meta(t) or is_vague(t) or is_echo(t, head):
+            continue
+        outs.append(t + ".")
     return outs
 
 def synthesize(key, title, body):
@@ -200,20 +242,25 @@ def synthesize(key, title, body):
     head = re.sub(r"\s+", " ", str(data.get("headline", ""))).strip().strip('"').strip()
     if is_meta(head) or len(head) < 8:
         head = ""
-    return head, _clean_bullets(data.get("takeaways", []))
+    return head, _clean_bullets(data.get("takeaways", []), head or title)
 
-def combined_body(urls, seed=""):
-    """Fetch + concatenate every cluster member's body (archive.ph fallback)."""
-    parts, seen = [], set()
+# A brief is only as good as the reporting under it. Below this much real article text
+# the model has nothing to summarize and pads by rephrasing the headline, so we would
+# rather run one story fewer than run one nobody can understand.
+MIN_BODY = 1000
+MIN_BULLETS = 3
+
+def combined_body(urls):
+    """Fetch + concatenate every cluster member's body (archive.ph fallback).
+
+    Deliberately NO excerpt fallback: an RSS blurb is 2 sentences, and asking for 4-5
+    takeaways off it yields content-free aboutness. Callers drop the story instead."""
+    parts = []
     for u in urls:
         b = fetch_body(u)
         if len(b) >= 200:
             parts.append(b)
-            seen.add(u)
-    combo = "\n\n---\n\n".join(parts)
-    if len(combo) < 200 and seed:      # everything paywalled/JS -> lean on the excerpt
-        combo = seed
-    return combo[:12000]
+    return "\n\n---\n\n".join(parts)[:12000]
 
 # post-synthesis same-tab near-duplicate guard. Two outlets can cover one event with
 # different headlines that conservative clustering won't merge; their BULLETS give it
@@ -256,23 +303,26 @@ def enrich(path=None):
                 total += 1
                 print(f"  {row.get('source','')}: {row.get('head','')[:44]} -> {len(row['takeaways'])} bullets")
             continue
-        # news topic: synthesize ONE original brief per cluster of URLs, keeping the
-        # first KEEP_PER good ones (spares cover dropped promos/dupes without backfill)
-        KEEP_PER = 5
+        # news topic: synthesize ONE original brief per cluster of URLs. Every candidate
+        # update.py hands us gets a shot; how many survive is decided by the quality gates
+        # below, not by a fixed quota -- a rich news day publishes more, a thin one fewer.
         kept, kept_bags = [], []
         for row in rows:
-            if len(kept) >= KEEP_PER:
-                break
-            body = combined_body(row.get("urls", []), row.get("summ", ""))
+            n_src = len(row.get("sources", []))
+            body = combined_body(row.get("urls", []))
+            if len(body) < MIN_BODY:
+                # nothing real to summarize (paywalled/JS/press-release stub). Writing a
+                # brief off the RSS blurb is how vague, nameless cards get made.
+                print(f"  [{n_src} src] {row.get('head','')[:44]} -> no article body (dropped)")
+                continue
             head, tk = synthesize(key, row.get("head", ""), body)
             if head:
                 row["head"] = head          # our headline replaces the seeded one
             row["takeaways"] = tk
             total += 1
-            n_src = len(row.get("sources", []))
-            if not tk:
-                # no real facts -> no original brief; drop rather than show a junk excerpt
-                print(f"  [{n_src} src] {row.get('head','')[:44]} -> 0 bullets (dropped)")
+            if len(tk) < MIN_BULLETS:
+                # too few real facts survived -> no brief worth publishing
+                print(f"  [{n_src} src] {row.get('head','')[:44]} -> {len(tk)} bullets (dropped)")
                 continue
             bag = _content_bag(row)
             if _is_near_dup(bag, kept_bags):

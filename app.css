@@ -38,6 +38,17 @@ body{
 .byline{ font-family:var(--mono); font-size:9.5px; font-weight:400; letter-spacing:0.11em; text-transform:uppercase; color:var(--meta); white-space:nowrap; }
 .bar-right{ display:flex; align-items:center; gap:14px; }
 .dateline{ font-family:var(--mono); font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:var(--meta); white-space:nowrap; }
+.dl-short{ display:none; }
+.wordmark-link{ text-decoration:none; }
+.icon-link{ display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; width:28px; height:28px;
+  color:var(--meta); transition:color 160ms ease, transform 260ms var(--ease-out); }
+.icon-link svg{ width:16px; height:16px; display:block; }
+.icon-link:hover{ color:var(--accent); }
+.icon-link:active{ transform:scale(0.9); }
+.arc-tag{ font-family:var(--mono); font-size:9px; letter-spacing:0.11em; text-transform:uppercase; color:var(--accent);
+  border:1px solid var(--accent); border-radius:999px; padding:3px 8px; text-decoration:none; white-space:nowrap;
+  transition:background 160ms ease, color 160ms ease; }
+.arc-tag:hover{ background:var(--accent); color:var(--paper); }
 .theme-toggle{ display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; width:28px; height:28px; padding:0;
   color:var(--meta); background:none; border:0; cursor:pointer; transition:transform 260ms var(--ease-out), color 160ms ease; }
 .theme-toggle svg{ width:18px; height:18px; display:block; }
@@ -52,7 +63,8 @@ body{
   border:1px solid var(--line); border-bottom:0; border-radius:10px 10px 0 0; background:var(--raise); color:var(--meta);
   font-family:var(--mono); font-size:11px; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;
   transition:background 180ms ease, color 180ms ease; }
-.tab:hover:not(.is-active){ background:var(--line); color:var(--ink); }
+.tab:hover:not(.is-active):not(.is-empty){ background:var(--line); color:var(--ink); }
+.tab.is-empty{ color:var(--faint); cursor:default; }
 .tab.is-active{ background:var(--paper); color:var(--ink); z-index:1; box-shadow:inset 0 2px 0 0 var(--accent); }
 .tab:focus-visible{ outline:2px solid var(--accent); outline-offset:-4px; border-radius:6px; }
 .tab.is-active::before,.tab.is-active::after{ content:""; position:absolute; bottom:-1px; width:10px; height:11px; z-index:1; }
@@ -102,7 +114,28 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
 .dots{ display:flex; gap:6px; }
 .dot-i{ width:6px; height:6px; border-radius:50%; background:var(--line-2); transition:background 220ms ease, transform 220ms var(--ease-out); }
 .dot-i.on{ background:var(--accent); transform:scale(1.25); }
+/* long tabs: dots give way to a bar that reads the same at any story count */
+.dots.as-bar{ display:block; width:54px; height:3px; border-radius:999px; background:var(--line-2); overflow:hidden; }
+.dot-fill{ display:block; width:100%; height:100%; border-radius:999px; background:var(--accent);
+  transform-origin:left center; transform:scaleX(0); transition:transform 300ms var(--ease-out); }
 .counter{ font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--meta); font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+/* ---------- archive index ---------- */
+/* a scrolling sheet rather than a deck: the list IS the navigation */
+.sheet{ flex:1 1 auto; min-height:0; overflow-y:auto; border-top:1px solid var(--line); scrollbar-width:none; }
+.sheet::-webkit-scrollbar{ display:none; }
+.sheet-inner{ padding:26px 30px 30px; }
+.sheet-title{ font-family:var(--display); font-weight:400; font-size:27px; line-height:1.1; letter-spacing:-0.012em; color:var(--title); margin:0 0 7px; }
+.sheet-note{ margin:0 0 8px; color:var(--body); font-size:14.5px; line-height:1.55; text-wrap:pretty; }
+.arc-month{ font-family:var(--mono); font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:var(--faint); padding:20px 0 9px; }
+.arc-row{ display:grid; grid-template-columns:auto 1fr auto; align-items:baseline; gap:16px; padding:13px 0;
+  border-top:1px solid var(--line); text-decoration:none; }
+.arc-row:last-child{ border-bottom:1px solid var(--line); }
+.arc-date{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.09em; text-transform:uppercase; color:var(--accent);
+  font-variant-numeric:tabular-nums; white-space:nowrap; }
+.arc-lead{ color:var(--title); font-size:14.5px; line-height:1.45; text-wrap:pretty; transition:color 180ms ease; }
+.arc-n{ font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:var(--faint); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.arc-row:hover .arc-lead{ color:var(--accent); }
 
 /* ---------- subscribe ---------- */
 .subscribe{ display:flex; align-items:center; justify-content:center; gap:9px; padding:0 18px 16px; }
@@ -124,6 +157,11 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
   .bar{ padding:15px 18px 11px; } .wordmark{ font-size:23px; } .byline{ display:none; }
   .tabs-outer{ padding:0 10px; } .tablist{ gap:6px; } .tab{ font-size:9.5px; letter-spacing:0.02em; padding:10px 3px 11px; }
   .slide-inner{ padding:20px 20px; } .head{ font-size:18.5px; }
+  /* the header can't hold a spelled-out dateline plus the archive controls on a
+     narrow phone, so the date abbreviates rather than disappearing */
+  .bar-right{ gap:9px; } .dl-full{ display:none; } .dl-short{ display:inline; }
+  .sheet-inner{ padding:20px 20px 26px; } .sheet-title{ font-size:24px; }
+  .arc-row{ gap:12px; } .arc-n{ display:none; }
   .sub-label{ display:none; }
   .subscribe{ justify-content:center; }
   .sub-field{ flex:0 1 260px; max-width:260px; margin:0 auto; }

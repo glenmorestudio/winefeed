@@ -40,7 +40,8 @@ jobs:
         run: |
           git config user.name  "winefeed-bot"
           git config user.email "actions@github.com"
-          git add index.html feed_data.json winefeed_artifact.html
+          # archive/ carries the day's snapshot + the regenerated back catalogue
+          git add index.html feed_data.json winefeed_artifact.html archive/
           if git diff --staged --quiet; then
             echo "No changes this run."
           else

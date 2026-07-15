@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>winefeed — a daily wine-news digest</title>
+<title>winefeed ,  a daily wine-news digest</title>
 <meta name="description" content="The wine world, summarized. Original, fact-based daily briefs across Market, Culture, Science, and independent Newsletters.">
 <meta name="author" content="Guido Cattabianchi">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -51,6 +51,17 @@ body{
 .byline{ font-family:var(--mono); font-size:9.5px; font-weight:400; letter-spacing:0.11em; text-transform:uppercase; color:var(--meta); white-space:nowrap; }
 .bar-right{ display:flex; align-items:center; gap:14px; }
 .dateline{ font-family:var(--mono); font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:var(--meta); white-space:nowrap; }
+.dl-short{ display:none; }
+.wordmark-link{ text-decoration:none; }
+.icon-link{ display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; width:28px; height:28px;
+  color:var(--meta); transition:color 160ms ease, transform 260ms var(--ease-out); }
+.icon-link svg{ width:16px; height:16px; display:block; }
+.icon-link:hover{ color:var(--accent); }
+.icon-link:active{ transform:scale(0.9); }
+.arc-tag{ font-family:var(--mono); font-size:9px; letter-spacing:0.11em; text-transform:uppercase; color:var(--accent);
+  border:1px solid var(--accent); border-radius:999px; padding:3px 8px; text-decoration:none; white-space:nowrap;
+  transition:background 160ms ease, color 160ms ease; }
+.arc-tag:hover{ background:var(--accent); color:var(--paper); }
 .theme-toggle{ display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; width:28px; height:28px; padding:0;
   color:var(--meta); background:none; border:0; cursor:pointer; transition:transform 260ms var(--ease-out), color 160ms ease; }
 .theme-toggle svg{ width:18px; height:18px; display:block; }
@@ -65,7 +76,8 @@ body{
   border:1px solid var(--line); border-bottom:0; border-radius:10px 10px 0 0; background:var(--raise); color:var(--meta);
   font-family:var(--mono); font-size:11px; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;
   transition:background 180ms ease, color 180ms ease; }
-.tab:hover:not(.is-active){ background:var(--line); color:var(--ink); }
+.tab:hover:not(.is-active):not(.is-empty){ background:var(--line); color:var(--ink); }
+.tab.is-empty{ color:var(--faint); cursor:default; }
 .tab.is-active{ background:var(--paper); color:var(--ink); z-index:1; box-shadow:inset 0 2px 0 0 var(--accent); }
 .tab:focus-visible{ outline:2px solid var(--accent); outline-offset:-4px; border-radius:6px; }
 .tab.is-active::before,.tab.is-active::after{ content:""; position:absolute; bottom:-1px; width:10px; height:11px; z-index:1; }
@@ -115,7 +127,28 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
 .dots{ display:flex; gap:6px; }
 .dot-i{ width:6px; height:6px; border-radius:50%; background:var(--line-2); transition:background 220ms ease, transform 220ms var(--ease-out); }
 .dot-i.on{ background:var(--accent); transform:scale(1.25); }
+/* long tabs: dots give way to a bar that reads the same at any story count */
+.dots.as-bar{ display:block; width:54px; height:3px; border-radius:999px; background:var(--line-2); overflow:hidden; }
+.dot-fill{ display:block; width:100%; height:100%; border-radius:999px; background:var(--accent);
+  transform-origin:left center; transform:scaleX(0); transition:transform 300ms var(--ease-out); }
 .counter{ font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--meta); font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+/* ---------- archive index ---------- */
+/* a scrolling sheet rather than a deck: the list IS the navigation */
+.sheet{ flex:1 1 auto; min-height:0; overflow-y:auto; border-top:1px solid var(--line); scrollbar-width:none; }
+.sheet::-webkit-scrollbar{ display:none; }
+.sheet-inner{ padding:26px 30px 30px; }
+.sheet-title{ font-family:var(--display); font-weight:400; font-size:27px; line-height:1.1; letter-spacing:-0.012em; color:var(--title); margin:0 0 7px; }
+.sheet-note{ margin:0 0 8px; color:var(--body); font-size:14.5px; line-height:1.55; text-wrap:pretty; }
+.arc-month{ font-family:var(--mono); font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:var(--faint); padding:20px 0 9px; }
+.arc-row{ display:grid; grid-template-columns:auto 1fr auto; align-items:baseline; gap:16px; padding:13px 0;
+  border-top:1px solid var(--line); text-decoration:none; }
+.arc-row:last-child{ border-bottom:1px solid var(--line); }
+.arc-date{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.09em; text-transform:uppercase; color:var(--accent);
+  font-variant-numeric:tabular-nums; white-space:nowrap; }
+.arc-lead{ color:var(--title); font-size:14.5px; line-height:1.45; text-wrap:pretty; transition:color 180ms ease; }
+.arc-n{ font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:var(--faint); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.arc-row:hover .arc-lead{ color:var(--accent); }
 
 /* ---------- subscribe ---------- */
 .subscribe{ display:flex; align-items:center; justify-content:center; gap:9px; padding:0 18px 16px; }
@@ -137,6 +170,11 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
   .bar{ padding:15px 18px 11px; } .wordmark{ font-size:23px; } .byline{ display:none; }
   .tabs-outer{ padding:0 10px; } .tablist{ gap:6px; } .tab{ font-size:9.5px; letter-spacing:0.02em; padding:10px 3px 11px; }
   .slide-inner{ padding:20px 20px; } .head{ font-size:18.5px; }
+  /* the header can't hold a spelled-out dateline plus the archive controls on a
+     narrow phone, so the date abbreviates rather than disappearing */
+  .bar-right{ gap:9px; } .dl-full{ display:none; } .dl-short{ display:inline; }
+  .sheet-inner{ padding:20px 20px 26px; } .sheet-title{ font-size:24px; }
+  .arc-row{ gap:12px; } .arc-n{ display:none; }
   .sub-label{ display:none; }
   .subscribe{ justify-content:center; }
   .sub-field{ flex:0 1 260px; max-width:260px; margin:0 auto; }
@@ -151,14 +189,8 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
 <body>
 <div class="app" data-kpub="Y9Wa3b" data-klist="XFjDXX">
       <header class="bar">
-        <div class="brand">
-          <h1 class="wordmark">wine<span class="dropchar">feed</span></h1>
-          <span class="byline">by Primal Wine</span>
-        </div>
-        <div class="bar-right">
-          <span class="dateline">TUESDAY 14 JULY 2026</span>
-          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2.75 A9.25 9.25 0 0 1 12 21.25 Z" fill="currentColor"/></svg></button>
-        </div>
+        <div class="brand"><h1 class="wordmark">wine<span class="dropchar">feed</span></h1><span class="byline">by Primal Wine</span></div>
+        <div class="bar-right"><span class="dateline"><span class="dl-full">TUESDAY 14 JULY 2026</span><span class="dl-short">14 JUL</span></span><a class="icon-link" href="archive/" aria-label="Read past editions" title="Past editions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2.75 A9.25 9.25 0 0 1 12 21.25 Z" fill="currentColor"/></svg></button></div>
       </header>
 
       <nav class="tabs-outer" aria-label="Topics">
@@ -172,156 +204,236 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
 
       <main class="deck" id="deck">
         <div class="track" id="track">
-            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 1 of 5">
-              <div class="slide-inner">
-                <div class="meta"><span class="idx">01</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">Tequila auction record fuels investment boom speculation</h3>
-                <ul class="takeaways"><li>Clase Azul bottle sold for US$35,000 at Sotheby&#x27;s, setting new tequila auction record and first spirits top lot.</li><li>Global tequila market projected to grow from US$12.6bn to US$21.6bn by 2033, driven by younger premium consumers.</li><li>WineFi launched premium tequila investment fund with 50 barrels, citing historic returns of 15-35% on comparable aged assets.</li><li>Extra Añejo tequila requires minimum three years maturation; investment funds recommend ten-year holding periods due to supply constraints.</li><li>Sotheby&#x27;s spirits head noted whiskey drinkers increasingly switching to agave spirits, marking potential new collectible category.</li></ul>
-                
-              </div>
-            </article>
-            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 2 of 5">
-              <div class="slide-inner">
-                <div class="meta"><span class="idx">02</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">Breaky Bottom, English wine pioneer estate, sells after 52 years</h3>
-                <ul class="takeaways"><li>Sussex vineyard founded by Peter Hall in 1974 listed for £4 million following his death in October 2025.</li><li>Estate produces around 10,000 bottles annually across approximately six acres, specializing in sparkling wines from Seyval Blanc and classic varieties.</li><li>Hall&#x27;s wines served at King Charles III&#x27;s coronation, Queen Elizabeth II&#x27;s Platinum Jubilee, and 2012 London Olympics.</li><li>English wine sector has grown from seven vineyards in 1974 to over 1,300 today; 2025 production rose 39% year-on-year.</li><li>Sale includes 15-acre property with farmhouse, winery barn, and full vineyard operations; Knight Frank expects international buyer interest.</li></ul>
-                
-              </div>
-            </article>
-            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 3 of 5">
-              <div class="slide-inner">
-                <div class="meta"><span class="idx">03</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">MacNeil examines prestige and pricing tensions in Bordeaux and Napa Valley</h3>
-                <ul class="takeaways"><li>Bordeaux and Napa Valley face a paradox: celebrated for quality yet criticized by industry insiders for high prices and exclusivity.</li><li>Wine Bible author Karen MacNeil explores the disconnect between consumer reverence and insider skepticism toward these regions.</li><li>Elite positioning of both regions creates tension within wine industry attitudes toward their market dominance.</li></ul>
-                
-              </div>
-            </article>
-            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 4 of 5">
-              <div class="slide-inner">
-                <div class="meta"><span class="idx">04</span><time class="date">10 JUL 2026</time></div>
-                <h3 class="head">Japanese winery awards boost visibility, but exports remain limited to larger producers</h3>
-                <ul class="takeaways"><li>International awards like DWWA and IWSC have recognized Japanese wines since 2010, with Suntory&#x27;s Koshu winning DWWA Best in Show in 2024.</li><li>About 70 percent of Japan&#x27;s 400-plus wineries are family-owned operations too focused on domestic production to pursue exports.</li><li>Larger producers like Château Mercian and Katsunuma Jyozo credit awards with providing commercial credibility and enabling export deals.</li><li>Restaurant placement and high-profile venues drive sales more effectively than awards alone, according to importers and producers.</li><li>High production costs from Japan&#x27;s terrain and weather, plus premium pricing, limit export appeal despite growing international recognition.</li></ul>
-                
-              </div>
-            </article>
-            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 5 of 5">
-              <div class="slide-inner">
-                <div class="meta"><span class="idx">05</span><time class="date">9 JUL 2026</time></div>
-                <h3 class="head">Bordeaux back vintages lead H1 fine wine gains amid disciplined buying</h3>
-                <ul class="takeaways"><li>Nine of top ten performing wines in H1 were Bordeaux back vintages, led by Château Climens 2012 up 66.1%.</li><li>Burgundy, Tuscany, Rhône, Napa Valley and Chile featured prominently in top 20, signaling broad secondary market recovery.</li><li>Investors shifted toward established brands offering value relative to quality, avoiding momentum-chasing in en primeur campaign.</li><li>2025 vintage presented strong entry point, but campaign exposed Bordeaux&#x27;s need to realign new-release pricing with buyer expectations.</li><li>Relative value and disciplined selection now define fine wine market as stable prices persist amid broader macro uncertainty.</li></ul>
-                
-              </div>
-            </article>
-            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 1 of 5">
+            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 1 of 7">
               <div class="slide-inner">
                 <div class="meta"><span class="idx">01</span><time class="date">14 JUL 2026</time></div>
-                <h3 class="head">English wine production surges 55% in 2025, reaching 16.5 million bottles</h3>
-                <ul class="takeaways"><li>UK wine production hit 124,377 hectolitres in 2025, up 55% from 2024, with white wine surging 131%.</li><li>Quality metrics improved: growing degree days reached 1,051, potential alcohol rose to 10.48%, and acid levels declined slightly.</li><li>Still wine now accounts for growing share of production; Essex&#x27;s Crouch Valley emerging as heartland for English Pinot Noir and Chardonnay.</li><li>Industry expanded to 1,158 registered vineyards and 4,357 hectares in production, employing over 10,000 people and valued at £14 billion.</li><li>Fungus-resistant grape varieties like Solaris gaining traction for sustainability; export volumes grew 35% in 2024 to reach 9% of sales.</li></ul>
+                <h3 class="head">15 Sommeliers Name Expensive Bordeaux Worth the Premium Price</h3>
+                <ul class="takeaways"><li>Château Palmer, a third-growth classified as a &#x27;Super Second,&#x27; offers emotional complexity with violet and graphite notes that justify premium pricing.</li><li>Château Lafleur, a tiny family-run Pomerol estate, commands high prices but rewards buyers with power and elegance rooted in meticulous vineyard farming.</li><li>La Mission Haut-Brion delivers first-growth quality from Graves terroir at lower cost than its famous neighbor Haut-Brion across the road.</li><li>Château Pontet-Canet, a fifth growth using biodynamic farming, undercuts quality peers on price while maintaining purity of fruit and balanced structure.</li><li>Super Second estates like Ducru-Beaucaillou and Cos d&#x27;Estournel offer savory complexity and aging potential comparable to first growths at more accessible prices.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 2 of 5">
+            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 2 of 7">
               <div class="slide-inner">
                 <div class="meta"><span class="idx">02</span><time class="date">14 JUL 2026</time></div>
-                <h3 class="head">Asia&#x27;s drinks industry convenes for education, trade events in June</h3>
-                <ul class="takeaways"><li>The Bitter Truth founder hosted a masterclass in Hong Kong for bartenders as part of the brand&#x27;s 20th anniversary Asia Tour.</li><li>Wines of Hungary held its inaugural Bor Camp in Seoul on June 23-24, bringing sommeliers and buyers together to explore Hungarian wine regions and varietals.</li><li>Tokyo&#x27;s Sake Fair returned June 19-20 with 5,600 visitors and around 1,200 sakes from 45 prefectures, plus 400 award-winning selections in a public tasting.</li><li>Lemsecco launched in China with lemon and blood orange spritz varieties stocked in over 400 Freshippo stores and 10 premium supermarket chains.</li><li>Summer activations across Asia included in-store tastings, branded promotions, and partnership events designed to engage young urban consumers.</li></ul>
+                <h3 class="head">Sicilia DOC unites fractious producers under single regional brand</h3>
+                <ul class="takeaways"><li>Sicilia DOC, established in 2011 after years of negotiation, simplifies consumer choice by offering a broad regional identity rather than competing sub-appellations like Etna DOC.</li><li>The designation struggled for adoption initially because producers preferred their own sub-regional brands, but now functions as an important force in Sicilian wine.</li><li>American tourism to Sicily, amplified by The White Lotus TV series and post-COVID travel, drives demand for specific Sicilian grapes like Grillo, Nero d&#x27;Avola, and Inzolia.</li><li>Sicilia DOC wines are now imported to the U.S., with Heritage Collection distributing Tasca d&#x27;Almerita bottlings at accessible price points.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 3 of 5">
+            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 3 of 7">
               <div class="slide-inner">
                 <div class="meta"><span class="idx">03</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">London masterclass explores diverse rosé styles and producers</h3>
-                <ul class="takeaways"><li>Rosé tasting masterclass scheduled for September 10 at The Chelsea Townhouse in London, starting at 6pm.</li><li>Event hosted by Master of Wine Patrick Schmitt, limited to 28 guests, featuring niche and mainstream rosé brands.</li><li>Masterclass designed for all experience levels, from casual drinkers to knowledgeable wine enthusiasts.</li><li>Part of the What to Drink series by trade publication the drinks business, offering producers direct contact with consumers.</li></ul>
+                <h3 class="head">Breaky Bottom, England&#x27;s pioneer vineyard, sells for first time since 1974</h3>
+                <ul class="takeaways"><li>Peter Hall&#x27;s Breaky Bottom near Lewes, Sussex, founded in 1974, listed at £4 million following Hall&#x27;s death in October 2025.</li><li>The 15-acre estate produces around 10,000 bottles annually, focusing on sparkling wines from Seyval Blanc and Chardonnay-Pinot blends.</li><li>Hall&#x27;s wines were served at King Charles III&#x27;s coronation, Queen Elizabeth II&#x27;s Platinum Jubilee, and London 2012 Olympics.</li><li>Knight Frank expects international interest, citing resilient demand for small-scale, terroir-driven producers despite broader wine market challenges.</li><li>The sale reflects growing investor interest in English wine as 2025 production surged 39% to 16.5 million bottles.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 4 of 5">
+            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 4 of 7">
               <div class="slide-inner">
                 <div class="meta"><span class="idx">04</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">Pol Roger releases 2019 Champagne from challenging but exceptional vintage</h3>
-                <ul class="takeaways"><li>2019 vintage experienced April frost, mildew, and August hailstorms, reducing regional yields by nearly 20%.</li><li>Ideal harvest conditions produced wines with rare harmony, freshness, and aromatic richness, according to Pol Roger.</li><li>2019 achieved average alcohol of 10.7%, higher than celebrated 2018 vintage at 10.2%.</li><li>Blend contains 63.5% Pinot Noir and 36.5% Chardonnay from premier and grand cru vineyards; aged six years.</li><li>Retails for £365 per bottle, 10% cheaper than 2018 release; expected to develop complexity over 3-5 years.</li></ul>
+                <h3 class="head">Babich Wines marks 110 years as New Zealand&#x27;s rare family-owned producer</h3>
+                <ul class="takeaways"><li>Josip Babich, a Croatian immigrant, founded the winery in 1916 with hand-filled oak barrels; it now exports to 60+ countries.</li><li>WWII American servicemen provided crucial cash flow in the 1940s, ending decades of financial struggle and enabling growth.</li><li>Second-generation brothers Peter and Joe modernised operations and built winemaking excellence; third-generation David expanded internationally starting in 2001.</li><li>Babich owns 14 vineyards across Marlborough and Hawke&#x27;s Bay, producing 750,000 cases annually while remaining wholly family-owned.</li><li>Fourth generation now active: David&#x27;s son Peter participated in his first vintage in 2025, continuing 110-year family winemaking tradition.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 5 of 5">
+            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 5 of 7">
               <div class="slide-inner">
                 <div class="meta"><span class="idx">05</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">Sam Neill, Two Paddocks founder, dies at 78</h3>
-                <ul class="takeaways"><li>Actor planted first vineyard in 1993, developing Two Paddocks into Central Otago&#x27;s benchmark Pinot Noir producer over 30+ years.</li><li>Estate expanded across four vineyard sites in Gibbston, Alexandra and Bannockburn, becoming sole Central Otago producer in all three valleys.</li><li>Winery achieved organic certification from 2017 vintage, prioritizing estate-grown Pinot Noir and site-specific bottlings over celebrity profile.</li><li>Neill rejected &#x27;celebrity winemaker&#x27; label, arguing it diminished the work behind the wines and prioritizing quality over fashionable styles.</li><li>He championed Burgundian vineyard principles and advocated for New Zealand Pinot Noir recognition alongside Burgundy on global stage.</li></ul>
+                <h3 class="head">Franzia shifts to Australian wine in China to escape 80% U.S. tariffs</h3>
+                <ul class="takeaways"><li>Franzia, owned by The Wine Group, now ships Australian bulk wine to China for local bottling instead of importing finished U.S. boxes due to nearly 80% total tax burden.</li><li>The brand entered China years ago with aggressive pricing, three-litre boxes under RMB100, but tariffs made that model unsustainable for affordable American wine.</li><li>Chinese products now list origin as China with Australian base wine noted separately, a shift that risks prestige but preserves Franzia&#x27;s price advantage in e-commerce.</li><li>Local bottling enables faster customisation for Chinese promotions and seasonal packaging, benefits beyond tariff avoidance that the distributor says improve competitiveness.</li><li>Resumption of U.S. imports depends on tariff reduction; current policy makes American-packaged Franzia uncompetitive on Chinese shelves.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 1 of 4">
+            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 6 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">01</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">Castello di Amorosa partners with Water Audit California to study Nash Creek</h3>
-                <ul class="takeaways"><li>Castello di Amorosa and Water Audit California announced a collaboration on July 13, 2026.</li><li>The partnership focuses on studying Nash Creek, a tributary of the upper Napa River.</li><li>The initiative is based in Napa, California.</li></ul>
+                <div class="meta"><span class="idx">06</span><time class="date">10 JUL 2026</time></div>
+                <h3 class="head">Japanese award-winning wines struggle to convert accolades into export sales</h3>
+                <ul class="takeaways"><li>Takahiko, a Hokkaido family winery, increased exports from 12 to 180 bottles annually after its 2017 pinot noir appeared on Noma&#x27;s wine list in 2020, not awards.</li><li>Around 70 percent of Japan&#x27;s 400+ wineries are family-owned operations too focused on domestic sales to pursue costly export processes and award submissions.</li><li>Kenneth Lee, a Hong Kong importer, says awards drive awareness but tastings and restaurant placements matter more for sales; he questions whether awards truly convert to revenue.</li><li>Japan&#x27;s mountainous terrain requires handpicked harvests and costly special trellising, making wines expensive overseas where price remains the largest barrier to uptake.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 2 of 4">
+            <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 7 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">07</span><time class="date">8 JUL 2026</time></div>
+                <h3 class="head">China&#x27;s top supermarkets expand wine push amid sector slowdown</h3>
+                <ul class="takeaways"><li>Walmart China led 2025 supermarket rankings with RMB 195.86 billion revenue; Freshippo rose to second place, both prioritizing wine via direct sourcing.</li><li>Costco China ranked 15th despite only seven stores, generating RMB 10 billion in sales, signaling wine&#x27;s premium appeal in Chinese retail.</li><li>ALDI China jumped 26 places to No. 35 with 88 stores and doubled annual revenue to RMB 4 billion, partly via RMB 99 six-bottle wine bundles.</li><li>Among China&#x27;s top 100 supermarkets, 52 reported declining revenue as traditional hypermarkets lose ground to value-focused direct sourcing and omnichannel rivals.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 1 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">01</span><time class="date">15 JUL 2026</time></div>
+                <h3 class="head">Michelin debuts Burgundy winery ratings; Arnoux-Lachaux demands removal</h3>
+                <ul class="takeaways"><li>Michelin launched its first winery classification in Burgundy, awarding one to three &#x27;Michelin Grapes&#x27; to 94 estates based on agronomy, technique, identity, balance and consistency.</li><li>Domaine Arnoux-Lachaux publicly rejected its one-grape rating, stating it halted wine submissions to critics in 2020 and requested removal from the guide.</li><li>Michelin evaluates entire estates rather than individual wines, emphasizing long-term consistency and vineyard management over vintage-by-vintage scoring.</li><li>The entry challenges established wine media including Wine Advocate, which Michelin acquired outright in 2019 after initially buying a 40% stake in 2017.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 2 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">02</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head">Champagne Barons de Rothschild releases two grand cru single-vineyard cuvées</h3>
+                <ul class="takeaways"><li>Les Maladries and Le Bateau, both 2021 blanc de blancs from Avize and Cramant respectively, mark the maison&#x27;s second foray into single-site Champagnes.</li><li>Les Maladries uses 80-year-old vines from a 0.3-hectare plot fermented half in concrete eggs, half in barrels, with 3g/l dosage.</li><li>Le Bateau, from 50-year-old vines on pure chalk soil, ferments entirely in wood with just 2g/l dosage, yielding a very dry style.</li><li>Cellar master Guillaume Lété confirmed the series will release annually from grand cru Chardonnay vineyards owned by the maison, with 2022 vintage expected richer.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 3 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">03</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head">Fladgate Partnership expands beyond Port into Portuguese table wines</h3>
+                <ul class="takeaways"><li>The Fladgate Partnership, which owns Taylor&#x27;s, Fonseca and Croft Port houses, acquired unfortified wines from Bairrada, Dão, and Vinhos Verdes starting in 2023.</li><li>The company will rebrand as Fladgate Family Wines to reflect its portfolio shift toward table and sparkling wines alongside fortified offerings.</li><li>Quinta de Bella in Dão grows Pinot Noir alongside native Touriga Nacional, with Pinot Noir showing age-worthiness comparable to Burgundy.</li><li>Quinta Colinas de São Lourenço in Bairrada produces sparkling wines and blends native varieties with international grapes in Bordeaux style.</li><li>Paço de Palmeira and Quinta da Pedra in Vinhos Verdes focus on single varietals, Loureiro and Alvarinho, proving the region&#x27;s fine-wine potential.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 4 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">04</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head">Wine Hub integrates Wine Collector platform for private collector inventory access</h3>
+                <ul class="takeaways"><li>Wine Hub, owned by Wine Owners, partnered with The Wine Collector (Nickolls &amp; Perks) to connect professional traders with private collector wines.</li><li>Wine Hub users can now bid on and purchase bonded, professionally stored wines from private collectors directly through their trading dashboard.</li><li>The integration allows Wine Hub traders to list client consigned wines on Wine Collector Exchange and access real-time inventory transparency.</li><li>Similar to Wine Hub&#x27;s existing Liv-Ex integration, the partnership aims to improve market liquidity and reduce double-selling risks for traders.</li><li>The deal follows Wine Hub&#x27;s recent LiveTrade integration with Bordeaux Index, part of a broader trend toward ecosystem-building among wine industry platforms.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 5 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">05</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head">Mendoza winery restaurants claim two more Michelin stars in 2026 guide</h3>
+                <ul class="takeaways"><li>La VidA at Susana Balbo Winemaker&#x27;s House and Cal at Sitio La Estocada earned Michelin stars on July 13, 2026.</li><li>Winery and winemaker-led restaurants now represent six of Argentina&#x27;s 14 Michelin-starred establishments.</li><li>Mendoza dominates Argentina&#x27;s starred dining scene with nine of 14 restaurants; Cal also received a Green Star for sustainability.</li><li>Chef Enzo González Petra, 28, won the Michelin Young Chef Award; sommelier Camila Torta won the Sommelier Award.</li><li>Michelin Guide Argentina launched in 2024; winery restaurants strengthen Mendoza&#x27;s international wine and gastronomy reputation amid tourism recovery efforts.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 6 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">06</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head">English wine production surges 55% in 2025 as still wines gain ground</h3>
+                <ul class="takeaways"><li>UK wine production reached 124,377 hectolitres in 2025, equivalent to 16.5 million bottles, with white wine production jumping 131% year-on-year.</li><li>Essex&#x27;s Crouch Valley emerged as English still wine heartland, attracting major investments including a joint venture between Danbury Ridge and Burgundy&#x27;s Domaine Duroché.</li><li>The sector now comprises 1,158 registered vineyards employing over 10,000 people, valued at £14 billion, with export volumes growing 35% in 2024.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 7 of 7">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">07</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head">Asia&#x27;s drinks industry convenes across Hong Kong, Seoul, Tokyo in June</h3>
+                <ul class="takeaways"><li>The Bitter Truth founder Stephan Berg hosted a masterclass in Hong Kong for bartenders during the brand&#x27;s 20th-anniversary Asia Tour at Bar Tincture.</li><li>Wines of Hungary held its inaugural Bor Camp in Seoul on June 23-24, bringing sommeliers and buyers together to explore Hungarian wine regions and distribution opportunities.</li><li>Sake Fair returned to Tokyo on June 19-20 with 5,600 visitors, showcasing 1,200 sakes from 45 prefectures and 400 award-winning selections from Japan Sake Awards 2026.</li><li>Lemsecco launched in China with Lemon and Blood Orange Spritz now stocked across 400+ Freshippo stores and premium chains including Ole, Apio and Citysuper.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 1 of 5">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">01</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head">Half of Napa vineyards lost money last year; profitable peers pivot to hospitality</h3>
+                <ul class="takeaways"><li>Napa Valley&#x27;s 2024 survey found 50% of vineyards saw revenue declines and 51% experienced profit losses, threatening long-term viability.</li><li>Tasting room visits dropped since 2022 as costs soared, average tasting now $75+ plus $400+ hotel nights, forcing wineries to lower prices and offer unique experiences.</li><li>Profitable wineries prioritize direct-to-consumer channels and flexible club models with multiple membership tiers to lower entry barriers and boost retention.</li><li>Access to premium grapes like Beckstoffer and Hyde has improved due to oversupply, creating opportunity for quality-focused producers during the industry downturn.</li></ul>
+                
+              </div>
+            </article>
+            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 2 of 5">
               <div class="slide-inner">
                 <div class="meta"><span class="idx">02</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head">Grape sunburn spreads beyond hot climates as heat waves intensify</h3>
-                <ul class="takeaways"><li>Sunburn occurs when berry surface temperatures exceed 104-109°F under high light, causing chlorophyll and aromatic compounds to degrade within minutes.</li><li>Affected wines display cooked fruit, asphalt, and creosote notes with flattened aromatics, high alcohol, low acidity, and premature aging characteristics.</li><li>Mid-to-late summer defoliation now carries risk; producers increasingly delay leaf removal until end of flowering to allow photoprotective compound buildup.</li><li>Kaolin clay reflective films reduce canopy temperature by up to 9°C; white varieties now receive minimal or no summer defoliation in affected regions.</li><li>Vineyard sorting and canopy architecture are becoming critical defenses as traditional sun-exposure practices prove counterproductive in warming climates.</li></ul>
+                <h3 class="head">Grape sunburn damage spreads as heat waves reach cooler wine regions</h3>
+                <ul class="takeaways"><li>Sunburned grapes show sensory markers: flattened fruit, rubber, asphalt, creosote notes, plus cooked flavors, brown rims, high alcohol, and flabby acid.</li><li>Direct sun pushes berry surface temps 22-27°F above air temperature; Chardonnay shows damage within five minutes above 104-109°F under high light.</li><li>Leaf removal timing is critical: defoliation at flowering builds photoprotective compounds; defoliation at veraison or before heat waves increases sunburn risk significantly.</li><li>Vintage strategy has shifted: Chêne Bleu in Ventoux eliminated summer leaf removal after 2023 heat wave; Tyrrell&#x27;s in Hunter Valley relies on kaolin since 2014.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 3 of 4">
+            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 3 of 5">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">03</span><time class="date">9 JUL 2026</time></div>
-                <h3 class="head">French heatwave to cut Champagne yields by 10 percent</h3>
-                <ul class="takeaways"><li>Champagne producers forecast yields around 10% lower than last year due to prolonged heat and drought across France.</li><li>Champagne harvest expected to begin around August 15, potentially the earliest on record, roughly a month ahead of historical norms.</li><li>Burgundy and Bordeaux also experiencing significant heat damage; growers cite water shortage concerns and rapid sugar accumulation in grapes.</li><li>Champagne houses may offset yield losses by drawing on reserve wines; final production impact remains uncertain pending rainfall.</li><li>Extended dry conditions forecast through mid-July across France&#x27;s major wine regions with little relief expected in near term.</li></ul>
+                <div class="meta"><span class="idx">03</span><time class="date">10 JUL 2026</time></div>
+                <h3 class="head">France&#x27;s heatwave cuts grape yields across Champagne, Bordeaux, Burgundy</h3>
+                <ul class="takeaways"><li>Champagne expects 10% production decline; Bordeaux forecasts 20% or steeper drops due to extreme heat and drought.</li><li>Prolonged water stress during critical growth stage threatens grape quality: delayed phenolic maturity, excessive alcohol, reduced acidity.</li><li>French regions harvesting 3-4 weeks earlier than historical norms; Champagne may pick around August 15, potentially earliest on record.</li><li>Widespread oversupply in entry-level Bordeaux means lower yields unlikely to trigger shortages, but premium whites and Sauternes face steeper losses.</li><li>Some Bordeaux estates irrigating illegally to save vines; Pauillac now authorized irrigation as growers adapt to climate stress.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 4 of 4">
+            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 4 of 5">
               <div class="slide-inner">
                 <div class="meta"><span class="idx">04</span><time class="date">9 JUL 2026</time></div>
-                <h3 class="head">Heat-Tolerant Mourvèdre Struggles as Southern France Temperatures Soar</h3>
-                <ul class="takeaways"><li>Mourvèdre, traditionally grown in Bandol, faces balance challenges as rising heat and drought strain even heat-adapted varieties.</li><li>Producers adopt canopy management techniques, including higher gobelet training and shade planting, to protect grapes from excessive sun exposure.</li><li>Drought pressures prompt debate over dry farming&#x27;s viability; some regions now consider irrigation essential for vine survival in severe dry years.</li><li>Jumilla&#x27;s vineyard area has halved in 20 years as hotter southern sites are abandoned; cooler high-altitude parcels remain viable.</li><li>Bandol&#x27;s rosé production (75% of output) may decline as cooler sites shift to red wine to adapt to warming conditions.</li></ul>
+                <h3 class="head">Mourvèdre struggles as southern France temperatures surge past historic records</h3>
+                <ul class="takeaways"><li>France recorded its highest average temperature on June 23, with harvests advancing, sugar rising, and acidity falling across southern regions.</li><li>Mourvèdre, traditionally dominant in Bandol&#x27;s coastal reds and rosés, evolved from a late-ripening liability to a heat-tolerant asset as climate warmed.</li><li>Bandol producers employ canopy management, higher pruning, and ground cover to shade vines and retain soil moisture amid intensifying heat and drought.</li><li>Jumilla&#x27;s vineyard surface halved in 20 years as lower-altitude sites abandoned; irrigation once rejected now deemed essential for vine survival in severe droughts.</li><li>Bandol risks shifting from 75 percent rosé production toward reds as cooler sites warm, while irrigation debates threaten the region&#x27;s dry-farming identity.</li></ul>
                 
               </div>
             </article>
-            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 1 of 5">
+            <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 5 of 5">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">01</span><span class="src">wineanorak</span><span class="dot">&middot;</span><span class="by">Jamie Goode</span><span class="dot">&middot;</span><time class="date">13 JUL 2026</time></div>
-                <h3 class="head"><a href="https://wineanorak.com/2026/07/13/video-visiting-an-agroforestry-coffee-plantation-in-brazil-the-15-hectare-sombra-experiment-thats-a-collaboration-between-fazenda-mio-and-volcano-coffee-works-in-the-uk/" target="_blank" rel="noopener">Video: visiting an agroforestry coffee plantation in Brazil, the 15 hectare Sombra experiment that’s a collaboration between Fazenda Mió and Volcano Coffee Works in the UK</a></h3>
-                <ul class="takeaways"><li>Fazenda Mió in Brazil operates a 15-hectare agroforestry coffee experiment with UK partner Volcano Coffee Works.</li><li>Four coffee varieties are interplanted with three tree types to provide shade and enhance soil life.</li><li>Cover crops between coffee rows boost soil microbiology and protect soil structure.</li></ul>
-                <a class="read" href="https://wineanorak.com/2026/07/13/video-visiting-an-agroforestry-coffee-plantation-in-brazil-the-15-hectare-sombra-experiment-thats-a-collaboration-between-fazenda-mio-and-volcano-coffee-works-in-the-uk/" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+                <div class="meta"><span class="idx">05</span><time class="date">8 JUL 2026</time></div>
+                <h3 class="head">Organic Sauvignon Blanc challenges growers but rewards biodynamic farming</h3>
+                <ul class="takeaways"><li>Sauvignon Blanc is difficult to grow organically because it&#x27;s highly susceptible to powdery and downy mildew, requiring frequent fungicide treatment.</li><li>Jonathan Pabiot, a biodynamic winemaker in Pouilly-Fumé, says copper-based fungicides damage the vine&#x27;s flowers, forcing organic growers to find alternative disease management.</li><li>Biodynamic farming helps overcome Sauvignon&#x27;s climate sensitivities by building living soil, according to winemakers including Pabiot and the Bertonis of Languedoc.</li><li>Nearly 20 years of organic farming at Domaine les Eminades has made their Sauvignon notably resilient to disease in Languedoc&#x27;s favorable climate.</li></ul>
+                
               </div>
             </article>
-            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 2 of 5">
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 1 of 10">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">02</span><span class="src">Vinography</span><span class="dot">&middot;</span><span class="by">Alder Yarrow</span><span class="dot">&middot;</span><time class="date">13 JUL 2026</time></div>
+                <div class="meta"><span class="idx">01</span><span class="src">wineanorak</span><span class="dot">&middot;</span><span class="by">Jamie Goode</span><span class="dot">&middot;</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head"><a href="https://wineanorak.com/2026/07/14/exploring-speciality-coffee-and-its-parallels-with-fine-wine-a-visit-to-fazenda-mio-in-brazil-to-catch-the-harvest/" target="_blank" rel="noopener">Exploring speciality coffee and its parallels with fine wine: a visit to Fazenda Mió in Brazil to catch the harvest</a></h3>
+                <ul class="takeaways"><li>Brazil produces 3.5 million tonnes of coffee annually, approximately one-third of global production.</li><li>Fazenda Mió spans 2,000+ hectares with 665 hectares of coffee plants in Minas Gerais, 200 miles north of São Paulo.</li><li>Coffee bushes yield after 3 years, are actively productive for 20 years, and Mió maintains bushes over 70 years old.</li><li>Harvest at Mió runs May to August; owners deliberately cultivate early, medium, and late varieties to spread harvest across the season.</li><li>Coffee processing, dry, washed, or semi-dry methods, is the critical stage for developing flavor compounds in the bean.</li></ul>
+                <a class="read" href="https://wineanorak.com/2026/07/14/exploring-speciality-coffee-and-its-parallels-with-fine-wine-a-visit-to-fazenda-mio-in-brazil-to-catch-the-harvest/" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+              </div>
+            </article>
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 2 of 10">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">02</span><span class="src">Fermentation</span><span class="dot">&middot;</span><span class="by">Tom Wark</span><span class="dot">&middot;</span><time class="date">14 JUL 2026</time></div>
+                <h3 class="head"><a href="https://tomwark.substack.com/p/the-best-wine-related-click-bait" target="_blank" rel="noopener">The Best Wine-Related Click Bait AI Can Buy</a></h3>
+                <ul class="takeaways"><li>An article titled &#x27;The Absolute Best Winery in Every U.S. State&#x27; received more clicks than any other article in The Spill newsletter this entire year.</li><li>The story appeared designed for SEO success with clickbait headline tactics rather than traditional wine journalism.</li></ul>
+                <a class="read" href="https://tomwark.substack.com/p/the-best-wine-related-click-bait" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+              </div>
+            </article>
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 3 of 10">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">03</span><span class="src">Vinography</span><span class="dot">&middot;</span><span class="by">Alder Yarrow</span><span class="dot">&middot;</span><time class="date">13 JUL 2026</time></div>
                 <h3 class="head"><a href="https://www.vinography.com/2026/07/wine-news-what-im-reading-the-week-of-7-12-26" target="_blank" rel="noopener">Wine News: What I’m Reading the Week of 7/12/26</a></h3>
                 <p class="summary">Hello and welcome to my weekly roundup of the wine stories that I find of interest on the web. I</p>
                 <a class="read" href="https://www.vinography.com/2026/07/wine-news-what-im-reading-the-week-of-7-12-26" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
               </div>
             </article>
-            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 3 of 5">
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 4 of 10">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">03</span><span class="src">The Morning Claret</span><span class="dot">&middot;</span><span class="by">Simon J. Woolf</span><span class="dot">&middot;</span><time class="date">8 JUL 2026</time></div>
+                <div class="meta"><span class="idx">04</span><span class="src">Maker&#x27;s Table</span><span class="dot">&middot;</span><span class="by">Meg Maker</span><span class="dot">&middot;</span><time class="date">13 JUL 2026</time></div>
+                <h3 class="head"><a href="https://www.makerstable.com/p/notable-releases-from-troon-vineyard" target="_blank" rel="noopener">Notable Releases from Troon Vineyard</a></h3>
+                <ul class="takeaways"><li>Troon Vineyard released 2025 Vermentino and 2023 Syrah from Oregon&#x27;s Applegate Valley.</li><li>Troon Vineyard, located in Grant&#x27;s Pass, farms using certified biodynamic and regenerative organic principles.</li><li>Troon ferments with ambient cultures, uses minimal sulfite at bottling, and avoids new oak aging.</li><li>Applegate Valley&#x27;s high latitude brings long summer days with heat, but overnight cooling from Siskiyou Mountain winds.</li></ul>
+                <a class="read" href="https://www.makerstable.com/p/notable-releases-from-troon-vineyard" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+              </div>
+            </article>
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 5 of 10">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">05</span><span class="src">Down The Rabbit Hole</span><span class="dot">&middot;</span><span class="by">George Nordahl</span><span class="dot">&middot;</span><time class="date">11 JUL 2026</time></div>
+                <h3 class="head"><a href="https://georgenordahl.substack.com/p/is-red-wine-losing-its-grip" target="_blank" rel="noopener">Is Red Wine Losing Its Grip?</a></h3>
+                <ul class="takeaways"><li>French beef consumption fell 13% and pork fell 11% between 2000 and 2021, while poultry consumption increased 31%, reducing occasions for structured, tannic reds.</li><li>Traditional French meals have become shorter, less formal, and less centered on family dining, removing a primary setting where structured red wine was served.</li></ul>
+                <a class="read" href="https://georgenordahl.substack.com/p/is-red-wine-losing-its-grip" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+              </div>
+            </article>
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 6 of 10">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">06</span><span class="src">The Burnt Cream</span><span class="dot">&middot;</span><span class="by">Emma Bentley</span><span class="dot">&middot;</span><time class="date">11 JUL 2026</time></div>
+                <h3 class="head"><a href="https://emmabentleyvino.substack.com/p/veneto-wedding-traditions" target="_blank" rel="noopener">Veneto Wedding Traditions</a></h3>
+                <p class="summary">Our friends are getting married this afternoon so I got thinking about some of the things that I&#x27;ve discovered which have surprised me</p>
+                <a class="read" href="https://emmabentleyvino.substack.com/p/veneto-wedding-traditions" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+              </div>
+            </article>
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 7 of 10">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">07</span><span class="src">The Feiring Line</span><span class="dot">&middot;</span><span class="by">Alice Feiring</span><span class="dot">&middot;</span><time class="date">10 JUL 2026</time></div>
+                <h3 class="head"><a href="https://feiring.substack.com/p/portland-maine-come-hungry" target="_blank" rel="noopener">Portland, Maine: Come Hungry</a></h3>
+                <ul class="takeaways"><li>Alice Feiring recently visited Portland, Maine and recommends ordering cabbage dishes at local restaurants.</li></ul>
+                <a class="read" href="https://feiring.substack.com/p/portland-maine-come-hungry" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+              </div>
+            </article>
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 8 of 10">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">08</span><span class="src">Eat This, Drink That</span><span class="dot">&middot;</span><span class="by">Fiona Beckett</span><span class="dot">&middot;</span><time class="date">10 JUL 2026</time></div>
+                <h3 class="head"><a href="https://fionabeckett.substack.com/p/the-friday-5-186" target="_blank" rel="noopener">The Friday 5 #186</a></h3>
+                <p class="summary">4 lush white wines under £10, this month’s cookbook giveaway and where to stop for a bite that isn&#x27;t Greggs</p>
+                <a class="read" href="https://fionabeckett.substack.com/p/the-friday-5-186" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+              </div>
+            </article>
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 9 of 10">
+              <div class="slide-inner">
+                <div class="meta"><span class="idx">09</span><span class="src">The Morning Claret</span><span class="dot">&middot;</span><span class="by">Simon J. Woolf</span><span class="dot">&middot;</span><time class="date">8 JUL 2026</time></div>
                 <h3 class="head"><a href="https://themorningclaret.com/p/mountains-and-magliocco-casa-comerci" target="_blank" rel="noopener">Mountains and Magliocco</a></h3>
-                <ul class="takeaways"><li>Calabria has nine scattered DOCs; only Cirò, in the east, has achieved fame for its red Gaglioppo variety.</li><li>Magliocco comes in two variants: Magliocco Dolce (more tannic, common in eastern Calabria) and Magliocco Canino (retains acidity, extremely late ripening).</li><li>Casa Comerci, a certified organic estate near Nicotera on Calabria&#x27;s Tyrrhenian coast, ferments and ages exclusively in stainless steel tanks, never barrels.</li><li>Magliocco Canino may be related to Sangiovese and is so late-ripening that Casa Comerci&#x27;s 2017 rosé was harvested in early December.</li></ul>
+                <ul class="takeaways"><li>Calabria has nine scattered DOCs; only Cirò in the east has achieved fame, while western mountain areas remain wine-obscure.</li><li>Magliocco exists in two variants: Magliocco Dolce (eastern, more tannic) and Magliocco Canino (western, possibly Sangiovese-related, retains acidity).</li><li>Casa Comerci, certified organic since 2009 with 15 hectares of vines, grows only Magliocco Canino and Greco Bianco near Nicotera on the Tyrrhenian coast.</li><li>Rosa and Michela Comerci use exclusively stainless steel fermentation and aging, avoiding barrels, yielding wines with strong fruit focus and plummy perfumes.</li><li>Cirò winery Librandi dominates coastal wine lists despite being 200km and three hours&#x27; drive north-east; artisanal producers from western Calabria remain hard to find.</li></ul>
                 <a class="read" href="https://themorningclaret.com/p/mountains-and-magliocco-casa-comerci" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
               </div>
             </article>
-            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 4 of 5">
+            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 10 of 10">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">04</span><span class="src">Tim Atkin</span><span class="dot">&middot;</span><span class="by">Tim Atkin MW</span><span class="dot">&middot;</span><time class="date">8 JUL 2026</time></div>
+                <div class="meta"><span class="idx">10</span><span class="src">Tim Atkin</span><span class="dot">&middot;</span><span class="by">Tim Atkin MW</span><span class="dot">&middot;</span><time class="date">8 JUL 2026</time></div>
                 <h3 class="head"><a href="https://timatkin.com/too-difficult/" target="_blank" rel="noopener">Too Difficult?</a></h3>
-                <ul class="takeaways"><li>Assyrtiko, Greece&#x27;s assertive grape variety, divides drinkers with high acidity but rewards those who persevere.</li><li>Orange wines by Joska Gravner of Friuli initially baffle tasters lacking conventional fruit and floral notes, but reveal gravitas through repeated tasting.</li><li>Nebbiolo-based Piedmont reds challenge expectations with pale color, high tannins, and earthy aromas rather than berry fruit.</li><li>Sherry&#x27;s deliberate oxidation and high acetaldehyde content make it difficult for many, but offer rewarding experiences to persistent explorers.</li></ul>
+                <ul class="takeaways"><li>Nebbiolo-based reds of Piedmont combine pale color with tannic structure and earth/smoke notes that challenge conventional expectations shaped by French red wines.</li><li>Sherry&#x27;s deliberate oxidation and high acetaldehyde levels make it difficult for many drinkers, similar to how 12-tone music challenges conventional listeners.</li></ul>
                 <a class="read" href="https://timatkin.com/too-difficult/" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-              </div>
-            </article>
-            <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 5 of 5">
-              <div class="slide-inner">
-                <div class="meta"><span class="idx">05</span><span class="src">Everyday Drinking</span><span class="dot">&middot;</span><span class="by">Jason Wilson</span><span class="dot">&middot;</span><time class="date">1 JUL 2026</time></div>
-                <h3 class="head"><a href="https://www.everydaydrinking.com/p/the-sysco-ification-of-wine" target="_blank" rel="noopener">The Sysco-ification of Wine</a></h3>
-                <ul class="takeaways"><li>71 percent of U.S. wine is controlled by the top 11 wine suppliers, according to 2024 American Association of Wine Economists data.</li><li>Gallo controlled 33 percent of the wine market in 2023 and has since acquired Rombauer, Hahn Family Wines, Massican, Whiny Baby, and Bev canned wine.</li><li>Independent wine distributors fell from roughly 3,000 in the 1990s to just over 1,000 today.</li><li>Three dominant distributors, Breakthru, RNDC, and Southern Glazer&#x27;s, controlled 53 percent of wine and spirits distribution in 2024.</li><li>Popular U.S. restaurants typically feature identical mass-market wine lists from a handful of corporate wineries, creating an illusion of choice.</li></ul>
-                <a class="read" href="https://www.everydaydrinking.com/p/the-sysco-ification-of-wine" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
               </div>
             </article>
         </div>
@@ -374,8 +486,13 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
   var N = slides.length;
   var idx = 0;
 
-  // tabs can hold a variable number of stories (>=1, up to 5) -> derive everything
-  // from each slide's data-tab instead of assuming a fixed count per tab.
+  // Past this many stories a row of dots stops being countable at a glance and starts
+  // overflowing the footer on a phone, so the progress readout becomes a slim bar and
+  // the "03 / 12" counter carries the number instead.
+  var DOTS_MAX = 8;
+
+  // tabs hold a variable number of stories (the engine publishes what it can ground) ->
+  // derive everything from each slide's data-tab instead of assuming a fixed count.
   var tabIdx = slides.map(function(s){ return parseInt(s.getAttribute('data-tab'), 10) || 0; });
   function tabOf(i){ return tabIdx[i] || 0; }
   function firstOfTab(t){ var k = tabIdx.indexOf(t); return k < 0 ? 0 : k; }
@@ -384,15 +501,25 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
   function pad2(n){ return String(n).padStart(2,'0'); }
 
   function render(){
+    if(!track) return;   // the archive index is a list, not a deck: no track to move
     track.style.transform = 'translateX(' + (-idx * 100) + '%)';
     var ti = tabOf(idx), within = withinOf(idx), cnt = countOfTab(ti);
     tabs.forEach(function(t,k){ var on = k === ti; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true':'false'); });
     if(dotsWrap){
-      if(dotsWrap.children.length !== cnt){
-        dotsWrap.innerHTML = '';
-        for(var q=0;q<cnt;q++){ var s = document.createElement('span'); s.className = 'dot-i'; dotsWrap.appendChild(s); }
+      var asBar = cnt > DOTS_MAX;
+      if(dotsWrap.classList.contains('as-bar') !== asBar){
+        dotsWrap.classList.toggle('as-bar', asBar);
+        dotsWrap.innerHTML = asBar ? '<span class="dot-fill"></span>' : '';
       }
-      for(var d=0;d<dotsWrap.children.length;d++){ dotsWrap.children[d].classList.toggle('on', d === within); }
+      if(asBar){
+        dotsWrap.firstChild.style.transform = 'scaleX(' + ((within+1) / cnt) + ')';
+      } else {
+        if(dotsWrap.children.length !== cnt){
+          dotsWrap.innerHTML = '';
+          for(var q=0;q<cnt;q++){ var s = document.createElement('span'); s.className = 'dot-i'; dotsWrap.appendChild(s); }
+        }
+        for(var d=0;d<dotsWrap.children.length;d++){ dotsWrap.children[d].classList.toggle('on', d === within); }
+      }
     }
     if(counter) counter.textContent = pad2(within+1) + ' / ' + pad2(cnt);
     if(tabname) tabname.textContent = TABS[ti] || '';

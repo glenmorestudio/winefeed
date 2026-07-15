@@ -25,8 +25,13 @@
   var N = slides.length;
   var idx = 0;
 
-  // tabs can hold a variable number of stories (>=1, up to 5) -> derive everything
-  // from each slide's data-tab instead of assuming a fixed count per tab.
+  // Past this many stories a row of dots stops being countable at a glance and starts
+  // overflowing the footer on a phone, so the progress readout becomes a slim bar and
+  // the "03 / 12" counter carries the number instead.
+  var DOTS_MAX = 8;
+
+  // tabs hold a variable number of stories (the engine publishes what it can ground) ->
+  // derive everything from each slide's data-tab instead of assuming a fixed count.
   var tabIdx = slides.map(function(s){ return parseInt(s.getAttribute('data-tab'), 10) || 0; });
   function tabOf(i){ return tabIdx[i] || 0; }
   function firstOfTab(t){ var k = tabIdx.indexOf(t); return k < 0 ? 0 : k; }
@@ -35,15 +40,25 @@
   function pad2(n){ return String(n).padStart(2,'0'); }
 
   function render(){
+    if(!track) return;   // the archive index is a list, not a deck: no track to move
     track.style.transform = 'translateX(' + (-idx * 100) + '%)';
     var ti = tabOf(idx), within = withinOf(idx), cnt = countOfTab(ti);
     tabs.forEach(function(t,k){ var on = k === ti; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true':'false'); });
     if(dotsWrap){
-      if(dotsWrap.children.length !== cnt){
-        dotsWrap.innerHTML = '';
-        for(var q=0;q<cnt;q++){ var s = document.createElement('span'); s.className = 'dot-i'; dotsWrap.appendChild(s); }
+      var asBar = cnt > DOTS_MAX;
+      if(dotsWrap.classList.contains('as-bar') !== asBar){
+        dotsWrap.classList.toggle('as-bar', asBar);
+        dotsWrap.innerHTML = asBar ? '<span class="dot-fill"></span>' : '';
       }
-      for(var d=0;d<dotsWrap.children.length;d++){ dotsWrap.children[d].classList.toggle('on', d === within); }
+      if(asBar){
+        dotsWrap.firstChild.style.transform = 'scaleX(' + ((within+1) / cnt) + ')';
+      } else {
+        if(dotsWrap.children.length !== cnt){
+          dotsWrap.innerHTML = '';
+          for(var q=0;q<cnt;q++){ var s = document.createElement('span'); s.className = 'dot-i'; dotsWrap.appendChild(s); }
+        }
+        for(var d=0;d<dotsWrap.children.length;d++){ dotsWrap.children[d].classList.toggle('on', d === within); }
+      }
     }
     if(counter) counter.textContent = pad2(within+1) + ' / ' + pad2(cnt);
     if(tabname) tabname.textContent = TABS[ti] || '';
