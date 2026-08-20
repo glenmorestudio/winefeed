@@ -4,7 +4,7 @@
 winefeed daily brief -> Klaviyo DRAFT campaign
 ==============================================
 Renders nothing itself; reads the HTML email_brief.py already wrote to
-~/primal_claude/klaviyo/winefeed-daily-brief.html (local-first source of truth),
+~/dev/primal_claude/klaviyo/winefeed-daily-brief.html (local-first source of truth),
 updates the winefeed template, and creates a DRAFT campaign to the "Winefeed Daily
 Brief" list. It NEVER creates a send job, so nothing goes out without a human in
 Klaviyo pressing send (honors "Klaviyo owns email").
@@ -26,7 +26,7 @@ REPLY_TO = "guido@primalwine.com"
 # repo-local send file (written by email_brief.py; present on CI too),
 # falling back to the local source-of-truth mirror if that's all there is.
 HTML_PATH = os.path.join(HERE, "winefeed-email-klaviyo.html")
-HTML_FALLBACK = os.path.expanduser("~/primal_claude/klaviyo/winefeed-daily-brief.html")
+HTML_FALLBACK = os.path.expanduser("~/dev/primal_claude/klaviyo/winefeed-daily-brief.html")
 
 def get_key():
     k = os.environ.get("KLAVIYO_PRIVATE_KEY")

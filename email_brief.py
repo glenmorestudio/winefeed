@@ -188,10 +188,10 @@ FOOTER_PREVIEW = f'''<table cellpadding="0" cellspacing="0" border="0" width="10
 
 KLAVIYO_HTML = page(FOOTER_KLAVIYO, WM_URL)
 # repo-local send file — this is what email_push.py reads (works on CI, where
-# ~/primal_claude is absent). Not committed (see .gitignore).
+# ~/dev/primal_claude is absent). Not committed (see .gitignore).
 open(os.path.join(HERE, "winefeed-email-klaviyo.html"), "w").write(KLAVIYO_HTML)
 # local source-of-truth mirror (email-local-first) when that dir exists
-_kdir = os.path.expanduser("~/primal_claude/klaviyo")
+_kdir = os.path.expanduser("~/dev/primal_claude/klaviyo")
 if os.path.isdir(_kdir):
     open(os.path.join(_kdir, "winefeed-daily-brief.html"), "w").write(KLAVIYO_HTML)
 open(os.path.join(HERE, "winefeed-email-preview.html"), "w").write(page(FOOTER_PREVIEW, WM_DATA))
