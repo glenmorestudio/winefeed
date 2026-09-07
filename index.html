@@ -115,6 +115,12 @@ body{
 .read-arrow svg{ width:14px; height:14px; display:block; }
 .read:hover{ color:var(--accent); }
 .read:hover .read-arrow{ transform:translateX(4px); }
+/* Credit row on a clustered brief: every outlet whose reporting the brief rests on,
+   each one linked. Same mono/uppercase register as .read, wraps on narrow screens. */
+.sources{ display:flex; align-items:center; flex-wrap:wrap; gap:7px 16px; margin-top:4px; }
+.sources-label{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.09em;
+  text-transform:uppercase; color:var(--faint); }
+.sources .read{ margin-top:0; }
 a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
 
 /* ---------- controls ---------- */
@@ -214,114 +220,114 @@ a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-rad
         <div class="track" id="track">
             <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 1 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">01</span><time class="date">2 SEP 2026</time></div>
+                <div class="meta"><span class="idx">01</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">2 SEP 2026</time></div>
                 <h3 class="head">Seven restaurant sommeliers reveal wine markup formulas, 60-76 percent of bill</h3>
                 <ul class="takeaways"><li>Seven beverage directors from US restaurants shared how they calculate wine markups, which range from 60 to 76 percent of the final menu price across their venues.</li><li>Kinga Mackowiak at Apple Blossom in Denver said 60-70 percent of a bottle&#x27;s menu price is markup, leaving the restaurant 38-48 percent profit after accounting for glassware, labor, and credit card fees.</li><li>William Jones at Deep Roots Restaurant Group in Alabama reported 76 percent average markup but said tariffs, labor costs, and economic pressures have forced tighter margins to meet profit targets.</li><li>Nayda Freire at Renzo in Charleston uses tiered markups, charging 2.5-4 times the wholesale price depending on initial cost, with glassware and rising insurance expenses driving pricing decisions.</li><li>Most beverage directors price wine dynamically rather than applying a fixed multiplier, weighing factors like demand, inventory age, exclusivity, and seasonality alongside operational overhead.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/articles/restaurant-wine-bill-percent-markup-explained/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 2 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">02</span><time class="date">2 SEP 2026</time></div>
+                <div class="meta"><span class="idx">02</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">2 SEP 2026</time></div>
                 <h3 class="head">Early harvests shift wine tourism and strain production beyond the cellar</h3>
                 <ul class="takeaways"><li>Grape harvests across France, Germany, California, and Czech Republic arrived six to eight weeks or more ahead of historical norms this summer, with Domaine Lafage in Roussillon picking July 23 for the first time in winemaker Jean-Marc Lafage&#x27;s career.</li><li>Aaron Jackson, winemaker at Aaron Wines in Paso Robles, California, reports July visitation to his tasting room drops sharply as heat rises, and direct-to-consumer shipping windows shrink as safe temperature ranges narrow year on year.</li><li>Šárka Betke, co-founder of the Lacery vineyard in Moravia, Czech Republic, reports wine tourism and shipping were severely limited by summer heat waves exceeding 40 degrees Celsius, hurting cash flow for established regional producers relying on summer sales.</li><li>Winemakers face rising costs from earlier-peak electricity demand, refrigeration strain, water fees, insurance, and packaging delays when heat prevents label adhesion, plus supply-chain pressure as harvest timing compresses crews and bottling facilities.</li><li>Wine tourism to regions like Champagne and Burgundy may grow as fall weather improves under climate change, and earlier harvests could align with peak family travel season, offsetting some revenue losses in other channels.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/articles/early-grape-harvests-climate-change-challenges/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 3 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">03</span><time class="date">27 AUG 2026</time></div>
+                <div class="meta"><span class="idx">03</span><span class="src">SevenFifty Daily</span><span class="dot">&middot;</span><time class="date">27 AUG 2026</time></div>
                 <h3 class="head">Massive wildfire destroys 200 hectares in Sierra de Gredos wine region</h3>
                 <ul class="takeaways"><li>Between July 22 and 26, wildfires burned 77,000 hectares across Ávila and Madrid provinces, destroying approximately 200 hectares of vineyards in Cebreros DO, about 40 percent of its registered vineyard area.</li><li>Bodegas Bernabeleva in San Martín de Valdeiglesias lost its office, facade sections, windows, and winery infrastructure; Bodega El Reventón expects to recover 80 to 90 percent of vines at its San Gregorio parcel.</li><li>Comando G, the pioneering winery that catalyzed Gredos&#x27;s transformation into a fine wine region over less than two decades, lost its one-hectare slate parcel in Cebreros to heavy smoke exposure.</li><li>Local producers including Comando G and Rico Nuevo have submitted proposals to regional authorities requesting firebreak subsidies, forest clearance support, and vineyard restoration funding.</li><li>Viticulturist Juanan Martín argues that rural depopulation has left vegetation unmanaged, creating fire fuel; vineyards and livestock farming are essential to preventing future disasters.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://daily.sevenfifty.com/wildfires-are-testing-sierra-de-gredoss-wine-revival/" target="_blank" rel="noopener">SevenFifty Daily<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 4 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">04</span><time class="date">17 AUG 2026</time></div>
+                <div class="meta"><span class="idx">04</span><span class="src">SevenFifty Daily</span><span class="dot">&middot;</span><time class="date">17 AUG 2026</time></div>
                 <h3 class="head">Federal THC limit threatens US hemp beverage retailers&#x27; fast-growing market</h3>
                 <ul class="takeaways"><li>US hemp-infused beverage retail sales rose 135 percent in the 52 weeks to April 2026, reaching $239 million, with potential market valued at $9.9 to $14.9 billion.</li><li>Art Nergaryan, owner of Art&#x27;s Specialties wine and cheese shops in Massachusetts, saw business jump 25 to 35 percent after stocking THC drinks, then collapse when state regulators banned their sale in wine stores in May 2024.</li><li>Congress included a provision in November 2025 spending legislation limiting hemp-derived THC to 0.4 milligrams per container, effective November 12, 2026, which effectively bans most THC beverages currently on sale.</li><li>State regulations vary wildly: Minnesota, Georgia, and Tennessee permit hemp beverages; California, Washington, and Vermont restrict or ban them outside licensed cannabis systems.</li><li>Federal law and FDA guidance treat hemp beverages as unlawful in interstate commerce, leaving retailers, distributors, and manufacturers navigating conflicting state and federal rules with no clear path forward.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://daily.sevenfifty.com/the-regulatory-chaos-of-cannabis-drinks-retail/" target="_blank" rel="noopener">SevenFifty Daily<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 5 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">05</span><time class="date">13 AUG 2026</time></div>
+                <div class="meta"><span class="idx">05</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">13 AUG 2026</time></div>
                 <h3 class="head">Silver Scope Media bids $400k for bankrupt Rogue Ales&#x27; intellectual property</h3>
                 <ul class="takeaways"><li>Silver Scope Media Ltd, a U.K. digital marketing agency, submitted a $400,000 bid for Rogue Ales &amp; Spirits&#x27; intellectual property, including recipes, yeast strains, trademarks, and the Dead Guy IPA brand.</li><li>Oregon Brewing, Rogue&#x27;s parent company, valued the IP at $2 million when filing for Chapter 7 bankruptcy nine months ago; competing bids must exceed $440,000 by August 21.</li><li>Rogue&#x27;s IP includes website domain, social media accounts, proprietary yeast propagation rights, and all manufacturing specifications; tangible brewery equipment sold separately in liquidation auction five months prior.</li><li>Valley View Winery, an Oregon estate, filed an objection claiming a perpetual license to Rogue wine and wine-based beverages dating to a 1997 settlement agreement.</li><li>Rogue collapsed with $17 million in debts against $5 million in assets; the U.S. Bankruptcy Court will hold a hearing on August 26 to finalize the IP sale.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/booze-news/rogue-ales-intellectual-property-bid/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 6 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">06</span><time class="date">25 AUG 2026</time></div>
+                <div class="meta"><span class="idx">06</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">25 AUG 2026</time></div>
                 <h3 class="head">American single malt ratification fails to boost sales amid whiskey downturn</h3>
                 <ul class="takeaways"><li>The TTB approved a standard of identity for American single malt in December 2024 after a decade-long petition by distillers, but anticipated sales gains have not materialized amid broader whiskey market weakness.</li><li>Westland Distillery in Seattle lost $1 million to theft and laid off staff; Diageo-owned Distill Ventures shut down, pushing Portland&#x27;s Westward Whiskey into bankruptcy; Balcones Distillery in Waco halted production and laid off 17 workers in August 2025.</li><li>The official designation has helped retailers create dedicated shelf space and clarified misconceptions among consumers that American single malt is peated, but the category remains largely unknown outside connoisseur circles.</li><li>Producers including Virginia Distillery Company and Whiskey Del Bac have diversified into lower-priced cask-finished variants, blended whiskeys, and other spirits to offset weak single-malt sales.</li><li>Distillers cite bourbon&#x27;s dominance, retail consolidation, and shelf oversaturation as structural barriers to growth that ratification alone cannot overcome.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/articles/distillers-form-american-single-malt-identity/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="0" role="group" aria-roledescription="slide" aria-label="MARKET 7 of 7">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">07</span><time class="date">14 AUG 2026</time></div>
+                <div class="meta"><span class="idx">07</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">14 AUG 2026</time></div>
                 <h3 class="head">World Cup failed to reverse beer sales decline despite $110 million push</h3>
                 <ul class="takeaways"><li>Anheuser-Busch InBev spent $110 million on a global Michelob Ultra campaign tied to the 2026 FIFA World Cup, expecting significant sales growth but projecting only 0.25 percent volume lift.</li><li>US beer category sales fell 2.1 percent in dollars and 3.4 percent in volume year-over-year in the final week of the tournament, according to Circana scan data through July 19.</li><li>ABI&#x27;s American portfolio declined 0.7 percent in dollars and 2.3 percent in volume for four weeks through July 12, with Q2 depletions down 1.9 percent as the tournament unfolded.</li><li>On-premise draft sales rose 7.1 percent in dollars and 6.46 percent in volume across BeerBoard&#x27;s bar network, but performance collapsed in the final tournament week to down 1 and 3 percent respectively.</li><li>Spirits outperformed beer during the tournament, with Circana data showing spirits up 4.4 percent in dollars and 8.4 percent in volume in the final week, led by ready-to-drink brands like Cutwater up 60 percent.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/articles/hop-take-world-cup-beer-sales-analysis/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 1 of 5">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">01</span><time class="date">3 SEP 2026</time></div>
+                <div class="meta"><span class="idx">01</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">3 SEP 2026</time></div>
                 <h3 class="head">New York sommeliers pair fine wine with cheap eats</h3>
                 <ul class="takeaways"><li>Seventeen sommeliers in New York City were asked to share high-low wine pairings, matching expensive bottles with casual, inexpensive foods.</li><li>Most chose premium wines as the elevated element: old Bordeaux, white Burgundy, and Champagne paired with everyday items like french fries, bread and butter, and rotisserie chicken.</li><li>Unconventional matches included Champagne with dino nuggets and caviar, and Julian Haart Riesling with Spam musubi, suggesting sommeliers actively experiment beyond traditional fine-dining norms.</li><li>The trend reflects a deliberate move to make wine pairing accessible and playful rather than exclusive to Michelin-starred restaurants and formal occasions.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/articles/sommeliers-best-high-low-wine-pairings/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 2 of 5">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">02</span><time class="date">27 AUG 2026</time></div>
+                <div class="meta"><span class="idx">02</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">27 AUG 2026</time></div>
                 <h3 class="head">Seven volcanic wine regions beyond Mount Etna showcase complex terroir and style</h3>
                 <ul class="takeaways"><li>Volcanic soils from ancient and active eruptions create high-acidity, mineral-driven wines with savory rather than fruity character across multiple continents.</li><li>Soave in Italy, dormant for 25 million years, expresses volcanic terroir through Garganega grapes with orchard fruit and pronounced acidity.</li><li>Santorini, in one of Earth&#x27;s most volcanically active zones, produces Assyrtiko whites with mineral depth and concentration unmatched elsewhere in Greece.</li><li>The Canary Islands&#x27; phylloxera-free volcanic slopes preserved old-vine varieties like Listán Blanco and Listán Negro, revived by winemakers in the 1980s and 1990s.</li><li>Volcanic soils aid organic viticulture and favor disease resistance, enabling producers from Auvergne to Lake County to farm without heavy intervention.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/articles/volcanic-wine-regions-beyond-mount-etna/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 3 of 5">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">03</span><time class="date">19 AUG 2026</time></div>
+                <div class="meta"><span class="idx">03</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">19 AUG 2026</time></div>
                 <h3 class="head">VinePair names 30 best Sauvignon Blancs, spotlights Virginia and Colorado</h3>
                 <ul class="takeaways"><li>VinePair&#x27;s tasting staff sampled thousands of bottles and scored entries on a 100-point scale assessing aroma, flavor, texture, balance, and regional typicity.</li><li>Virginia emerged as a standout region this year, with winemaker Emily Hodson and owners Sandy and Erin Robertson of Dogwood &amp; Thistle producing Sauvignon Blancs that punch above their price point.</li><li>Colorado proved capable of quality Sauvignon Blanc, with sommeliers-turned-winemakers Steve Steese and Jayme Henderson demonstrating the variety thrives outside legacy regions.</li><li>Loire Valley Sauvignon Blancs now show more texture and depth than in prior years, while Friuli producers in Italy continue to lead with stainless steel fermentation techniques.</li><li>The list spans nine countries and includes established regions like Napa and Willamette Valley alongside emerging terroirs, assessed on quality, price, and availability.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/buy-this-booze/best-sauvignon-blanc-2026/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 4 of 5">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">04</span><time class="date">17 AUG 2026</time></div>
+                <div class="meta"><span class="idx">04</span><span class="src">Decanter</span><span class="dot">&middot;</span><time class="date">17 AUG 2026</time></div>
                 <h3 class="head">Young sommelier champions Austrian Furmint for casual dining beyond wine formality</h3>
                 <ul class="takeaways"><li>Daria Volokitina, sommelier at Hotel Plaza Athénée in Paris, chose Austrian Furmint over Champagne and Italian reds for a casual barbecue to challenge beer-drinking stereotypes.</li><li>She selected Liszt&#x27;s Minimaliszt 2022, a natural wine from Burgenland, for its ability to refresh the palate alongside grilled meat and bright vegetable sides.</li><li>The wine paired sensations and emotions rather than following formal pairing rules, reflecting a shift toward wine in everyday, informal settings.</li><li>Furmint remains closely tied to Hungarian Tokaj, but a small Austrian grower group in Burgenland now produces mineral-driven examples.</li><li>Natural wine remains poorly understood by younger consumers despite growing popularity, signalling a gap between new drinkers and education around emerging wine styles.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://www.decanter.com/wine/under-30s-wine-trade-sips-daria-28/" target="_blank" rel="noopener">Decanter<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="1" role="group" aria-roledescription="slide" aria-label="CULTURE 5 of 5">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">05</span><time class="date">4 SEP 2026</time></div>
+                <div class="meta"><span class="idx">05</span><span class="src">VinePair</span><span class="dot">&middot;</span><time class="date">4 SEP 2026</time></div>
                 <h3 class="head">AriZona Iced Tea launches artist residency at New York headquarters</h3>
                 <ul class="takeaways"><li>AriZona Iced Tea, founded in 1992 by Don and Ilene Vultaggio, launched a six-week artist residency program at its Woodbury, New York headquarters, hosting up to four artists per session with stipends, housing, materials, and studio access.</li><li>The first cohort began in July 2025; the third group completed residency in August 2025, with participants including painter Eleanor Dexter and mixed-media artist Lucas Carlo Monasterio collaborating on individual and shared projects.</li><li>Artists work in The Lookout, a rooftop studio equipped with computer workstations, woodshop tools, and laser-cutting technology, while drawing creative inspiration from the brand&#x27;s Southwest aesthetic and signature teal-and-cherry-blossom design language.</li><li>AriZona exhibits completed work at the end of each session, invites contributions to its permanent collection, and shares pieces on social media; recent works include stained-glass windows and large-scale iced-tea-can reinterpretations.</li><li>Spencer Vultaggio, current chief marketing officer and Don&#x27;s son, frames the residency as an extension of the founders&#x27; hands-on design philosophy and a way to set the brand apart through unconventional corporate patronage of visual art.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://vinepair.com/articles/arizona-iced-tea-artist-residency/" target="_blank" rel="noopener">VinePair<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 1 of 2">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">01</span><time class="date">17 AUG 2026</time></div>
+                <div class="meta"><span class="idx">01</span><span class="src">SevenFifty Daily</span><span class="dot">&middot;</span><time class="date">17 AUG 2026</time></div>
                 <h3 class="head">Pierce&#x27;s Disease Threatens 41% of European vineyards as climate warms</h3>
                 <ul class="takeaways"><li>Xylella fastidiosa bacterium, which causes Pierce&#x27;s disease by blocking water transport in vines, has spread to grapevines in Spain, Portugal, Italy, and France since 2016, killing infected plants within years.</li><li>New climate modelling shows 41.2 percent of European vineyards now face climate risk from Pierce&#x27;s disease, up from 21.8 percent in earlier estimates, as warming winters allow the pathogen to survive.</li><li>Vineyard microclimates in river basins and valleys are especially vulnerable because their topography connects otherwise isolated areas where the bacterium can establish hotspots.</li><li>California growers have learned that early detection, vector management, and sustained research slow spread once the disease is endemic; eradication alone is not feasible at scale.</li><li>European countries lack coordinated reporting and communication strategies, risking concealment of infections by growers who fear mandatory vine destruction.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://daily.sevenfifty.com/pierces-disease-is-knocking-at-europes-door/" target="_blank" rel="noopener">SevenFifty Daily<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="2" role="group" aria-roledescription="slide" aria-label="SCIENCE 2 of 2">
               <div class="slide-inner">
-                <div class="meta"><span class="idx">02</span><time class="date">10 AUG 2026</time></div>
+                <div class="meta"><span class="idx">02</span><span class="src">SevenFifty Daily</span><span class="dot">&middot;</span><time class="date">10 AUG 2026</time></div>
                 <h3 class="head">Disease-resistant hybrid grapes cut fungicide sprays by 80 percent in European vineyards</h3>
                 <ul class="takeaways"><li>PIWIs, hybrid grapes bred for powdery and downy mildew resistance, cut fungicide applications from eight to 15 sprays per season to two to three at Famille Ducourt in Bordeaux.</li><li>Modern backcrossing and rhAmpSeq genetic testing now allow breeders to create hybrids containing up to 95 percent Vitis vinifera material while retaining fungus resistance.</li><li>Germany leads European adoption with 4,000 hectares of PIWI plantings in 2025, up 10 percent year-on-year, accounting for four percent of total German vineyard area.</li><li>A 2026 Luxembourg study found PIWI cultivation delivered twofold economic savings and threefold environmental benefits versus traditional varieties, mainly through reduced spraying costs and lower soil toxicity.</li><li>French breeders are developing ResDur varieties by crossing disease-resistant hybrids with Cabernet Franc and Petit Verdot to preserve Bordeaux&#x27;s regional character in experimental plantings.</li></ul>
-                
+                <div class="sources"><span class="sources-label">Reported by</span><a class="read" href="https://daily.sevenfifty.com/the-science-behind-disease-resistant-wine-grapes/" target="_blank" rel="noopener">SevenFifty Daily<span class="read-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
               </div>
             </article>
             <article class="slide" data-tab="3" role="group" aria-roledescription="slide" aria-label="NEWSLETTERS 1 of 8">

@@ -115,11 +115,20 @@ def slides_html(items):
                 head_html = f'<h3 class="head"><a href="{esc(url)}" target="_blank" rel="noopener">{esc(head)}</a></h3>'
                 tail = f'<a class="read" href="{esc(url)}" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true">{ARROW_R}</span></a>'
             else:
-                # our own brief: original research/summary of public facts, not any
-                # outlet's scoop -> unlinked headline, no credit line, no read-more
-                meta = f'<span class="idx">{wi:02d}</span><time class="date">{esc(fmt_date(date))}</time>'
+                # A cluster we wrote ourselves: our headline, our words, our facts. But
+                # the reporting underneath is somebody else's, so we CREDIT every outlet
+                # in the cluster and LINK to each. The brief is a pointer, not a stand-in,
+                # and an unattributed brief reads as if we broke the story ourselves.
+                srcs, urls = row.get("sources", []), row.get("urls", [])
+                srctag = f'<span class="src">{esc(", ".join(srcs))}</span><span class="dot">&middot;</span>' if srcs else ''
+                meta = f'<span class="idx">{wi:02d}</span>{srctag}<time class="date">{esc(fmt_date(date))}</time>'
                 head_html = f'<h3 class="head">{esc(head)}</h3>'
-                tail = ''
+                links = "".join(
+                    f'<a class="read" href="{esc(u)}" target="_blank" rel="noopener">{esc(sname)}'
+                    f'<span class="read-arrow" aria-hidden="true">{ARROW_R}</span></a>'
+                    for sname, u in zip(srcs, urls) if u)
+                tail = (f'<div class="sources"><span class="sources-label">Reported by</span>{links}</div>'
+                        if links else '')
             slides.append(f'''<article class="slide" data-tab="{ti}" role="group" aria-roledescription="slide" aria-label="{name} {wi} of {count}">
               <div class="slide-inner">
                 <div class="meta">{meta}</div>

@@ -8,10 +8,10 @@ grounded in the source articles (no invented facts). Reads feed_data.json, enric
 each story in place, writes it back.
 
 - News topics (MARKET/CULTURE/SCIENCE): each row is a CLUSTER of URLs covering the
-  same event. We fetch every member's body (falling back to archive.ph for
-  paywalled/thin pages, to lift one or two extra facts), combine them, and have
-  Claude write OUR OWN headline + 4-5 key-takeaway bullets. Facts are public; the
-  phrasing is ours, which is what keeps it copyright-safe. No outbound link.
+  same event. We fetch every member's freely published body (never a paywalled one,
+  never via archive.ph), combine them, and have Claude write OUR OWN headline plus at
+  most 3 key-takeaway bullets. Facts are public and the phrasing is ours; the brief
+  reports the facts and points at the outlets rather than standing in for them.
 
   WE ALSO FILE THE STORY HERE. The tab update.py routed a candidate into is a pile,
   not a label -- it reads the outlet's RSS blurb, and the brief we publish is written
@@ -80,25 +80,39 @@ def _curl(url, t=20):
     except Exception:
         return ""
 
-def fetch_body(url, allow_archive=True):
-    """Article body; if the live page is thin/paywalled, try archive.ph for a
-    couple more grounded facts. Best-effort — archive can rate-limit CI, so the
-    brief must stand on whatever it returns."""
-    body = _extract(_curl(url))
-    if len(body) < 400 and allow_archive:
-        arc = _extract(_curl("https://archive.ph/newest/" + url, t=25))
-        if len(arc) > len(body):
-            body = arc
-    return body
+# Outlets whose reporting sits behind a paywall. We never summarize them: a brief
+# built from paid reporting cannibalises the exact thing the reader was meant to pay
+# for, and that is the fact pattern publishers are currently suing over. Their
+# headline still counts toward a cluster's corroboration, we just never take a body.
+# Soft paywalls matter as much as hard ones: several of these ship the full text in
+# the HTML and hide it with an overlay, so an extractor sails straight through.
+PAYWALLED = (
+    "ft.com", "bloomberg.com", "wsj.com", "nytimes.com", "economist.com",
+    "telegraph.co.uk", "thetimes.co.uk", "washingtonpost.com", "winespectator.com",
+    "decanter.com", "cluboenologique.com",
+)
+
+def _is_paywalled(url):
+    host = re.sub(r"^https?://(www\.)?", "", url or "").split("/")[0].lower()
+    return any(host == d or host.endswith("." + d) for d in PAYWALLED)
+
+def fetch_body(url):
+    """Article body from the freely published page, or "" if there is nothing we may
+    take. No archive.ph, no paywall workaround: if the outlet does not publish the
+    text openly, we do not have a source and the story is dropped upstream."""
+    if _is_paywalled(url):
+        print(f"    - paywalled, not summarized: {url[:70]}", file=sys.stderr)
+        return ""
+    return _extract(_curl(url))
 
 PROMPT = """You are the editor of Winefeed, a wine-news brief read by wine lovers and trade.
-From the source article below, write 4-5 KEY TAKEAWAY bullets: the most important facts a reader should know so they can skip the full article.
+From the source article below, write AT MOST 3 KEY TAKEAWAY bullets: the core facts of what happened, enough that a reader knows the news and can decide whether to go read the outlet in full.
 
 Hard rules:
 - Use ONLY facts explicitly stated in the source. Never invent or infer numbers, names, dates, or claims.
-- Aim for 4-5 bullets when the source supports it. If the source is thin, return fewer (even 1). If there are zero real facts, return {"takeaways": []}.
+- 3 bullets maximum, never more. If the source is thin, return fewer (even 1). If there are zero real facts, return {"takeaways": []}.
 - NEVER write ABOUT the article, source, paywall, subscribers, metadata, or missing content. Output wine facts or nothing.
-- Each bullet: one sentence, 25 words or fewer, plain and factual. No marketing, no "the article says", no fluff.
+- Each bullet: one sentence, 25 words or fewer, plain and factual. Three bullets means fewer facts, not the same facts packed tighter: drop the least important, never chain clauses to smuggle one in. No marketing, no "the article says", no fluff.
 - Neutral, information-dense. Lead with the concrete fact (who/what/number). No two bullets should repeat the same fact.
 - NAME the people, producers, estates and regions involved. Never write that the author "explores", "examines" or "reflects on" a subject: say what they actually found or claimed. No bullet may merely restate the headline.
 
@@ -180,7 +194,7 @@ Return STRICT JSON only: {"headline": "...", "topic": "...", "why": "...", "take
 headline: an original, specific headline IN YOUR OWN WORDS. Under 12 words, concrete (who/what), no clickbait, no outlet names, no "Winefeed".
 topic: exactly one of MARKET, CULTURE, SCIENCE. See FILING below.
 why: one short clause naming the consequence you filed it on. For the editor, never published.
-takeaways: 4-5 KEY TAKEAWAY bullets a reader can skim to know the story.
+takeaways: AT MOST 3 KEY TAKEAWAY bullets carrying the core facts of the story.
 
 FILING. Pick the tab by THE CONSEQUENCE, NOT THE INGREDIENT. Every story mentions a drought, a price, a sommelier; what matters is what actually CHANGED and for whom. Ask what the news IS, not what words are in it.
 
@@ -202,9 +216,10 @@ Worked filings, these are real and were all filed WRONG by keywords:
   "France's INAO approved back-sweetening to 9g/l" -> CULTURE. There is a regulator (market) and a cellar technique (science) in it, but bullet 1 sets up a shift in what ends up in the glass.
   "Osaka researchers bred a high-ornithine yeast strain" -> SCIENCE (how it is made).
 
-THE BRIEF MUST STAND ALONE. The reader cannot click through to any article — your bullets are the entire story they will ever see. Someone who knows nothing about this must finish the bullets understanding what happened, who it happened to, and why it matters. Assume no prior context.
+THE BRIEF POINTS AT THE STORY, IT DOES NOT REPLACE IT. Report the core facts: what happened, to whom, when, and the numbers that matter. Assume no prior context, so a reader who knows nothing still understands the news. Then STOP. The outlet's analysis, colour, quotes, argument and structure are theirs and stay with them; a reader who wants those should go read the outlet, and a good brief makes them want to.
 
 LENGTH IS A HARD LIMIT: each bullet MUST be one sentence of 25 words or fewer. This is not in tension with being specific — it is the skill. Cut the throat-clearing, not the facts. A bullet that runs long is rejected outright and its facts are lost, so tighten it rather than let it run.
+DO NOT CRAM. Three bullets means FEWER FACTS, not the same facts packed tighter. When the source has more than three bullets' worth of material, keep the three that matter most and DROP the rest. Never chain clauses with commas or semicolons to smuggle a fourth fact into a third bullet. A bullet over 25 words is rejected and its facts are lost, so choose what to leave out rather than compress.
 
 BULLET 1 IS THE SETUP. Before any detail, say what this actually is: the occasion, the event, the survey, the announcement, and who is involved. A reader must never meet a name, a list or a number before they know what they are reading about. If the story is "fifteen sommeliers name Bordeaux worth the price", bullet 1 says who the sommeliers are and what they were asked; the picks come after.
 
@@ -283,7 +298,7 @@ def _dedash(t):
 
 def _clean_bullets(raw, head=""):
     outs = []
-    for t in (raw or [])[:5]:
+    for t in (raw or [])[:3]:   # 3 is the published cap, see PROMPT
         t = re.sub(r"\s+", " ", str(t)).strip(" .–-").strip()
         t = _dedash(t)
         if len(t) < 8:
@@ -335,12 +350,14 @@ def synthesize(key, title, body):
 # the model has nothing to summarize and pads by rephrasing the headline, so we would
 # rather run one story fewer than run one nobody can understand.
 MIN_BODY = 1000
-MIN_BULLETS = 3
+MIN_BULLETS = 2   # floor, not the cap: the cap is 3 (_clean_bullets)
 
 def combined_body(urls):
-    """Fetch + concatenate every cluster member's body (archive.ph fallback).
+    """Fetch + concatenate every cluster member's freely published body.
 
-    Deliberately NO excerpt fallback: an RSS blurb is 2 sentences, and asking for 4-5
+    Paywalled members contribute nothing here (fetch_body returns "" for them), so a
+    cluster carried only by paywalled outlets produces no body and is dropped upstream.
+    Deliberately NO excerpt fallback either: an RSS blurb is 2 sentences, and asking for
     takeaways off it yields content-free aboutness. Callers drop the story instead."""
     parts = []
     for u in urls:

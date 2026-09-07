@@ -102,6 +102,12 @@ body{
 .read-arrow svg{ width:14px; height:14px; display:block; }
 .read:hover{ color:var(--accent); }
 .read:hover .read-arrow{ transform:translateX(4px); }
+/* Credit row on a clustered brief: every outlet whose reporting the brief rests on,
+   each one linked. Same mono/uppercase register as .read, wraps on narrow screens. */
+.sources{ display:flex; align-items:center; flex-wrap:wrap; gap:7px 16px; margin-top:4px; }
+.sources-label{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.09em;
+  text-transform:uppercase; color:var(--faint); }
+.sources .read{ margin-top:0; }
 a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
 
 /* ---------- controls ---------- */
