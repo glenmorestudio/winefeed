@@ -33,10 +33,39 @@ Model: Claude Haiku (cheap). Key from env ANTHROPIC_API_KEY or ~/.primal_wine_cl
 Called by update.py; if no key, cards fall back to the freshest excerpt.
 """
 import json, os, re, subprocess, sys
+import urllib.robotparser as _rp
+from functools import lru_cache
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MODEL = "claude-haiku-4-5-20251001"
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+# ---- crawler identity --------------------------------------------------------
+# We used to send a spoofed Chrome string. Pretending to be a browser to take text
+# an operator may not want taken is the same aggravating fact as the archive.ph
+# fallback was: it turns an arguable fetch into a deliberate one. So we say who we
+# are, we publish where to complain, and we obey robots.txt. If an outlet does not
+# want winefeedbot reading it, that is an answer and we take it.
+UA = "winefeedbot/1.0 (+https://winefeed.co/about; contact: guido@primalwine.com)"
+UA_TOKEN = "winefeedbot"
+
+@lru_cache(maxsize=256)
+def _robots(origin):
+    """Parsed robots.txt for one scheme+host. Fetched with curl, not urllib: this
+    machine's Python has no working cert bundle, which is why _curl exists at all."""
+    p = _rp.RobotFileParser()
+    p.parse(_curl(origin + "/robots.txt", t=10).splitlines())
+    return p
+
+def _robots_ok(url):
+    """True if robots.txt permits us. A missing, empty or unparseable robots.txt is
+    NOT a disallow, and a parse failure must never take down a whole edition, so
+    every uncertain case allows. Only an explicit Disallow stops the fetch."""
+    m = re.match(r"(https?://[^/]+)", url or "")
+    if not m:
+        return False
+    try:
+        return _robots(m.group(1)).can_fetch(UA_TOKEN, url)
+    except Exception:
+        return True
 
 def get_key():
     k = os.environ.get("ANTHROPIC_API_KEY")
@@ -102,6 +131,9 @@ def fetch_body(url):
     text openly, we do not have a source and the story is dropped upstream."""
     if _is_paywalled(url):
         print(f"    - paywalled, not summarized: {url[:70]}", file=sys.stderr)
+        return ""
+    if not _robots_ok(url):
+        print(f"    - robots.txt disallows us, skipped: {url[:70]}", file=sys.stderr)
         return ""
     return _extract(_curl(url))
 
