@@ -8,10 +8,13 @@
   function current(){ var s = root.getAttribute('data-theme'); if(s) return s;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
   try{ var saved = localStorage.getItem('winefeed-theme'); if(saved) root.setAttribute('data-theme', saved); }catch(e){}
+  function pressed(){ if(toggle) toggle.setAttribute('aria-pressed', current() === 'dark' ? 'true' : 'false'); }
+  pressed();
   if(toggle) toggle.addEventListener('click', function(){
     var next = current() === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     try{ localStorage.setItem('winefeed-theme', next); }catch(e){}
+    pressed();
   });
 
   /* ---- deck ---- */
@@ -22,6 +25,7 @@
   var dotsWrap = document.querySelector('.dots');
   var counter = document.getElementById('counter');
   var tabname = document.getElementById('tabname');
+  var status = document.getElementById('deckStatus');
   var N = slides.length;
   var idx = 0;
 
@@ -49,7 +53,10 @@
     if(!track) return;   // the archive index is a list, not a deck: no track to move
     track.style.transform = 'translateX(' + (-idx * 100) + '%)';
     var ti = tabOf(idx), within = withinOf(idx), cnt = countOfTab(ti);
-    tabs.forEach(function(t,k){ var on = k === ti; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true':'false'); });
+    tabs.forEach(function(t,k){ var on = k === ti; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true':'false'); t.tabIndex = on ? 0 : -1; });
+    // only the story on screen is in the reading and Tab order; the panel is named by its tab
+    slides.forEach(function(s,k){ s.inert = k !== idx; });
+    track.setAttribute('aria-labelledby', 'tab-' + ti);
     if(dotsWrap){
       if(dotsWrap.classList.contains('as-bar') !== USE_BAR){
         dotsWrap.classList.toggle('as-bar', USE_BAR);
@@ -68,13 +75,33 @@
     if(counter) counter.textContent = pad2(within+1) + ' / ' + pad2(cnt);
     if(tabname) tabname.textContent = TABS[ti] || '';
   }
-  function go(i){ if(!N) return; idx = ((i % N) + N) % N; render(); }
+  function go(i){
+    if(!N) return; idx = ((i % N) + N) % N; render();
+    // Previous/Next, arrows and swipes say where they landed
+    if(status){
+      var t = TABS[tabOf(idx)] || '', h = slides[idx].querySelector('.head');
+      status.textContent = t.charAt(0) + t.slice(1).toLowerCase() + ', story ' + (withinOf(idx)+1) + ' of ' + countOfTab(tabOf(idx)) + ': ' + (h ? h.textContent : '');
+    }
+  }
 
   var prev = document.getElementById('prevBtn'), next = document.getElementById('nextBtn');
   if(prev) prev.addEventListener('click', function(){ go(idx-1); });
   if(next) next.addEventListener('click', function(){ go(idx+1); });
-  tabs.forEach(function(t,k){ t.addEventListener('click', function(){ go(firstOfTab(k)); }); });
+  tabs.forEach(function(t,k){
+    t.addEventListener('click', function(){ go(firstOfTab(k)); });
+    // tablist keys: Left/Right move between the topics that have stories
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if(!d) return;
+      e.preventDefault(); e.stopPropagation();
+      for(var j = 1; j < tabs.length; j++){
+        var n = tabs[(k + d*j + tabs.length) % tabs.length];
+        if(!n.disabled){ n.focus(); n.click(); break; }
+      }
+    });
+  });
   document.addEventListener('keydown', function(e){
+    if(e.target.closest && e.target.closest('input,textarea')) return;   // arrows move the caret there
     if(e.key === 'ArrowRight'){ go(idx+1); }
     else if(e.key === 'ArrowLeft'){ go(idx-1); }
   });

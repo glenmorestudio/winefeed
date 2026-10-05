@@ -57,7 +57,7 @@ def fmt_date(s):
     return str(s)
 
 def esc(t):
-    return html.escape(str(t).replace("—", ", ").replace("–", "-"), quote=True)
+    return html.escape(str(t).replace(" — ", ", ").replace("—", ", ").replace("–", "-"), quote=True)
 
 def parse_day(s):
     y, m, d = map(int, str(s).split("-"))
@@ -69,8 +69,8 @@ def dateline_of(day):
 def dateline_html(day):
     """Spelled out where there's room, abbreviated on a phone — never dropped, since on
     an archive page the date is the only thing telling you which edition you're reading."""
-    return (f'<span class="dateline"><span class="dl-full">{esc(dateline_of(day))}</span>'
-            f'<span class="dl-short">{day.day} {MONTHS[day.month]}</span></span>')
+    return (f'<p class="dateline"><time datetime="{day.isoformat()}"><span class="dl-full">{esc(dateline_of(day))}</span>'
+            f'<span class="dl-short">{day.day} {MONTHS[day.month]}</span></time></p>')
 
 ARROW_R = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>'
 ARROW_L = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>'
@@ -90,7 +90,9 @@ def tabs_html(items):
         cls = "tab" + (" is-active" if i == first and not empty else "") + (" is-empty" if empty else "")
         sel = "true" if (i == first and not empty) else "false"
         dis = ' disabled aria-disabled="true"' if empty else ''
-        out.append(f'<button class="{cls}" role="tab" aria-selected="{sel}" data-tab="{i}"{dis}>{name}</button>')
+        why = '<span class="sr-only">, no stories in this edition</span>' if empty else ''
+        out.append(f'<button class="{cls}" type="button" role="tab" id="tab-{i}" aria-controls="track" aria-selected="{sel}"'
+                   f' tabindex="{0 if sel == "true" else -1}" data-tab="{i}"{dis}>{name}{why}</button>')
     return "\n          ".join(out)
 
 def body_html(row):
@@ -112,8 +114,8 @@ def slides_html(items):
                 byline = f'<span class="dot">&middot;</span><span class="by">{esc(author)}</span>' if author else ''
                 srctag = f'<span class="src">{esc(src)}</span>' if src else ''
                 meta = f'<span class="idx">{wi:02d}</span>{srctag}{byline}<span class="dot">&middot;</span><time class="date">{esc(fmt_date(date))}</time>'
-                head_html = f'<h3 class="head"><a href="{esc(url)}" target="_blank" rel="noopener">{esc(head)}</a></h3>'
-                tail = f'<a class="read" href="{esc(url)}" target="_blank" rel="noopener">Read the full story <span class="read-arrow" aria-hidden="true">{ARROW_R}</span></a>'
+                head_html = f'<h2 class="head"><a href="{esc(url)}" target="_blank" rel="noopener">{esc(head)}</a></h2>'
+                tail = f'<a class="read" href="{esc(url)}" target="_blank" rel="noopener">Read the full story<span class="sr-only">: {esc(head)}</span><span class="read-arrow" aria-hidden="true">{ARROW_R}</span></a>'
             else:
                 # A cluster we wrote ourselves: our headline, our words, our facts. But
                 # the reporting underneath is somebody else's, so we CREDIT every outlet
@@ -122,9 +124,9 @@ def slides_html(items):
                 srcs, urls = row.get("sources", []), row.get("urls", [])
                 srctag = f'<span class="src">{esc(", ".join(srcs))}</span><span class="dot">&middot;</span>' if srcs else ''
                 meta = f'<span class="idx">{wi:02d}</span>{srctag}<time class="date">{esc(fmt_date(date))}</time>'
-                head_html = f'<h3 class="head">{esc(head)}</h3>'
+                head_html = f'<h2 class="head">{esc(head)}</h2>'
                 links = "".join(
-                    f'<a class="read" href="{esc(u)}" target="_blank" rel="noopener">{esc(sname)}'
+                    f'<a class="read" href="{esc(u)}" target="_blank" rel="noopener">{esc(sname)}<span class="sr-only">: {esc(head)}</span>'
                     f'<span class="read-arrow" aria-hidden="true">{ARROW_R}</span></a>'
                     for sname, u in zip(srcs, urls) if u)
                 tail = (f'<div class="sources"><span class="sources-label">Reported by</span>{links}</div>'
@@ -139,39 +141,41 @@ def slides_html(items):
             </article>''')
     return "\n            ".join(slides)
 
-def brand_html(home_href=None):
-    mark = '<h1 class="wordmark">wine<span class="dropchar">feed</span></h1>'
+def brand_html(home_href=None, heading=True):
+    tag = "h1" if heading else "div"
+    mark = f'<{tag} class="wordmark">wine<span class="dropchar">feed</span></{tag}>'
     if home_href:
         mark = f'<a class="wordmark-link" href="{esc(home_href)}" aria-label="winefeed home">{mark}</a>'
-    return f'<div class="brand">{mark}<span class="byline">by Primal Wine</span></div>'
+    return f'<div class="brand">{mark}<p class="byline">by Primal Wine</p></div>'
 
-def header_html(*, right, home_href=None):
+def header_html(*, right, home_href=None, heading=True):
     return f'''<header class="bar">
-        {brand_html(home_href)}
+        {brand_html(home_href, heading)}
         <div class="bar-right">{right}</div>
       </header>'''
 
 def subscribe_html():
     return f'''<form class="subscribe" id="subForm" novalidate>
           <div class="sub-field">
-            <input type="email" id="subEmail" placeholder="Sign up for our daily brief" autocomplete="email" aria-label="Sign up for our daily brief">
+            <input type="email" id="subEmail" placeholder="Sign up for our daily brief" autocomplete="email" aria-label="Email address" required>
             <button class="sub-btn" type="submit" aria-label="Subscribe">{MAIL}</button>
           </div>
-          <span class="sub-msg" id="subMsg"></span>
+          <span class="sub-msg" id="subMsg" role="status"></span>
         </form>'''
 
 def deck_html(items, *, right, home_href=None):
-    return f'''<div class="app" data-kpub="{esc(KPUB)}" data-klist="{esc(KLIST)}">
+    return f'''<a class="skip" href="#deck">Skip to content</a>
+    <div class="app" data-kpub="{esc(KPUB)}" data-klist="{esc(KLIST)}">
       {header_html(right=right, home_href=home_href)}
 
-      <nav class="tabs-outer" aria-label="Topics">
-        <div class="tablist" role="tablist">
+      <div class="tabs-outer">
+        <div class="tablist" role="tablist" aria-label="Topics">
           {tabs_html(items)}
         </div>
-      </nav>
+      </div>
 
       <main class="deck" id="deck">
-        <div class="track" id="track">
+        <div class="track" id="track" role="tabpanel">
             {slides_html(items)}
         </div>
       </main>
@@ -184,6 +188,7 @@ def deck_html(items, *, right, home_href=None):
             <span class="counter" id="tabname"></span>
             <span class="counter" id="counter"></span>
           </div>
+          <p class="sr-only" id="deckStatus" aria-live="polite"></p>
           <button class="nav-btn" id="nextBtn" type="button" aria-label="Next story">{ARROW_R}</button>
         </div>
         {subscribe_html()}
@@ -250,7 +255,7 @@ def render_archive_day(date, data):
     day = parse_day(date)
     right = (f'<a class="arc-tag" href="index.html">Archive</a>'
              + dateline_html(day)
-             + f'<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme">{TOGGLE}</button>')
+             + f'<button class="theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false">{TOGGLE}</button>')
     body = deck_html(data["items"], right=right, home_href="../")
     n = sum(len(v) for v in data["items"].values())
     html_out = page(body, root="../", inline=False,
@@ -264,22 +269,28 @@ def render_archive_index(days):
         day = parse_day(date)
         month = (day.year, day.month)
         if month != cur_month:
+            if cur_month:
+                rows.append('</ul>')
             cur_month = month
-            rows.append(f'<div class="arc-month">{MONTHS_FULL[day.month]} {day.year}</div>')
+            rows.append(f'<h2 class="arc-month">{MONTHS_FULL[day.month]} {day.year}</h2><ul class="arc-list">')
         n = sum(len(v) for v in data["items"].values())
         lead = lead_of(data)
-        rows.append(f'''<a class="arc-row" href="{esc(date)}.html">
-            <span class="arc-date">{WEEKDAYS_SHORT[day.weekday()]} {day.day:02d}</span>
+        spoken = f"{WEEKDAYS[day.weekday()].title()} {day.day} {MONTHS_FULL[day.month].title()} {day.year}"
+        rows.append(f'''<li><a class="arc-row" href="{esc(date)}.html">
+            <span class="arc-date"><span aria-hidden="true">{WEEKDAYS_SHORT[day.weekday()]} {day.day:02d}</span><span class="sr-only">{spoken}:</span></span>
             <span class="arc-lead">{esc(lead)}</span>
-            <span class="arc-n">{n}</span>
-          </a>''')
+            <span class="arc-n">{n}<span class="sr-only"> stories</span></span>
+          </a></li>''')
+    if cur_month:
+        rows.append('</ul>')
     oldest = parse_day(days[-1][0]) if days else datetime.date.today()
-    right = f'<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme">{TOGGLE}</button>'
-    body = f'''<div class="app" data-kpub="{esc(KPUB)}" data-klist="{esc(KLIST)}">
-      {header_html(right=right, home_href="../")}
-      <main class="sheet">
+    right = f'<button class="theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false">{TOGGLE}</button>'
+    body = f'''<a class="skip" href="#sheet">Skip to content</a>
+    <div class="app" data-kpub="{esc(KPUB)}" data-klist="{esc(KLIST)}">
+      {header_html(right=right, home_href="../", heading=False)}
+      <main class="sheet" id="sheet">
         <div class="sheet-inner">
-          <h2 class="sheet-title">Archive</h2>
+          <h1 class="sheet-title">Archive</h1>
           <p class="sheet-note">Every edition of winefeed since {fmt_date(oldest.isoformat()).title()}. {len(days)} in all.</p>
           {"".join(rows)}
         </div>
@@ -303,7 +314,7 @@ def main():
 
     right = (dateline_html(today)
              + f'<a class="icon-link" href="archive/" aria-label="Read past editions" title="Past editions">{HISTORY}</a>'
-             f'<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme">{TOGGLE}</button>')
+             f'<button class="theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false">{TOGGLE}</button>')
     body = deck_html(items, right=right)
 
     open(os.path.join(_HERE, 'index.html'), 'w').write(page(
