@@ -37,7 +37,7 @@ import urllib.robotparser as _rp
 from functools import lru_cache
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-MODEL = "claude-haiku-4-5-20251001"
+MODEL = "claude-haiku-5-5"
 # ---- crawler identity --------------------------------------------------------
 # We used to send a spoofed Chrome string. Pretending to be a browser to take text
 # an operator may not want taken is the same aggravating fact as the archive.ph
@@ -159,7 +159,8 @@ ARTICLE:
 def call_haiku(key, title, source, body):
     payload = json.dumps({
         "model": MODEL,
-        "max_tokens": 550,
+        "max_tokens": 900,
+        "thinking": {"type": "disabled"},
         "messages": [{"role": "user", "content": PROMPT % {"title": title, "source": source, "body": body}}],
     })
     try:
@@ -171,7 +172,7 @@ def call_haiku(key, title, source, body):
              "-d", payload],
             capture_output=True, timeout=60)
         resp = json.loads(r.stdout.decode("utf-8", "replace"))
-        text = resp["content"][0]["text"]
+        text = next(b["text"] for b in resp["content"] if b.get("type") == "text")
     except Exception as e:
         print(f"    ! haiku call failed: {e}", file=sys.stderr)
         return []
@@ -280,9 +281,10 @@ SOURCE MATERIAL:
 %(body)s
 """
 
-def _call(key, prompt, max_tokens=650):
+def _call(key, prompt, max_tokens=900):
     payload = json.dumps({
         "model": MODEL, "max_tokens": max_tokens,
+        "thinking": {"type": "disabled"},
         "messages": [{"role": "user", "content": prompt}],
     })
     try:
@@ -293,7 +295,8 @@ def _call(key, prompt, max_tokens=650):
              "-H", "content-type: application/json",
              "-d", payload],
             capture_output=True, timeout=70)
-        text = json.loads(r.stdout.decode("utf-8", "replace"))["content"][0]["text"]
+        resp = json.loads(r.stdout.decode("utf-8", "replace"))
+        text = next(b["text"] for b in resp["content"] if b.get("type") == "text")
     except Exception as e:
         print(f"    ! haiku call failed: {e}", file=sys.stderr)
         return None
