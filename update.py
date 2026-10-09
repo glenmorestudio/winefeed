@@ -93,6 +93,7 @@ POOL = [
     ("Liv-ex",                "https://www.liv-ex.com/feed/"),
     ("WineGB",                "https://www.winegb.co.uk/feed/"),
     ("The Guardian",          "https://www.theguardian.com/food/wine/rss"),
+    ("Wine Australia",        "https://www.wineaustralia.com/rss"),
 ]
 # Tested 2026-10-09 and NOT added: paywalled (Napa Valley Register, GuildSomm, Six Atmospheres,
 # Robb Report: paywall scripts on the page, and soft paywalls count); 403 or no feed (Good Fruit
@@ -102,8 +103,7 @@ POOL = [
 # WineMaker, Sovos ShipCompliant, Ohio State); stale (AJEV, Laffort, Enartis, WSU V&E, Grape & Wine
 # Mag, Grapevine Mag, ASEV, Phys.org, The Conversation, Wine & Spirits, Wine Folly, Italian Wine
 # Central, Washington Wine, Penn State); mostly not wine (ScienceDaily, BeverageDaily, The Shout,
-# Eater, Bon Appetit, Forbes, Imbibe, IWSR, SOMM Journal); Vitisphere (French only); Wine Australia
-# (dates in a non-standard <LastPublished> tag the parser does not read).
+# Eater, Bon Appetit, Forbes, Imbibe, IWSR, SOMM Journal); Vitisphere (French only).
 # Independent wine writers / Substacks -> NEWSLETTERS tab (source, url, author).
 # One post per writer per day, freshest first, capped at MAX_NEWSLETTERS -- so a deep bench
 # is a feature: it rotates voices and regions and covers for whoever is quiet that week.
@@ -281,6 +281,14 @@ def is_filler(title):
     t = title.lower()
     return any(s in t for s in SKIP)
 
+def parse_dmy(s):
+    """Day/month/year dates, as Wine Australia's feed writes them in <LastPublished>
+    ("7/10/2026 9:49:30 am"). Used only for that tag, so no other feed's m/d/y can be misread."""
+    try:
+        return datetime.datetime.strptime((s or "").strip().split(" ")[0], "%d/%m/%Y").date()
+    except Exception:
+        return None
+
 def field(block, *tags):
     for tag in tags:
         m = re.search(rf"<{tag}[^>]*>(.*?)</{tag}>", block, re.S | re.I)
@@ -303,7 +311,7 @@ def parse(xmlt, source):
         title = clean(field(b, "title"))
         link = clean(field(b, "link")) if not atom else atom_link(b)
         desc = field(b, "description", "summary", "content:encoded", "content")
-        date = parse_date(field(b, "pubDate", "published", "updated", "dc:date"))
+        date = parse_date(field(b, "pubDate", "published", "updated", "dc:date")) or parse_dmy(field(b, "LastPublished"))
         if not title or not link or is_filler(title):
             continue
         items.append({"source": source, "url": link, "title": title,
