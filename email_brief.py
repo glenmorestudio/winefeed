@@ -1,27 +1,28 @@
 # -*- coding: utf-8 -*-
 """
-winefeed daily brief -> email (Klaviyo), mirroring the winefeed.co website style.
-feed_data.json -> header (winefeed by Primal Wine, left-aligned) -> the brief
-(4 topics x top-3 stories, 2 key takeaways each, hairline-separated) -> Wine of
-the Day (featured-product merge slot) -> Shop All / Join Club band -> footer.
-News briefs are our own summaries of public facts (no source link/credit);
-newsletters keep byline + link. Palette + type match the site.
+winefeed WEEKLY brief -> email (Klaviyo), mirroring the winefeed.co website style.
+weekly_data.json (written by weekly.py from the week's daily snapshots) -> header ->
+the brief (4 topics x top-5 stories of the week, 2 key takeaways each, hairline-separated,
+every news brief credits and links the outlets that reported it) -> Wine of the Week
+(featured-product merge slot) -> Shop All / Join Club band -> footer. Empty topics are
+left out. Palette + type match the site. The daily email was retired 2026-10-09.
 """
 import html, datetime, os, json, re, base64
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA = json.load(open(os.path.join(HERE, "feed_data.json")))
+DATA = json.load(open(os.path.join(HERE, "weekly_data.json")))
 ITEMS = DATA.get("items", {})
 TAB_ORDER = ["MARKET", "CULTURE", "SCIENCE", "NEWSLETTERS"]
 BULLETS_IN_EMAIL = 2
-STORIES_IN_EMAIL = 3      # top 3 per topic in the email; full set lives on the site
+STORIES_IN_EMAIL = 5      # top 5 per topic of the week; the full set lives on the site
 
 MONTHS_FULL = ["", "JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 MONTHS = ["", "JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
 WEEKDAYS = ["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY"]
 _d = DATA.get("date")
 today = datetime.date(*map(int, _d.split("-"))) if _d else datetime.date.today()
-DATELINE = f"{WEEKDAYS[today.weekday()]} {today.day} {MONTHS_FULL[today.month]} {today.year}"
+_start = datetime.date.fromisoformat(DATA["start"]) if DATA.get("start") else today
+DATELINE = f"WEEK OF {_start.day} {MONTHS_FULL[_start.month]} {_start.year}"
 
 def e(t): return html.escape(str(t).replace("—", ", ").replace("–", "-"), quote=True)
 def fmt(s):
@@ -72,7 +73,13 @@ def story(row, wi, is_newsletter, first):
         meta = f'<span style="color:{ACCENT};">{wi:02d}</span> &middot; {e(fmt(date))}'
         head_html = (f'<span style="color:{TITLE}; font-family:{SANS}; font-size:16.5px; '
                      f'font-weight:500; line-height:1.34;">{e(head)}</span>')
-        credit = ""
+        names = row.get("sources") or []
+        urls = row.get("urls") or []
+        links = ", ".join(
+            f'<a href="{e(u)}" style="color:{INK}; text-decoration:underline;">{e(n)}</a>' if u else e(n)
+            for n, u in zip(names, urls + [""] * len(names)))
+        credit = (f'<p style="margin:4px 0 0; font-family:{MONO}; font-size:10px; letter-spacing:0.06em; '
+                  f'text-transform:uppercase; color:{META};">Reported by {links}</p>') if links else ""
     return f'''
     <tr><td style="padding:{pad}; {sep}">
       <p style="margin:0 0 6px; font-family:{MONO}; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:{META};">
@@ -85,6 +92,8 @@ def story(row, wi, is_newsletter, first):
 
 def topic_block(name, ti):
     rows = ITEMS.get(name, [])[:STORIES_IN_EMAIL]
+    if not rows:
+        return ""
     is_newsletter = name == "NEWSLETTERS"
     stories = "".join(story(r, i, is_newsletter, first=(i == 1)) for i, r in enumerate(rows, 1))
     sep = "" if ti == 0 else f"border-top:1px solid {LINE};"
@@ -94,9 +103,9 @@ def topic_block(name, ti):
     </td></tr>
     {stories}'''
 
-BRIEF = "".join(topic_block(n, i) for i, n in enumerate(TAB_ORDER))
+BRIEF = "".join(topic_block(n, i) for i, n in enumerate([t for t in TAB_ORDER if ITEMS.get(t)]))
 
-# ---- Wine of the Day (featured-product format, NO pill) ----
+# ---- Wine of the Week (featured-product format, NO pill) ----
 WOTD = f'''
     <tr><td style="padding:30px 0 0; border-top:1px solid {LINE};">
       <table cellpadding="0" cellspacing="0" border="0" width="100%">
@@ -105,8 +114,8 @@ WOTD = f'''
             <div style="width:140px; height:180px; background:{RAISE}; border:1px solid {LINE}; border-radius:16px; text-align:center; line-height:180px; font-family:{MONO}; font-size:10px; letter-spacing:0.1em; color:{META};">BOTTLE</div>
           </td>
           <td valign="top">
-            <p style="margin:0 0 6px; font-family:{MONO}; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:{META};"><span style="color:{ACCENT};">Wine of the Day</span> &middot; Red &middot; Etna, Sicily &middot; $32</p>
-            <p style="margin:0 0 8px; font-family:{SERIF}; font-size:19px; font-weight:500; color:{TITLE}; line-height:1.25;">Wine of the Day title</p>
+            <p style="margin:0 0 6px; font-family:{MONO}; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:{META};"><span style="color:{ACCENT};">Wine of the Week</span> &middot; Red &middot; Etna, Sicily &middot; $32</p>
+            <p style="margin:0 0 8px; font-family:{SERIF}; font-size:19px; font-weight:500; color:{TITLE}; line-height:1.25;">Wine of the Week title</p>
             <p style="margin:0 0 16px; font-family:{SANS}; font-size:13.5px; line-height:1.6; color:{BODY}; min-height:65px;">One flowing, three-line note on why this bottle is worth reaching for tonight. Producer, place, and the single thing that makes it sing.</p>
             <a href="https://primalwine.com/products/PRODUCT-HANDLE" style="display:inline-block; font-family:{MONO}; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:{INK}; text-decoration:none; border:1px solid {INK}; border-radius:999px; padding:9px 22px;">Shop this bottle</a>
           </td>
@@ -149,7 +158,7 @@ body{{margin:0; background:{PAGE};}}
 }}
 </style></head>
 <body>
-<div style="display:none; max-height:0; overflow:hidden; opacity:0;">The wine world in five-minute reads. Today's brief from winefeed by Primal Wine.</div>
+<div style="display:none; max-height:0; overflow:hidden; opacity:0;">The wine world in a five-minute read. This week's brief from winefeed by Primal Wine.</div>
 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background:{PAGE};"><tr><td align="center" style="padding:28px 14px;">
   <table cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:600px; background:{CARD}; border:1px solid {LINE}; border-radius:20px;">
 
@@ -161,7 +170,7 @@ body{{margin:0; background:{PAGE};}}
         </td>
         <td valign="baseline" align="right" style="font-family:{MONO}; font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.72); white-space:nowrap;">{DATELINE}</td>
       </tr></table>
-      <p style="margin:17px 0 0; font-family:{SANS}; font-weight:400; font-size:14.5px; line-height:1.55; color:rgba(255,255,255,0.82);">The wine world, summarized. The day's most important stories across the trade, culture, and science of wine, with the key facts pulled out.</p>
+      <p style="margin:17px 0 0; font-family:{SANS}; font-weight:400; font-size:14.5px; line-height:1.55; color:rgba(255,255,255,0.82);">The wine world, summarized. The week's most important stories across the trade, culture, and science of wine, with the key facts pulled out.</p>
     </td></tr>
 
     <tr><td class="card-inner" style="padding:2px 38px 30px;">
@@ -193,7 +202,7 @@ open(os.path.join(HERE, "winefeed-email-klaviyo.html"), "w").write(KLAVIYO_HTML)
 # local source-of-truth mirror (email-local-first) when that dir exists
 _kdir = os.path.expanduser("~/dev/primal_claude/klaviyo")
 if os.path.isdir(_kdir):
-    open(os.path.join(_kdir, "winefeed-daily-brief.html"), "w").write(KLAVIYO_HTML)
+    open(os.path.join(_kdir, "winefeed-weekly-brief.html"), "w").write(KLAVIYO_HTML)
 open(os.path.join(HERE, "winefeed-email-preview.html"), "w").write(page(FOOTER_PREVIEW, WM_DATA))
 
 # content-only for the Artifact preview (strip doctype/html/head/body)
@@ -201,7 +210,7 @@ full = page(FOOTER_PREVIEW, WM_DATA)
 style = re.search(r"<style>.*?</style>", full, re.S).group(0)
 inner = re.search(r"<body>(.*)</body>", full, re.S).group(1)
 open(os.path.join(HERE, "winefeed-email-artifact.html"), "w").write(
-    "<title>winefeed daily brief — email</title>\n" + style + "\n" + inner)
+    "<title>winefeed weekly brief, email</title>\n" + style + "\n" + inner)
 
 print("wrote klaviyo template + preview + artifact")
 print("date:", DATELINE, "| stories:", sum(len(ITEMS.get(t, [])) for t in TAB_ORDER))

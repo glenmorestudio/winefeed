@@ -1,0 +1,29 @@
+name: winefeed weekly brief
+
+# Every Friday: collect the week's daily editions (archive/*.json), render the weekly email,
+# and leave it as a DRAFT campaign in Klaviyo. It never sends: a person reviews and presses send.
+on:
+  schedule:
+    - cron: "0 15 * * 5"    # Fridays 15:00 UTC (GitHub may start it later)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the week's data, render the email, push a Klaviyo DRAFT (never sends)
+        env:
+          KLAVIYO_PRIVATE_KEY: ${{ secrets.KLAVIYO_PRIVATE_KEY }}
+        run: |
+          python3 weekly.py
+          python3 email_brief.py
+          python3 email_push.py

@@ -157,7 +157,7 @@ def header_html(*, right, home_href=None, heading=True):
 def subscribe_html():
     return f'''<form class="subscribe" id="subForm" novalidate>
           <div class="sub-field">
-            <input type="email" id="subEmail" placeholder="Sign up for our daily brief" autocomplete="email" aria-label="Email address" required>
+            <input type="email" id="subEmail" placeholder="Sign up for our weekly brief" autocomplete="email" aria-label="Email address" required>
             <button class="sub-btn" type="submit" aria-label="Subscribe">{MAIL}</button>
           </div>
           <span class="sub-msg" id="subMsg" role="status"></span>

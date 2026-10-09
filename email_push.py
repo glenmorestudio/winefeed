@@ -1,32 +1,32 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-winefeed daily brief -> Klaviyo DRAFT campaign
-==============================================
+winefeed weekly brief -> Klaviyo DRAFT campaign
+===============================================
 Renders nothing itself; reads the HTML email_brief.py already wrote to
-~/dev/primal_claude/klaviyo/winefeed-daily-brief.html (local-first source of truth),
-updates the winefeed template, and creates a DRAFT campaign to the "Winefeed Daily
+~/dev/primal_claude/klaviyo/winefeed-weekly-brief.html (local-first source of truth),
+updates the winefeed template, and creates a DRAFT campaign to the "Winefeed Weekly
 Brief" list. It NEVER creates a send job, so nothing goes out without a human in
 Klaviyo pressing send (honors "Klaviyo owns email").
 
-Idempotent per day: re-running updates that day's existing draft instead of piling
+Idempotent per week: re-running updates that week's existing draft instead of piling
 up duplicates. Skips cleanly (exit 0) if no Klaviyo private key is available.
 
 Key: env KLAVIYO_PRIVATE_KEY, else ~/.primal_wine_club/config.json "klaviyo_key".
-Run:  python3 email_brief.py && python3 email_push.py
+Run:  python3 weekly.py && python3 email_brief.py && python3 email_push.py
 """
 import json, os, sys, subprocess, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REVISION = "2025-10-15"
-TEMPLATE_ID = "WuKNJh"                 # "winefeed Daily Brief" template
+TEMPLATE_ID = "WuKNJh"                 # "Winefeed Weekly Brief" template
 FROM_EMAIL = "guido@primalwine.com"    # verified sender on the account
 FROM_LABEL = "winefeed by Primal Wine"
 REPLY_TO = "guido@primalwine.com"
 # repo-local send file (written by email_brief.py; present on CI too),
 # falling back to the local source-of-truth mirror if that's all there is.
 HTML_PATH = os.path.join(HERE, "winefeed-email-klaviyo.html")
-HTML_FALLBACK = os.path.expanduser("~/dev/primal_claude/klaviyo/winefeed-daily-brief.html")
+HTML_FALLBACK = os.path.expanduser("~/dev/primal_claude/klaviyo/winefeed-weekly-brief.html")
 
 def get_key():
     k = os.environ.get("KLAVIYO_PRIVATE_KEY")
@@ -69,8 +69,8 @@ def kv(key, method, path, body=None):
     return ok, data
 
 def subject_and_preview():
-    """A specific, enticing subject + preheader built from the day's lead briefs."""
-    d = json.load(open(os.path.join(HERE, "feed_data.json")))
+    """A specific subject + preheader built from the week's lead briefs."""
+    d = json.load(open(os.path.join(HERE, "weekly_data.json")))
     items = d.get("items", {})
     heads = []
     for tab in ("MARKET", "CULTURE", "SCIENCE"):
@@ -78,7 +78,7 @@ def subject_and_preview():
             h = (row.get("head") or "").strip()
             if h:
                 heads.append(h)
-    lead = heads[0] if heads else "Today's wine brief"
+    lead = heads[0] if heads else "This week's wine brief"
     rest = heads[1:3]
     preview = "Plus: " + " · ".join(rest) if rest else "The wine world, summarized."
     return lead[:150], preview[:180]
@@ -98,20 +98,20 @@ def main():
         return 1
     html = open(path).read()
 
-    today = datetime.date.today().isoformat()
-    name = f"winefeed daily brief — {today}"
+    week = json.load(open(os.path.join(HERE, "weekly_data.json"))).get("start") or datetime.date.today().isoformat()
+    name = f"Winefeed weekly brief, week of {week}"
     subject, preview = subject_and_preview()
 
     # 1) refresh the shared template with today's HTML (assign clones it into the message)
     ok, data = kv(key, "PATCH", f"templates/{TEMPLATE_ID}/", {
         "data": {"type": "template", "id": TEMPLATE_ID,
-                 "attributes": {"name": "winefeed Daily Brief", "html": html}}})
+                 "attributes": {"name": "Winefeed Weekly Brief", "html": html}}})
     if not ok:
         print("! template update failed:", json.dumps(data.get("errors", data))[:600], file=sys.stderr)
     else:
         print(f"template {TEMPLATE_ID} updated")
 
-    # 2) find today's draft campaign (idempotent) or create a fresh draft
+    # 2) find this week's draft campaign (idempotent) or create a fresh draft
     campaign_id = None
     ok, data = kv(key, "GET", "campaigns/?filter=equals(messages.channel,'email')&sort=-created_at&page[size]=50")
     if ok:
@@ -122,7 +122,7 @@ def main():
                 break
 
     if campaign_id:
-        print(f"reusing today's draft campaign {campaign_id}")
+        print(f"reusing this week's draft campaign {campaign_id}")
     else:
         ok, data = kv(key, "POST", "campaigns/", {
             "data": {"type": "campaign", "attributes": {
@@ -132,7 +132,7 @@ def main():
                     "type": "campaign-message",
                     "attributes": {"definition": {
                         "channel": "email",
-                        "label": "winefeed daily brief",
+                        "label": "winefeed weekly brief",
                         "content": {
                             "subject": subject, "preview_text": preview,
                             "from_email": FROM_EMAIL, "from_label": FROM_LABEL,
@@ -158,7 +158,7 @@ def main():
                      "from_email": FROM_EMAIL, "from_label": FROM_LABEL,
                      "reply_to_email": REPLY_TO}}}}})
 
-    # 5) clone today's template HTML into the message (this is the actual body)
+    # 5) clone this week's template HTML into the message (this is the actual body)
     ok, data = kv(key, "POST", "campaign-message-assign-template/", {
         "data": {"type": "campaign-message", "id": message_id,
                  "relationships": {"template": {"data": {"type": "template", "id": TEMPLATE_ID}}}}})
