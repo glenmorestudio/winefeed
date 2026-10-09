@@ -3,7 +3,71 @@
   "items": {
     "MARKET": [
       {
-        "head": "Vinitaly.USA moves to New York's Pier 36 for October 2026 debut",
+        "head": "South Australian wineries win 12 of 26 trophies at Royal Adelaide awards",
+        "date": "2026-10-09",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "South Australian wineries have claimed 12 of the 26 trophies on offer at the 2026 Royal Adelaide Wine Awards, with the Adelaide Hills having a strong result, taking out Best Pinot Noir and Best Sparkling Wine, while alternative varieties also featured among the highlights. Evans & Tate’s 2024 Redbrook Estate Chardonnay won the...",
+        "urls": [
+          "https://winetitles.com.au/south-australian-winemakers-claim-12-trophies-at-2026-royal-adelaide-wine-awards/"
+        ],
+        "takeaways": [
+          "South Australian wineries claimed 12 of the 26 trophies at the 2026 Royal Adelaide Wine Awards, with Adelaide Hills wines strong.",
+          "Sidewood Estate won Best Pinot Noir and Simon Tolley Wines won Best Sparkling Wine, both categories usually dominated by Tasmania.",
+          "Naked Run Wines and Serafino Wines won the Governor's Trophies, and both wines will be served at Government House for 12 months."
+        ]
+      },
+      {
+        "head": "Gang steals 30,000 bottles worth €5m from Antinori winery in Cortona",
+        "date": "2026-10-09",
+        "sources": [
+          "The Guardian"
+        ],
+        "summ": "<p>Gang breaks into cellar of Marchesi Antinori in Cortona and loads two trucks with 30,000 bottles before getaway</p><p>Thousands of bottles of wine worth €5m (£4.2m) have been stolen from a prestigious winery in Tuscany in what is thought to be the biggest heist of its kind in Italy.</p><p>A gang of at least seven masked...",
+        "urls": [
+          "https://www.theguardian.com/world/2026/oct/09/thieves-make-off-with-haul-from-prestigious-italian-winery-marchesi-antinori"
+        ],
+        "takeaways": [
+          "A masked gang of at least seven broke into Marchesi Antinori's Cortona cellar, disabled alarms and cameras, and loaded two trucks.",
+          "Roughly 30,000 bottles from the 2023 vintage, priced €120 to €400 each and worth about €5 million, were taken in the Saturday raid.",
+          "The company's insurance does not cover theft of wine at this value, and it has warned customers against buying its wine outside official channels."
+        ]
+      },
+      {
+        "head": "VINITECH-SIFEL trade show in Bordeaux, December 2026, with international buyer programme",
+        "date": "2026-10-08",
+        "sources": [
+          "Vineyard Magazine"
+        ],
+        "summ": "From 1-3 December 2026, Bordeaux will welcome wine professionals from around the world for VINITECH-SIFEL, a leading international trade show dedicated to innovation and solutions for the wine, fruit and vegetable sectors. Bringing together 700 exhibitors, 40,000 professionals from 70 countries and 70,000 m² of exhibition...",
+        "urls": [
+          "https://www.vineyardmagazine.co.uk/events/vinitech-sifel-2026-connect-with-the-global-wine-industry-in-bordeaux/"
+        ],
+        "takeaways": [
+          "VINITECH-SIFEL, a wine, fruit and vegetable trade show, runs 1-3 December 2026 in Bordeaux with 700 exhibitors.",
+          "The event expects 40,000 professionals from 70 countries across 70,000 m² of exhibition space.",
+          "The International Buyers Program offers eligible investors 4-star hotel stays and travel support, funded by the organisers."
+        ]
+      },
+      {
+        "head": "Treasury Wine Estates cuts 170 roles as new operating model nears",
+        "date": "2026-10-08",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "According to reporting by The Australian, Treasury Wine Estates (TWE) has axed 170 roles as part of its previously announced major operational and regional restructure. The article details that the redundancies are mostly across roles in marketing, IT, finance and support roles at TWE’s offices. The Australian said that some...",
+        "urls": [
+          "https://winetitles.com.au/twe-cuts-170-jobs-as-new-operating-model-comes-into-effect/"
+        ],
+        "takeaways": [
+          "Treasury Wine Estates has cut 170 roles, mostly in marketing, IT, finance and support at its offices, per The Australian.",
+          "Most redundancies are at the Melbourne headquarters and other offices, though some job losses are believed to have hit its vineyards.",
+          "The restructure creates a unified, simplified portfolio and takes effect 1 October 2026, with recruiting continuing for commercial roles."
+        ]
+      },
+      {
+        "head": "Vinitaly.USA debuts in New York City at Pier 36 in October 2026",
         "date": "2026-10-07",
         "sources": [
           "SevenFifty Daily"
@@ -13,45 +77,77 @@
           "https://daily.sevenfifty.com/register-now-for-vinitaly-usas-nyc-debut/"
         ],
         "takeaways": [
-          "Vinitaly.USA makes its first New York City appearance at Pier 36 on October 26 and 27, 2026, after two years in Chicago.",
-          "The fair will host 300 exhibitors presenting 2,500 labels, its largest exhibitor count to date, including Asti DOCG, Sicilia DOC and Prosecco DOC.",
-          "Registration is open, and the event features a 95-winery delegation organized by the Italian Trade Agency plus the wine2wine Vinitaly Business Forum."
+          "Vinitaly.USA, organized by Veronafiere with the Italian Trade Agency, holds its first New York City edition at Pier 36 on October 26-27, 2026.",
+          "The event moves from Chicago after two years and will host 300 exhibitors presenting 2,500 labels, the largest exhibitor count yet.",
+          "A 95-winery delegation organized by the Italian Trade Agency joins regional collectives from Friuli-Venezia Giulia, Lazio and Sardinia."
         ]
       },
       {
-        "head": "Restaurant beverage directors adapt to rising costs and wholesaler collapse",
-        "date": "2026-10-06",
+        "head": "Bordeaux leads fine wine trade with 33% share; DRC dominates Burgundy",
+        "date": "2026-10-02",
         "sources": [
-          "VinePair"
+          "Liv-ex"
         ],
-        "summ": "It’s a hard time to run a beverage program. Costs are escalating due in part to an unhappy blend of tariffs, supply chain issues, and general inflation. The wholesale sector of the drinks industry is in a tremendous amount of flux following the collapse of Republic National Distributing Company (RNDC) over the last year,...",
+        "summ": "In this week’s Talking Trade, US buyers maintained their lead of purchasing, with EU buyers behind increasing their purchased value by 140% week-on-week",
         "urls": [
-          "https://vinepair.com/articles/how-beverage-directors-navigate-restaurant-economics/"
+          "https://www.liv-ex.com/fine-wine-news-eu-buying-up-140-on-week-on-week/"
         ],
         "takeaways": [
-          "Wholesaler RNDC collapsed from second-largest US beverage distributor to Chapter 11 bankruptcy in under two years.",
-          "Will Jones of The Hope Farm and Little Bird in Fairhope, Ala. now substitutes Burgundy villages for Premier Cru because prices rose sharply.",
-          "Felipe de Assis Villela of Bluepoint Hospitality Group in Easton, Md. says he avoids restaurant markups of 200-300 percent."
+          "Bordeaux took 33.0% of traded value this week, ahead of Burgundy's 28.5%, with the 2009 and 2019 vintages top by value.",
+          "Domaine de la Romanee-Conti accounted for 10.6% of overall trade, over a third of Burgundy's trade.",
+          "Champagne fell to 13.9% of traded value from 21.4% last week, while US buyers took 47% of the region's purchases."
         ]
       },
       {
-        "head": "Clase Azul and Patrón lead list of world's most expensive tequilas",
+        "head": "Emeritus Vineyards diversifies sales and dry farms Pinot Noir in Sonoma",
+        "date": "2026-09-30",
+        "sources": [
+          "Growing Produce"
+        ],
+        "summ": "Emeritus Vineyards in California stays focused on quality and pursues new opportunities in a difficult wine market",
+        "urls": [
+          "https://www.growingproduce.com/fruits/grapes/how-emeritus-vineyards-grows-opportunities-with-diversification-and-dry-farming/"
+        ],
+        "takeaways": [
+          "Emeritus Vineyards in Sebastopol, California, is led by President Mari Jones and vineyard manager Riggs Lokka, both second-generation.",
+          "Amid a market downturn, the company sells a meaningful share of its fruit to winery partners alongside its own wines.",
+          "Emeritus began a four-year transition from irrigation to dry farming in 2007, which it says changed wine quality and flavor."
+        ]
+      },
+      {
+        "head": "Fine wine market shows early recovery, led by top-end demand and back vintages",
         "date": "2026-09-29",
         "sources": [
-          "VinePair"
+          "Liv-ex"
         ],
-        "summ": "Though many consumers might recognize tequila as what they encountered in a shot in college or as the ingredient in their favorite cocktail, there’s also a market for extremely high-end tequila. These luxury bottles, often from prestigious brands like Clase Azul and Patrón, are revered for both their flavor profiles and...",
+        "summ": "Tom Burchfield, Head of Decision Intelligence at Liv-ex, presented at the Drinks Business Conference 2026 on the state of the fine wine market",
         "urls": [
-          "https://vinepair.com/booze-news/10-most-expensive-tequilas-2026/"
+          "https://www.liv-ex.com/inside-the-drinks-business-conference-2026-tom-burchfields-state-of-the-fine-wine-market-presentation/"
         ],
         "takeaways": [
-          "Wine Searcher ranked the world's ten most expensive tequilas, mostly from Clase Azul and Patrón.",
-          "Many of the priciest bottlings come from limited runs of under 500 bottles, with some as few as 299 or 300.",
-          "Packaging includes artisanal decanters made with artists, such as clay decanters with sterling silver and crystal decanters."
+          "Liv-ex indices have risen slightly over the past year, and Q3 trade value rose steeply versus Q2 2026 and Q3 2025.",
+          "Recovery is narrow: demand is returning first to top-end wines and back vintages, with performance varying by region, producer and vintage.",
+          "Pre-2011 Bordeaux trade rose sharply on Liv-ex in Q3, and the Fine Wine 1000 is back to its 2015 level in real terms."
         ]
       },
       {
-        "head": "Seven proposed US AVAs spanning California, Oregon, New Jersey and New York await approval",
+        "head": "WineGB takes English and Welsh wines to Stockholm, Oslo and Trondheim",
+        "date": "2026-09-26",
+        "sources": [
+          "Vineyard Magazine"
+        ],
+        "summ": "WineGB confirms Scandinavian tasting tour, creating a high value commercial opportunity for members. WineGB confirms its Scandinavian Trade & Media Tasting Tour, a three city showcase across Stockholm, Oslo and Trondheim, designed to accelerate export growth for English wine producers and deliver meaningful commercial value for...",
+        "urls": [
+          "https://www.vineyardmagazine.co.uk/events/international-tour-creates-commercial-opportunity/"
+        ],
+        "takeaways": [
+          "WineGB is running a Scandinavian trade and media tasting tour across Stockholm, Oslo and Trondheim to promote export growth.",
+          "The tour will feature more than 20 English and Welsh producers aimed at Nordic buyers, importers and sommeliers.",
+          "English wine export sales grew 9% in 2024, with volumes up 35%, and exports now reach 50 countries."
+        ]
+      },
+      {
+        "head": "Seven proposed US AVAs spanning California to New Jersey seek federal wine-region recognition",
         "date": "2026-09-24",
         "sources": [
           "SevenFifty Daily"
@@ -61,29 +157,13 @@
           "https://daily.sevenfifty.com/what-to-expect-from-7-potential-new-avas/"
         ],
         "takeaways": [
-          "Seven potential new American Viticultural Areas are in early stages, each needing years of review by the federal TTB.",
-          "The proposed Deschutes River AVA would be central Oregon's first recognized winegrowing region, spanning 723,760 acres.",
-          "The proposed Hunterdon Hills AVA in New Jersey covers about 200,000 acres, ranking second for suitable premier grape land."
+          "Seven potential new American Viticultural Areas are in early stages, each requiring years of review by the TTB.",
+          "Annapolis-Sea Ranch, in California, would cover 26,637 acres with 651 acres of grapes across a dozen vineyards.",
+          "The 723,760-acre Deschutes River AVA would be the first recognized winegrowing region in central Oregon."
         ]
       },
       {
-        "head": "Cruise lines emerge as wine marketing channel for wineries seeking loyalty",
-        "date": "2026-09-21",
-        "sources": [
-          "SevenFifty Daily"
-        ],
-        "summ": "From dedicated charters to custom bottlings, wineries are leveraging cruise partnerships to capture engaged audiences and drive long-term sales",
-        "urls": [
-          "https://daily.sevenfifty.com/cruise-ships-wine-sales/"
-        ],
-        "takeaways": [
-          "Cooper's Hawk chartered Virgin Voyages' Valiant Lady for a four-night Caribbean wine club cruise, and a second charter in February 2027 drew over 30% sign-ups.",
-          "Holland America launched a Columbia Valley brut fleetwide in 2024 with Four Feathers Wine Services, now its most-served adult beverage.",
-          "Eleven Eleven Wines reported a 33% conversion rate among non-club passengers after a seven-day Mediterranean sailing on Scenic Eclipse II."
-        ]
-      },
-      {
-        "head": "VinePair's weekly roundup lists Southern Glazer's probe and new spirits releases",
+        "head": "VinePair's weekly roundup lists beverage alcohol news and new product releases",
         "date": "2026-10-09",
         "sources": [
           "VinePair"
@@ -96,31 +176,15 @@
           "https://vinepair.com/booze-news/booze-news-weekly-roundup-new-english-single-malt-category-trump-to-lift-irish-whiskey-tariff/"
         ],
         "takeaways": [
-          "California has launched an investigation into Southern Glazer's over a reported bribery issue.",
-          "Trump is set to lift the tariff on Irish whiskey, per the roundup's headlines.",
-          "The roundup also covers GunBun's bankruptcy filing and a legal dispute between Stateside and AB InBev."
-        ]
-      },
-      {
-        "head": "Constellation Brands buys SpikedAde, a boozy sports drink brand, for $75 million",
-        "date": "2026-10-06",
-        "sources": [
-          "VinePair"
-        ],
-        "summ": "On Tuesday Constellation Brands announced its acquisition of SpikedAde, one of the leading ready-to-drink (RTD) beverages in the growing boozy sports drink segment. Constellation agreed to a payment of $75 million for 100 percent ownership of the fast-growing brand, though payments in the next five years could reach up to an...",
-        "urls": [
-          "https://vinepair.com/booze-news/constellation-acquires-spikedade-for-75-million/"
-        ],
-        "takeaways": [
-          "Constellation Brands agreed to pay $75 million for 100 percent ownership of SpikedAde, a vodka-based ready-to-drink brand.",
-          "Up to an additional $278 million could be paid over five years, contingent on the brand's performance.",
-          "The deal is Constellation's first move into hard sports drinks, a segment whose 'Ade' products passed one million cases this year."
+          "California has launched an investigation into Southern Glazer's over a bribery matter.",
+          "Trump has moved to ban Canadian alcohol, and Trump will lift the tariff on Irish whiskey.",
+          "GunBun filed for bankruptcy, and Stateside and AB InBev are in a legal dispute."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Bouvet-Ladubay marks 175 years as Saumur's largest sparkling producer",
+        "head": "Bouvet-Ladubay marks 175 years of sparkling wine in Saumur's Loire cellars",
         "date": "2026-10-09",
         "sources": [
           "VinePair"
@@ -130,13 +194,29 @@
           "https://vinepair.com/articles/bouvet-ladubays-loire-legacy/"
         ],
         "takeaways": [
-          "Bouvet-Ladubay, founded in Saumur in 1851 by Etienne Bouvet and Célestine Ladubay, is celebrating its 175th anniversary this year.",
-          "The house is described as the largest producer of méthode traditionnelle sparkling wine in Saumur, with cellars covering eight kilometres.",
-          "Its wines are exported to around 50 countries, and the Monmousseau family has run the house since 1908."
+          "Bouvet-Ladubay, founded in 1851 by Etienne Bouvet and Célestine Ladubay, is celebrating its 175th anniversary in Saumur, Loire.",
+          "The house is the largest producer of méthode traditionnelle sparkling wine in Saumur, with cellars spanning eight kilometres under an old abbey.",
+          "Its Cuvée blends Chenin Blanc, Chardonnay and Cabernet Franc, sourced from about 80 winegrowers on more than 100 plots."
         ]
       },
       {
-        "head": "Bartenders say American drinkers abroad are curious, though they still favor vodka",
+        "head": "Economist Mike Veseth to keynote 2027 Unified Wine & Grape Symposium in Sacramento",
+        "date": "2026-09-29",
+        "sources": [
+          "The Wine Economist"
+        ],
+        "summ": "SACRAMENTO, Calif., Sept. 14, 2026 , As the wine industry navigates changing consumer demand, shifting global markets and continued economic pressures, Mike Veseth will take the stage as keynote speaker at the 2027 Unified Wine & Grape Symposium, offering his full outlook after years of shaping the conversation as moderator of...",
+        "urls": [
+          "https://wineeconomist.com/2026/09/29/unified-4/"
+        ],
+        "takeaways": [
+          "Economist and author Mike Veseth will give the keynote at the 2027 Unified Wine & Grape Symposium, opening day January 26 in Sacramento.",
+          "Veseth, professor emeritus at the University of Puget Sound and editor of The Wine Economist, will address global wine economic forces and their implications for growers and wineries.",
+          "The Keynote Speaker Luncheon is January 26 at the Sheraton Grand Hotel, with seats limited and requiring separate registration."
+        ]
+      },
+      {
+        "head": "Bartenders say American drinkers abroad are curious, if still fond of vodka and Martinis",
         "date": "2026-10-08",
         "sources": [
           "VinePair"
@@ -146,13 +226,126 @@
           "https://vinepair.com/articles/signs-of-american-drinkers-in-europe/"
         ],
         "takeaways": [
-          "European bartenders say American bar guests in 2026 are curious and open, though many still order vodka Martinis.",
-          "Connaught Bar in London makes about 30,000 Martinis a year, with many American guests specifying vodka over gin.",
-          "Americans abroad often request spirit substitutions like bourbon, and some ask for American drinks such as the Cosmopolitan."
+          "Giorgio Bargiani of The Connaught Bar in London says American guests at the bar are entertaining and show genuine interest in staff and drinks.",
+          "Arturo Burzio, head mixologist at Rosewood Villa Magna in Madrid, says American guests often request vodka Martinis and spirit substitutions.",
+          "U.S. travel to Europe hit a record 24 million trips in 2025, per The Wall Street Journal, with a further 5 percent rise expected this year."
         ]
       }
     ],
-    "SCIENCE": [],
+    "SCIENCE": [
+      {
+        "head": "Part Two of vineyard lab series examines irrigation water's effect on soil minerals",
+        "date": "2026-10-08",
+        "sources": [
+          "Lodi Growers"
+        ],
+        "summ": "THURSDAY, OCTOBER 8, 2026. BY STAN GRANT, VITICULTURIST. Part Two of a Three-Part Vineyard Mineral Nutrient Management Lab Analysis Series.",
+        "urls": [
+          "https://lodigrowers.com/lab-analysis-in-vineyard-mineral-nutrient-management-water/"
+        ],
+        "takeaways": [
+          "Viticulturist Stan Grant's Part Two of a three-part series covers irrigation water's role in vineyard mineral nutrient management.",
+          "Nearly pure irrigation water, such as Sierra Nevada snowmelt, strips soil minerals, making soils less fertile and more acidic over time.",
+          "Saline well water can make soils saline under drip emitters, causing grapevines to work harder to take up water and risking sodium and chloride toxicity."
+        ]
+      },
+      {
+        "head": "Regenerative vineyards show gains in cover crop, soil and resilience research",
+        "date": "2026-10-07",
+        "sources": [
+          "Regenerative Viticulture Foundation"
+        ],
+        "summ": "Our September newsletter is out. This month: Tasting Climate Change 2026 sessions now available to watch; practical guides on cover crops, weed management and compost teas; fresh research on resilience and economics in regenerative vineyards from France to Sonoma, plus new recognition for ROC and regenerative producers from...",
+        "urls": [
+          "https://regenerativeviticulture.org/resources/articles-and-blogs/september-2026-newsletter/"
+        ],
+        "takeaways": [
+          "A 2026 Environmental Microbiome study by Canavera et al. tested cover-crop under-vine mulching in a non-irrigated vineyard in Piacenza, Italy.",
+          "That mulching significantly raised microbial diversity around roots and in leaves while reducing pathogen pressure, per the study.",
+          "A 2026 Field Crops Research study of Mediterranean rainfed vineyards found roller-crimped cover crops improved soil cover and vine water status."
+        ]
+      },
+      {
+        "head": "French wine harvest set for historic low after summer heatwaves",
+        "date": "2026-10-07",
+        "sources": [
+          "The Guardian"
+        ],
+        "summ": "<p>This year’s harvest expected to be down 2% on mediocre yield in 2025, when production was lowest in nearly 70 years</p><p>France’s wine industry is facing a historic low harvest after the country was hit by a series of summer heatwaves.</p><p>At about 35m hectolitres, the total harvest would be down 2% on a mediocre 2025...",
+        "urls": [
+          "https://www.theguardian.com/food/2026/oct/07/french-wine-industry-historic-low-harvest-extreme-summer-heat"
+        ],
+        "takeaways": [
+          "France's 2026 wine harvest is estimated at about 35m hectolitres, 2% below 2025 and 14% below the 2021-2025 average, per the agriculture ministry.",
+          "Champagne harvested in September for the first time, with output halved from last year after extreme heat sped sugar buildup.",
+          "Burgundy and Beaujolais production is projected 30% below the five-year average, while Bordeaux is expected to rise 10% on 2025."
+        ]
+      },
+      {
+        "head": "SFI 2026 offers UK vineyards payments for cover crops and habitat measures",
+        "date": "2026-09-25",
+        "sources": [
+          "Vineyard Magazine"
+        ],
+        "summ": "The second application window for the Sustainable Farming Incentive (SFI) is set to open on 22 September, so Hutchinsons head of environmental services, Georgina Wallis, highlights some actions that may be of interest to growers in the viticulture sector. While the SFI is primarily aimed at arable and livestock farms, vines and...",
+        "urls": [
+          "https://www.vineyardmagazine.co.uk/agronomy/sfi-2026-whats-in-it-for-vineyards/"
+        ],
+        "takeaways": [
+          "The Sustainable Farming Incentive (SFI) 2026 includes vines and horticultural permanent crops, with 71 actions, several relevant to vineyards.",
+          "LEAF Marque Standard version 17.0 requires 5% or more of farm or site area managed as habitat, with an optional 10% target.",
+          "Overwinter cover crops should ideally be sown by late August or early September, though SFI allows up to 12 months to establish a mix."
+        ]
+      },
+      {
+        "head": "English sparkling producer Nyetimber starts earliest harvest, expects strong 2026 vintage",
+        "date": "2026-09-10",
+        "sources": [
+          "The Guardian"
+        ],
+        "summ": "<p>Hot weather means sweeter grapes, but outlook gloomier for beermakers, as drought diminishes barley harvest</p><p></p><p>English sparkling winemakers expect their earliest grape harvest and a “vintage year” after a scorching summer quickly ripened grapes.</p><p>However, beer sellers have warned of a potential shortage after...",
+        "urls": [
+          "https://www.theguardian.com/uk-news/2026/sep/10/english-winemakers-vintage-grapes-harvest-heatwave"
+        ],
+        "takeaways": [
+          "Nyetimber, England's first exclusive sparkling pinot noir, chardonnay and pinot meunier grower, will start picking on 14 September.",
+          "That is its earliest harvest since first planting in 1988, with 500 pickers recruited for about 2,500 tonnes of grapes.",
+          "Late spring frosts hit almost 30% of its vines, while summer drought shrank some berries, though sunshine concentrated sugars."
+        ]
+      },
+      {
+        "head": "Survey of vineyards finds heat and rainfall shifts drive shift from chemical inputs",
+        "date": "2026-09-09",
+        "sources": [
+          "Sustainable Wine Roundtable"
+        ],
+        "summ": "(4 min read) We spend our time working on sustainability in wine: it’s our job, and there’s a clue in our organisation’s title! As a result, we know a lot about things like bottle weight, packaging and how different sustainability standards compare with each other. However, what we - and indeed most of us in",
+        "urls": [
+          "https://swroundtable.org/what-does-sustainability-in-wine-actually-look-like-in-the-vineyard/"
+        ],
+        "takeaways": [
+          "Sustainable Vineyard Practice Survey, run by SWR, drew responses from Australia, Italy, South Africa, France, UK, USA and New Zealand.",
+          "Almost all respondents cited heat and changing rainfall patterns as their most significant environmental problem.",
+          "Over 80% use non-chemical or targeted fertiliser approaches, and only about 5% still apply chemicals blanket-style."
+        ]
+      },
+      {
+        "head": "Hampshire firm Wildflower Co. shortlisted for South Coast tech award",
+        "date": "2026-09-27",
+        "sources": [
+          "Vineyard Magazine"
+        ],
+        "summ": "Hampshire-based biodiversity specialist Wildflower Co. is a finalist in the South Coast Tech and Innovation Awards, in recognition of its groundbreaking use of science and technology to help tackle biodiversity loss and accelerate nature recovery. The pioneering company, which combines more than two decades of scientific...",
+        "urls": [
+          "https://www.vineyardmagazine.co.uk/news/creating-species-rich-wildflower-habitats-faster/"
+        ],
+        "takeaways": [
+          "Hampshire biodiversity specialist Wildflower Co. is a finalist in the South Coast Tech and Innovation Awards' Tech for Good category.",
+          "Its Meadowscape Pro system can establish high-quality meadow habitats in three to four months.",
+          "The Southampton awards ceremony takes place on 15 October."
+        ]
+      }
+    ],
     "NEWSLETTERS": [
       {
         "source": "wineanorak",
@@ -162,8 +355,21 @@
         "summ": "Canadian Sparkling Wine is a category that is progressing nicely. This tasting was a selection of 24, across many different",
         "author": "Jamie Goode",
         "takeaways": [
-          "A rare cross-country tasting of 24 Canadian sparkling wines was held in Niagara, which is over-represented as a result.",
-          "Trius Showcase Blanc de Blancs NV, from Niagara, was tasted and scored 93/100, while York Reserve 2016 from Niagara-on-the-Lake also scored 94/100."
+          "A rare cross-country Canadian sparkling tasting featured 24 wines, with Niagara over-represented because the tasting was held there.",
+          "Highlights included Trius Showcase Blanc de Blancs NV and York Reserve 2016, both scored 93/100 and 94/100 respectively."
+        ]
+      },
+      {
+        "source": "shades of grape",
+        "url": "https://www.shadesofgrape.ca/p/400-montepulciano-bottles-for-thomas",
+        "date": "2026-10-09",
+        "head": "400 Montepulciano Bottles for Thomas Jefferson circa 1805",
+        "summ": "The wine everyone’s been gushing over since the middle ages!",
+        "author": "Eveline Chartier",
+        "takeaways": [
+          "The oldest known document for Vino Nobile di Montepulciano dates to October 17, 1350, held in the State Archives of Florence.",
+          "Thomas Jefferson received 473 bottles of Montepulciano in November 1805 and asked for 400 more bottles annually.",
+          "A 2024 Consorzio-unveiled document shows the first known use of the term Vino Nobile was in 1766 by the Jesuit order."
         ]
       },
       {
@@ -174,9 +380,9 @@
         "summ": "I take a look at a brand new reference work to see how it stacks up with the competition",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "Dorling Kindersley's The Encyclopedia of Wine publishes October 8 in the UK and November 10 in the US.",
+          "Dorling Kindersley's The Encyclopedia of Wine is published 8 October in the UK and 10 November in the US.",
           "The book was written by 28 contributors, including Jane Anson on Bordeaux and Wink Lorch on the Jura.",
-          "It is a 400-page book, positioned against Oxford Companion to Wine and The World Atlas of Wine from the Robinson team."
+          "It is a 400-page volume and competes with The Oxford Companion to Wine and The World Atlas of Wine."
         ]
       },
       {
@@ -187,9 +393,35 @@
         "summ": "When urban Logroño winery meets the wilds of the Mediterranean",
         "author": "Miquel Hudin",
         "takeaways": [
-          "Arizcuren, owned by Javier Arizcuren, is the most urban winery in Rioja, located in central Logroño, a city of 150,000 people.",
-          "The winery produces around 30,000 bottles a year from its small central space, which also houses Javier's architecture office.",
-          "Arizcuren sources grapes from hills south of Quel in Rioja Oriental, a Mediterranean-influenced area where Grenache is significant."
+          "Arizcuren, based in central Logroño, is the most urban winery in Rioja, producing around 30,000 bottles a year from a tiny space.",
+          "Owner Javier Arizcuren, an architect, runs his architecture office in the same building and has been acquiring nearby space along Calle Santa Isabel.",
+          "Arizcuren sources grapes from the hills south of Quel in Rioja Oriental, once dominated by Grenache before Tempranillo took over."
+        ]
+      },
+      {
+        "source": "The Burgundy Outlook",
+        "url": "https://www.burgundyoutlook.com/p/inside-the-wine-festival-reshaping",
+        "date": "2026-10-06",
+        "head": "Inside the Wine Festival Reshaping How the World Sees Burgundy Right Now",
+        "summ": "Experience the 2026 Saint-Vincent Tournante wine festival. Discover new Burgundy wine flavours and see how this festivity reshapes perceptions of Burgundy",
+        "author": "Jonathan Finch",
+        "takeaways": [
+          "The 83rd Saint-Vincent Tournante will be held in Volnay on 30 and 31 January 2027.",
+          "Visitors to the Saint-Vincent Tournante will need to register in advance for the first time in the festival's history.",
+          "The 2026 edition in the Maranges villages drew nearly 60,000 visitors over the weekend."
+        ]
+      },
+      {
+        "source": "Cab Franc Chronicles",
+        "url": "https://www.cabfrancchronicles.com/p/five-minutes-with-thierry-and-louis",
+        "date": "2026-10-06",
+        "head": "Five Minutes with... Thierry and Louis Germain of Domaine des Roches Neuves",
+        "summ": "Two generations from one of Saumur-Champigny’s leading estates on their single-vineyard cuvées and learning to embrace Cabernet Franc’s green side",
+        "author": "Cab Franc Chronicles",
+        "takeaways": [
+          "Domaine des Roches Neuves, run by Thierry Germain with his son Louis, has produced single-vineyard cuvées parcellaires in Saumur-Champigny for 35 years.",
+          "The estate's five single-vineyard cuvées include Terres Chaudes, La Marginale, Clos de l'Échelier, Les Mémoires and Franc de Pied, the last made from ungrafted vines on sandy soils.",
+          "Thierry Germain says Cabernet Franc doesn't handle ripeness beyond 13.5 or 14% alcohol well, becoming a \"bad Syrah\"."
         ]
       },
       {
@@ -202,6 +434,18 @@
         "takeaways": []
       },
       {
+        "source": "1WineDude",
+        "url": "https://www.1winedude.com/another-exciting-new-chapter/",
+        "date": "2026-10-02",
+        "head": "(Another) Exciting New Chapter",
+        "summ": "Much has been happening behind the scenes here at the new 1WD HQ, folks. You might have heard the recent news that my bruthah-from-anothah-muthah Jonathan Cristaldi is moving into the role of Chief Wine Critic for both The Tasting Panel and its sister publication The SOMM Journal. As JC wrote in the press release for […] This...",
+        "author": "Joe Roberts",
+        "takeaways": [
+          "Jonathan Cristaldi is moving into the role of Chief Wine Critic for The Tasting Panel and its sister publication The SOMM Journal.",
+          "The news was announced in a press release, according to 1WineDude's post about the new 1WD HQ."
+        ]
+      },
+      {
         "source": "Maker's Table",
         "url": "https://www.makerstable.com/p/red-and-white-and-roero-all-over",
         "date": "2026-10-01",
@@ -209,9 +453,9 @@
         "summ": "Notes from my week in Piemonte, plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Meg Maker returned from a four-day Roero tour, where Roero's soils are sedimentary sandstone rather than the marl found in the Langhe to the south.",
-          "Roero's D.O.C.G. grapes are white Arneis and red Nebbiolo; producers plant roughly 1,000 hectares of Arneis versus 360 hectares of Nebbiolo.",
-          "Maker says Roero Nebbiolo reds sell in the U.S. for $25 to $45, while whites rarely top $25 except the Riserva bottlings."
+          "Meg Maker toured Roero, north of Alba across the Tanaro River, on a four-day trip with producer visits and a tasting itinerary.",
+          "Roero's D.O.C.G. grapes are white Arneis and red Nebbiolo, grown on sandstone soils rather than the marl of the Langhe.",
+          "Roero has about 1,000 planted hectares of Arneis versus 360 of Nebbiolo, with U.S. red prices of $25 to $45."
         ]
       },
       {
@@ -222,20 +466,9 @@
         "summ": "The year is 2029. First-world civilisation has adapted to mass surveillance. Waymos and Tesla Robotaxis chauffeur NPCs between work and their domicile.",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "Tim Atkin tested CellarTracker and food-pairing AI programs and found they often recommend Champagne for everything and confuse rosé with red.",
-          "Atkin says the SommPal app, developed by Marc Lewin, ranks up to five wine pairings per menu item and explains each recommendation's logic.",
-          "Lewin says SommPal is meant to help novice drinkers where no expert sommelier is available, not to replace sommeliers."
-        ]
-      },
-      {
-        "source": "Drinks Insider",
-        "url": "https://www.drinksinsider.com/p/what-i-learned-at-a-conference-on",
-        "date": "2026-08-13",
-        "head": "What I Learned at a Conference on Drinking",
-        "summ": "From the invention of moderation to the return of temperance",
-        "author": "Felicity Carter",
-        "takeaways": [
-          "Felicity Carter reports from Dublin on a conference about drinking, noting the city was cooler than the rest of Europe at end of June."
+          "Tim Atkin tested CellarTracker and food-pairing AI programmes and found they often recommend Champagne for everything and confuse rosé with red.",
+          "A Burgenland St. Laurent was recommended by an app for Mushroom-Jamón Arancini after the server couldn't help with the wine list.",
+          "Developer Marc Lewin's SommPal app ranks up to five pairings per menu item and explains each recommendation's logic, aimed at novice drinkers without an expert available."
         ]
       }
     ]
