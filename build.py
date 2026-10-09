@@ -143,9 +143,9 @@ def slides_html(items):
 
 def brand_html(home_href=None, heading=True):
     tag = "h1" if heading else "div"
-    mark = f'<{tag} class="wordmark">wine<span class="dropchar">feed</span></{tag}>'
+    mark = f'<{tag} class="wordmark">Winefeed</{tag}>'
     if home_href:
-        mark = f'<a class="wordmark-link" href="{esc(home_href)}" aria-label="winefeed home">{mark}</a>'
+        mark = f'<a class="wordmark-link" href="{esc(home_href)}" aria-label="Winefeed home">{mark}</a>'
     return f'<div class="brand">{mark}<p class="byline">by Primal Wine</p></div>'
 
 def header_html(*, right, home_href=None, heading=True):

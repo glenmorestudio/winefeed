@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Generate the 'winefeed' wordmark in Newsreader 400 as SVG (vector master) + PNG (for email)."""
+"""Generate the 'Winefeed' wordmark in Guido Serif Medium (500) as SVG (vector master) + PNG (for email)."""
 import os
 from fontTools.ttLib import TTFont
 from fontTools.varLib import instancer
@@ -9,10 +9,10 @@ from fontTools.pens.boundsPen import BoundsPen
 from PIL import Image, ImageFont, ImageDraw
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-TEXT = "winefeed"
+TEXT = "Winefeed"
 INK = "#16181D"
 
-font = TTFont(os.path.join(HERE, "font_newsreader.woff2"))
+font = TTFont(os.path.join(HERE, "font_guidoserif_medium.woff2"))
 if "fvar" in font:
     present = {a.axisTag for a in font["fvar"].axes}
     pin = {}

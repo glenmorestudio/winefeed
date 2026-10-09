@@ -37,7 +37,7 @@ body{
 /* ---------- header ---------- */
 .bar{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:17px 22px 13px; flex:0 0 auto; }
 .brand{ display:flex; align-items:baseline; gap:10px; min-width:0; }
-.wordmark{ font-family:var(--display); font-weight:400; font-size:25px; letter-spacing:-0.012em; color:var(--ink); margin:0; line-height:1; }
+.wordmark{ font-family:'Guido Serif',var(--display); font-weight:500; font-size:25px; letter-spacing:-0.005em; color:var(--ink); margin:0; line-height:1; }
 .wordmark .dropchar{ color:var(--ink); }
 .byline{ font-family:var(--mono); font-size:9.5px; font-weight:400; letter-spacing:0.11em; text-transform:uppercase; color:var(--meta); white-space:nowrap; }
 .bar-right{ display:flex; align-items:center; gap:14px; }
