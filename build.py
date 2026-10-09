@@ -264,15 +264,26 @@ def render_archive_day(date, data):
     open(os.path.join(ARCHIVE_DIR, f"{date}.html"), "w").write(html_out)
 
 def render_archive_index(days):
+    # one collapsible box per month (newest open), editions newest first inside it
+    per_month = {}
+    for date, _ in days:
+        d = parse_day(date)
+        per_month[(d.year, d.month)] = per_month.get((d.year, d.month), 0) + 1
+    chevron = ('<svg class="arc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" '
+               'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>')
     rows, cur_month = [], None
     for date, data in days:
         day = parse_day(date)
         month = (day.year, day.month)
         if month != cur_month:
             if cur_month:
-                rows.append('</ul>')
+                rows.append('</ul></details>')
+            n_ed = per_month[month]
+            rows.append(f'<details class="arc-box"{" open" if cur_month is None else ""}>'
+                        f'<summary class="arc-sum"><h2 class="arc-month">{MONTHS_FULL[day.month]} {day.year}</h2>'
+                        f'<span class="arc-count">{n_ed} edition{"s" if n_ed != 1 else ""}</span>{chevron}</summary>'
+                        f'<ul class="arc-list">')
             cur_month = month
-            rows.append(f'<h2 class="arc-month">{MONTHS_FULL[day.month]} {day.year}</h2><ul class="arc-list">')
         n = sum(len(v) for v in data["items"].values())
         lead = lead_of(data)
         spoken = f"{WEEKDAYS[day.weekday()].title()} {day.day} {MONTHS_FULL[day.month].title()} {day.year}"
@@ -282,7 +293,7 @@ def render_archive_index(days):
             <span class="arc-n">{n}<span class="sr-only"> stories</span></span>
           </a></li>''')
     if cur_month:
-        rows.append('</ul>')
+        rows.append('</ul></details>')
     oldest = parse_day(days[-1][0]) if days else datetime.date.today()
     right = f'<button class="theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false">{TOGGLE}</button>'
     body = f'''<a class="skip" href="#sheet">Skip to content</a>
