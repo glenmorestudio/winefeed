@@ -146,7 +146,7 @@ def brand_html(home_href=None, heading=True):
     mark = f'<{tag} class="wordmark">Winefeed</{tag}>'
     if home_href:
         mark = f'<a class="wordmark-link" href="{esc(home_href)}" aria-label="Winefeed home">{mark}</a>'
-    return f'<div class="brand">{mark}<p class="byline">by Primal Wine</p></div>'
+    return f'<div class="brand">{mark}</div>'
 
 def header_html(*, right, home_href=None, heading=True):
     return f'''<header class="bar">
