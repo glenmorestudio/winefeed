@@ -13,7 +13,7 @@ Writes feed_data.json, then runs build.py to regenerate index.html.
 Run:  python3 update.py         (then deploy index.html)
 Fully self-contained: only stdlib + curl. No API key, no external packages.
 """
-import subprocess, re, html, json, os, sys, datetime
+import subprocess, re, html, json, os, sys, datetime, time
 from email.utils import parsedate_to_datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -78,7 +78,32 @@ POOL = [
     ("Grape Collective",      "https://grapecollective.com/rss"),
     ("The Wine Economist",    "https://wineeconomist.com/feed/"),
     ("Dr Vino",               "https://www.drvino.com/feed/"),
+    # added 2026-10-09, each health-tested with this engine's parse/usable/is_wine and an
+    # article-body fetch under the winefeedbot UA. Science-heavy on purpose: SCIENCE was
+    # empty 13 of 14 days with the outlets above.
+    ("IVES Open Science",     "https://ives-openscience.eu/feed/"),
+    ("AWRI",                  "https://www.awri.com.au/feed/"),
+    ("Vineyard Magazine",     "https://www.vineyardmagazine.co.uk/feed/"),
+    ("Lodi Growers",          "https://www.lodigrowers.com/feed/"),
+    ("Growing Produce",       "https://www.growingproduce.com/fruits/grapes/feed/"),
+    ("Sustainable Wine Roundtable", "https://swroundtable.org/feed/"),
+    ("Regenerative Viticulture Foundation", "https://www.regenerativeviticulture.org/feed/"),
+    ("OIV",                   "https://www.oiv.int/rss.xml"),
+    ("Winetitles",            "https://winetitles.com.au/feed/"),
+    ("Liv-ex",                "https://www.liv-ex.com/feed/"),
+    ("WineGB",                "https://www.winegb.co.uk/feed/"),
+    ("The Guardian",          "https://www.theguardian.com/food/wine/rss"),
 ]
+# Tested 2026-10-09 and NOT added: paywalled (Napa Valley Register, GuildSomm, Six Atmospheres,
+# Robb Report: paywall scripts on the page, and soft paywalls count); 403 or no feed (Good Fruit
+# Grower, MDPI, EurekAlert, UC Davis, Food & Wine, Drinks International, Drinks Retailing, Tasting
+# Panel, World of Fine Wine, Falstaff, Real Review, Wine Intelligence, Pix, NC State, Wineland,
+# Lallemand, Geisenheim, ISVV, OENO One, IVES Technical Reviews); empty feed (Gambero Rosso Intl,
+# WineMaker, Sovos ShipCompliant, Ohio State); stale (AJEV, Laffort, Enartis, WSU V&E, Grape & Wine
+# Mag, Grapevine Mag, ASEV, Phys.org, The Conversation, Wine & Spirits, Wine Folly, Italian Wine
+# Central, Washington Wine, Penn State); mostly not wine (ScienceDaily, BeverageDaily, The Shout,
+# Eater, Bon Appetit, Forbes, Imbibe, IWSR, SOMM Journal); Vitisphere (French only); Wine Australia
+# (dates in a non-standard <LastPublished> tag the parser does not read).
 # Independent wine writers / Substacks -> NEWSLETTERS tab (source, url, author).
 # One post per writer per day, freshest first, capped at MAX_NEWSLETTERS -- so a deep bench
 # is a feature: it rotates voices and regions and covers for whoever is quiet that week.
@@ -112,6 +137,32 @@ NEWSLETTERS = [
     ("Italy Matters",       "https://robertcamuto.substack.com/feed",       "Robert Camuto"),
     ("Be Wine Curious",     "https://newsletter.hudin.com/feed",            "Miquel Hudin"),
     ("Grape Wall of China", "https://www.grapewallofchina.com/feed",        "Jim Boyce"),
+    # added 2026-10-09 (health-tested as above; jamiegoode.substack skipped, Jamie Goode is wineanorak)
+    ("The 30 Second Wine Advisor", "https://30secondwineadvisor.substack.com/feed", "Robin Garr"),
+    ("Beyond Organic Wine", "https://beyondorganicwine.substack.com/feed",  "Beyond Organic Wine"),
+    ("The Burgundy Outlook","https://www.burgundyoutlook.com/feed",         "Jonathan Finch"),
+    ("Cab Franc Chronicles","https://www.cabfrancchronicles.com/feed",      "Cab Franc Chronicles"),
+    ("Deborah Parker Wong", "https://deborahparkerwong.substack.com/feed",  "Deborah Parker Wong"),
+    ("Joe Fattorini",       "https://joefattorini.substack.com/feed",       "Joe Fattorini"),
+    ("Paul Gregutt's Wine Guide", "https://paulgregutt.substack.com/feed",  "Paul Gregutt"),
+    ("Wine Thinking",       "https://robertejoseph.substack.com/feed",      "Robert Joseph"),
+    ("The Corrupt Wine Writer", "https://thecorruptwinewriter.substack.com/feed", "Joel Stein"),
+    ("Thirst Behavior",     "https://thirstbehavior.substack.com/feed",     "Bodhi Landa"),
+    ("Wine Flights",        "https://wineflights.substack.com/feed",        "Amy Beth Wright"),
+    ("Wine Missives",       "https://alexanderstoffel.substack.com/feed",   "Alexander Stoffel"),
+    ("Amanda McCrossin",    "https://sommvivant.substack.com/feed",         "Amanda McCrossin"),
+    ("Tannic Panic!",       "https://www.tannicpanic.wine/feed",            "Zach O'Brown"),
+    ("Drink Local",         "https://drinklocal.substack.com/feed",         "Robin Shreeves"),
+    ("Grape Nomad",         "https://grapenomad.substack.com/feed",         "Aleksandar Draganic"),
+    ("Grappolo",            "https://grappolo.substack.com/feed",           "Caleb Daniel"),
+    ("The Friday Flash on Wine", "https://leeseeger.substack.com/feed",     "Lee Seeger"),
+    ("shades of grape",     "https://www.shadesofgrape.ca/feed",            "Eveline Chartier"),
+    ("The Examined Vine",   "https://stephentaylormarsh.substack.com/feed", "Stephen Taylor Marsh"),
+    ("Case by Case",        "https://davidscheidt.substack.com/feed",       "David Mastro Scheidt"),
+    ("Good + Tasty",        "https://kathleenwillcox.substack.com/feed",    "Kathleen Willcox"),
+    ("Jim Silver on Wine",  "https://jimsilver.substack.com/feed",          "Jim Silver"),
+    ("winestreetbets",      "https://winestreetbets.substack.com/feed",     "winestreetbets"),
+    ("1WineDude",           "https://www.1winedude.com/feed/",              "Joe Roberts"),
 ]
 
 # ---- keyword buckets for the pool -------------------------------------------
@@ -419,6 +470,8 @@ def main():
     print("Fetching newsletters...")
     news = []
     for src, url, author in NEWSLETTERS:
+        if "substack.com" in url:
+            time.sleep(1)  # Substack rate-limits quick runs of requests (429s seen in testing)
         items = parse(fetch(url), src)
         print(f"  {src}: {len(items)} items")
         for it in items:
