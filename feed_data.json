@@ -1,9 +1,25 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "items": {
     "MARKET": [
       {
-        "head": "VINITECH-SIFEL trade show in Bordeaux, 1-3 December 2026, hosts global wine professionals",
+        "head": "Liv-ex upgrades LWIN matching with AI engine and in-app price enrichment",
+        "date": "2026-10-16",
+        "sources": [
+          "Liv-ex"
+        ],
+        "summ": "Liv-ex has introduced two connected improvements designed to help members work with wine lists more efficiently and at scale",
+        "urls": [
+          "https://www.liv-ex.com/the-next-evolution-of-lwin-turning-wine-lists-into-value-faster/"
+        ],
+        "takeaways": [
+          "Liv-ex has added its member-exclusive Wine Matcher tool inside List Studio, letting members match wine lists to LWIN.",
+          "Matched lists can be enriched in bulk with Liv-ex market price, last trade, best bid and offer, critic scores and ABVs.",
+          "The redesigned matching engine combines modern AI with Liv-ex's proprietary data, claiming above 99% precision and processing up to 1,500 lines per minute."
+        ]
+      },
+      {
+        "head": "VINITECH-SIFEL trade show returns to Bordeaux, 1-3 December 2026",
         "date": "2026-10-08",
         "sources": [
           "Vineyard Magazine"
@@ -13,13 +29,13 @@
           "https://www.vineyardmagazine.co.uk/events/vinitech-sifel-2026-connect-with-the-global-wine-industry-in-bordeaux/"
         ],
         "takeaways": [
-          "VINITECH-SIFEL, a Bordeaux trade show for wine, fruit and vegetable sectors, runs 1-3 December 2026.",
-          "The show expects 700 exhibitors and 40,000 professionals from 70 countries across 70,000 m² of space.",
-          "The International Buyers Program may fund 4-star hotel stays and travel for eligible overseas buyers with investment projects."
+          "VINITECH-SIFEL, a Bordeaux trade show for wine, fruit and vegetable sectors, runs 1-3 December 2026 with 700 exhibitors.",
+          "Some 40,000 professionals from 70 countries are expected, across 70,000 m² of exhibition space.",
+          "The International Buyers Program offers eligible investing visitors 4-star hotel stays and travel cost support."
         ]
       },
       {
-        "head": "Vinitaly.USA debuts in New York City at Pier 36 in October 2026",
+        "head": "Vinitaly.USA moves to New York with 300 exhibitors in October",
         "date": "2026-10-07",
         "sources": [
           "SevenFifty Daily"
@@ -29,13 +45,13 @@
           "https://daily.sevenfifty.com/register-now-for-vinitaly-usas-nyc-debut/"
         ],
         "takeaways": [
-          "Vinitaly.USA, organized by Veronafiere with the Italian Trade Agency, holds its first New York City edition at Pier 36 on October 26-27, 2026.",
-          "The event moves from Chicago after two years and expects 300 exhibitors presenting 2,500 labels, its largest exhibitor count yet.",
-          "Regional collectives from Friuli-Venezia Giulia, Lazio and Sardinia join Asti DOCG, Sicilia DOC and Prosecco DOC, plus 95 wineries from an Italian Trade Agency delegation."
+          "Vinitaly.USA makes its first New York City appearance at Pier 36 on October 26 and 27, 2026, after two years in Chicago.",
+          "The event will host 300 exhibitors presenting 2,500 labels, its largest exhibitor count to date.",
+          "A 95-winery delegation organized by the Italian Trade Agency joins regional collectives from Friuli-Venezia Giulia, Lazio and Sardinia."
         ]
       },
       {
-        "head": "Global wine shifts from red toward white and sparkling styles, IWSR data shows",
+        "head": "Global wine demand shifts from red toward white and sparkling styles",
         "date": "2026-10-07",
         "sources": [
           "Wine Australia"
@@ -45,13 +61,13 @@
           "https://www.wineaustralia.com/news/market-bulletin/issue-374"
         ],
         "takeaways": [
-          "IWSR data shows red wine's share of global wine consumption fell from about 52% in 2012 to 43% in 2025.",
-          "Over the same period, white wine rose from 31% to 34% and sparkling wine from 8% to 13% of consumption.",
-          "Australia's Market Bulletin says the shift matters for its red-led reputation, with Shiraz central to its export position."
+          "Red wine's share of global wine consumption fell from about 52 per cent in 2012 to 43 per cent in 2025, per IWSR analysis.",
+          "White wine rose from 31 to 34 per cent over the same period, while sparkling climbed from 8 to 13 per cent.",
+          "Red wine has lost share as older drinkers cut back and younger consumers have favoured white and sparkling styles."
         ]
       },
       {
-        "head": "France's 2026 wine harvest set to fall 14% below recent average",
+        "head": "France's 2026 wine harvest set for historic low after summer heatwaves",
         "date": "2026-10-07",
         "sources": [
           "The Guardian"
@@ -61,13 +77,13 @@
           "https://www.theguardian.com/food/2026/oct/07/french-wine-industry-historic-low-harvest-extreme-summer-heat"
         ],
         "takeaways": [
-          "France's 2026 harvest is estimated at about 35m hectolitres, down 2% on 2025 and 14% below the 2021-2025 average.",
-          "The ministry of agriculture published these estimates, following 2025's lowest French production since 1957 per the OIV.",
-          "Champagne production is down by half on last year and the five-year average after an unusually early harvest."
+          "French agriculture ministry estimates the 2026 harvest at about 35 million hectolitres, 2% below 2025 and 14% below the 2021-2025 average.",
+          "The International Organisation of Vine and Wine says France's 2025 production was its lowest since 1957.",
+          "Champagne harvest finished early in September, with output down by half on last year and the five-year average."
         ]
       },
       {
-        "head": "Australian wine exports to Malaysia, Indonesia and Philippines rise despite declines in West",
+        "head": "Australian wine exports to Malaysia and Indonesia rise sharply in year to June 2026",
         "date": "2026-10-06",
         "sources": [
           "Wine Australia"
@@ -77,13 +93,13 @@
           "https://www.wineaustralia.com/news/market-bulletin/issue-372"
         ],
         "takeaways": [
-          "Wine Australia data show Australian wine exports to Malaysia rose 13% in volume and 30% in value to A$55 million in the year to June 2026.",
-          "Indonesia's Australian wine exports jumped 88% in volume and 300% in value to A$21 million over the same 12 months.",
-          "Australia exported 2.5 million litres worth A$11.5 million to the Philippines, slightly down year on year but above five years ago."
+          "Wine Australia export data for the year to June 2026 show Malaysia volume up 13% to 3 million litres, value up 30% to A$55 million.",
+          "Indonesia volume rose 88% to 864,000 litres and value 300% to A$21 million, while Philippine exports fell slightly to A$11.5 million.",
+          "The three markets together hold over 425 million consumers, and Australia leads imported wine categories in Malaysia and Indonesia."
         ]
       },
       {
-        "head": "Bordeaux leads Liv-ex trade with 33% share as Burgundy follows at 28.5%",
+        "head": "Bordeaux leads fine wine trade as Domaine de la Romanée-Conti dominates producer volumes",
         "date": "2026-10-02",
         "sources": [
           "Liv-ex"
@@ -93,29 +109,13 @@
           "https://www.liv-ex.com/fine-wine-news-eu-buying-up-140-on-week-on-week/"
         ],
         "takeaways": [
-          "Bordeaux took 33.0% of traded value on Liv-ex this week, ahead of Burgundy at 28.5%.",
-          "Domaine de la Romanee-Conti was the top-traded producer, accounting for 10.6% of overall trade.",
-          "Champagne fell to 13.9% of traded value from 21.4% the previous week, and US buyers took 47% of Champagne purchases."
+          "Bordeaux took 33.0% of traded fine wine value, ahead of Burgundy at 28.5% and Champagne at 13.9%.",
+          "Domaine de la Romanée-Conti was the top-traded producer, accounting for 10.6% of overall trade value.",
+          "US buyers made up 47% of Champagne purchasing by value, focused on Dom Pérignon."
         ]
       },
       {
-        "head": "SFI 2026 offers UK vineyards extra payments for cover crops and habitat",
-        "date": "2026-09-25",
-        "sources": [
-          "Vineyard Magazine"
-        ],
-        "summ": "The second application window for the Sustainable Farming Incentive (SFI) is set to open on 22 September, so Hutchinsons head of environmental services, Georgina Wallis, highlights some actions that may be of interest to growers in the viticulture sector. While the SFI is primarily aimed at arable and livestock farms, vines and...",
-        "urls": [
-          "https://www.vineyardmagazine.co.uk/agronomy/sfi-2026-whats-in-it-for-vineyards/"
-        ],
-        "takeaways": [
-          "The Sustainable Farming Incentive (SFI) 2026 includes vines and horticultural permanent crops, with several of its 71 actions relevant to vineyards.",
-          "Payments could add income for vineyard measures benefiting biodiversity and help meet LEAF Marque v17.0 habitat rules, which require 5% of site area.",
-          "Overwinter cover crop (CSAM2) should be sown by late August or early September, but SFI allows up to 12 months to establish a mix."
-        ]
-      },
-      {
-        "head": "Seven proposed US wine regions seek new AVA designations, each with distinct terroir",
+        "head": "Seven proposed US wine regions await TTB approval for new AVA status",
         "date": "2026-09-24",
         "sources": [
           "SevenFifty Daily"
@@ -125,48 +125,65 @@
           "https://daily.sevenfifty.com/what-to-expect-from-7-potential-new-avas/"
         ],
         "takeaways": [
-          "Seven proposed new American Viticultural Areas are in early stages, with approval taking several years through the TTB.",
-          "Proposed Annapolis-Sea Ranch AVA in Sonoma would cover 26,637 acres with 651 acres of grapes across a dozen vineyards.",
-          "Proposed Deschutes River AVA in central Oregon would cover 723,760 acres, the state's first recognized central region."
-        ]
-      },
-      {
-        "head": "VinePair's weekly roundup covers Southern Glazer's, product drops and industry updates",
-        "date": "2026-10-09",
-        "sources": [
-          "VinePair"
-        ],
-        "summ": "This is VinePair’s Booze News Weekly Roundup, where we gather the hottest headlines and product releases every Friday for a snapshot of what’s happening in the beverage alcohol industry. It was a quiet week on the news front, but as we gear up for gifting season, there are a ton of new product drops.",
-        "urls": [
-          "https://vinepair.com/booze-news/booze-news-weekly-roundup-california-investigates-southern-for-bribery/",
-          "https://vinepair.com/booze-news/booze-news-weekly-roundup-trump-canadian-alcohol-ban/",
-          "https://vinepair.com/booze-news/booze-news-weekly-roundup-gundlach-bundschu-files-bankruptcy/"
-        ],
-        "takeaways": [
-          "California has launched an investigation into distributor Southern Glazer's over a bribery allegation.",
-          "Maker's Mark has launched a new product collection ahead of the gifting season.",
-          "OpenTable released its 2026 restaurant report, also part of this week's roundup."
+          "Seven proposed AVAs, including Annapolis-Sea Ranch, Lake Hennessey and Deschutes River, are still early in the process before TTB approval.",
+          "Approval can take several years, and an AVA lets a region call out its features and build a recognizable brand.",
+          "Deschutes River would be central Oregon's first recognized winegrowing region, covering 723,760 acres between the Cascades and Ochoco Mountains."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Adam Wolf discusses Willamette Valley White Pinot Noir Fest on Wine 101",
+        "head": "China hosts OIV World Congress in Yinchuan, first time in Asia",
+        "date": "2026-10-16",
+        "sources": [
+          "OIV"
+        ],
+        "summ": "<span class=\"field field--name-title field--type-string field--label-hidden\">China hosted the 47th OIV World Congress of Vine and Wine, marking a historic first for Asia</span> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span lang=\"\" about=\"https://www.oiv.int/user/3\"...",
+        "urls": [
+          "https://www.oiv.int/press/china-hosted-47th-oiv-world-congress-vine-and-wine-marking-historic-first-asia"
+        ],
+        "takeaways": [
+          "The 47th OIV World Congress of Vine and Wine was held 12 to 16 October 2026 in Yinchuan, Ningxia, China.",
+          "It was the first OIV World Congress ever held in Asia, drawing more than 600 participants from 47 countries.",
+          "The event featured 420 scientific contributions and six technical visits, with presentations to be published open-access on the IVES Conference series platform."
+        ]
+      },
+      {
+        "head": "Oregon's AAPI Food & Wine festival wins Next Wave nonprofit award",
         "date": "2026-10-15",
         "sources": [
           "VinePair"
         ],
-        "summ": "This episode of Wine 101 is brought to you by Meiomi. Celebrate your holiday season to the fullest by bringing, or hosting with, the bottle that makes a lasting impression even after the last drop. From lush aromas of black cherry to warm notes of toasty mocha, Meiomi Pinot Noir is the perfect finish for all of your holiday moments.",
+        "summ": "In 2020, Lois and Dave Cho became the first Korean American winemakers in Oregon when they launched CHO Wines in the Willamette Valley. The fast-growing winery quickly amassed a following and received critical acclaim, but they kept fielding the same question: “What informs your palate for wine?” The answer to that question...",
         "urls": [
-          "https://vinepair.com/articles/wine-101-podcast-white-pinot-noir-fest/"
+          "https://vinepair.com/articles/2026-next-wave-aapi-food-and-wine/",
+          "https://vinepair.com/articles/2026-next-wave-vesper-books-and-wine/",
+          "https://vinepair.com/articles/2026-next-wave-matt-turner/",
+          "https://vinepair.com/articles/2026-next-wave-matt-crafton/"
         ],
         "takeaways": [
-          "Adam Wolf of Saffron Fields Vineyards joins host Keith Beavers on the VinePair podcast Wine 101.",
-          "The two discuss how the United States celebrates wine in ways unlike any other place on earth."
+          "Lois and Dave Cho launched AAPI Food & Wine in 2023 to give Asian American-made wine the recognition its food already has.",
+          "The festival began as a Willamette Valley event with 12 Portland chefs and five AAPI-owned wineries, drawing about 1,000 attendees.",
+          "It has since held three annual Oregon festivals and a three-day New York City event in 2025, nearly or fully selling out each time."
         ]
       },
       {
-        "head": "Bartenders say American visitors in Europe are curious, chatty, and still love vodka",
+        "head": "Cloudy, unfiltered wines like pét nat gain ground on British supermarket shelves",
+        "date": "2026-10-15",
+        "sources": [
+          "The Guardian"
+        ],
+        "summ": "<p>There’s something refreshing about unfiltered or unfined wines. We filter through a selection …</p><p>Centuries ago, Geoffrey Chaucer observed that “ther is no newe gyse that it nas old”. This truth - that there is nothing new under the sun - certainly applies to wine: every year, a well-documented or ancient viticultural...",
+        "urls": [
+          "https://www.theguardian.com/food/2026/oct/15/cloudy-wine-why-pet-nat-on-the-rise"
+        ],
+        "takeaways": [
+          "Pét nat is bottled before fermentation finishes and usually left undisgorged, which gives it its cloudy look.",
+          "Ottolenghi's three house wines are unfiltered and cloudy, chosen for texture and a better fit with bold food."
+        ]
+      },
+      {
+        "head": "European bartenders say American visitors are curious and chatty but still favor vodka Martinis",
         "date": "2026-10-08",
         "sources": [
           "VinePair"
@@ -176,63 +193,15 @@
           "https://vinepair.com/articles/signs-of-american-drinkers-in-europe/"
         ],
         "takeaways": [
-          "Giorgio Bargiani of The Connaught Bar in London says American guests are entertaining and show genuine interest in staff and other customers.",
-          "Bartenders report American customers often order Martinis made with vodka, and ask for American spirit substitutions and drinks like the Cosmopolitan.",
-          "Experienced American travelers increasingly let bartenders guide them, sometimes choosing gin Martinis or local drinks like Westmalle Dubbel."
+          "European bartenders describe American bar guests as friendly, curious and quick to strike up conversation with staff and other customers.",
+          "Americans at London's Connaught Bar, which makes about 30,000 Martinis a year, often specify vodka over gin.",
+          "Madrid and Rome bartenders report American requests for customized drinks, such as sugar-free Margaritas, bourbon swaps and Cosmopolitans."
         ]
       }
     ],
     "SCIENCE": [
       {
-        "head": "NMR spectroscopy and chemometrics separate Brazilian tropical wines by vintage and grape cultivar",
-        "date": "2026-10-15",
-        "sources": [
-          "IVES Open Science"
-        ],
-        "summ": "Tropical wines have been produced in Northeast of Brazil since 1980’s, between the 8o and 9o S latitude, in a region called Sub-middle São Francisco river Valley",
-        "urls": [
-          "https://ives-openscience.eu/69831/?utm_source=rss&utm_medium=rss&utm_campaign=use-of-chemometrics-to-characterize-tropical-wines-from-different-vintages-and-grape-cultivars-according-to-the-1h-nmr-spectroscopy-data"
-        ],
-        "takeaways": [
-          "Researchers at Federal University of Pernambuco used 1H NMR spectroscopy with PCA and PLS statistics to characterise tropical wines from Northeast Brazil.",
-          "The analysis separated wines by vintage and grape cultivar, but failed to discriminate between vintages when white and red wines were combined.",
-          "Metabolic compounds were identified as the chemical drivers behind the wine clusters."
-        ]
-      },
-      {
-        "head": "Brazilian tropical wines show distinct aroma profiles by colour and harvest month",
-        "date": "2026-10-15",
-        "sources": [
-          "IVES Open Science"
-        ],
-        "summ": "Tropical wines have been produced in Thailand, India, Venezuela and mainly in Northeastern Brazil. In Brazil, this activity started twenty-five years ago and has been studied only in the last years. In this Brazilian Area, between 8-9° parallel of the South Hemisphere, it is possible to have two or three harvests per year due...",
-        "urls": [
-          "https://ives-openscience.eu/69859/?utm_source=rss&utm_medium=rss&utm_campaign=characterization-of-aromatic-profiles-in-brazilian-tropical-wines-determined-by-gas-chromatography-and-multivariate-statistical-analysis"
-        ],
-        "takeaways": [
-          "Researchers from Brazilian institutions analysed white and red tropical wines from two 2009 vintages using gas chromatography and multivariate statistics.",
-          "Northeast Brazil, at 8-9° South, allows two or three harvests a year thanks to heat, sunlight and irrigation.",
-          "Higher alcohols separated wine samples more effectively than volatile esters, and white and red wines had different aromatic compound concentrations."
-        ]
-      },
-      {
-        "head": "Brazilian tropical vineyard study measures sunlight reaching Syrah grape clusters",
-        "date": "2026-10-15",
-        "sources": [
-          "IVES Open Science"
-        ],
-        "summ": "This work aimed to determine the photosynthetically active radiation (PAR) incidence at the berry level at east (E) and west (W) direction in a Syrah vineyard growing in a tropical semiarid area of Brazil",
-        "urls": [
-          "https://ives-openscience.eu/69870/?utm_source=rss&utm_medium=rss&utm_campaign=photosynthetically-active-radiation-levels-in-a-syrah-vineyard-in-a-brazilian-tropical-semiarid-area-preliminary-results"
-        ],
-        "takeaways": [
-          "Researchers at Embrapa Tropical Semiarid in Petrolina, Brazil, measured light reaching Syrah berries in a semiarid vineyard during the first half of 2010.",
-          "Photosynthetically active radiation at the top of the vineyard was about 40% of incident solar global radiation.",
-          "Clusters on east-facing canopy walls received more photosynthetically active light than those on west-facing walls, and leaf removal and shoot trimming changed berry light levels."
-        ]
-      },
-      {
-        "head": "Tropical Brazilian red wines keep high polyphenols after a year in bottle",
+        "head": "Brazilian tropical reds keep high polyphenols after a year of bottle storage",
         "date": "2026-10-15",
         "sources": [
           "IVES Open Science"
@@ -243,13 +212,13 @@
           "https://ives-openscience.eu/69865/?utm_source=rss&utm_medium=rss&utm_campaign=sensory-profiles-of-tropical-wines-produced-in-the-sao-francisco-river-valley-northeast-brazil"
         ],
         "takeaways": [
-          "Petit Verdot, Tempranillo and Syrah grown in Brazil's semi-arid São Francisco Valley were tracked for 12 months in bottle.",
-          "Petit Verdot showed less colour change than wines from temperate climates, per spectrophotometry and HPLC measurements.",
-          "Polyphenols fell during storage as expected but stayed above published levels, including anthocyanins in Petit Verdot and trans-resveratrol in Syrah."
+          "Petit Verdot, Tempranillo and Syrah from Brazil's São Francisco Valley were tracked for 12 months of bottle storage.",
+          "Petit Verdot showed less colour change than wines from temperate climates, and polyphenols stayed above literature levels.",
+          "Red wines grew softer in flavour over storage, while the whites stayed refreshing, per sensory analysis."
         ]
       },
       {
-        "head": "Tropical Brazilian, Indian, Thai and Venezuelan wineries now produce quality wine at scale",
+        "head": "Tropical wine production expands in Brazil, India, Thailand and Venezuela",
         "date": "2026-10-15",
         "sources": [
           "IVES Open Science"
@@ -259,13 +228,12 @@
           "https://ives-openscience.eu/68696/?utm_source=rss&utm_medium=rss&utm_campaign=the-development-of-the-viticulture-for-a-high-quality-tropical-wine-production-in-the-world"
         ],
         "takeaways": [
-          "Commercial tropical wineries now operate in Brazil, India, Thailand and Venezuela, after the industry began about 30 years ago.",
-          "Tropical wine output is a few million litres a year, from grapes that are mostly grown for other uses.",
-          "Researchers at Embrapa in Brazil say high-quality tropical wine at meaningful volume is likely in the near future."
+          "Tropical wineries now operate commercially in Brazil, India, Thailand and Venezuela, after about 30 years of industry development.",
+          "Only a small share of tropical grapes is made into wine, roughly some million litres of tropical wine per year."
         ]
       },
       {
-        "head": "Undervine heating trials show grapevine fruit set rises or falls by cultivar",
+        "head": "Heat treatments shift grapevine fruit set differently across four cultivars",
         "date": "2026-10-15",
         "sources": [
           "IVES Open Science"
@@ -275,9 +243,9 @@
           "https://ives-openscience.eu/69853/?utm_source=rss&utm_medium=rss&utm_campaign=grapevine-reproductive-performance-in-a-hotter-climate"
         ],
         "takeaways": [
-          "In 2009/2010, researchers used undervine tents to raise daytime temperatures 3-5°C above ambient across four grape cultivars.",
-          "Chardonnay under heat set less fruit, producing fewer berries and lower bunch weights, alongside reduced pollen tube growth.",
-          "Semillon and Shiraz under heat set more fruit, with higher berry counts and bunch weights, while Cabernet Franc showed no significant difference."
+          "Undervine tents raised daytime temperatures 3-5 degrees C over ambient in the 2009/2010 growing season.",
+          "Chardonnay under heat had lower fruit set, fewer berries and lighter bunches, with reduced pollen tube growth.",
+          "Semillon and Shiraz had higher fruit set, more berries per bunch and heavier bunches; Cabernet Franc showed no significant change."
         ]
       },
       {
@@ -292,13 +260,13 @@
           "https://ives-openscience.eu/69848/?utm_source=rss&utm_medium=rss&utm_campaign=water-and-nitrogen-effects-on-carbon-isotope-composition-%25ce%25b413c-of-field-grown-grapevines-under-a-mediterranean-climate"
         ],
         "takeaways": [
-          "Researchers grew Grenache vines on three rootstocks, 110 Richter, 41-B and 161-49, in rhizotrons with sandy soil under two water regimes.",
-          "Root growth peaked in summer during berry growth and ripening, with more roots forming under the higher water dose.",
-          "110 Richter produced greater root length than the other two rootstocks, though this did not increase vegetative growth."
+          "Researchers grew three-year-old Grenache vines grafted to 110 Richter, 41-B and 161-49 rootstocks in rhizotrons under two water regimes.",
+          "Root growth peaked in summer during berry growth and ripening, with more roots under the higher water dose.",
+          "110 Richter developed greater root length than the other two rootstocks, though this did not translate into more vegetative growth."
         ]
       },
       {
-        "head": "Researchers call for multidisciplinary breeding of climate-resilient grapevine rootstocks and scions",
+        "head": "Researchers propose multidisciplinary breeding of climate-adapted grapevine scions and rootstocks",
         "date": "2026-10-15",
         "sources": [
           "IVES Open Science"
@@ -308,13 +276,13 @@
           "https://ives-openscience.eu/69824/?utm_source=rss&utm_medium=rss&utm_campaign=multidisciplinary-research-to-select-new-cultivars-adapted-to-climate-changes"
         ],
         "takeaways": [
-          "French and Spanish researchers from INRA and several Spanish universities argue climate change threatens viticulture sustainability in several regions.",
-          "They say breeding stable-yielding grapevine scions and rootstocks requires ecophysiologists, molecular physiologists and geneticists working together.",
-          "The paper also reports tropical wines made from Petit Verdot, Tempranillo and Syrah in Northeast Brazil's semiarid São Francisco Valley."
+          "A French and Spanish multidisciplinary team reviews how climate change will affect grapevine development and rootstock responses.",
+          "Climate change threatens viticulture sustainability in several regions, so breeding stable-yield, quality grapevine genotypes has become urgent.",
+          "The authors argue that ecophysiologists, molecular physiologists and geneticists must work together to find adaptation loci."
         ]
       },
       {
-        "head": "Irrigation water chemistry can strip or supply vineyard soil nutrients",
+        "head": "Part Two of vineyard lab series explains how irrigation water shapes soil minerals",
         "date": "2026-10-08",
         "sources": [
           "Lodi Growers"
@@ -324,12 +292,13 @@
           "https://lodigrowers.com/lab-analysis-in-vineyard-mineral-nutrient-management-water/"
         ],
         "takeaways": [
-          "Nearly pure water such as Sierra Nevada snowmelt strips minerals from soils, especially sandy ones, making them more acidic and less fertile.",
-          "Alkaline well water can supply calcium and magnesium, but bicarbonate and carbonate reduce their availability as fertilizer."
+          "Viticulturist Stan Grant's part two of a three-part series covers irrigation water in vineyard mineral nutrient management.",
+          "Nearly pure, low-conductivity water such as Sierra Nevada snowmelt strips minerals from soils, making them more acidic and less fertile.",
+          "Alkaline well waters can supply calcium and magnesium, but bicarbonate and carbonate tie them up as solid compounds."
         ]
       },
       {
-        "head": "Cover crops and mulching boost vineyard soil microbes and resilience, studies find",
+        "head": "Cover crops and mulching boost vineyard soil microbes and climate resilience",
         "date": "2026-10-07",
         "sources": [
           "Regenerative Viticulture Foundation"
@@ -339,29 +308,42 @@
           "https://regenerativeviticulture.org/resources/articles-and-blogs/september-2026-newsletter/"
         ],
         "takeaways": [
-          "Canavera et al. (2026, Environmental Microbiome) found cover crop mulching in a non-irrigated northern Italian vineyard raised microbial diversity and reduced pathogen pressure.",
-          "A 2026 Field Crops Research study of Mediterranean rainfed vineyards found roller-crimped cover crops improved vine water status and mycorrhizal colonization.",
-          "In that Mediterranean study, seasonal climate was the dominant driver of fungal diversity, and grape quality was unaffected."
+          "A 2026 Environmental Microbiome study by Canavera et al. in Piacenza, Italy, tested cover-crop under-vine mulching in a non-irrigated vineyard.",
+          "The mulching significantly increased rhizosphere and phyllosphere microbial diversity, improved soil conditions and reduced pathogen pressure.",
+          "A 2026 Field Crops Research study of Mediterranean rainfed vineyards found roller-crimped cover crops improved soil cover and vine water status."
         ]
       },
       {
-        "head": "Hampshire firm Wildflower Co. shortlisted for South Coast tech award",
-        "date": "2026-09-27",
+        "head": "SFI 2026 offers UK vineyards payments for cover crops and habitat actions",
+        "date": "2026-09-25",
         "sources": [
           "Vineyard Magazine"
         ],
-        "summ": "Hampshire-based biodiversity specialist Wildflower Co. is a finalist in the South Coast Tech and Innovation Awards, in recognition of its groundbreaking use of science and technology to help tackle biodiversity loss and accelerate nature recovery. The pioneering company, which combines more than two decades of scientific...",
+        "summ": "The second application window for the Sustainable Farming Incentive (SFI) is set to open on 22 September, so Hutchinsons head of environmental services, Georgina Wallis, highlights some actions that may be of interest to growers in the viticulture sector. While the SFI is primarily aimed at arable and livestock farms, vines and...",
         "urls": [
-          "https://www.vineyardmagazine.co.uk/news/creating-species-rich-wildflower-habitats-faster/"
+          "https://www.vineyardmagazine.co.uk/agronomy/sfi-2026-whats-in-it-for-vineyards/"
         ],
         "takeaways": [
-          "Hampshire biodiversity specialist Wildflower Co. is a finalist in the South Coast Tech and Innovation Awards, Tech for Good category.",
-          "The awards ceremony takes place in Southampton on 15 October.",
-          "Its Meadowscape Pro system can establish high-quality meadow habitats in three to four months."
+          "Vines and other horticultural permanent crops are included in the 2026 Sustainable Farming Incentive (SFI) scheme, alongside arable and livestock farms.",
+          "Cover crops for vineyards must be sown by late August or early September to establish before winter, though SFI allows up to 12 months to establish a mix.",
+          "The RPA is using satellite imagery to monitor SFI action delivery, and small-seeded cover mixes need a fine, weed-free seedbed to establish."
         ]
       }
     ],
     "NEWSLETTERS": [
+      {
+        "source": "wineanorak",
+        "url": "https://wineanorak.com/2026/10/16/santuvario-a-natural-wine-producer-in-alto-piemonte-italy/",
+        "date": "2026-10-16",
+        "head": "Santuvario, a natural wine producer in Alto Piemonte, Italy",
+        "summ": "Santuvario is a small natural wine producer based in the town of Borgomanero in Alto Piemonte, at the foot of",
+        "author": "Jamie Goode",
+        "takeaways": [
+          "Santuvario is a small natural wine producer in Borgomanero, Alto Piemonte, run by Ivano Barbaglia and Paola Fornara, who began in 2012.",
+          "The Boca region has shrunk from 1000 hectares to just 10, and Santuvario farms old vines including Nebbiolo, Vespolina, Uva Rara and Croatina.",
+          "The author tasted Santuvario wines at the VinNatur event in Paris in November 2025, scoring the Lazio 2022 highest at 94/100."
+        ]
+      },
       {
         "source": "Tim Atkin",
         "url": "https://timatkin.com/a-level-playing-field/",
@@ -370,22 +352,22 @@
         "summ": "What do we mean by the word “Burgundian”? Used indiscriminately to describe a region that is famously, almost defiantly complex, it’s a term that covers so many appellations, terroirs and styles as to be almost meaningless, especially when it comes to white Burgundy. Are we talking Chablis, the Côte Beaune or the Mâconnais?",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "Tim Atkin says top Chardonnay is now a level playing field, with world-class examples from Argentina, Australia, Chile, New Zealand, South Africa and the United States.",
-          "In a blind tasting organised by Steve Smith MW, 43 tasters scored 24 wines, ten from Pyramid Valley and Smith & Sheth, against 14 from Burgundy.",
-          "The 2024 Smith & Sheth Onewa Chardonnay from Hawkes Bay narrowly lost to the 2023 Domaine Guffens-Heynen Saint Véran Clos de Poncetys."
+          "Tim Atkin's blind tasting of 24 Chardonnays pitted 10 New Zealand wines from Pyramid Valley and Smith & Sheth against 14 Burgundies, with 43 tasters scoring them.",
+          "The 2024 Smith & Sheth Onewa Chardonnay from Gimblett Gravels, Hawkes Bay, was Atkin's favourite and was expected to retail for around £60.",
+          "Atkin argues top Chardonnay is now a level playing field, citing Domaine Leflaive finishing picking on August 18th and Burgundy's warming climate."
         ]
       },
       {
-        "source": "wineanorak",
-        "url": "https://wineanorak.com/2026/10/14/hazendal-a-stellenbosch-wine-estate-transformed/",
-        "date": "2026-10-14",
-        "head": "Hazendal, a Stellenbosch wine estate transformed",
-        "summ": "Hazendal is a historic wine farm in the Bottelary Hills subregion of Stellenbosch that has been transformed. It",
-        "author": "Jamie Goode",
+        "source": "Cab Franc Chronicles",
+        "url": "https://www.cabfrancchronicles.com/p/cabernet-franc-in-the-press-october",
+        "date": "2026-10-15",
+        "head": "Cabernet Franc in the Press: October 2026",
+        "summ": "From Livermore to the Loire: Cabernet Franc in Food & Wine, Robb Report, Le Point, JancisRobinson.com, and more",
+        "author": "Cab Franc Chronicles",
         "takeaways": [
-          "Hazendal, a Bottelary Hills estate in Stellenbosch, replanted its vineyards in 2016 after virus problems reduced production.",
-          "Winemaker Kiara Scott Farmer, who arrived in 2024, leads the new era, with 2025 as the first vintage under her direction.",
-          "Reviewer scored the 2025 range from 92 to 95 points, with the Chenin Blanc and White Blend rated highest at 95 and 94."
+          "Only 3,501 acres of Cabernet Franc were planted in California in 2025, versus 90,040 acres of Cabernet Sauvignon, per the California Grape Acreage Report.",
+          "Livermore Valley officially named Cabernet Franc its signature red variety in February 2025, while New York State's producer-led Cab Franc Forward formed in late 2024.",
+          "Lang & Reed, founded in 1996 by John and Tracey Skupny solely to make Cabernet Franc, was profiled by Alder Yarrow in Jancis Robinson's site."
         ]
       },
       {
@@ -396,9 +378,9 @@
         "summ": "Delving into the details of change in the DO Montsant wine region of Catalunya",
         "author": "Miquel Hudin",
         "takeaways": [
-          "DO Montsant, in Catalunya's Priorat area, has revised its bylaws to add a certification for vi brisat (orange-style) wines.",
-          "Montsant's revised bylaws also create a classification for 'minimal intervention' wines, requiring hand-harvesting, organic certification, spontaneous fermentation and no additives except gentle filtration.",
-          "The author says the minimal-intervention classification may be the first of its kind in Spain, though the DO has not stated its maximum sulfur dioxide limit."
+          "DO Montsant, in Catalunya's Priorat area, has revised its bylaws to add certification for 'vi brisat' (orange-style) wines.",
+          "Montsant's revised bylaws also create a classification for 'minimal intervention' wines, requiring hand-harvesting, organic certification and spontaneous fermentation.",
+          "The minimal-intervention rules cap sulfur dioxide far below conventional levels, though the DO has not disclosed the actual limit to the author."
         ]
       },
       {
@@ -409,8 +391,8 @@
         "summ": "Learn the strategy Burgundy wine négociants hope you never discover to find the best winery deals in 2026",
         "author": "Jonathan Finch",
         "takeaways": [
-          "Louis Latour, Louis Jadot, Maison Albert Bichot and Bouchard Père & Fils are named as leading négociant houses dominating Burgundy wine sales worldwide.",
-          "It cites Capitain-Gagnerot Corton-Charlemagne and Domaine Jean Féry Puligny-Montrachet as lower-priced alternatives to Coche-Dury and Leflaive Clavoillon."
+          "Louis Latour, Louis Jadot, Maison Albert Bichot and Bouchard Père & Fils are named as leading négociant houses dominating Burgundy's worldwide trade.",
+          "It cites Capitain-Gagnerot Corton-Charlemagne as a cheaper alternative to Coche-Dury, and Domaine Jean Féry Puligny-Montrachet as a value option versus Leflaive Clavoillon."
         ]
       },
       {
@@ -421,7 +403,8 @@
         "summ": "You’ll find no shortage of Vintage Port coverage on these virtual pages (something that, as I taste more and more vintages of the stuff, has become a source of amusing vexation as I search for whether or not a VP that I want to feature here has already been reviewed and featured here…). And you’ll […] This article was...",
         "author": "Joe Roberts",
         "takeaways": [
-          "The author notes it has become harder to check whether a Vintage Port has already been reviewed on the blog."
+          "1WineDude's Lenn Thompson is tasting the 2024 Vintage Port declaration.",
+          "The headline calls the wines 'unquestionably among the greatest wines in the world.'."
         ]
       },
       {
@@ -441,9 +424,9 @@
         "summ": "Recommended Roero Nebbiolo and Arneis wines from my recent tour",
         "author": "Meg Maker",
         "takeaways": [
-          "Roero's principal grapes are Nebbiolo and Arneis, both native to Piedmont and rarely grown beyond its borders.",
-          "Roero Arneis was nearly extinct until Bruno Giacosa and Alfredo Curado of Vietti resurrected it in the 1970s.",
-          "Today Roero has nearly 1,000 hectares of Arneis versus about 360 hectares of Nebbiolo, according to the report."
+          "Roero's principal grapes, Nebbiolo and Arneis, are native to the region and rarely grown beyond Piedmont's borders.",
+          "Today Roero has nearly 1,000 hectares of Arneis versus about 360 of Nebbiolo, after Bruno Giacosa and Alfredo Curado of Vietti resurrected Arneis in the 1970s.",
+          "The author tasted about 80 wines during a five-day September visit hosted by the Roero Consorzio and highlighted 31 favorites, including producers Angelo Negro and Deltetto."
         ]
       },
       {
@@ -454,9 +437,9 @@
         "summ": "The wine everyone’s been gushing over since the middle ages!",
         "author": "Eveline Chartier",
         "takeaways": [
-          "A 1350 trade contract between the Del Pecora family and merchant Jacopo di Vanni is the oldest known document for Vino Nobile di Montepulciano, held in Florence's State Archives.",
-          "A 2024 document unveiled by the Consorzio del Vino Nobile di Montepulciano shows the term 'Vino Nobile' was used by the Jesuits in 1766, predating the previously known 1787 record.",
-          "Thomas Jefferson received 473 bottles of Montepulciano in November 1805 and requested 400 bottles annually, per a letter to Thomas Appleton."
+          "A 1350 trade contract between the Del Pecora family and merchant Jacopo di Vanni is the oldest known document for Vino Nobile di Montepulciano.",
+          "Thomas Jefferson received 473 bottles of Montepulciano in November 1805 and requested 400 bottles annually from Thomas Appleton.",
+          "A 2024 Consorzio-unveiled document dates the first known use of the term Vino Nobile to 1766, by the Jesuit order."
         ]
       },
       {
@@ -467,22 +450,9 @@
         "summ": "I take a look at a brand new reference work to see how it stacks up with the competition",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "Dorling Kindersley's The Encyclopedia of Wine is out 8th October in the UK and 10th November in the US.",
-          "Editor-in-chief David Williams aims for an authoritative but accessible reference, written by acknowledged experts, 28 contributors in total.",
+          "Dorling Kindersley's The Encyclopedia of Wine is published 8 October in the UK and 10 November in the US.",
+          "Editor-in-chief David Williams aims for an authoritative but accessible reference, written by 28 acknowledged wine experts.",
           "The 400-page book is positioned against Oxford Companion to Wine and The World Atlas of Wine, both from Jancis Robinson's team."
-        ]
-      },
-      {
-        "source": "Cab Franc Chronicles",
-        "url": "https://www.cabfrancchronicles.com/p/five-minutes-with-thierry-and-louis",
-        "date": "2026-10-06",
-        "head": "Five Minutes with... Thierry and Louis Germain of Domaine des Roches Neuves",
-        "summ": "Two generations from one of Saumur-Champigny’s leading estates on their single-vineyard cuvées and learning to embrace Cabernet Franc’s green side",
-        "author": "Cab Franc Chronicles",
-        "takeaways": [
-          "Domaine des Roches Neuves, a Saumur-Champigny estate active for 35 years, produces five cuvées parcellaires led by Thierry Germain and his son Louis.",
-          "Thierry Germain says single-vineyard wines were rare in Saumur 35 years ago, apart from Clos Rougeard, and he was inspired by Burgundy in the early 1990s.",
-          "Louis Germain describes La Marginale, from the Fosse de Chaintres clay soils, as having a velvety, rose-petal texture, while Franc de Pied comes from sandy soils with ungrafted vines."
         ]
       }
     ]
