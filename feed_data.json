@@ -1,27 +1,9 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "items": {
     "MARKET": [
       {
-        "head": "Wine directors plan holiday lists around familiar, approachable bottles and selective trade-ups",
-        "date": "2026-10-29",
-        "sources": [
-          "Wine Industry Advisor",
-          "SevenFifty Daily"
-        ],
-        "summ": "Even as consumer spending tightens, the holiday season is a critical time for restaurants and bars to generate wine revenue. Here’s how six sommeliers and beverage directors are prepping their cellars",
-        "urls": [
-          "https://wineindustryadvisor.com/2026/10/29/a-wine-directors-guide-to-maximizing-holiday-sales/",
-          "https://daily.sevenfifty.com/a-wine-directors-guide-to-maximizing-holiday-sales/"
-        ],
-        "takeaways": [
-          "Six wine directors from across the US told SevenFifty Daily how to prepare inventory and guest expectations for the holiday season.",
-          "Directors report guests trading up one price tier, with Champagne costs rising so accessible houses like Roederer and Billecart-Salmon are favoured.",
-          "Directors say holiday guests want familiar wines and approachable options, while large-format bottles tend to boost sales for bigger parties."
-        ]
-      },
-      {
-        "head": "Bordeaux leads Liv-ex trade as Burgundy share falls to 15.4%",
+        "head": "Bordeaux leads Liv-ex trade as Lynch-Bages 2005 becomes top-traded wine",
         "date": "2026-10-26",
         "sources": [
           "Liv-ex"
@@ -31,13 +13,13 @@
           "https://www.liv-ex.com/fine-wine-news-bordeaux-keeps-the-lead-lynch-bages-2005-top-traded/"
         ],
         "takeaways": [
-          "Bordeaux led Liv-ex fine wine trading with a 37.4% share of purchases, with Lynch-Bages 2005 the top-traded wine.",
-          "Burgundy's share fell to 15.4% from 18.4% the previous week, below a September average of 24.6%.",
-          "US buyers, largely for California wines, rose to 9.6% share and claimed over half of Bordeaux's purchased value."
+          "Bordeaux held the lead with a 37.4% share of purchases on the Liv-ex trading platform this week.",
+          "Lynch-Bages 2005 was the region's top-traded wine, with Burgundy's share falling to 15.4% from 18.4%.",
+          "US buyers accounted for over half of Bordeaux's purchased value, rising to a 66.2% share of its traded value."
         ]
       },
       {
-        "head": "Surrey funds 17 rural projects, including a vineyard bird-repelling laser",
+        "head": "Surrey backs 17 rural projects with £500,000 innovation grants",
         "date": "2026-10-25",
         "sources": [
           "Vineyard Magazine"
@@ -47,13 +29,13 @@
           "https://www.vineyardmagazine.co.uk/news/500000-boost-for-rural-and-farming-businesses-to-grow-and-innovate/"
         ],
         "takeaways": [
-          "Surrey County Council's Farming Innovation Accelerator is giving 17 rural and farming projects grants of up to £35,000 each.",
-          "The grants come from a £500,000 pot funded by UK government Shared Prosperity Funding, drawn from over 50 proposals.",
-          "Albury Vineyard will install an automated bird-repellent laser to protect 18 acres of grapevines, adding over 1,700 bottles a year."
+          "Surrey County Council's Farming Innovation Accelerator funded 17 rural projects from a £500,000 pot of UK Shared Prosperity Funding.",
+          "Each recipient receives a grant of up to £35,000 plus bespoke expert support, drawn from more than 50 competitive proposals.",
+          "Albury Vineyard will install an automated bird-repellent laser to protect 18 acres of grapevines, adding over 1,700 bottles yearly."
         ]
       },
       {
-        "head": "Navarra turns demanding rosé methods into a premium selling point",
+        "head": "Navarra turns demanding rosé methods into a premium identity for its wines",
         "date": "2026-10-24",
         "sources": [
           "Vineyard Magazine"
@@ -63,12 +45,12 @@
           "https://www.vineyardmagazine.co.uk/sales-and-marketing/when-difficulty-becomes-a-competitive-advantage/"
         ],
         "takeaways": [
-          "Navarra rosado producers use the Saignée method, needing up to three times more grapes than standard red production.",
-          "The region's Rosado Tradition designation requires Saignée and exclusively Garnacha, reinforcing premium positioning."
+          "Navarra rosado producers use the Saignée method, which can need up to three times more grapes than standard red production.",
+          "The Regulatory Council of D.O. Navarra introduced a Rosado Tradition designation requiring Saignée and exclusive Garnacha use."
         ]
       },
       {
-        "head": "VinePair's weekly roundup gathers drinks-industry headlines and product releases",
+        "head": "VinePair rounds up weekly beverage alcohol news and product releases",
         "date": "2026-10-30",
         "sources": [
           "VinePair"
@@ -80,15 +62,15 @@
           "https://vinepair.com/booze-news/booze-news-weekly-roundup-italy-biggest-wine-heist/"
         ],
         "takeaways": [
-          "Judge approved RNDC's Chapter 11 liquidation, per one weekly roundup.",
-          "Class action reportedly being prepared against Celsius, per the same roundup.",
-          "Roundups also cite Diageo's toxic chemical spill and a Supreme Court home distilling review."
+          "A judge approved RNDC's Chapter 11 liquidation, according to VinePair's weekly roundup.",
+          "Heineken reportedly sent a memo on weight-loss drugs' effect on drinking, per the roundup's headlines.",
+          "Uncle Nearest's potential buyers are named as a headline item, with no further details given."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Volcanic soils give wines a distinctive tension, importers and critics say",
+        "head": "Volcanic soils give wines a distinctive tension, shaped by harsh vineyard conditions",
         "date": "2026-10-29",
         "sources": [
           "The Guardian"
@@ -98,13 +80,13 @@
           "https://www.theguardian.com/food/2026/oct/29/volcanic-wines-review-mina-holland"
         ],
         "takeaways": [
-          "Volcanic wines span ash, basalt, obsidian, pumice and tuff soils, with little stylistic common ground between regions.",
-          "Importer Nic Rizzi of Modal Wines says volcanic wines carry an extra tension, which he links to hard-working growers on La Palma.",
-          "Victoria Torres Pecis's Las Machuqueras 2016/19, from black ash soils and very old vines, retails at £55 via Modal Wines."
+          "Importer Nic Rizzi of Modal Wines says volcanic wines carry an extra tension that is hard to describe.",
+          "Volcanic soils including ash, basalt, obsidian, pumice and tuff vary widely, so the wines differ greatly in style.",
+          "Victoria Torres Pecis farms on La Palma in the Canaries, where a volcano erupted during harvest in 2021."
         ]
       },
       {
-        "head": "Plumpton College offers Level 3 viticulture apprenticeship for UK vineyards",
+        "head": "Plumpton College offers Level 3 Viticulture Apprenticeship for UK vineyards",
         "date": "2026-10-28",
         "sources": [
           "Vineyard Magazine"
@@ -114,15 +96,49 @@
           "https://www.vineyardmagazine.co.uk/professional-services/grow-your-vineyards-future/"
         ],
         "takeaways": [
-          "Plumpton College is recruiting its next Level 3 Viticulture Apprenticeship cohort, starting 9 November, with late joiners possibly accepted in January.",
-          "For eligible non-levy-paying SMEs, the Government funds 100% of training costs for apprentices aged 16 to 24, subject to funding rules.",
-          "The apprenticeship pairs workplace experience with college block weeks, and qualifications are endorsed by WineGB."
+          "Plumpton College is recruiting for its next Level 3 Viticulture Apprenticeship cohort, starting 9 November, with possible early-January joiners.",
+          "The apprenticeship is endorsed by WineGB and covers vineyard operative skills, with progression towards assistant vineyard manager.",
+          "Government funds 100% of training costs for eligible non-levy-paying SMEs' apprentices aged 16 to 24, subject to funding rules."
+        ]
+      },
+      {
+        "head": "Real Housewives' wine tastes skew sweet, mass-market and status-driven, essayist argues",
+        "date": "2026-10-21",
+        "sources": [
+          "PUNCH"
+        ],
+        "summ": "What do the reality stars’ drinking habits reveal about wealth, taste, status and the economics of the U.S. wine industry?",
+        "urls": [
+          "https://punchdrink.com/articles/real-housewives-wine-cake-zine/"
+        ],
+        "takeaways": [
+          "Cake Zine essayist, a certified wine specialist, watched Real Housewives franchises and noted their wine choices.",
+          "Housewives mostly drink mass-market, high-alcohol, sweet Californian cabernet sauvignon, such as Justin and Caymus.",
+          "The essay ties this sweet-wine preference to Robert Parker's 100-point system and the 'Parkerization' of flavour profiles."
         ]
       }
     ],
     "SCIENCE": [
       {
-        "head": "Oak alternatives chosen by winemaking objective, with colour gains needing oxygen",
+        "head": "Pembrokeshire's Velfrey wins first Welsh trophy at Glass of Bubbly Awards",
+        "date": "2026-10-30",
+        "sources": [
+          "WineGB",
+          "Vineyard Magazine"
+        ],
+        "summ": "Pembrokeshire vineyard wins prestigious Glass of Bubbly trophy and gold medal, plus two silvers, competing against Champagne and sparkling wines from around the world A family-run vineyard in Pembrokeshire has",
+        "urls": [
+          "https://winegb.co.uk/2026/10/30/velfrey-makes-welsh-wine-history-with-international-trophy-triumph/",
+          "https://www.vineyardmagazine.co.uk/news/velfrey-makes-welsh-wine-history-with-international-trophy-triumph/"
+        ],
+        "takeaways": [
+          "Velfrey Vineyard, a family-run Pembrokeshire producer, won gold and the Winter Warmer Trophy at the Glass of Bubbly Awards 2026 for its Cuvée Reserve 2022.",
+          "It is the first Welsh wine ever to win a trophy at the competition, which judges Champagne and sparkling wines from around the world.",
+          "Its Rhosyn 2023 rosé and non-vintage Velfrey NV each took silver, giving the vineyard medals for all three wines entered."
+        ]
+      },
+      {
+        "head": "Enartis explains matching oak alternatives to specific winemaking goals",
         "date": "2026-10-29",
         "sources": [
           "Vineyard Magazine"
@@ -132,13 +148,13 @@
           "https://www.vineyardmagazine.co.uk/wine-making/choosing-the-right-tool-for-the-right-objective/"
         ],
         "takeaways": [
-          "Enartis describes oak alternatives as precision tools, with toast level and surface area driving aroma release speed.",
-          "Oak chips extract rapidly, while oak tannins dissolve immediately and help bind sulphur compounds linked to off-aromas.",
-          "Colour stabilisation from oak works best during maturation with micro-oxygenation, since adding chips during fermentation gives little benefit."
+          "Oak alternatives differ in surface area and toast level, which set how fast aromas release and which profile results.",
+          "Oak chips added during fermentation barely aid colour stability because oxygen is very low at that stage.",
+          "Colour stability gains come mainly during maturation when oak is combined with controlled oxygen, such as micro-oxygenation."
         ]
       },
       {
-        "head": "UK vineyards hit by 2026 frosts, then record heat that stalled Bacchus ripening",
+        "head": "English vines hit by 2026 heatwaves; Bacchus struggled, Sauvignon Blanc thrived",
         "date": "2026-10-26",
         "sources": [
           "Vineyard Magazine"
@@ -148,13 +164,13 @@
           "https://www.vineyardmagazine.co.uk/agronomy/assessing-the-impact-of-heatwaves-on-the-2026-crop/"
         ],
         "takeaways": [
-          "Fifty-four Met Office stations broke all-time daily maximum records this summer, including 38.2°C in Gloucestershire in August.",
-          "Older vines with deep roots coped better than young vines carrying heavy crops, and early fruit thinning helped.",
-          "Harvest came 10-14 days early, but Bacchus struggled as sugar development stalled while acidity kept falling."
+          "Fifty-four Met Office stations broke all-time daily maximum records this summer, peaking at 38.2°C in Gloucestershire in August.",
+          "Harvest ran 10-14 days earlier than normal, with Sauvignon Blanc showing high alcohol and phenolic ripeness while Bacchus struggled.",
+          "Viticulturist Markus Keller says heat stress starts above 30°C, with photosynthesis collapsing once leaf temperatures reach 40-45°C."
         ]
       },
       {
-        "head": "UK vineyards face early, hot 2026 harvest after frost and drought",
+        "head": "UK vineyards navigate early, dry 2026 harvest driven by warmth and drought",
         "date": "2026-10-23",
         "sources": [
           "Vineyard Magazine"
@@ -164,9 +180,9 @@
           "https://www.vineyardmagazine.co.uk/grape-growing/harvest-2026-adapting-to-a-changing-climate/"
         ],
         "takeaways": [
-          "The 2026 season began with severe frost events, then turned warm and dry, with rapid ripening across English and Welsh vineyards.",
-          "Harvest came several weeks early at some sites, and dry weather kept disease pressure low, so fruit reached wineries in good condition.",
-          "Growers now say no typical season can be planned for, so resilience must be built through soil health, water management and monitoring."
+          "The 2026 English and Welsh growing season began with severe frost events, then turned warm, dry and fast-ripening, with heat stress and water availability becoming key concerns.",
+          "Harvest arrived several weeks early at some UK vineyards, but dry weather kept disease pressure low and fruit arrived at wineries in excellent condition.",
+          "VineWorks argues UK growers can no longer plan around a typical season, so resilience needs building through soil health, water management, canopy control and variety choice."
         ]
       },
       {
@@ -180,13 +196,13 @@
           "https://swroundtable.org/organic-winemaking-in-argentina-a-visit-to-domaine-bousquet/"
         ],
         "takeaways": [
-          "SWR Membership Manager Ilva Fridenberga visited Domaine Bousquet in Mendoza, at the foot of the Andes, in February.",
-          "The winery is trialing biodiversity corridors, closed to protect vegetation, and garden corridors growing vegetables between vine rows.",
-          "It switched to high-pressure hoses to clean harvest boxes and is committed to bottles under 420g via the Bottle Weight Accord."
+          "SWR Membership Manager Ilva Fridenberga visited Domaine Bousquet's Mendoza winery at the foot of the Andes in February.",
+          "The winery is trialling biodiversity and garden vineyard corridors, with harvest done from outside the vine rows.",
+          "It switched to high-pressure hoses for cleaning harvest boxes, using significantly less water, and is a signatory of the Bottle Weight Accord, targeting still bottles under 420g."
         ]
       },
       {
-        "head": "MODIS satellite data validated for mapping vineyard water use in Italy",
+        "head": "MODIS satellite data used to map vineyard water use in Italy",
         "date": "2026-10-22",
         "sources": [
           "IVES Open Science"
@@ -196,29 +212,13 @@
           "https://ives-openscience.eu/71494/?utm_source=rss&utm_medium=rss&utm_campaign=using-modis-data-for-monitoring-evapotranspiration-in-vineyards"
         ],
         "takeaways": [
-          "Researchers at the University of Padova used MODIS satellite data to estimate evapotranspiration across a 25-hectare Italian vineyard.",
-          "Estimates were calibrated on two years of eddy-covariance measurements and validated against two independent years of data.",
-          "Results showed good consistency with in situ observations, suggesting MODIS can monitor vineyard water use at regional scale."
+          "Researchers at the University of Padova used MODIS satellite data to estimate evapotranspiration in a 25-hectare northeastern Italian vineyard.",
+          "Estimates, combined with ground weather data, were calibrated on two years of eddy-covariance measurements and validated on two independent years.",
+          "Results showed good consistency with in situ observations, suggesting MODIS could monitor vineyard water use at regional scale."
         ]
       },
       {
-        "head": "Portuguese trial finds ethephon and manual thinning cut Vinhos Verdes yields",
-        "date": "2026-10-22",
-        "sources": [
-          "IVES Open Science"
-        ],
-        "summ": "Some years, climate conditions and biological events increment the fertility of vines, which can lead to over cropping and a decrease of wine quality",
-        "urls": [
-          "https://ives-openscience.eu/71559/?utm_source=rss&utm_medium=rss&utm_campaign=yield-control-by-chemical-methods-and-manual-cluster-thinning-in-vitis-vinifera-white-cv-loureiro-and-red-cv-borracal-into-the-portuguese-vinhos-verdes-region"
-        ],
-        "takeaways": [
-          "A 2007 trial in two Vinhos Verdes vineyards tested ways to reduce yield in Loureiro and Borraçal vines.",
-          "Ethephon and manual bunch thinning significantly reduced crop, with Borraçal yields falling about 41% against control under thinning.",
-          "Ethephon at berry buckshot size raised sugar and lowered acidity in Loureiro, while Borraçal showed no quality gains."
-        ]
-      },
-      {
-        "head": "Grenache rootstocks and irrigation trials show water-use gains in Spain",
+        "head": "Grenache rootstocks and irrigation shape water use and stomatal control in Spain",
         "date": "2026-10-22",
         "sources": [
           "IVES Open Science"
@@ -228,13 +228,13 @@
           "https://ives-openscience.eu/71453/?utm_source=rss&utm_medium=rss&utm_campaign=water-use-in-young-grenache-with-different-rootstocks-and-water-regimes"
         ],
         "takeaways": [
-          "A three-year-old Grenache vineyard in NE Spain was grafted onto three rootstocks, 110-R, 41-B and 161-49C, and tested irrigated versus non-irrigated.",
-          "Non-irrigated vines had higher water use efficiency, and 110-R and 41-B outperformed 161-49C on this measure.",
-          "Stomatal conductance differences from irrigation persisted through the season, with a positive leaf water potential link only in non-irrigated vines."
+          "IRTA researchers in Catalonia, Spain, grew three-year-old Grenache on rootstocks 110-R, 41-B and 161-49C, irrigated or non-irrigated.",
+          "Non-irrigated vines had higher water use efficiency, and 110-R and 41-B outperformed 161-49C.",
+          "Stomatal conductance differences from irrigation persisted through the season, suggesting hormonal signals outweighed hydraulic signals under these conditions."
         ]
       },
       {
-        "head": "Italian researchers outline viticulture strategies for climate change and biodiversity",
+        "head": "Italian researchers outline viticulture strategies for climate, water scarcity and biodiversity",
         "date": "2026-10-22",
         "sources": [
           "IVES Open Science"
@@ -244,25 +244,41 @@
           "https://ives-openscience.eu/71187/?utm_source=rss&utm_medium=rss&utm_campaign=viticulture-for-the-third-millenium-safeguard-and-innovation"
         ],
         "takeaways": [
-          "Pisa University researchers argue climate change may extend viticulture to higher latitudes and altitudes, requiring more resilient genotypes.",
-          "They say local Italian grape varieties are at risk of erosion, and some regions have started projects to recover them.",
-          "The paper reports viticultural and economic research on Latium's Malvasia, Cesanese d'Affile and Cabernet Sauvignon grown under Cordon Spur of Conegliano training."
+          "Pisa University researchers outline future viticulture shaped by climate change, energy costs and genetic improvement.",
+          "They say Mediterranean water scarcity and native grape variety erosion require adaptable, resistant vine genotypes.",
+          "Their work studies Lazio varieties Malvasia and Cesanese d'Affile plus Cabernet Sauvignon under Cordon Spur of Conegliano training."
         ]
       },
       {
-        "head": "Conegliano pruning trials on Lazio grape varieties assess yield, quality and value",
+        "head": "Portuguese trial tests chemical and manual thinning to cut Vinhos Verdes vine yields",
         "date": "2026-10-22",
         "sources": [
           "IVES Open Science"
         ],
-        "summ": "In this work the salient results of the viticultural and ecomomic researches earned out on interesting italic varieties of Latium (Malvasia of the Lazio and Cesanese d'Affile) and an international vsriety (Cabernet sauvignon), \"Cordon Spur of Conegliano\" (CSC) as growing system, will be exposed",
+        "summ": "Some years, climate conditions and biological events increment the fertility of vines, which can lead to over cropping and a decrease of wine quality",
         "urls": [
-          "https://ives-openscience.eu/71411/?utm_source=rss&utm_medium=rss&utm_campaign=viticultural-and-economic-social-metaethical-researches-in-the-cordon-spur-of-conegliano-and-in-the-vertical-tridimensional-minimal-pruning-of-conegliano-vtmpc-with-and-without-dmrc-ps-do"
+          "https://ives-openscience.eu/71559/?utm_source=rss&utm_medium=rss&utm_campaign=yield-control-by-chemical-methods-and-manual-cluster-thinning-in-vitis-vinifera-white-cv-loureiro-and-red-cv-borracal-into-the-portuguese-vinhos-verdes-region"
         ],
         "takeaways": [
-          "Researchers at Italy's CRA Viticulture Centre in Conegliano tested pruning systems on Malvasia di Lazio, Cesanese d'Affile and Cabernet Sauvignon.",
-          "Trials compared Vertical Tridimensional Minimal Pruning of Conegliano with and without DMRC, aiming to raise gross saleable product.",
-          "The study addresses vine fertility and over-cropping, which can lower wine quality, and water scarcity in Mediterranean vineyards."
+          "A 2007 trial in Vinhos Verdes compared Ethephon, Prohexadione-calcium and manual bunch thinning on Loureiro and Borraçal vines.",
+          "Manual bunch thinning cut Borraçal yield about 41% and Loureiro yield about 26% against the untreated control.",
+          "Ethephon significantly reduced crop, but only Loureiro showed quality gains, with higher sugar and lower acidity."
+        ]
+      },
+      {
+        "head": "Vine balance concept explained: growth, crop load and seasonal dynamics",
+        "date": "2026-10-22",
+        "sources": [
+          "IVES Open Science"
+        ],
+        "summ": "Vine balance is a commonly used term in viticulture that expresses the concept of an appropriate balance of vegetative to reproductive growth of the vine",
+        "urls": [
+          "https://ives-openscience.eu/71100/?utm_source=rss&utm_medium=rss&utm_campaign=vine-balance-what-is-it-and-how-does-it-change-over-the-season"
+        ],
+        "takeaways": [
+          "Vine balance is the appropriate balance between a vine's vegetative growth and its reproductive growth, meaning fruit production.",
+          "Quantifying vine balance is hard, since most measures like yield to pruning weight ratio ignore seasonal growth dynamics.",
+          "A dynamic carbohydrate simulation model can show seasonal patterns of growth needs against canopy carbon supply."
         ]
       }
     ],
@@ -276,8 +292,41 @@
         "author": "Jamie Goode",
         "takeaways": [
           "Filipa Pato, daughter of Luis Pato, began making her own wines in 2001 at age 25, now labelled with husband William Wouters.",
-          "Filipa Pato and William Wouters farm 20 hectares across 37 plots, using pigs to help regenerate soils biodynamically.",
-          "Filipa Pato uses a DJI drone to spray plant-derived preparations, despite EU rules restricting drone spraying of agrochemicals."
+          "Filipa and William farm 20 hectares across 37 plots, including the Missão vineyard, planted in 1864 and ungrafted.",
+          "Filipa uses pigs to regenerate soils and drone spraying for plant-derived treatments, though EU rules ban drone spraying of agrochemicals."
+        ]
+      },
+      {
+        "source": "Vinography",
+        "url": "https://www.vinography.com/2026/10/vinography-images-the-anomaly",
+        "date": "2026-10-30",
+        "head": "Vinography Images: The Anomaly",
+        "summ": "The word you’re likely to hear most often while visiting the Douro wine region is schist. There’s a lot of",
+        "author": "Alder Yarrow",
+        "takeaways": []
+      },
+      {
+        "source": "Maker's Table",
+        "url": "https://www.makerstable.com/p/essential-kit-for-kitchen-season",
+        "date": "2026-10-30",
+        "head": "Essential Kit for Kitchen Season",
+        "summ": "Outfitting your kitchen with the season’s essential tools, plus this week’s favorite stories about food, wine, and culture",
+        "author": "Meg Maker",
+        "takeaways": [
+          "Meg Maker's Maker's Table piece frames November and December as \"Kitchen Season,\" when cooking becomes a way to mark occasions."
+        ]
+      },
+      {
+        "source": "Cab Franc Chronicles",
+        "url": "https://www.cabfrancchronicles.com/p/tasting-diaries-october-2026",
+        "date": "2026-10-30",
+        "head": "Tasting Diaries: October 2026",
+        "summ": "Niagara’s Cabernet Franc harvest finally gets underway, plus the bottles that made my October memorable",
+        "author": "Cab Franc Chronicles",
+        "takeaways": [
+          "Ontario's Niagara Peninsula saw unseasonably warm, dry October weather after one of its wettest summers on record, with Cabernet Franc harvest just starting, a little later than average.",
+          "Buttonwood Grove's 2025 Blanc de Franc from the Finger Lakes is a semi-sweet white Cabernet Franc with about 10 g/L residual sugar, priced at $24 USD.",
+          "Château de Fosse Sèche's 2018 Éolithe VDF from Saumur is described as fresh and elegant despite a very warm vintage, with at least five years of life ahead."
         ]
       },
       {
@@ -288,20 +337,8 @@
         "summ": "If you are not familiar with the lore of White Zinfandel , America’s greatest contribution to wine culture , you are missing out on some excellent cocktail conversation. I understand this might sound like the layup for a bad wine joke, but I’m not being facetious. White Zinfandel is as important to the United States",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "Tim Atkin argues the US wine industry is due a sequel to White Zinfandel, which still sold 49.2 million bottles in the US in 2024.",
-          "Atkin says Sutter Home's Bob Trinchero created White Zin around 1977 when fermentation stopped early, leaving an off-dry wine that became a hit.",
-          "Atkin proposes a field-blend style called \"Relevé\" of mixed red and white grapes, inspired by Will Marengo's Feudal Project wine from Walla Walla."
-        ]
-      },
-      {
-        "source": "Vinography",
-        "url": "https://www.vinography.com/2026/10/san-franciscos-local-wine-complex",
-        "date": "2026-10-27",
-        "head": "San Francisco’s Local-Wine Complex",
-        "summ": "San Francisco and its immediate surrounds have never been more packed with places where a thirsty wine lover can sit",
-        "author": "Alder Yarrow",
-        "takeaways": [
-          "San Francisco and its surrounding area now host a growing number of places where wine lovers can sit and drink."
+          "Tim Atkin argues the US wine industry needs a 'new' White Zinfandel, as wine sales are at an all-time low.",
+          "Atkin proposes 'Relevé', a field blend of red and white grapes from an entire estate or region, inspired by Will Marengo's Feudal Project wine."
         ]
       },
       {
@@ -312,9 +349,9 @@
         "summ": "Is a wine from the depths ‘better’ or does it depend on the boat?",
         "author": "Miquel Hudin",
         "takeaways": [
-          "Attis, the winery run by Robustiano Fariña's family in O Grove near Pontevedra, Galicia, ages its Albariño underwater in magnums.",
-          "The Attis Albariño 'Mar' is aged five months in the estuary at 13-16C, versus its 'Standard' bottling of about 120,000 bottles annually.",
-          "The Attis Albariño 'Mar' is sealed with a glass cap rather than cork, because cork failed under water despite waterproofing."
+          "Attis, a winery owned by Robustiano Fariña's family near O Grove, Galicia, ages its Albariño underwater in the local estuary.",
+          "The Attis Albariño 'Mar' is aged five months in 13-16C estuary waters, while the standard version produces about 120,000 bottles annually.",
+          "The author notes that underwater-aged wines he has tasted seemed tired and more advanced in age than landbound counterparts."
         ]
       },
       {
@@ -325,20 +362,9 @@
         "summ": "Discover the world's most famous charity wine auction held since 1859. Get essential tips and insights for this year's legendary Burgundy event",
         "author": "Jonathan Finch",
         "takeaways": [
-          "The 166th Hospices de Beaune wine sale takes place Sunday 15 November 2026, with 2026 vintage wines auctioned under the Halles de Beaune.",
-          "The 2026 Hospices crop is 432 barrels (348 red, 84 white), smaller than normal because an early heatwave reduced yields."
-        ]
-      },
-      {
-        "source": "Maker's Table",
-        "url": "https://www.makerstable.com/p/owendee",
-        "date": "2026-10-24",
-        "head": "Owendee",
-        "summ": "The rituals of service for the holidays, plus this week’s favorite stories about food, wine, and culture",
-        "author": "Meg Maker",
-        "takeaways": [
-          "Wine-related search queries slump in July but rise sharply through October, peaking on December 31, according to the author's search-trend evidence.",
-          "The October-to-December wine peak coincides with the Northern Hemisphere harvest, which the author says marks the start of this season."
+          "The 166th Hospices de Beaune wine auction is on Sunday 15 November 2026, with the 2026 vintage offered under the Halles de Beaune.",
+          "The 2026 crop is 432 barrels (348 red, 84 white), smaller than usual because an early heatwave reduced yields.",
+          "Last year's sale raised €18.8 million, with an average cask price of about €34,000 and Grand Crus averaging €86,290."
         ]
       },
       {
@@ -349,22 +375,9 @@
         "summ": "The extraordinary story of Domaine de Beudon in Valais, Switzerland",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "Domaine de Beudon, a Valais estate at 890 metres, is run by the Granges-Faiss family, reached only by a hike or a cable car.",
-          "Jacky Granges-Faiss bought the estate in 1971; after his death in June 2016, Marion Granges-Faiss became the de facto winemaker.",
-          "Beudon ferments at the estate but ages and bottles at Pierre-Antoine Crettenand's winery in Saillon, and whites carry 70-100 mg/L total sulphites."
-        ]
-      },
-      {
-        "source": "Cab Franc Chronicles",
-        "url": "https://www.cabfrancchronicles.com/p/inside-chinons-lieux-dits-project",
-        "date": "2026-10-21",
-        "head": "Inside Chinon’s Lieux-Dits Project",
-        "summ": "Vignerons lead a collective effort to recognize the vineyards behind the appellation’s Cabernet Francs",
-        "author": "Cab Franc Chronicles",
-        "takeaways": [
-          "Chinon's lieux-dits project, begun by the Chinon Syndicat in 2014, promotes named vineyard sites without an official hierarchy or technical criteria.",
-          "Seven lieux-dits have been officially recognized so far, starting with La Croix Boissée in Cravant-les-Côteaux in 2018.",
-          "Each recognized site requires a monograph, a collaborative study with historians, geologists and pedologists, and is marked with an engraved stone in the vineyard."
+          "Domaine de Beudon, a Valais estate at 890 metres, is reachable only by a 90-minute hike or a cable car, with no road.",
+          "The Granges-Faiss family has farmed Beudon for over 50 years; Jacky bought it in 1971, and he died in June 2016 after a vineyard accident.",
+          "Marion Granges-Faiss has become the de facto winemaker, while the grapes ferment on the mountain but ageing and bottling happen at Pierre-Antoine Crettenand's Saillon winery."
         ]
       },
       {
@@ -375,8 +388,8 @@
         "summ": "Last week, I published a bunch of reviews from an NYC media tasting of selections from the (stellar) 2024 Port vintage. I typically follow those type of posts up with another post of other, older selections of vintage Ports that I tasted at the same event, and I offer them without much shame as simply […] This article was...",
         "author": "Joe Roberts",
         "takeaways": [
-          "1WineDude published reviews of selections from the 2024 Port vintage after an NYC media tasting.",
-          "A follow-up post covers older vintage Ports tasted at the same event, with vintages from 1985 to 2022."
+          "1WineDude published reviews from an NYC media tasting of selections from the 2024 Port vintage.",
+          "A follow-up post covers older vintage Ports from the same event, spanning 1985 to 2022."
         ]
       },
       {
@@ -387,9 +400,9 @@
         "summ": "The wine everyone’s been gushing over since the middle ages!",
         "author": "Eveline Chartier",
         "takeaways": [
-          "A 1350 trade contract between the Del Pecora family and merchant Jacopo di Vanni is the oldest known document for Vino Nobile di Montepulciano, held in Florence's State Archives.",
-          "A 2024 Consorzio-unveiled document shows the term Vino Nobile was first used in 1766 by the Jesuit order, not 1787 as previously thought.",
-          "In April 1806 Thomas Jefferson wrote to Thomas Appleton requesting 400 bottles annually of Montepulciano wine from the ancient Jesuit vineyards."
+          "A 1350 trade contract between the Del Pecora family and merchant Jacopo di Vanni is the oldest known document for Vino Nobile di Montepulciano.",
+          "A 2024 document from the Jesuits of Montepulciano shows the term Vino Nobile was in use by 1766, earlier than the previously known 1787 record.",
+          "In 1806 Thomas Jefferson asked Thomas Appleton for 400 bottles of Montepulciano annually, sourced from ancient Jesuit vineyards."
         ]
       }
     ]
