@@ -1,9 +1,41 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "items": {
     "MARKET": [
       {
-        "head": "Australian wine's small formats gain ground amid moderation and single-person households",
+        "head": "Moldova pitches indigenous grapes and 23 producers at ProWine Shanghai",
+        "date": "2026-11-05",
+        "sources": [
+          "Vino Joy News"
+        ],
+        "summ": "With 23 wine and spirits producers heading to ProWine Shanghai, the export-driven country is putting indigenous grapes and competitive pricing at the center of its pitch",
+        "urls": [
+          "https://vino-joy.com/2026/11/05/moldova-makes-its-case-to-chinas-wine-buyers/"
+        ],
+        "takeaways": [
+          "23 Moldovan wine and spirits producers will seek business with Chinese importers and distributors at ProWine Shanghai, November 10 to 12.",
+          "Chinese customs data show Moldovan wine imports reached US$1.43 million in the first nine months of 2026.",
+          "About 85% of Moldova's wine production is exported, and the EU now takes roughly 60% of its wine exports."
+        ]
+      },
+      {
+        "head": "Barossa's Sustainable Winegrowing Australia participation reaches 90% of vineyard area",
+        "date": "2026-11-05",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Barossa Australia has revealed that more than 300 Barossa vineyards and wineries are now participating in Sustainable Winegrowing Australia, with over 80% achieving independent certification. 12,768 Ha (90%) of Barossa’s 14,162 Ha under-vine is participating in Sustainable Winegrowing Australia , a 1,264 hectare (10%) increase...",
+        "urls": [
+          "https://winetitles.com.au/90-of-barossa-vineyard-area-now-participating-in-national-sustainability-program/"
+        ],
+        "takeaways": [
+          "Barossa Australia says 303 vineyards and wineries now belong to Sustainable Winegrowing Australia, up 66% in two years.",
+          "Participating vineyards cover 12,768 hectares, or 90% of the region's 14,162 hectares under vine, a 1,264 hectare rise.",
+          "Over 80% of members, 244 businesses, have reached best practice through third-party Freshcare audits."
+        ]
+      },
+      {
+        "head": "Australian wine small formats grow as moderation and single-person households rise",
         "date": "2026-11-04",
         "sources": [
           "Wine Australia"
@@ -13,9 +45,9 @@
           "https://www.wineaustralia.com/news/market-bulletin/issue-376"
         ],
         "takeaways": [
-          "Combined export and domestic off-trade sales of 187mL wine packs rose 22% to almost 1.9 million litres in 2025-26.",
-          "Export volumes of 187mL packs grew 39% from 450,000 litres in 2023-24 to 620,000 litres in 2025-26, concentrated in Asia-Pacific.",
-          "Single-person households make up 26% of Australian households, up from 18% in 1981, per Census data cited in the bulletin."
+          "Combined off-trade sales of 187mL wine packs rose 22% to almost 1.9 million litres in 2025-26.",
+          "Export volumes of 187mL packs grew 39%, from 450,000 litres in 2023-24 to 620,000 litres in 2025-26.",
+          "Single-person households are 26% of Australian households, up from 18% in 1981, per Census data."
         ]
       },
       {
@@ -29,13 +61,29 @@
           "https://daily.sevenfifty.com/europe-is-cracking-down-on-greenwashing-what-does-that-mean-for-wine-labels/"
         ],
         "takeaways": [
-          "EU Directive 2024/825, enforced from September 27, bans vague environmental claims like \"eco-friendly\" and unverified sustainability badges on wine.",
-          "Old stock is not grandfathered in, so producers are using stickers or point-of-sale information to fix existing inventory.",
-          "Fines can reach four percent of annual turnover, with enforcement left to each member state's own framework."
+          "EU Directive 2024/825, enforced from September 27, bans vague environmental claims like \"eco-friendly\" and unbacked sustainability badges on products sold in the EU.",
+          "Producers must substantiate claims with third-party certification or verifiable data, and old stock is not grandfathered in, so stickers are being used.",
+          "Fines for widespread violations can reach four percent of annual turnover, with enforcement left to each member state, creating varied national frameworks."
         ]
       },
       {
-        "head": "Bordeaux takes 41% of week's traded wine value as Burgundy's share jumps",
+        "head": "Mark Harvey-Sutton named new CEO of Australian Grape & Wine",
+        "date": "2026-11-02",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Australian Grape & Wine (AGW) has today announced the appointment of Mark Harvey-Sutton as its new CEO, bringing “extensive experience in industry leadership, agricultural trade and national advocacy” to the role. Harvey-Sutton has served as CEO of the Australian Livestock Exporters' Council since 2019, representing Australian...",
+        "urls": [
+          "https://winetitles.com.au/mark-harvey-sutton-announced-as-new-australian-grape-wine-ceo/"
+        ],
+        "takeaways": [
+          "Australian Grape & Wine, the national wine industry body, has appointed Mark Harvey-Sutton as its new chief executive.",
+          "Harvey-Sutton has been CEO of the Australian Livestock Exporters' Council since 2019, handling international trade and market access.",
+          "He will start in the role on 13 January 2027."
+        ]
+      },
+      {
+        "head": "Bordeaux takes 41% of weekly fine wine trade as Burgundy share climbs",
         "date": "2026-11-02",
         "sources": [
           "Liv-ex"
@@ -45,13 +93,45 @@
           "https://www.liv-ex.com/bordeaux-strengthens-its-market-lead-mature-vintages-trading-actively/"
         ],
         "takeaways": [
-          "Bordeaux claimed 41% of the week's traded value on Liv-ex, with 2019 and 2020 vintages top-traded.",
-          "Burgundy's share of traded value rose from 15.7% to 20.8%, with Domaine de la Romanée-Conti and Domaine Leflaive leading.",
-          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6% led by Soldera Case Bassa and Sassicaia."
+          "Bordeaux claimed 41% of the week's traded fine wine value, extending its lead, with 2019 and 2020 vintages top-traded.",
+          "Burgundy's share of traded value rose from 15.7% last week to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive leading.",
+          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6%, with Soldera Case Basse and Sassicaia top-traded."
         ]
       },
       {
-        "head": "California table grape supply to hold through December for holiday retail promotions",
+        "head": "India-EU trade deal cuts wine tariffs, but state rules still complicate entry",
+        "date": "2026-10-28",
+        "sources": [
+          "Vino Joy News"
+        ],
+        "summ": "For years, India has occupied a peculiar position in the international wine industry: too large to ignore, too complicated to enter",
+        "urls": [
+          "https://vino-joy.com/2026/10/28/india-is-opening-up-to-wine-but-is-the-wine-trade-ready/"
+        ],
+        "takeaways": [
+          "The India-EU Free Trade Agreement will cut India's 150% tariff on EU wine to 20% for premium and 30% for medium wines.",
+          "India imported 5.4 million litres of wine worth US$28.8 million in 2025, per Ministry of Commerce data.",
+          "Alcohol is regulated state by state, so distribution and licensing differ across Mumbai, Delhi NCR, Bengaluru and Goa."
+        ]
+      },
+      {
+        "head": "German wine imports into China rise in volume, value and price",
+        "date": "2026-10-28",
+        "sources": [
+          "Vino Joy News"
+        ],
+        "summ": "Imports rose in volume, value and average price in the first nine months, offering an encouraging backdrop for 45 wineries and importers heading to the German Pavilion",
+        "urls": [
+          "https://vino-joy.com/2026/10/28/german-wine-gains-in-china-as-producers-prepare-for-prowine-shanghai/"
+        ],
+        "takeaways": [
+          "China imported 4.23 million liters of bottled German wine in the first nine months of 2026, up 8% year on year.",
+          "Import value rose 11% to US$22.49 million, while the average import price increased 3%, per Chinese customs data.",
+          "Germany brings 45 wineries and importers to the national pavilion at ProWine Shanghai, running Nov. 10-12."
+        ]
+      },
+      {
+        "head": "California table grape supply to last through December for holiday promotions",
         "date": "2026-10-28",
         "sources": [
           "Growing Produce"
@@ -61,81 +141,122 @@
           "https://www.growingproduce.com/fruits/grapes/california-table-grapes-positioned-for-strong-finish-to-the-year/"
         ],
         "takeaways": [
-          "The California Table Grape Commission says California grapes will stay in promotable volumes through December despite an early harvest.",
-          "Harvest is expected to end in mid-November, but shipments will continue well beyond the final picking day.",
-          "Commission research found 72% of grape purchasers prefer U.S.-grown grapes, versus fewer than 5% preferring imports."
-        ]
-      },
-      {
-        "head": "Bordeaux leads Liv-ex trade as Lynch-Bages 2005 becomes top-traded wine",
-        "date": "2026-10-26",
-        "sources": [
-          "Liv-ex"
-        ],
-        "summ": "US and UK buyers both upped their purchasing, the former segment reclaiming their share of purchasing",
-        "urls": [
-          "https://www.liv-ex.com/fine-wine-news-bordeaux-keeps-the-lead-lynch-bages-2005-top-traded/"
-        ],
-        "takeaways": [
-          "Bordeaux led the Liv-ex market with a 37.4% share of purchases, while Burgundy fell to 15.4%.",
-          "Lynch-Bages was the region's top-traded wine overall, with the 2005 vintage the most traded across all regions.",
-          "US buyers claimed over half of Bordeaux's purchased value, with California-led US share rising from 7.0% to 9.6% overall."
+          "The California Table Grape Commission says grapes will stay available in promotable volumes throughout December despite an early harvest.",
+          "Harvest is expected to conclude in mid-November, but significant volumes will keep shipping well beyond that point.",
+          "Commission president Ian LeMay cites consumer research showing 72% of grape buyers prefer U.S.-grown grapes over imports."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Portland's Papi serves Pornstar Martini riff topped with Cava custard foam",
-        "date": "2026-11-04",
+        "head": "Sommeliers name underrated Pinot Noir and Sauvignon Blanc picks beyond famous regions",
+        "date": "2026-11-05",
         "sources": [
           "VinePair"
         ],
-        "summ": "It’s no secret that foam is among the most popular drink garnishes of today. From cloud-topped coffees and side-pulled beer pours to frozen cocktails with dollops of salted mascarpone, frothy drinks are popping up in just about every corner of the beverage sector. Bartenders, baristas, and consumers alike just can’t get enough...",
+        "summ": "Though it has centuries of history in Burgundy, great quality Pinot Noir can now be found in every corner of the world, from the volcanic Otago peninsula in New Zealand to the high plateaus of Greece’s Amyndeon region. Across these different areas, Pinot Noir offers a wide variety of expressions, from dense, fruit-forward...",
         "urls": [
-          "https://vinepair.com/articles/portland-papi-cava-custard-foam-cocktail/"
+          "https://vinepair.com/articles/wa-sommeliers-underrated-pinot-noir/",
+          "https://vinepair.com/articles/wa-wine-pros-most-underrated-sauvignon-blanc-2026/"
         ],
         "takeaways": [
-          "Izzy Stein, beverage and creative director at Papi in Portland, Maine, created the Mami Chula cocktail.",
-          "The cocktail is a rum-based Pornstar Martini riff with passion fruit, lime, and a Cava custard foam topping.",
-          "Stein reduces Cava about 40 percent and folds it into an egg yolk, cream, and vanilla custard charged in an iSi canister."
+          "Sixteen sommeliers were asked to name the most underrated Pinot Noir on the market right now.",
+          "Picks include Redbank Pinot Noir from King Valley, Australia, and Wasenhaus and Enderle & Moll from Germany's Baden region.",
+          "A separate survey of ten sommeliers named underrated Sauvignon Blanc, including Casa Jipi from Baja, Mexico, and Hannes Sabathi from Styria, Austria."
         ]
       },
       {
-        "head": "Real Housewives' wine choices reveal mass-market, sweet-leaning taste",
-        "date": "2026-10-21",
+        "head": "Napa consultant launches one-day human wine advice chat before Thanksgiving",
+        "date": "2026-11-05",
         "sources": [
           "PUNCH"
         ],
-        "summ": "What do the reality stars’ drinking habits reveal about wealth, taste, status and the economics of the U.S. wine industry?",
+        "summ": "A new project empowers curious holiday drinkers to ask real experts for their advice",
         "urls": [
-          "https://punchdrink.com/articles/real-housewives-wine-cake-zine/"
+          "https://punchdrink.com/articles/thanksgiving-wine-advice-ai-sommelier/"
         ],
         "takeaways": [
-          "Cake Zine essay by a certified wine specialist argues Real Housewives favour mass-market, sweet, high-alcohol wines, often Californian cabernet.",
-          "Example cited: Whitney Rose recommends Justin Cabernet, a roughly $22 bottle, to a wealthy Salt Lake City castmate.",
-          "Author links the taste to Robert Parker's 100-point scoring, which encouraged fruit-forward, lower-acid wines."
+          "Napa social media consultant Evan Roscoe launched Ask Wines, a 24-hour chat run by wine professionals.",
+          "The free service runs the day before Thanksgiving and invites anyone to ask questions about buying, selecting or pairing wine.",
+          "About 50 wine experts volunteered after Roscoe's Instagram poll, including sommeliers, winemakers, buyers and WSET students."
         ]
-      }
-    ],
-    "SCIENCE": [
+      },
       {
-        "head": "Roller-crimped cover crops improve Mediterranean vine water status and mycorrhizal colonization",
-        "date": "2026-11-04",
+        "head": "Gippsland Wine Show awards 85 medals from 116 entries, record Pinot and Chardonnay focus",
+        "date": "2026-11-05",
         "sources": [
-          "Regenerative Viticulture Foundation"
+          "Winetitles"
         ],
-        "summ": "In a 2026 study published in Field Crops Research based on Mediterranean rainfed vineyards, the authors found that roller-crimping cover crops improved soil cover, vine water status, yield (in wetter conditions), and mycorrhizal colonization without affecting grape quality, while seasonal climate was the dominant driver of...",
+        "summ": "In a record medal tally, the 2026 Farmer’s Daughters Gippsland Wine Show attracted 116 entries “with a strong focus on the region’s famed Pinot Noir and Chardonnay classes”. Wine Gippsland president Rob Lightfoot said there was an “outstanding haul” of 85 medals from the 103 varietal entries yielding seven trophies, “a...",
         "urls": [
-          "https://regenerativeviticulture.org/resources/research-and-reviews/effects-of-inter-row-cover-crop-termination-strategy-on-grapevine-performance-and-mycorrhizal-activity-under-contrasting-seasonal-conditions-copy/"
+          "https://winetitles.com.au/gippsland-wine-show-attracts-116-entries-awards-seven-trophies-and-85-medals/"
         ],
         "takeaways": [
-          "A 2026 Field Crops Research study tested roller-crimped cover crops in rainfed Mediterranean vineyards.",
-          "Roller-crimping improved soil cover, vine water status, and mycorrhizal colonization without affecting grape quality.",
-          "Yield rose only in wetter seasons, while seasonal climate was the main driver of fungal diversity."
+          "The 2026 Farmer's Daughters Gippsland Wine Show received 116 entries and awarded 85 medals, including 15 gold, 31 silver and 39 bronze.",
+          "Gippsland Wine Company's 2025 Loch Chardonnay was named Best Wine of Show, with makers Mark Heath and Jane Taylor.",
+          "Dirty Three Wines' Marcus Satchell and Lisa Sartori took three of four golds in the Pinot Noir class of 29 entries."
+        ]
+      },
+      {
+        "head": "Huntington Estate and Rosby lead 2026 Mudgee Wine Show trophy winners",
+        "date": "2026-11-05",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "The 54th CCL Mudgee Wine Show has celebrated another year of outstanding wines and achievements across the Mudgee wine industry, with the 2026 trophy winners announced at the Mudgee Wine Show Awards at Di Lusso Estate on Thursday 10 September. Huntington Estate was among the standout performers, named Most Successful Exhibitor...",
+        "urls": [
+          "https://winetitles.com.au/54th-mudgee-wine-show-celebrates-another-year-of-outstanding-wines-and-achievements/"
+        ],
+        "takeaways": [
+          "The 54th CCL Mudgee Wine Show trophies were announced at Di Lusso Estate on 10 September 2026.",
+          "Huntington Estate was named Most Successful Exhibitor and its Tim Stevens was named Winemaker of the Year.",
+          "Rosby Wines took Best Wine of Show for its 2025 Riesling, while Heslop Wines won Best Red Wine of Show."
+        ]
+      },
+      {
+        "head": "Alison Smith Story recounts how she came to wine, on Wine 101",
+        "date": "2026-11-05",
+        "sources": [
+          "VinePair"
+        ],
+        "summ": "This episode of Wine 101 is brought to you by Wines of Alsace and Alsace Rocks. Tucked between the Vosges Mountains and the Rhine River in northeastern France, Alsace is one of the most distinctive wine regions on earth, and is home to centuries of family winemaking, some of France’s most certifiably organic vineyards, and a...",
+        "urls": [
+          "https://vinepair.com/articles/wine-101-podcast-alison-smith-story/"
+        ],
+        "takeaways": [
+          "VinePair's Wine 101 podcast, hosted by Keith Beavers, features Alison Smith Story of Smith Story Wines.",
+          "In the episode, Story talks through her journey into the wine business in a casual conversation."
         ]
       }
     ],
+    "SCIENCE": [],
     "NEWSLETTERS": [
+      {
+        "source": "Grape Wall of China",
+        "url": "https://www.grapewallofchina.com/2026/11/05/roadshow-review-spain-brings-value-wines-to-china/",
+        "date": "2026-11-05",
+        "head": "Roadshow Review: Spain Brings Value Wines to China",
+        "summ": "Does any nation offer better wine value than Spain? This seems obvious to French bottlers, who import major amounts of Spanish wine each year. Per",
+        "author": "Jim Boyce",
+        "takeaways": [
+          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing and was due in Guangzhou on November 6.",
+          "Spain ranked fifth by volume in China last year, narrowly behind Italy but a quarter of leader Australia, per WBO stats.",
+          "Spain ranked sixth by value, below New Zealand, with only Chile's per-liter value lower among the top eight sources."
+        ]
+      },
+      {
+        "source": "The Morning Claret",
+        "url": "https://themorningclaret.com/p/why-i-enjoy-judging-at-wine-competitions-le-puy-vintage-guide",
+        "date": "2026-11-04",
+        "head": "Why I Enjoy Wine Competition Judging",
+        "summ": "Plus a guide to Le Puy wines - my notes from a recent vertical tasting",
+        "author": "Simon J. Woolf",
+        "takeaways": [
+          "Writer is judging at the Asia Wine Trophy in Daejeon, South Korea, which has a dedicated panel for orange and amber wines.",
+          "A Georgian Khikhvi amber was rated in the mid-90s by all six judges, earning an instant grand gold without discussion.",
+          "Le Puy, a biodynamic right-bank Bordeaux estate of 54 hectares, left the Francs Côtes de Bordeaux appellation in 2017 and now bottles as Vin de France."
+        ]
+      },
       {
         "source": "Tim Atkin",
         "url": "https://timatkin.com/traditional-labels-suck-my-duck/",
@@ -144,9 +265,9 @@
         "summ": "Never say that wine labelling regulations are a subject devoid of humour. The Tribunal Correctionnel de Paris recently heard a case brought by anti-alcohol NGO Addictions France against Languedoc vigneron Nicolas Vellas over his provocative packaging. Vellas’s edgy cuvées have included “Little Fuck,” “Bad Angel” (its label...",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "A Paris court heard a case by anti-alcohol group Addictions France against Languedoc vigneron Nicolas Vellas over his provocative labels, including \"Suck my Duck\".",
-          "Bordeaux has lost a fifth of its vineyard area in four years, with 30,000 ha due to be uprooted by end of December.",
-          "Author Tim Atkin argues French wine's conservative labels, especially in Bordeaux, risk alienating younger consumers, while Santus in Franciacorta cites its label for success in Japan."
+          "Nicolas Vellas, a Languedoc vigneron, faces a Paris court case brought by Addictions France over provocative labels like \"Suck my Duck\" and \"Punish Me\".",
+          "Bordeaux has lost a fifth of its vineyard area in four years, with 30,000 ha set to be uprooted by end of December.",
+          "Bordeaux labels remain largely old-fashioned, featuring château pictures or family crests, while natural wine producers in less prestigious regions use bolder designs."
         ]
       },
       {
@@ -166,9 +287,8 @@
         "summ": "Early harvest data from the 2026 Burgundy vintage reveals exciting insights into the region's grapes, offering a first look at vine yields and pricing",
         "author": "Jonathan Finch",
         "takeaways": [
-          "Burgundy's Côte d'Or picking finished between 10 and 12 September 2026, after the region's earliest harvest ever recorded.",
-          "The Comité des Vins de Bourgogne estimates the 2026 crop down around 30 per cent against the five-year average, with the official figure due mid-November.",
-          "Agreste forecasts Pinot Noir losses in Burgundy above half, while Champagne's harvest is seen down by almost half."
+          "Burgundy's Côte d'Or picking finished between 10 and 12 September 2026, after the region's earliest harvest on record.",
+          "The Comité des Vins de Bourgogne estimates Burgundy's 2026 volume about 30 per cent below the five-year average, with the official figure due mid-November."
         ]
       },
       {
@@ -179,22 +299,9 @@
         "summ": "Château Nadal Hainaut, an organic wine producer in the Roussillon making some nice wines. This visit was with Pauline Nadal,",
         "author": "Jamie Goode",
         "takeaways": [
-          "Château Nadal Hainaut in the Roussillon farms 27 hectares of vines organically across 10 varieties, including a centenarian Carignan plot.",
+          "Château Nadal Hainaut in the Roussillon is an organic estate farming 27 hectares across 10 varieties, including a centenarian Carignan plot.",
           "Pauline Nadal, a sixth-generation family member and trained ceramicist, is responsible for production at the estate.",
-          "The estate was bought by the Hainault family in 1826 and rebuilt by Pauline's parents, who still invest in it."
-        ]
-      },
-      {
-        "source": "Grape Wall of China",
-        "url": "https://www.grapewallofchina.com/2026/11/01/albarino-soleri-pinot-iskra-new-white-wine-player-in-china/",
-        "date": "2026-11-01",
-        "head": "Albarino? Soleri? Pinot Iskra? New White Wine Player in China",
-        "summ": "Attendees of the China Sommelier Summit in Shanghai were treated to a new local white wine producer pouring smack dab in the middle of the",
-        "author": "Jim Boyce",
-        "takeaways": [
-          "Lan Yue, established in Yantai in 2021, poured six wines at the China Sommelier Summit in Shanghai, including Albarino, Chardonnay, Viognier, Pinot Iskra and Soleri.",
-          "Lan Yue planted its first vines in 2023 and recently released its first wines, with its vineyards covering about 15.5 hectares, 2.7 hectares of which are Albarino.",
-          "Lan Yue wines are unoaked except the Chardonnay Reserve, and the Albarino is singled out for high acidity and citrus and white flower aromas."
+          "The 2024 Domaine Nadal Hainaut Rosé de Syrah is scored 91/100, and the Signum 2020 Côtes du Roussillon, with 1800 bottles made, scores 94/100."
         ]
       },
       {
@@ -205,8 +312,9 @@
         "summ": "Outfitting your kitchen with the season’s essential tools, plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Meg Maker says the clocks dropping back on Sunday marks the start of what she calls Kitchen Season.",
-          "Kitchen Season, she writes, is when November and December cooking becomes a way to mark occasions and cook for others."
+          "Meg Maker says the clocks dropping back on Sunday starts what she calls Kitchen Season.",
+          "Kitchen Season, she writes, spans November and December, when people feel a special itch to cook for others.",
+          "Maker's Table is sharing a list of kitchen tools the author uses year-round that become even more essential during festive cooking."
         ]
       },
       {
@@ -217,9 +325,9 @@
         "summ": "Niagara’s Cabernet Franc harvest finally gets underway, plus the bottles that made my October memorable",
         "author": "Cab Franc Chronicles",
         "takeaways": [
-          "Buttonwood Grove's 2025 Blanc de Franc from the Finger Lakes is a white Cabernet Franc the author describes as delicious, with about 10 g/L residual sugar.",
-          "Château de Fosse Sèche's 2018 Éolithe VDF from Saumur is praised for freshness and restraint in a warm vintage, with at least five years of life ahead.",
-          "Fogolar Wines' 2018 Cabernet Franc Picone Vineyard from Vinemount Ridge, Niagara, is called a serious, cellar-worthy Niagara Cabernet Franc."
+          "Buttonwood Grove's 2025 Blanc de Franc from the Finger Lakes is a white Cabernet Franc with about 10 g/L residual sugar, which the writer calls off-dry.",
+          "Château de Fosse Sèche's 2018 Éolithe VDF from Saumur is described as an early-drinking Cabernet Franc from silex de Brossay limestone, with 5+ years of life ahead.",
+          "Fogolar Wines' 2018 Cabernet Franc \"Picone Vineyard\" from VQA Vinemount Ridge, Niagara Peninsula, is called a serious, cellar-worthy Niagara Cabernet Franc."
         ]
       },
       {
@@ -230,22 +338,9 @@
         "summ": "Is a wine from the depths ‘better’ or does it depend on the boat?",
         "author": "Miquel Hudin",
         "takeaways": [
-          "Attis, a winery owned by the Fariña family in O Grove, Galicia, ages its Albariño 'Mar' bottles underwater in the estuary.",
-          "The Attis Albariño 'Mar' is aged five months underwater at 13-16°C, versus the 'Standard' bottling of about 120,000 annually.",
-          "The author's past tastings of underwater-aged wines suggested they seemed older and less fresh than landbound counterparts."
-        ]
-      },
-      {
-        "source": "The Morning Claret",
-        "url": "https://themorningclaret.com/p/visiting-the-vineyard-in-the-sky",
-        "date": "2026-10-21",
-        "head": "Visiting the Vineyard in the Sky",
-        "summ": "The extraordinary story of Domaine de Beudon in Valais, Switzerland",
-        "author": "Simon J. Woolf",
-        "takeaways": [
-          "Marion Granges-Faiss and her late husband Jacky farm Domaine de Beudon at 890 metres in Valais, Switzerland, with six hectares of vineyard.",
-          "Jacky bought the estate in 1971, and the family became Valais's first Demeter-certified estate in 1992.",
-          "Jacky began making his own wine in 1995 with help from Pierre-Antoine Crettenand, since 2003 using only sulphites and bottling unfiltered."
+          "Attis, a winery owned by the Fariña family, ages its Albariño 'Mar' underwater in magnums off O Grove, Galicia.",
+          "The Mar is aged five months in the estuary's 13-16C waters, with the Standard Albariño made from the same wine.",
+          "Attis seals its underwater bottles with glass caps rather than cork, as cork was unreliable after waterproofing."
         ]
       },
       {
@@ -256,8 +351,9 @@
         "summ": "Last week, I published a bunch of reviews from an NYC media tasting of selections from the (stellar) 2024 Port vintage. I typically follow those type of posts up with another post of other, older selections of vintage Ports that I tasted at the same event, and I offer them without much shame as simply […] This article was...",
         "author": "Joe Roberts",
         "takeaways": [
-          "1WineDude published reviews from an NYC media tasting of selections from the 2024 Port vintage.",
-          "A follow-up post covers older vintage Ports from the same event, spanning 1985 to 2022."
+          "1WineDude tasted older vintage Ports from 1985 to 2022 at an NYC media tasting, following up a post on the 2024 Port vintage.",
+          "The reviewer found the 2003 vintage Ports powerful and fruity, with one 2003 Port praised as his favorite of that vintage so far.",
+          "Several wines were judged too young to open, with the reviewer advising cellaring for another ten years for one."
         ]
       }
     ]
