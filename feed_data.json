@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "items": {
     "MARKET": [
       {
-        "head": "Moldova pitches indigenous grape varieties to Chinese buyers at ProWine Shanghai",
+        "head": "Moldova pitches indigenous grapes and 23 producers at ProWine Shanghai",
         "date": "2026-11-05",
         "sources": [
           "Vino Joy News"
@@ -13,29 +13,13 @@
           "https://vino-joy.com/2026/11/05/moldova-makes-its-case-to-chinas-wine-buyers/"
         ],
         "takeaways": [
-          "23 Moldovan wine and spirits producers exhibit at ProWine Shanghai from November 10 to 12, seeking Chinese importers and distributors.",
-          "Moldova's wine imports to China reached US$1.43 million in the first nine months of 2026, per Chinese customs data.",
-          "About 85% of Moldovan wine production is exported, and the EU now takes roughly 60% of wine exports."
+          "Twenty-three Moldovan wine and spirits producers will seek Chinese importers and distributors at ProWine Shanghai, November 10 to 12.",
+          "Chinese customs data show Moldovan wine imports reached US$1.43 million in the first nine months of 2026.",
+          "About 85% of Moldova's wine production is exported, with the EU taking roughly 60% of wine exports."
         ]
       },
       {
-        "head": "Central Valley grower swaps wine grapes for almonds amid market and water pressures",
-        "date": "2026-11-05",
-        "sources": [
-          "Growing Produce"
-        ],
-        "summ": "After years of uncertainty in other crops, Proplant Transplanting is taking a measured approach to almonds",
-        "urls": [
-          "https://www.growingproduce.com/nuts/from-grapes-to-almonds-ways-one-grower-is-finding-firmer-ground/"
-        ],
-        "takeaways": [
-          "Proplant Transplanting, a fourth-generation Central Valley family business, is replacing hundreds of acres of wine grapes with almonds.",
-          "Wine demand fell: US volume dropped about 4% from 2024 to 2025 and over 12% since 2018, per BMO.",
-          "Almond prices hit about $3.50 per pound in 2026, a decade high, though farming costs have also risen sharply."
-        ]
-      },
-      {
-        "head": "Australian wine's small formats gain ground as consumers seek moderation and convenience",
+        "head": "Australian wine small formats gain traction amid moderation and single-person households",
         "date": "2026-11-04",
         "sources": [
           "Wine Australia"
@@ -45,13 +29,13 @@
           "https://www.wineaustralia.com/news/market-bulletin/issue-376"
         ],
         "takeaways": [
-          "Combined export and domestic off-trade sales of 187mL wine packs rose 22 per cent to almost 1.9 million litres in 2025-26.",
-          "Export volumes of 187mL packs grew 39 per cent, from 450,000 litres in 2023-24 to 620,000 litres in 2025-26.",
-          "Australia's single-person households reached 26 per cent of households, up from 18 per cent in 1981, per Census data."
+          "Combined Australian export and domestic off-trade sales of 187mL wine packs rose 22 per cent to almost 1.9 million litres in 2025-26.",
+          "Export volumes of 187mL packs grew 39 per cent from 2023-24 to 2025-26, concentrated in Asia-Pacific markets such as Taiwan and Singapore.",
+          "Single-person households make up 26 per cent of Australian households, up from 18 per cent in 1981, per Census data."
         ]
       },
       {
-        "head": "EU greenwashing rules now bind wine labels and sommelier talk on environmental claims",
+        "head": "EU greenwashing rules restrict vague eco claims on wine labels from September 27",
         "date": "2026-11-02",
         "sources": [
           "SevenFifty Daily"
@@ -61,13 +45,13 @@
           "https://daily.sevenfifty.com/europe-is-cracking-down-on-greenwashing-what-does-that-mean-for-wine-labels/"
         ],
         "takeaways": [
-          "Directive (EU) 2024/825, called EmpCo, restricts vague environmental claims like \"eco-friendly\" and \"green\" on products sold in the EU.",
-          "Enforcement began September 27, with fines up to four percent of annual turnover, set country by country by each member state.",
-          "Terms such as \"natural\" must be specified and substantiated, and old stock is not grandfathered in under the rules."
+          "EU Directive 2024/825, known as EmpCo, bans vague environmental claims like clean, green and eco-friendly on consumer products.",
+          "Enforcement begins September 27, with national authorities setting penalties of up to four percent of annual turnover for widespread violations.",
+          "Terms like natural lack accepted definitions and are banned as generic claims unless producers substantiate them, with old stock not grandfathered."
         ]
       },
       {
-        "head": "Bordeaux takes 41% of weekly traded wine value on Liv-ex",
+        "head": "Bordeaux takes 41% of traded wine value as Burgundy's share jumps",
         "date": "2026-11-02",
         "sources": [
           "Liv-ex"
@@ -77,13 +61,13 @@
           "https://www.liv-ex.com/bordeaux-strengthens-its-market-lead-mature-vintages-trading-actively/"
         ],
         "takeaways": [
-          "Bordeaux claimed 41% of the week's traded value, with 2019 and 2020 vintages the top-traded by value.",
-          "Burgundy's share rose from 15.7% to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive leading.",
-          "Champagne's share fell from 13.0% to 8.5%, while Tuscany rose to 11.6%, per Liv-ex weekly trade data."
+          "Bordeaux claimed 41% of the week's traded value, extending its lead on the Liv-ex market.",
+          "Burgundy's share rose from 15.7% to 20.8%, while Champagne's fell from 13.0% to 8.5%.",
+          "Domaine de la Romanee-Conti and Domaine Leflaive were the top-traded Burgundy producers, around a third of regional trade."
         ]
       },
       {
-        "head": "India-EU trade deal to cut wine tariffs, but market entry remains complex",
+        "head": "India-EU trade deal to cut wine tariffs, but state rules complicate entry",
         "date": "2026-10-28",
         "sources": [
           "Vino Joy News"
@@ -93,13 +77,29 @@
           "https://vino-joy.com/2026/10/28/india-is-opening-up-to-wine-but-is-the-wine-trade-ready/"
         ],
         "takeaways": [
-          "India's 150% tariff on EU wine will phase down to 20% for premium and 30% for medium-range wines under the India-EU FTA.",
-          "Alcohol is regulated state by state in India, so registration, taxation and distribution vary across markets.",
+          "The India-EU Free Trade Agreement will phase India's 150% tariff on EU wine down to 20% for premium and 30% for mid-range wines.",
+          "Alcohol is regulated state by state in India, so registration, taxation and distribution differ widely across regions.",
           "India imported 5.4 million litres of wine worth US$28.8 million in 2025, up 13.7% in volume and 10.9% in value."
         ]
       },
       {
-        "head": "California table grapes stay in supply through December despite early harvest",
+        "head": "German wine imports into China rise in volume, value and price in 2026",
+        "date": "2026-10-28",
+        "sources": [
+          "Vino Joy News"
+        ],
+        "summ": "Imports rose in volume, value and average price in the first nine months, offering an encouraging backdrop for 45 wineries and importers heading to the German Pavilion",
+        "urls": [
+          "https://vino-joy.com/2026/10/28/german-wine-gains-in-china-as-producers-prepare-for-prowine-shanghai/"
+        ],
+        "takeaways": [
+          "China imported 4.23 million liters of bottled German wine in the first nine months of 2026, up 8% year on year.",
+          "Import value rose 11% to US$22.49 million, while the average import price increased 3%.",
+          "Germany brings 45 wineries and importers to the national pavilion at ProWine Shanghai, running Nov. 10-12."
+        ]
+      },
+      {
+        "head": "California table grapes stay available through December for holiday promotions",
         "date": "2026-10-28",
         "sources": [
           "Growing Produce"
@@ -109,41 +109,9 @@
           "https://www.growingproduce.com/fruits/grapes/california-table-grapes-positioned-for-strong-finish-to-the-year/"
         ],
         "takeaways": [
-          "California Table Grape Commission says harvest ends mid-November but shipments continue well into December.",
-          "Grape volumes will remain promotable through the holiday season, supported by steady shipments and cold storage supplies.",
-          "Consumer research cited shows 72% of grape purchasers prefer U.S.-grown grapes, versus under 5% preferring imports."
-        ]
-      },
-      {
-        "head": "Hong Kong-listed Grace Wine proposes renaming itself under 1919 founder's control",
-        "date": "2026-10-26",
-        "sources": [
-          "Vino Joy News"
-        ],
-        "summ": "Hong Kong-listed Grace Wine Holdings has proposed changing its name as it expands beyond wine under the control of the founder of Chinese drinks retailer 1919",
-        "urls": [
-          "https://vino-joy.com/2026/10/26/chinas-grace-wine-formally-changes-name-as-it-expands-beyond-wine/"
-        ],
-        "takeaways": [
-          "Grace Wine Holdings proposed renaming itself Consumer Business Factory Holdings, referencing drinks retailer 1919, in an October 9 filing.",
-          "1919 founder Yang Lingjiang acquired a 73.63% controlling stake in Grace Wine in December 2025.",
-          "The company is expanding into sauce-aroma baijiu and supply-chain operations, moving away from its vertically integrated wine business."
-        ]
-      },
-      {
-        "head": "Bordeaux leads Liv-ex trade as Lynch-Bages 2005 becomes top-traded wine",
-        "date": "2026-10-26",
-        "sources": [
-          "Liv-ex"
-        ],
-        "summ": "US and UK buyers both upped their purchasing, the former segment reclaiming their share of purchasing",
-        "urls": [
-          "https://www.liv-ex.com/fine-wine-news-bordeaux-keeps-the-lead-lynch-bages-2005-top-traded/"
-        ],
-        "takeaways": [
-          "Bordeaux held the lead on Liv-ex with a 37.4% share of purchases, and Lynch-Bages 2005 was the top-traded wine.",
-          "Burgundy's share fell to 15.4% from 18.4% last week, and was well below its 24.6% September average.",
-          "US buyers took over half of Bordeaux's purchased value, while US share of California trade rose to 9.6%."
+          "California Table Grape Commission says grapes will stay in promotable volumes throughout December despite an early harvest.",
+          "Harvest is expected to end in mid-November, but shipments will continue well beyond the final picking date.",
+          "Commission research finds 72% of grape purchasers prefer U.S.-grown grapes, versus fewer than 5% preferring imports."
         ]
       }
     ],
@@ -159,13 +127,13 @@
           "https://winetitles.com.au/brendan-carter-of-bottleshock-named-2026-wine-communicator-of-the-year/"
         ],
         "takeaways": [
-          "Wine Communicators of Australia named Brendan Carter of Bottleshock its 2026 Wine Communicator of the Year at its Sydney Awards Night.",
-          "Judges assessed 33 entries across 13 categories, with WCA National Chair Lynda Schenk presenting the award to Carter.",
-          "Carter was recognised for his Bottleshock.TV content and The Big Blind League wine tasting competition, and urged Australian accents to lead global wine authority."
+          "Wine Communicators of Australia named Brendan Carter, of Bottleshock, its 2026 Wine Communicator of the Year at its Sydney Awards Night.",
+          "Judges cited his Bottleshock.TV content and The Big Blind League wine tasting competition for engaging consumers.",
+          "Among 33 judges, 13 category winners were honoured across campaigns, digital, social media, features, packaging and events."
         ]
       },
       {
-        "head": "Stanley Wine Bar wins three awards at Tasmanian Wine List of the Year 2026",
+        "head": "Stanley Wine Bar wins three awards at 2026 Tasmanian Wine List Awards",
         "date": "2026-11-06",
         "sources": [
           "Winetitles"
@@ -175,62 +143,13 @@
           "https://winetitles.com.au/stanley-wine-bar-wins-three-major-accolades-at-2026-tasmanian-wine-list-of-the-year-awards/"
         ],
         "takeaways": [
-          "Wine Tasmania's 2026 Tasmanian Wine List of the Year Awards honoured venues showcasing local Tasmanian wines.",
-          "Stanley Wine Bar, a north-west coast venue, won Overall Judges' Choice Best Tasmanian Wine List of the Year.",
-          "It also took Best Small Bar Wine List and the People's Choice Award, judged by a panel including Nola James."
+          "The 2026 Tasmanian Wine List of the Year Awards, run by Wine Tasmania, recognise venues that champion local wines.",
+          "Stanley Wine Bar on the north-west coast won Overall Judges' Choice Best Tasmanian Wine List, Best Small Bar Wine List and the People's Choice Award.",
+          "Wine Tasmania CEO Sheralee Davies said visitors travel to Tasmania for its wines and stay longer and spend more."
         ]
       },
       {
-        "head": "Sommeliers name underrated Pinot Noir and Sauvignon Blanc producers beyond famous regions",
-        "date": "2026-11-05",
-        "sources": [
-          "VinePair"
-        ],
-        "summ": "Though it has centuries of history in Burgundy, great quality Pinot Noir can now be found in every corner of the world, from the volcanic Otago peninsula in New Zealand to the high plateaus of Greece’s Amyndeon region. Across these different areas, Pinot Noir offers a wide variety of expressions, from dense, fruit-forward...",
-        "urls": [
-          "https://vinepair.com/articles/wa-sommeliers-underrated-pinot-noir/",
-          "https://vinepair.com/articles/wa-wine-pros-most-underrated-sauvignon-blanc-2026/"
-        ],
-        "takeaways": [
-          "Sixteen sommeliers were asked to name the most underrated Pinot Noir on the market right now.",
-          "Picks include Redbank from King Valley, Australia, Wasenhaus from Baden, Germany, and Niedrist from Alto Adige, Italy.",
-          "A separate panel of ten sommeliers named underrated Sauvignon Blanc, including Casa Jipi from Baja, Mexico and Hannes Sabathi from Styria, Austria."
-        ]
-      },
-      {
-        "head": "Napa consultant launches one-day Ask Wines chat with wine experts before Thanksgiving",
-        "date": "2026-11-05",
-        "sources": [
-          "PUNCH"
-        ],
-        "summ": "A new project empowers curious holiday drinkers to ask real experts for their advice",
-        "urls": [
-          "https://punchdrink.com/articles/thanksgiving-wine-advice-ai-sommelier/"
-        ],
-        "takeaways": [
-          "Napa social media consultant Evan Roscoe launched Ask Wines, a 24-hour site answering Thanksgiving wine questions from human experts.",
-          "Roscoe recruited about 50 interested experts, including sommeliers, winemakers, wine buyers and drinks writers, via an Instagram poll.",
-          "The site runs the day before Thanksgiving, with questions expected on pairings, bottle quantities and grocery store choices."
-        ]
-      },
-      {
-        "head": "Gippsland Wine Show awards 85 medals from 116 entries in record year",
-        "date": "2026-11-05",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "In a record medal tally, the 2026 Farmer’s Daughters Gippsland Wine Show attracted 116 entries “with a strong focus on the region’s famed Pinot Noir and Chardonnay classes”. Wine Gippsland president Rob Lightfoot said there was an “outstanding haul” of 85 medals from the 103 varietal entries yielding seven trophies, “a...",
-        "urls": [
-          "https://winetitles.com.au/gippsland-wine-show-attracts-116-entries-awards-seven-trophies-and-85-medals/"
-        ],
-        "takeaways": [
-          "The 2026 Farmer's Daughters Gippsland Wine Show received 116 entries, with a strong focus on Pinot Noir and Chardonnay classes.",
-          "The show awarded 85 medals from 103 varietal entries, including 15 gold, 31 silver and 39 bronze, plus seven trophies.",
-          "Gippsland Wine Company's 2025 Loch Chardonnay, from South Gippsland, was named Best Wine of Show."
-        ]
-      },
-      {
-        "head": "Alison Smith Story recounts her path into the wine business",
+        "head": "Alison Smith Story recounts her path into the American wine business",
         "date": "2026-11-05",
         "sources": [
           "VinePair"
@@ -241,12 +160,11 @@
         ],
         "takeaways": [
           "Keith Beavers hosts this VinePair Wine 101 episode, which features Alison Smith Story of Smith Story Wines.",
-          "The conversation covers how Alison Smith Story came to work in the wine business, told casually.",
-          "The episode is sponsored by Wines of Alsace."
+          "The episode is a casual conversation about how Smith Story came to work in the wine business."
         ]
       },
       {
-        "head": "Volcanic soils make hard-to-farm vines and wines with a distinctive tension",
+        "head": "Volcanic soils make wines with a distinctive tension and sense of place",
         "date": "2026-10-29",
         "sources": [
           "The Guardian"
@@ -256,9 +174,9 @@
           "https://www.theguardian.com/food/2026/oct/29/volcanic-wines-review-mina-holland"
         ],
         "takeaways": [
-          "Volcanic wines come from many soil types, including ash, basalt, obsidian, pumice and tuff, and vary widely in style.",
-          "Farming on volcanic terrain is difficult, as on La Palma, where growers face black ash soils, high winds and heatwaves.",
-          "Importer Nic Rizzi says volcanic wines carry an extra tension that reflects the hard conditions the vines grow in."
+          "Volcanic wines are a geological category rather than a style, spanning soils like ash, basalt, obsidian, pumice and tuff.",
+          "Importer Nic Rizzi of Modal Wines says volcanic wines have an extra tension that is hard to describe.",
+          "Victoria Torres Pecis farms vines on La Palma in the Canaries, including black ash soils and vines trained low against high winds."
         ]
       }
     ],
@@ -274,25 +192,9 @@
           "https://winetitles.com.au/barossa-workshop-provides-practical-presentation-on-reworking-old-vine-grenache/"
         ],
         "takeaways": [
-          "Torbreck viticulturists Nigel Blieschke and Tom Bartholomaeus led a Barossa Viticulture Technical Group workshop on reworking old-vine Grenache.",
-          "Block one, reworked in 2020, reached about 95% strike rate, while block two, reworked in 2022, reached only 75%.",
-          "Block two yielded about 1.3 tonnes per hectare less, as the team rushed the process and cordons and trunks grew weaker."
-        ]
-      },
-      {
-        "head": "90% of Barossa vineyard area now in Sustainable Winegrowing Australia",
-        "date": "2026-11-05",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "Barossa Australia has revealed that more than 300 Barossa vineyards and wineries are now participating in Sustainable Winegrowing Australia, with over 80% achieving independent certification. 12,768 Ha (90%) of Barossa’s 14,162 Ha under-vine is participating in Sustainable Winegrowing Australia , a 1,264 hectare (10%) increase...",
-        "urls": [
-          "https://winetitles.com.au/90-of-barossa-vineyard-area-now-participating-in-national-sustainability-program/"
-        ],
-        "takeaways": [
-          "Barossa Australia says 12,768 hectares, 90% of the region's 14,162 under-vine area, now participate in Sustainable Winegrowing Australia.",
-          "The program now has 303 Barossa vineyard and winery members, up 66% in two years, with 244 certified to best practice via Freshcare audit.",
-          "Government grants worth over $170,000 over five years have funded free certification training and expert viticulture sessions to lower program costs."
+          "The Barossa Viticulture Technical Group hosted a workshop on reworking old-vine Grenache, led by Tom Bartholomaeus and Nigel Blieschke of Torbreck Vintners.",
+          "A 2022 reworked block achieved a 75% strike rate and yielded about 1.3 tonnes per hectare less than a 2020 block at roughly 95%.",
+          "Speakers stressed slow, long-term work, and Torbreck credits keeping the same four pruners for 10 years for consistent vineyard knowledge."
         ]
       },
       {
@@ -306,13 +208,26 @@
           "https://regenerativeviticulture.org/resources/research-and-reviews/effects-of-inter-row-cover-crop-termination-strategy-on-grapevine-performance-and-mycorrhizal-activity-under-contrasting-seasonal-conditions-copy/"
         ],
         "takeaways": [
-          "A 2026 Field Crops Research study tested roller-crimped cover crops in Mediterranean rainfed vineyards.",
-          "Roller-crimping improved soil cover, vine water status and mycorrhizal colonization without changing grape quality.",
-          "Yield rose only in wetter seasons, while climate was the dominant driver of fungal diversity."
+          "A 2026 Field Crops Research study of Mediterranean rainfed vineyards tested roller-crimping cover crops between vine rows.",
+          "Roller-crimping improved soil cover, vine water status and mycorrhizal colonization without affecting grape quality.",
+          "Yield rose only in wetter conditions, while seasonal climate was the dominant driver of fungal diversity."
         ]
       }
     ],
     "NEWSLETTERS": [
+      {
+        "source": "wineanorak",
+        "url": "https://wineanorak.com/2026/11/08/tasting-some-ports-from-quinta-do-infantado-an-important-douro-producer/",
+        "date": "2026-11-08",
+        "head": "Tasting some Ports from Quinta do Infantado, an important Douro producer",
+        "summ": "Infantado is a family-owned Quinta dating back to 1816. They were famous for being the first quinta to",
+        "author": "Jamie Goode",
+        "takeaways": [
+          "Quinta do Infantado, a family-owned Douro estate dating to 1816, was the first quinta to bottle Port in the region in 1979 rather than in Vila Nova de Gaia.",
+          "João Roseira heads the 46-hectare estate in Covas de Douro, with cousin Álvaro Roseira in charge of winemaking; it has farmed organically since 1990.",
+          "Graft, the estate's new UK importer, currently takes only the Ports, with Quinta do Infantado Vintage Port 2015 scored 95/100 in the tasting."
+        ]
+      },
       {
         "source": "Vinography",
         "url": "https://www.vinography.com/2026/11/vinography-images-slice-of-italy",
@@ -321,7 +236,7 @@
         "summ": "What else do you need really? A little farmhouse, a patch of grapes, some olive trees, and the rolling hills",
         "author": "Alder Yarrow",
         "takeaways": [
-          "A Vinography photo post shows a small Italian farmhouse set among grapevines, olive trees and rolling hills."
+          "Vinography's image post features a photo of an Italian farmhouse set among grapevines, olive trees and rolling hills."
         ]
       },
       {
@@ -332,9 +247,9 @@
         "summ": "Through a Burgundian lens, Cabernet Franc becomes a study of place and terroir, parcel by parcel",
         "author": "Cab Franc Chronicles",
         "takeaways": [
-          "Aurélien Revillot is a relative newcomer to the Bourgueil appellation whose domaine is part of Becky Wasserman's portfolio.",
-          "Revillot makes single-vineyard wines from his best slope parcels alongside an entry-level cuvée blended from several parcels.",
-          "At the time of the author's first visit in May 2022, Revillot had three finished cuvées, with two cuvées parcellaires due from the 2020 vintage."
+          "Aurélien Revillot is a relatively new producer in Bourgueil whose domaine is part of Becky Wasserman's portfolio.",
+          "Revillot makes an entry-level blend from several parcels, plus single-vineyard cuvées from his best slope parcels, with two cuvées parcellaires set to join from the 2020 vintage.",
+          "Revillot, from a Mâconnais farming family, trained in Dijon and worked vintages at Domaine Drouhin in Oregon and Newton Johnson in South Africa before reaching the Loire."
         ]
       },
       {
@@ -346,8 +261,8 @@
         "author": "Eveline Chartier",
         "takeaways": [
           "Josep Raventós of Penedès produced Spain's first traditional method sparkling wine in 1872, using Spanish grapes rather than Champagne varieties.",
-          "Cava is produced mainly in Sant Sadurní d'Anoia, Penedès, Catalonia, where 95% of Cava comes from, and its cellars can reach 20 m deep.",
-          "Sumarroca Gran Reserva Brut Nature Cava 2022 from Finca Sumarroca is aged 40 months and priced at $28 Cdn, per the author."
+          "Cava takes its name from the cellars, or caves, dug in Sant Sadurní d'Anoia, where wine ages; the term became formal Spanish law in 1972.",
+          "Sumarroca Gran Reserva Brut Nature Cava 2022 from Penedès, aged 40 months on lees, is priced at $28 Cdn."
         ]
       },
       {
@@ -358,9 +273,9 @@
         "summ": "Does any nation offer better wine value than Spain? This seems obvious to French bottlers, who import major amounts of Spanish wine each year. Per",
         "author": "Jim Boyce",
         "takeaways": [
-          "The Wines From Castilla, La Mancha Roadshow visited Beijing, with a Guangzhou stop planned for November 6.",
-          "Spain ranked fifth for wine volume in China last year, narrowly behind Italy but a quarter of leader Australia, per WBO stats.",
-          "Entry-level picks highlighted include DCOOP's Airén and Tempranillo, plus Verdejo from Ayuso and Campos Reales, priced around RMB12 to RMB24."
+          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing and was set to visit Guangzhou on November 6.",
+          "Spain ranked fifth by volume in China last year, narrowly behind Italy but only a quarter of leader Australia, per WBO stats.",
+          "Spain ranked sixth for value in China, below New Zealand, with per-liter value above only Chile among the top eight sources."
         ]
       },
       {
@@ -372,8 +287,21 @@
         "author": "Simon J. Woolf",
         "takeaways": [
           "Columnist is judging at the Asia Wine Trophy in Daejeon, South Korea, the only competition known with a dedicated orange and amber wine panel.",
-          "A Georgian Khikhvi amber received mid-90s scores from all six judges and earned grand gold without discussion.",
-          "Le Puy, a biodynamic right-bank Bordeaux estate, left the Francs Côtes de Bordeaux appellation in 2017 and now bottles as Vin de France."
+          "A Georgian Khikhvi amber received mid-90s scores from all six judges, earning instant grand gold without discussion.",
+          "Le Puy, a right-bank Bordeaux estate, left the Francs Côtes de Bordeaux appellation in 2017 and now bottles its wines as Vin de France."
+        ]
+      },
+      {
+        "source": "Tim Atkin",
+        "url": "https://timatkin.com/traditional-labels-suck-my-duck/",
+        "date": "2026-11-04",
+        "head": "Traditional labels? Suck My Duck",
+        "summ": "Never say that wine labelling regulations are a subject devoid of humour. The Tribunal Correctionnel de Paris recently heard a case brought by anti-alcohol NGO Addictions France against Languedoc vigneron Nicolas Vellas over his provocative packaging. Vellas’s edgy cuvées have included “Little Fuck,” “Bad Angel” (its label...",
+        "author": "Tim Atkin MW",
+        "takeaways": [
+          "A Paris court heard a case by anti-alcohol group Addictions France against Languedoc vigneron Nicolas Vellas over provocative labels like \"Suck My Duck\".",
+          "The case tests whether such packaging breaches France's 1991 Loi Évin, which restricts alcohol advertising and bans links to social success and seduction.",
+          "Vellas's lawyer argued the labels' sexual references aimed to create a convivial environment, and the case appears adjourned for now."
         ]
       },
       {
@@ -384,9 +312,9 @@
         "summ": "Early harvest data from the 2026 Burgundy vintage reveals exciting insights into the region's grapes, offering a first look at vine yields and pricing",
         "author": "Jonathan Finch",
         "takeaways": [
-          "Burgundy's Côte d'Or picking finished between 10 and 12 September, after the region's earliest harvest on record.",
-          "The Comité des Vins de Bourgogne estimates the 2026 crop is about 30 per cent below the five-year average, per early figures.",
-          "Growers report small, thick-skinned berries and healthy fruit, with Côte de Beaune acidity mostly holding up despite the heat."
+          "Burgundy's Côte d'Or picking finished between 10 and 12 September, after the region's earliest harvest ever recorded.",
+          "The Comité des Vins de Bourgogne estimates a volume drop of around 30 per cent against the five-year average, with official figures due mid-November.",
+          "Growers report small, thick-skinned berries and healthy fruit, with Côte de Beaune malic acid breaking down while tartaric acid stayed high."
         ]
       },
       {
@@ -397,9 +325,9 @@
         "summ": "Outfitting your kitchen with the season’s essential tools, plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Meg Maker says the clocks going back this Sunday marks the start of what she calls Kitchen Season.",
-          "During November and December, she says many people get a special urge to cook for others or try new cuisines.",
-          "Her article lists kitchen tools she uses year-round that become more essential during festive cooking."
+          "Meg Maker says November and December bring a strong urge to cook for others, often to keep family recipes alive or try new cuisines.",
+          "The clocks drop back on Sunday, and Maker calls the stretch from then on \"Kitchen Season.\".",
+          "Maker shares a list of kitchen tools she uses year-round that become even more essential during festive cooking, with no affiliate links."
         ]
       },
       {
@@ -410,35 +338,9 @@
         "summ": "Is a wine from the depths ‘better’ or does it depend on the boat?",
         "author": "Miquel Hudin",
         "takeaways": [
-          "Attis, a winery owned by the Fariña family near O Grove, Galicia, ages its magnum Albariño underwater in the Galician estuary.",
-          "The Attis Albariño 'Mar' 2025 is aged five months under water at 13-16C, versus the 'Standard' bottling of about 120,000 bottles annually.",
-          "The author notes that past underwater-aged wines he tasted seemed older and less fresh than landbound counterparts."
-        ]
-      },
-      {
-        "source": "1WineDude",
-        "url": "https://www.1winedude.com/yet-another-vintage-port-flex-post-tasting-selections-from-1985-2022/",
-        "date": "2026-10-21",
-        "head": "Yet Another Vintage Port Flex Post (Tasting Selections From 1985 - 2022)",
-        "summ": "Last week, I published a bunch of reviews from an NYC media tasting of selections from the (stellar) 2024 Port vintage. I typically follow those type of posts up with another post of other, older selections of vintage Ports that I tasted at the same event, and I offer them without much shame as simply […] This article was...",
-        "author": "Joe Roberts",
-        "takeaways": [
-          "1WineDude reviewed older vintage Port selections, dated 1985 to 2022, from an NYC media tasting that also featured the 2024 vintage.",
-          "The reviewer called the 2003 vintage Ports powerful, and said one 2003 bottle was probably his favorite of that vintage tasted so far.",
-          "Several selections were judged not yet ready, with the reviewer advising cellaring for roughly ten more years for the youngest wine."
-        ]
-      },
-      {
-        "source": "Tannic Panic!",
-        "url": "https://www.tannicpanic.wine/p/tannic-panic-issue-148-better-than",
-        "date": "2026-09-16",
-        "head": "Tannic Panic! Issue #148: Better Than Pinotage",
-        "summ": "South African reds, including one $30 bottle rated 98 points by a prominent “wine critic”",
-        "author": "Zach O'Brown",
-        "takeaways": [
-          "Tannic Panic! tasted three South African Bordeaux-style blends, including a $35 bottle that Tim Atkin rated 98 points.",
-          "The reviewers scored the $35 Stellenbosch-area blend 92 points, calling it well balanced and a strong South African Cabernet blend.",
-          "One blend scored 80 points and was called sour with a short finish, dominated by Cabernet Franc's smoky, green notes."
+          "Attis, a winery owned by Robustiano Fariña's family near O Grove, Galicia, ages magnums of its Albariño underwater in the Ría estuary.",
+          "The Attis Albariño 'Mar' is aged five months underwater at 13-16C, and is the same wine as its 'Standard' bottling, of which about 120,000 bottles are made yearly.",
+          "The author's experience with underwater-aged wines is that they generally taste tired and more advanced in age than landbound counterparts."
         ]
       }
     ]
