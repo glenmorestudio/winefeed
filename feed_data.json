@@ -1,39 +1,68 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "items": {
     "MARKET": [
       {
-        "head": "Calabria Family's Bélena launches 200ml minis across Pinot Grigio, Moscato and Rosé",
-        "date": "2026-11-09",
+        "head": "Unified Wine & Grape Symposium returns to Sacramento in January 2027 with new sessions",
+        "date": "2026-11-10",
         "sources": [
-          "Winetitles"
+          "The Wine Economist"
         ],
-        "summ": "As Australian wine preferences shift and drinking occasions continue to evolve, the Calabria Family is looking beyond the traditional 750ml bottle with its new 200ml Bélena minis. The new format is across the brand’s most popular styles, including Pinot Grigio, Moscato and Rosé. It will arrive in stores from January 2027 and...",
+        "summ": "The wine industry has had a tough year, both here in the U.S. and around the world. There has been a steady stream of bad news from all corners of the wine world and precious little good news to balance the scales.",
         "urls": [
-          "https://winetitles.com.au/calabria-family-launches-200ml-belena-bottles/"
+          "https://wineeconomist.com/2026/11/10/unified-2027/"
         ],
         "takeaways": [
-          "Calabria Family is launching 200ml Bélena minis in Pinot Grigio, Moscato and Rosé from January 2027.",
-          "The minis will be distributed nationally in Australia by the House of Fine Wine network.",
-          "Bélena reports domestic sales growth of 20% despite an overall decline in the Australian wine category."
+          "The Unified Wine & Grape Symposium, America's largest wine industry gathering, meets in Sacramento from January 26 to 28, 2027.",
+          "A new Tuesday general session, From Shelf to Vineyard, traces a $35 Napa Cabernet and a $12.99 Sauvignon Blanc back through the supply chain."
         ]
       },
       {
-        "head": "VinePair's weekly roundup covers spending, Chianti rosé, and industry product releases",
-        "date": "2026-11-06",
+        "head": "Yarra Valley's Levantine Hill makes US debut at New York benefit dinner",
+        "date": "2026-11-10",
         "sources": [
-          "VinePair"
+          "Winetitles"
         ],
-        "summ": "This is VinePair’s Booze News Weekly Roundup, where we gather the hottest headlines and product releases every Friday for a snapshot of what’s happening in the beverage alcohol industry. This week, we have updates on household spending on alcohol in the U.S., the EU’s approval of Chianti rosé, the latest product releases, and more.",
+        "summ": "Levantine Hill is expanding into the US, marking a “major milestone” for the family-owned Yarra Valley estate. Ranked number two in The Real Review’s Top Wineries of Australia 2026, the winery made its USA debut as the official wine partner of the American Australian Association’s 2026 New York Benefit Dinner.",
         "urls": [
-          "https://vinepair.com/booze-news/booze-news-weekly-roundup-us-household-spending-hits-low/",
-          "https://vinepair.com/booze-news/booze-news-weekly-roundup-heineken-warns-against-weight-loss-drugs/",
-          "https://vinepair.com/booze-news/booze-news-weekly-rounup-supreme-court-home-distilling-ban/",
-          "https://vinepair.com/booze-news/booze-news-weekly-roundup-italy-biggest-wine-heist/"
+          "https://winetitles.com.au/yarra-valley-winery-makes-its-us-debut-on-wall-street/"
         ],
         "takeaways": [
-          "It cites U.S. household alcohol spending, an EU approval of Chianti rosé, and recent product releases, without details or figures.",
-          "Other roundup editions in the material mention Heineken, RNDC, Diageo, and Uncle Nearest, but their specifics are not reported in this text."
+          "Levantine Hill, a family-owned Yarra Valley estate, became official wine partner of the American Australian Association's 2026 New York Benefit Dinner.",
+          "Its wines were served on 5 November 2026 to hundreds of business, government and diplomacy leaders at the Manhattan gala.",
+          "Each guest took home a bottle of the 2019 Samantha's Paddock Mélange Traditionnel, the estate's flagship Cabernet blend."
+        ]
+      },
+      {
+        "head": "Wine stays Australia's top-bought alcohol as drinking declines and spending per visit rises",
+        "date": "2026-11-10",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "New research shows that wine endures as “the most widely purchased category” in Australia at 55%, followed by spirits at 46% and beer at 44%. The new ‘What’s Driving Australia’s Alcohol Shopper: Consumption, Channels, Promotions and Occasions’ report from Vypr and Shop! ANZ found that 41% of Australians are drinking less than a...",
+        "urls": [
+          "https://winetitles.com.au/wine-remains-australias-most-purchased-category-as-alcohol-consumption-moderates/"
+        ],
+        "takeaways": [
+          "Vypr and Shop! ANZ report: 55% of Australians buy wine, ahead of spirits at 46% and beer at 44%.",
+          "41% of Australians drink less than a year ago or have stopped, while only 6% drink more.",
+          "48% of shoppers now typically spend over $40 per liquor-store visit, up from around 23% a year ago."
+        ]
+      },
+      {
+        "head": "Marnong Estate releases first Reserve Chardonnay alongside new cool-climate range",
+        "date": "2026-11-10",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Marnong Estate has unveiled its first-ever Reserve Chardonnay as a part its new collection of cool-climate expressions from the estate's Sunbury vineyards. The 2024 Reserve Chardonnay leads the new range which features the 2025 Single Vineyard Chardonnay and 2025 Estate Chardonnay, offering “distinct interpretations of the...",
+        "urls": [
+          "https://winetitles.com.au/marnong-estate-unveils-its-first-ever-reserve-chardonnay/"
+        ],
+        "takeaways": [
+          "Marnong Estate, a Sunbury winery, has released its first-ever Reserve Chardonnay, the 2024 vintage, as part of a new spring collection.",
+          "The collection also includes the 2025 Single Vineyard Chardonnay, the 2025 Estate Chardonnay and the 2026 Estate Sangiovese Rosé, its first rosé from that fruit.",
+          "The new releases are sold nationally through independent merchants, at the cellar door and online via the winery's website."
         ]
       },
       {
@@ -47,13 +76,13 @@
           "https://vino-joy.com/2026/11/05/moldova-makes-its-case-to-chinas-wine-buyers/"
         ],
         "takeaways": [
-          "Twenty-three Moldovan wine and spirits producers will seek business with Chinese importers at ProWine Shanghai, November 10 to 12.",
-          "Chinese customs data show Moldovan wine imports reached US$1.43 million in the first nine months of 2026.",
-          "About 85% of Moldovan production is exported, and the EU now takes roughly 60% of its wine exports."
+          "23 Moldovan wine and spirits producers will seek Chinese importers at ProWine Shanghai, November 10 to 12.",
+          "Wine imports from Moldova to China reached US$1.43 million in the first nine months of 2026, per Chinese customs data.",
+          "About 85% of Moldova's wine production is exported, and the EU now takes roughly 60% of its wine exports."
         ]
       },
       {
-        "head": "Australian wine's small formats gain ground as moderation and single-person households grow",
+        "head": "Australian wine small formats gain traction amid moderation and single-person households",
         "date": "2026-11-04",
         "sources": [
           "Wine Australia"
@@ -63,13 +92,13 @@
           "https://www.wineaustralia.com/news/market-bulletin/issue-376"
         ],
         "takeaways": [
-          "Combined export and domestic off-trade sales of 187mL wine packs rose 22 per cent to almost 1.9 million litres in 2025-26.",
-          "Export volumes of 187mL packs grew 39 per cent from 2023-24 to 2025-26, concentrated in Asia-Pacific markets.",
-          "Single-person households make up 26 per cent of Australian households, up from 18 per cent in 1981, per Census data."
+          "Combined export and domestic off-trade sales of 187mL wine packs rose 22% to about 1.9 million litres in 2025-26.",
+          "Australian 187mL export volumes grew 39%, from 450,000 litres in 2023-24 to 620,000 litres in 2025-26.",
+          "Single-person households make up 26% of Australian households, up from 18% in 1981, per Census data."
         ]
       },
       {
-        "head": "EU greenwashing directive takes effect, restricting vague eco claims on wine",
+        "head": "EU greenwashing rules now restrict vague eco claims on wine labels and marketing",
         "date": "2026-11-02",
         "sources": [
           "SevenFifty Daily"
@@ -79,13 +108,13 @@
           "https://daily.sevenfifty.com/europe-is-cracking-down-on-greenwashing-what-does-that-mean-for-wine-labels/"
         ],
         "takeaways": [
-          "Directive (EU) 2024/825, also called EmpCo, bans vague environmental claims like \"eco-friendly\" and \"green\" from wine marketing and labels.",
-          "Enforcement began September 27, with fines up to four percent of annual turnover, applied by individual EU member states.",
-          "Old stock is not grandfathered in, so producers are using stickers or point-of-sale information to correct existing claims."
+          "Directive (EU) 2024/825, called EmpCo, began enforcement on September 27 and bans vague environmental claims on consumer products.",
+          "Terms like \"eco-friendly\" and \"green\" must be specified and substantiated, and unverified sustainability badges are prohibited.",
+          "Enforcement is left to individual EU member states, with fines of up to four percent of annual turnover for widespread violations."
         ]
       },
       {
-        "head": "Bordeaux takes 41% of traded wine value as Burgundy's share jumps",
+        "head": "Bordeaux takes 41% of traded value as Burgundy's share jumps to 20.8%",
         "date": "2026-11-02",
         "sources": [
           "Liv-ex"
@@ -95,13 +124,13 @@
           "https://www.liv-ex.com/bordeaux-strengthens-its-market-lead-mature-vintages-trading-actively/"
         ],
         "takeaways": [
-          "Bordeaux claimed 41% of the week's traded value on the Liv-ex wine market, extending its lead.",
-          "Burgundy's share of traded value rose from 15.7% last week to 20.8% this week.",
-          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6% of traded value."
+          "Bordeaux claimed 41% of the week's traded value, with 2019 and 2020 vintages the top-traded by value.",
+          "Burgundy's share rose from 15.7% to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive leading producers.",
+          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6%, led by Soldera Case Basse and Sassicaia."
         ]
       },
       {
-        "head": "India's EU trade deal to cut wine tariffs, but state rules complicate entry",
+        "head": "India-EU trade deal cuts wine tariffs, but state rules still complicate entry",
         "date": "2026-10-28",
         "sources": [
           "Vino Joy News"
@@ -111,13 +140,13 @@
           "https://vino-joy.com/2026/10/28/india-is-opening-up-to-wine-but-is-the-wine-trade-ready/"
         ],
         "takeaways": [
-          "The India-EU Free Trade Agreement will cut India's 150% tariff on EU wine to 20% for premium and 30% for medium wines, phased in.",
-          "Alcohol is regulated state by state in India, so exporters must plan market entry for each state rather than nationally.",
-          "India imported 5.4 million litres of wine worth US$28.8 million in 2025, up 13.7% in volume and 10.9% in value."
+          "India's 150% tariff on EU wine will fall to 20% for premium and 30% for medium wines, phased in over time.",
+          "Alcohol is regulated state by state in India, so market entry means separate routes in each state, not one national market.",
+          "India imported 5.4 million litres of wine in 2025, worth US$28.8 million, with volume up 13.7% year on year."
         ]
       },
       {
-        "head": "German wine imports into China rise in volume, value and price this year",
+        "head": "German wine imports into China rise in volume, value and average price",
         "date": "2026-10-28",
         "sources": [
           "Vino Joy News"
@@ -127,15 +156,63 @@
           "https://vino-joy.com/2026/10/28/german-wine-gains-in-china-as-producers-prepare-for-prowine-shanghai/"
         ],
         "takeaways": [
-          "China imported 4.23 million litres of bottled German wine in the first nine months of 2026, up 8%.",
+          "China imported 4.23 million liters of bottled German wine in the first nine months of 2026, up 8%.",
           "Import value rose 11% to US$22.49 million, while the average import price increased 3%.",
-          "Germany brings 45 wineries and importers to ProWine Shanghai, Nov. 10-12, including over 10 first-time Chinese exhibitors."
+          "Germany brings 45 wineries and importers to ProWine Shanghai, Nov. 10–12, including over 10 first-time Chinese exhibitors."
+        ]
+      },
+      {
+        "head": "California table grape supply to last through December for holiday promotions",
+        "date": "2026-10-28",
+        "sources": [
+          "Growing Produce"
+        ],
+        "summ": "Despite an early start to harvest, steady shipments and cold storage supplies are in position to keep California table grapes available for holiday promotions",
+        "urls": [
+          "https://www.growingproduce.com/fruits/grapes/california-table-grapes-positioned-for-strong-finish-to-the-year/"
+        ],
+        "takeaways": [
+          "California Table Grape Commission says grapes stay available in promotable volumes throughout December after harvest ends mid-November.",
+          "Commission President Ian LeMay says steady shipments and cold storage let supply continue well into December despite an early harvest start.",
+          "Commission consumer research finds 72% of grape purchasers prefer U.S.-grown grapes, versus fewer than 5% preferring imports."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Beaujolais Nouveau's midnight release became wine's first viral, hype-driven launch",
+        "head": "Seventeen sommeliers name the bottles they always order from menus",
+        "date": "2026-11-10",
+        "sources": [
+          "VinePair"
+        ],
+        "summ": "Exploration is one of wine’s greatest virtues. A bottle shop or wine menu can take you from the Rheinessen’s steep hills to the peaks of Mendoza to the sea salt-dusted cliffs of the San Luis Obispo Coast. Even within a single region, drinkers can taste a world of grapes, terroirs, and climates.",
+        "urls": [
+          "https://vinepair.com/articles/wa-somms-must-order-wines/"
+        ],
+        "takeaways": [
+          "Seventeen sommeliers were asked to name the wines they always order when they see them on a menu.",
+          "Picks include Lady of the Sunshine Chene Vineyard Pinot Noir, Antinori Tignanello, and Lodi's 135-year-old Bechtold Vineyard Cinsault.",
+          "Other choices include Les Jardins de la Martinière Shi Ro 2018, Jonata La Sangre Syrah, and Valentini Cerasuolo d'Abruzzo."
+        ]
+      },
+      {
+        "head": "Four South Australian wine professionals win overseas knowledge exchange bursaries for 2026-27",
+        "date": "2026-11-10",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Four South Australian wine industry representatives have been selected to travel to some of the world’s most renowned wine regions to “connect with international experts and explore new ideas and innovations”. The South Australian Government explained that ‘The Great Wine Capitals Outbound Knowledge Exchange Bursary Program’...",
+        "urls": [
+          "https://winetitles.com.au/sa-wine-professionals-to-head-overseas-for-knowledge-exchange-program/"
+        ],
+        "takeaways": [
+          "Four South Australian wine industry professionals were selected for the 2026-27 Great Wine Capitals Outbound Knowledge Exchange Bursary Program.",
+          "Recipients Jodie Armstrong, Nicole Brasier, Susi Whiting and Luke Willis each receive a $6,000 bursary for travel between October 2026 and March 2027.",
+          "The bursaries fund visits to Great Wine Capitals Global Network regions to exchange knowledge on sustainability, climate adaptation and consumer engagement."
+        ]
+      },
+      {
+        "head": "Beaujolais Nouveau's midnight release became wine's original viral marketing event",
         "date": "2026-11-09",
         "sources": [
           "VinePair"
@@ -145,60 +222,13 @@
           "https://vinepair.com/articles/georges-duboeuf-beaujolais-nouveau/"
         ],
         "takeaways": [
-          "Beaujolais Nouveau, made from Gamay in France, is released at 12:01 a.m. on the third Thursday of November, a date set in 1985 by INAO.",
-          "Négociant Georges Duboeuf, founder of his house in 1964, helped turn the release into an international event with stunts like a 1988 horseback truck departure.",
-          "Carbonic maceration lets the wine go from vine to bottle in six to eight weeks, producing a light, fruity style meant for drinking soon after release."
+          "Beaujolais Nouveau, made from Gamay, is released at 12:01 a.m. on the third Thursday of November, a date set by France's INAO in 1985.",
+          "Georges Duboeuf, founder of his négociant house in 1964, helped turn the release into an international phenomenon through publicity stunts.",
+          "The wine is low in tannin and alcohol, meant to be drunk soon after release, and is marketed as a Thanksgiving pairing."
         ]
       },
       {
-        "head": "Charlotte Newton named Dux of 2026 Len Evans Tutorial in Hunter Valley",
-        "date": "2026-11-09",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "Charlotte Newton, owner and winemaker at Cha Cha Wines in Western Australia, has been awarded the Basil Sellers Prize for Dux of the 2026 Len Evans Tutorial. Newton, along with 11 other Australian wine professionals, took part in the 24th Tutorial held at Spicer’s Guesthouse in the Hunter Valley from 2 to 6 November.",
-        "urls": [
-          "https://winetitles.com.au/charlotte-newton-awarded-dux-of-the-2026-len-evans-tutorial/"
-        ],
-        "takeaways": [
-          "Charlotte Newton, owner and winemaker at Cha Cha Wines in Western Australia, was named Dux of the 2026 Len Evans Tutorial.",
-          "Twelve scholars, picked from a record 193 applications, took part in the tutorial at Spicer's Guesthouse in the Hunter Valley from 2 to 6 November.",
-          "As Dux, Newton receives $10,000 to further her global wine education."
-        ]
-      },
-      {
-        "head": "Orlando Cellar 13 Grenache takes top prize at James Halliday Grenache Challenge",
-        "date": "2026-11-09",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "The Orlando 2025 Cellar 13 Grenache has received the highest accolade at the 10th annual James Halliday Grenache Challenge, judged in McLaren Vale on 20th October 2026. The judges assessed 169 single-varietal Grenache wines from around Australia, “celebrating the growing strength and incredible diversity of the variety”.",
-        "urls": [
-          "https://winetitles.com.au/orlando-2025-cellar-13-grenache-wins-james-halliday-grenache-challenge/"
-        ],
-        "takeaways": [
-          "At the 10th James Halliday Grenache Challenge in McLaren Vale, judges named Orlando's 2025 Cellar 13 Grenache the top wine from 169 entries.",
-          "Chief judge Tony Barlow called it a worthy winner, with the final tasting margin between six Grenaches from three regions very close.",
-          "The competition's judges also named Big Easy Radio 2025 Perpetual Holidaze Grenache and S.C. Pannell 2024 Little Branch Grenache as top wines."
-        ]
-      },
-      {
-        "head": "Dan Sims named chair of Melbourne Royal Wine Awards Committee",
-        "date": "2026-11-09",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "Melbourne Royal has appointed respected wine industry figure Dan Sims, chair of Wine Victoria, as chair of the Melbourne Royal Wine Awards Committee, bringing “extensive industry experience, leadership and a deep commitment to the continued success of one of Australia’s most prestigious wine competitions”.",
-        "urls": [
-          "https://winetitles.com.au/melbourne-royal-appoints-dan-sims-as-chair-of-wine-awards-committee/"
-        ],
-        "takeaways": [
-          "The committee is made up of representatives from across the Australian wine industry and oversees the competition's program.",
-          "Sims will co-present this year's awards with Kirrily Waldhorn, Melbourne Royal senior manager food & beverage awards, at the Trophy Awards Presentation."
-        ]
-      },
-      {
-        "head": "Alison Smith Story of Smith Story Wines describes her path into the wine business",
+        "head": "Alison Smith Story recounts how she came to work in the wine business",
         "date": "2026-11-05",
         "sources": [
           "VinePair"
@@ -208,15 +238,14 @@
           "https://vinepair.com/articles/wine-101-podcast-alison-smith-story/"
         ],
         "takeaways": [
-          "Alison Smith Story, of Smith Story Wine Cellars, is the guest on VinePair's Wine 101 podcast hosted by Keith Beavers.",
-          "The episode is a casual conversation about how Story fell into the wine business and her journey in wine.",
-          "The podcast is sponsored by Wines of Alsace and the Alsace Rocks campaign."
+          "Keith Beavers hosts this episode of VinePair's Wine 101 podcast, an informal conversation with Alison Smith Story of Smith Story Wine Cellars.",
+          "Smith Story describes her personal journey into the wine industry and how she came to work in it."
         ]
       }
     ],
     "SCIENCE": [
       {
-        "head": "AWRI updates agrochemical and MRL search app on Apple and Google stores",
+        "head": "AWRI updates agrochemical lookup app on Apple and Android stores",
         "date": "2026-11-09",
         "sources": [
           "AWRI"
@@ -226,35 +255,44 @@
           "https://www.awri.com.au/information_services/ebulletin/2026/11/09/agrochemical-update-apple-and-android-users-time-to-update-your-awri-agrochemical-mrl-search-app/"
         ],
         "takeaways": [
-          "The Australian Wine Research Institute has released an updated version of its AWRI Agrochemical & MRL Search app on Apple and Google Play.",
-          "The free app gives rapid access to information in the 'Agrochemicals registered for use in Australian viticulture' booklet, known as the 'Dog book'.",
-          "Users who already have the app are asked to install the update so they keep receiving future updates."
+          "The Australian Wine Research Institute has released an updated version of its AWRI Agrochemical & MRL Search app on Apple and Google stores.",
+          "The free app gives rapid access to information from the 'Agrochemicals registered for use in Australian viticulture' booklet, known as the Dog book.",
+          "Users who already have the app are asked to update it to keep receiving future updates."
         ]
       }
     ],
     "NEWSLETTERS": [
       {
         "source": "wineanorak",
-        "url": "https://wineanorak.com/2026/11/08/tasting-some-ports-from-quinta-do-infantado-an-important-douro-producer/",
-        "date": "2026-11-08",
-        "head": "Tasting some Ports from Quinta do Infantado, an important Douro producer",
-        "summ": "Infantado is a family-owned Quinta dating back to 1816. They were famous for being the first quinta to",
+        "url": "https://wineanorak.com/2026/11/10/tasting-five-of-the-best-from-torres-penedes-spain/",
+        "date": "2026-11-10",
+        "head": "Tasting five of the best from Torres, Penedès, Spain",
+        "summ": "At the recent Star Wine List Inspiration Day I tasted through these fine wines from leading Catalunyan producer Torres. They",
         "author": "Jamie Goode",
         "takeaways": [
-          "Quinta do Infantado, a family-owned Douro estate dating to 1816, was first to bottle Port in the Douro in 1979 rather than in Vila Nova de Gaia.",
-          "João Roseira heads the 46-hectare Covas de Douro estate, with cousin Álvaro Roseira in charge of winemaking; Graft is the new UK importer for its Ports.",
-          "Tasting notes rate the Ports 93 to 95 out of 100, including a 2015 Vintage Port scored 95 and a 2021 Late Bottled Vintage at 50 g/l sugar."
+          "Torres Milmanda Chardonnay 2022 from Conca de Barberà was the first Torres vintage made without malolactic fermentation, with reduced ageing time.",
+          "Torres Mas de la Rosa Vinyes Velles Porrera 2020, a single old-vineyard Priorat, scored 96/100, the top score among the five wines tasted.",
+          "Torres Mas La Plana 2020, a Penedès Cabernet Sauvignon first made in 1970, was also rated 96/100."
         ]
       },
       {
         "source": "Vinography",
-        "url": "https://www.vinography.com/2026/11/vinography-images-slice-of-italy",
-        "date": "2026-11-06",
-        "head": "Vinography Images: Slice of Italy",
-        "summ": "What else do you need really? A little farmhouse, a patch of grapes, some olive trees, and the rolling hills",
+        "url": "https://www.vinography.com/2026/11/wine-news-what-im-reading-the-week-of-11-8-26",
+        "date": "2026-11-10",
+        "head": "Wine News: What I’m Reading the Week of 11/8/26",
+        "summ": "Hello and welcome to my weekly roundup of the wine stories that I find of interest on the web. I",
         "author": "Alder Yarrow",
+        "takeaways": []
+      },
+      {
+        "source": "The Burgundy Outlook",
+        "url": "https://www.burgundyoutlook.com/p/meet-the-young-winemakers-reshaping",
+        "date": "2026-11-10",
+        "head": "Meet the Young Winemakers Reshaping Burgundy Right Now",
+        "summ": "Meet the young winemakers in the heart of Burgundy who are tending the vines and shaping the future of wine",
+        "author": "Jonathan Finch",
         "takeaways": [
-          "Vinography's image post shows an Italian farmhouse set among grapevines, olive trees and rolling hills."
+          "Young winemakers in Burgundy are tending vines and shaping the region's future, per The Burgundy Outlook."
         ]
       },
       {
@@ -265,9 +303,9 @@
         "summ": "Through a Burgundian lens, Cabernet Franc becomes a study of place and terroir, parcel by parcel",
         "author": "Cab Franc Chronicles",
         "takeaways": [
-          "Aurélien Revillot is a relative newcomer to Bourgueil, and his domaine is part of Becky Wasserman's portfolio.",
-          "Revillot has three finished cuvées, with two additional cuvées parcellaires set to join from the 2020 vintage.",
-          "Revillot, from a Mâconnais farming family, trained in Dijon and worked at Domaine Drouhin in Oregon and Newton Johnson in South Africa."
+          "Aurélien Revillot is a relative newcomer to Bourgueil whose domaine is part of Becky Wasserman's portfolio.",
+          "Revillot produces one blended entry-level cuvée and single-vineyard wines from his best slope parcels, with two cuvées parcellaires set to join from 2020.",
+          "Revillot, from a Mâconnais farming family, trained in Dijon and worked at Domaine Drouhin in Oregon and Newton Johnson in South Africa before arriving in the Loire in 2010."
         ]
       },
       {
@@ -278,9 +316,9 @@
         "summ": "How a Champagne trip in the 1800s resulted in a new Spanish wine in a league of its own",
         "author": "Eveline Chartier",
         "takeaways": [
-          "Josep Raventós of Penedès produced Spain's first traditional method sparkling wine in 1872, with second fermentation in the bottle, using Spanish indigenous grapes.",
-          "Cava takes its name from the cellars, or caves, dug in Sant Sadurní d'Anoia, which can reach 20 m deep, and became the formal label term under Spanish law in 1972.",
-          "Finca Sumarroca's 2022 Gran Reserva Brut Nature Cava, made from Macabeu, Xarel•lo and Parellada, aged 40 months and sells for $28 Cdn."
+          "Josep Raventós of Penedès produced Spain's first traditional method sparkling wine in 1872, using Spanish grapes rather than Champagne varieties.",
+          "Cava takes its name from the cellars dug to store the wine, becoming a formal Spanish legal label term in 1972.",
+          "The Sumarroca Gran Reserva Brut Nature Cava 2022 from Penedès is made from Macabeu, Xarel•lo and Parellada and aged 40 months."
         ]
       },
       {
@@ -291,9 +329,9 @@
         "summ": "Does any nation offer better wine value than Spain? This seems obvious to French bottlers, who import major amounts of Spanish wine each year. Per",
         "author": "Jim Boyce",
         "takeaways": [
-          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing and was set to visit Guangzhou on November 6.",
-          "Spain ranked fifth by volume in China last year, narrowly behind Italy but only a quarter of leader Australia, per WBO stats.",
-          "The author highlighted Piqueras' El Abuelo, a blend of Alicante Bouschet, Monastrell and Syrah, as standout value among roadshow wines."
+          "The Wines From Castilla, La Mancha Roadshow visited Beijing, with a Guangzhou stop set for November 6.",
+          "Spain ranked fifth for wine volume in China last year, narrowly behind Italy but a quarter of leader Australia, per WBO stats.",
+          "DCOOP's Airén and Tempranillo, Ayuso and Campos Reales Verdejo, and Piqueras El Abuelo were highlighted, with many wines priced RMB12 to RMB24 per bottle."
         ]
       },
       {
@@ -304,9 +342,9 @@
         "summ": "Plus a guide to Le Puy wines - my notes from a recent vertical tasting",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "Le Puy, a right-bank Bordeaux estate of 54 hectares farmed biodynamically, left the Francs Côtes de Bordeaux appellation in 2017 and now bottles as Vin de France.",
-          "Le Puy's entry cuvée Emilien costs €30, €40 in Europe, $50 in the US, or £60 in the UK, with the grand vin Barthélemy around triple those prices.",
-          "At the Asia Wine Trophy in Daejeon, a Georgian Khikhvi amber earned an instant grand gold, with all six judges scoring it in the mid-90s."
+          "Columnist is judging at the Asia Wine Trophy in Daejeon, South Korea, the only competition known with a dedicated orange and amber wine panel.",
+          "A Georgian Khikhvi amber received mid-90s scores from all six judges, earning an instant grand gold without discussion.",
+          "Le Puy, a biodynamic right-bank Bordeaux estate, left the Francs Côtes de Bordeaux appellation in 2017 and now bottles as Vin de France."
         ]
       },
       {
@@ -317,22 +355,9 @@
         "summ": "Never say that wine labelling regulations are a subject devoid of humour. The Tribunal Correctionnel de Paris recently heard a case brought by anti-alcohol NGO Addictions France against Languedoc vigneron Nicolas Vellas over his provocative packaging. Vellas’s edgy cuvées have included “Little Fuck,” “Bad Angel” (its label...",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "A Paris court heard a case by anti-alcohol group Addictions France against Languedoc vigneron Nicolas Vellas over provocative labels like \"Suck My Duck\".",
-          "The case tests whether such packaging breaches France's 1991 Loi Évin, which restricts alcohol advertising, and the court reportedly held it adjourned for now.",
-          "Bordeaux has lost a fifth of its vineyard area in four years, with 30,000 ha uprooted by end-December, while its labels remain conservative."
-        ]
-      },
-      {
-        "source": "The Burgundy Outlook",
-        "url": "https://www.burgundyoutlook.com/p/the-2026-harvest-is-in-heres-what",
-        "date": "2026-11-03",
-        "head": "The 2026 Harvest Is In , Here’s What It’s Already Telling Us About this Burgundy Wine Vintage",
-        "summ": "Early harvest data from the 2026 Burgundy vintage reveals exciting insights into the region's grapes, offering a first look at vine yields and pricing",
-        "author": "Jonathan Finch",
-        "takeaways": [
-          "Burgundy's Côte d'Or picking finished between 10 and 12 September, and the Comité des Vins de Bourgogne called the 2026 harvest the earliest ever recorded.",
-          "Early estimates passed on by the Comité suggest Burgundy's 2026 crop is down around 30 per cent against the five-year average.",
-          "Agreste forecasts Pinot Noir losses in Burgundy of more than half, while Champagne's harvest is seen down by almost half."
+          "A Paris court heard a case brought by anti-alcohol NGO Addictions France against Languedoc vigneron Nicolas Vellas over provocative labels like \"Suck My Duck\".",
+          "Bordeaux has lost a fifth of its vineyard area in four years, with 30,000 ha set to be uprooted by end of December.",
+          "Bordeaux labels remain largely old-fashioned, featuring château pictures or family crests, while natural producers in less prestigious regions use eye-catching labels."
         ]
       },
       {
@@ -343,9 +368,8 @@
         "summ": "Outfitting your kitchen with the season’s essential tools, plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Meg Maker says the clocks dropping back on Sunday, Oct 30, 2026, marks the start of what she calls Kitchen Season.",
-          "Maker says November and December bring a special urge to cook for others and to revive family recipes or try new cuisines.",
-          "Maker's article lists kitchen tools she uses year-round that become even more essential during festive cooking, with no affiliate links."
+          "Meg Maker says the clocks dropping back on Sunday mark the start of what she calls Kitchen Season.",
+          "Meg Maker shares a list of kitchen tools she uses year-round that become even more essential during festive cooking."
         ]
       },
       {
@@ -356,9 +380,9 @@
         "summ": "Is a wine from the depths ‘better’ or does it depend on the boat?",
         "author": "Miquel Hudin",
         "takeaways": [
-          "Attis, a winery owned by the Fariña family in O Grove near Pontevedra, Galicia, aged magnum bottles of its Albariño under the estuary's waters.",
-          "The underwater-aged wine is the 2025 Attis Albariño 'Mar', aged five months at 13-16C and sealed with glass caps instead of cork.",
-          "The author's past tastings of underwater-aged wines suggested gimmickry, finding them more advanced in age than landbound counterparts."
+          "Attis, a winery owned by the Fariña family near Pontevedra, Galicia, ages magnums of its Albariño underwater in the O Grove estuary.",
+          "The underwater-aged Attis Albariño 'Mar' is aged five months at 13-16C and is compared against the 2025 'Standard' bottling, of which about 120,000 bottles are made annually.",
+          "The author's experience is that underwater-aged wines tend to taste more advanced in age and less fresh than landbound counterparts, which he views as largely a gimmick."
         ]
       }
     ]
