@@ -1,24 +1,59 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "items": {
     "MARKET": [
       {
-        "head": "Unified Wine & Grape Symposium returns to Sacramento in January 2027",
-        "date": "2026-11-10",
+        "head": "Shanghai wine trader WINEXSH applies for liquidation amid falling fine wine prices",
+        "date": "2026-11-12",
         "sources": [
-          "The Wine Economist"
+          "Vino Joy News"
         ],
-        "summ": "The wine industry has had a tough year, both here in the U.S. and around the world. There has been a steady stream of bad news from all corners of the wine world and precious little good news to balance the scales.",
+        "summ": "Shanghai-based fine wine trader WINEXSH has applied for bankruptcy liquidation, with a supplier reporting an unpaid order and Chinese wine media citing complaints from customers unable to collect wines or secure refunds",
         "urls": [
-          "https://wineeconomist.com/2026/11/10/unified-2027/"
+          "https://vino-joy.com/2026/11/12/shanghais-leading-wine-trader-and-major-en-primeur-buyer-files-for-bankruptcy/"
         ],
         "takeaways": [
-          "The Unified Wine & Grape Symposium meets in Sacramento from January 26 to 28, 2027, billed as America's largest wine industry gathering.",
-          "Tuesday's opening general session covers tracing a $35 Napa Cabernet and a $12.99 Sauvignon Blanc back through the supply chain."
+          "Shanghai Free Trade Zone Wine Exchange, known as WINEXSH, applied for bankruptcy liquidation, per an October 17 notice on China's bankruptcy disclosure platform.",
+          "The Shanghai Pudong New Area People's Court is reviewing the application, which a Sina Finance report says had a hearing on October 29.",
+          "A former supplier says an unpaid order and large inventories left WINEXSH exposed as Chinese fine wine prices declined."
         ]
       },
       {
-        "head": "Wine still tops Australian alcohol purchases as drinking falls and spending per visit rises",
+        "head": "Western Australian wineries sell well at Shanghai consumer and trade festival",
+        "date": "2026-11-12",
+        "sources": [
+          "Vino Joy News"
+        ],
+        "summ": "A two-day Discover Western Australian Festival drew nearly 900 people in Shanghai, with exhibitors reporting stronger-than-expected consumer sales and new business prospects among distributors, restaurants and hotels",
+        "urls": [
+          "https://vino-joy.com/2026/11/12/we-could-have-sold-more-western-australian-wineries-find-eager-buyers-in-shanghai/"
+        ],
+        "takeaways": [
+          "Discover Western Australia Festival in Shanghai on November 7-8 drew nearly 600 consumers and about 300 trade professionals.",
+          "Twenty exhibitors, including 17 wineries from Margaret River and Great Southern, sold wines on site and through Red Note.",
+          "Importers and distributors reported unmet demand, with Xanadu, Willoughby Park and 3 Drops drawing buyers despite limited stock."
+        ]
+      },
+      {
+        "head": "Wine Australia and Wine Victoria partner on three-year Victorian industry projects",
+        "date": "2026-11-12",
+        "sources": [
+          "Wine Australia",
+          "Winetitles"
+        ],
+        "summ": "<p>A new partnership between Wine Australia and Wine Victoria will fund a range of projects across the Victorian wine industry supporting grapegrowers and winemakers.</p>",
+        "urls": [
+          "https://www.wineaustralia.com/news/media-releases/new-partnership-to-strengthen-victorias-wine-sector",
+          "https://winetitles.com.au/three-year-partnership-between-wine-australia-and-wine-victoria-to-strengthen-states-wine-sector/"
+        ],
+        "takeaways": [
+          "Wine Australia and Wine Victoria will co-fund Victorian wine industry projects over three years, aligned with the Victorian Wine Strategy 2025–2030.",
+          "The program combines $540,000 in Victorian Government funding with $346,667 in Wine Australia co-investment via its Australian Wine Future Fund.",
+          "Projects target sustainability, biosecurity preparedness, data-driven decision making and export capability, delivered through workshops, webinars and benchmarking tools."
+        ]
+      },
+      {
+        "head": "Wine still tops Australian alcohol purchases as drinking declines and spending rises",
         "date": "2026-11-10",
         "sources": [
           "Winetitles"
@@ -28,13 +63,13 @@
           "https://winetitles.com.au/wine-remains-australias-most-purchased-category-as-alcohol-consumption-moderates/"
         ],
         "takeaways": [
-          "Vypr and Shop! ANZ report finds wine is the most purchased alcohol category in Australia at 55% of shoppers.",
-          "41% of Australians drink less than a year ago or have stopped, while 6% drink more, the report says.",
-          "48% of shoppers now typically spend over $40 per liquor-store visit, up from about 23% a year earlier."
+          "Vypr and Shop! ANZ report finds 55% of Australians buy wine, ahead of spirits at 46% and beer at 44%.",
+          "41% of Australians drink less than a year ago or have stopped, while only 6% drink more.",
+          "48% of shoppers now typically spend over $40 per liquor-store visit, up from around 23% a year earlier."
         ]
       },
       {
-        "head": "Marnong Estate releases first Reserve Chardonnay alongside new spring range",
+        "head": "Marnong Estate releases first Reserve Chardonnay and new Sangiovese rosé",
         "date": "2026-11-10",
         "sources": [
           "Winetitles"
@@ -44,13 +79,13 @@
           "https://winetitles.com.au/marnong-estate-unveils-its-first-ever-reserve-chardonnay/"
         ],
         "takeaways": [
-          "Marnong Estate, a Sunbury winery, has released its first-ever Reserve Chardonnay, the 2024 vintage, as part of a new cool-climate range.",
-          "The spring collection also includes the 2025 Single Vineyard Chardonnay, the 2025 Estate Chardonnay and the 2026 Estate Sangiovese Rosé.",
-          "The new releases are available nationally through independent merchants, at the cellar door and online via the winery's website."
+          "Marnong Estate, a Sunbury winery, has released its first-ever Reserve Chardonnay, the 2024 vintage.",
+          "The spring range also includes 2025 Single Vineyard and Estate Chardonnays and a 2026 Estate Sangiovese Rosé.",
+          "The new releases are sold through independent merchants, the cellar door and the winery's website."
         ]
       },
       {
-        "head": "Moldova pitches indigenous grapes to Chinese buyers at ProWine Shanghai",
+        "head": "Moldova pitches indigenous grapes and PGI wines to Chinese buyers at ProWine Shanghai",
         "date": "2026-11-05",
         "sources": [
           "Vino Joy News"
@@ -60,13 +95,13 @@
           "https://vino-joy.com/2026/11/05/moldova-makes-its-case-to-chinas-wine-buyers/"
         ],
         "takeaways": [
-          "23 Moldovan wine and spirits producers exhibit at ProWine Shanghai, November 10 to 12, seeking Chinese importers and distributors.",
-          "Chinese customs data shows Moldovan wine imports reached US$1.43 million in the first nine months of 2026.",
-          "About 85% of Moldova's wine production is exported, with the EU taking roughly 60% of exports."
+          "Twenty-three Moldovan wine and spirits producers will seek Chinese importers and distributors at ProWine Shanghai, November 10 to 12.",
+          "Chinese customs data show Moldovan wine imports reached US$1.43 million in the first nine months of 2026.",
+          "About 85% of Moldova's production is exported, and the EU now takes roughly 60% of its wine exports."
         ]
       },
       {
-        "head": "Australian wine's small formats gain ground as moderation and single-person households grow",
+        "head": "Australian wine packaging shifts to smaller formats as single-person households grow",
         "date": "2026-11-04",
         "sources": [
           "Wine Australia"
@@ -76,13 +111,13 @@
           "https://www.wineaustralia.com/news/market-bulletin/issue-376"
         ],
         "takeaways": [
-          "Combined export and domestic off-trade sales of 187mL wine packs rose 22% to almost 1.9 million litres in 2025-26.",
-          "Export volumes of 187mL packs grew 39%, from 450,000 litres in 2023-24 to 620,000 litres in 2025-26.",
-          "Australian households occupied by a single person rose to 26%, from 18% in 1981, per Census data."
+          "Combined Australian 187mL wine pack sales rose 22 per cent to almost 1.9 million litres in 2025-26.",
+          "Export volumes of 187mL packs grew 39 per cent from 2023-24 to 2025-26, concentrated in Asia-Pacific markets.",
+          "Single-person households make up 26 per cent of Australian households, up from 18 per cent in 1981, per Census data."
         ]
       },
       {
-        "head": "EU greenwashing rules restrict vague wine sustainability claims from September 27",
+        "head": "EU greenwashing rules restrict vague eco claims on wine labels from September 27",
         "date": "2026-11-02",
         "sources": [
           "SevenFifty Daily"
@@ -92,13 +127,13 @@
           "https://daily.sevenfifty.com/europe-is-cracking-down-on-greenwashing-what-does-that-mean-for-wine-labels/"
         ],
         "takeaways": [
-          "EU Directive 2024/825 (EmpCo) restricts vague environmental claims on consumer products, including wine, and is enforced from September 27.",
-          "Banned terms include unsubstantiated words like eco-friendly, green and clean, plus sustainability badges lacking third-party certification.",
-          "Fines for widespread violations can reach four percent of annual turnover, with enforcement left to individual EU member states."
+          "EU Directive 2024/825, known as EmpCo, bans vague claims like \"eco-friendly\" and unsubstantiated sustainability badges from September 27.",
+          "Old stock is not grandfathered, so impacted producers are using stickers or point-of-sale information to correct claims.",
+          "Violations face fines of up to four percent of annual turnover, with enforcement left to individual EU member states."
         ]
       },
       {
-        "head": "Bordeaux takes 41% of fine wine trade value as Burgundy's share jumps",
+        "head": "Bordeaux takes 41% of traded value as Burgundy's share climbs",
         "date": "2026-11-02",
         "sources": [
           "Liv-ex"
@@ -108,47 +143,47 @@
           "https://www.liv-ex.com/bordeaux-strengthens-its-market-lead-mature-vintages-trading-actively/"
         ],
         "takeaways": [
-          "Bordeaux claimed 41% of the week's traded fine wine value, extending its lead, per Liv-ex market data.",
-          "Burgundy's share of traded value rose from 15.7% last week to 20.8% this week.",
-          "Champagne's share fell from 13.0% to 8.5%, while Tuscany rose to 11.6% on EU buyer demand."
+          "Bordeaux claimed 41% of the week's traded value, extending its lead; 2019 and 2020 vintages led by value.",
+          "Burgundy's share rose from 15.7% to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive the top producers.",
+          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6%, led by Soldera Case Basse and Sassicaia."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Restaurant director says guests may ask sommeliers to adjust wine temperature",
-        "date": "2026-11-11",
+        "head": "Guardian columnist champions affordable school-night wines around £12 a bottle",
+        "date": "2026-11-12",
         "sources": [
-          "VinePair"
+          "The Guardian"
         ],
-        "summ": "When it comes to wine temperature, there are a handful of rules. Some are quick tips for when you’re in a pinch like the easy-to-remember 20 minute rule, while others are more nuanced serving guidelines that map out the proper temperature for each style down to the exact degree. Though these time-tested recommendations might...",
+        "summ": "<p>Five wines that hit the spot without breaking the bank</p><p>Last week, I made The One Sauce from <a href=\"https://guardianbookshop.com/ottolenghi-simple-too-9781529109511/\">the new Ottolenghi book, Simple Too</a>, and it might well be the zenith of tomato sauces. We ate this gloriously garlicky, vinegar-spiked number with...",
         "urls": [
-          "https://vinepair.com/articles/ask-a-pro-asking-for-different-wine-temperature-rude/"
+          "https://www.theguardian.com/food/2026/nov/12/school-night-wine-the-best-bottles-for-an-impromptu-midweek-treat"
         ],
         "takeaways": [
-          "Andrew Elder, director of restaurants for D.C.'s Hive Hospitality, says guests may ask for wine to be chilled more or brought to room temperature.",
-          "Elder advises asking questions rather than declaring a wine wrong, since ideal serving temperature depends on the wine style and the moment.",
-          "Restaurants can chill a too-warm wine in an ice bucket or freezer, or decant a too-cold one to let it warm."
+          "Columnist argues midweek 'school-night' wine offers impromptu pleasure, arguing against an over-scheduled, all-or-nothing culture.",
+          "She sets the budget at about £12 a bottle, noting roughly £7 of that is the wine itself after VAT and duty.",
+          "Picks include Berry Bros & Rudd fino at £13.50, M&S Found Encruzado at £8.50 and Cuvée Alice 2023 at £12.45."
         ]
       },
       {
-        "head": "VinePair's tasting panel names its top 50 wines of 2026",
-        "date": "2026-11-11",
+        "head": "AI's energy, e-waste and water footprint threatens wine's green image",
+        "date": "2026-11-12",
         "sources": [
-          "VinePair"
+          "Winetitles"
         ],
-        "summ": "Check out the best wines from previous years here! As the tastings department prepares to wrap up another busy year of exploring, analyzing, and enjoying wine here at VinePair HQ, we’re taking a moment to reflect on the best bottles that 2026 had to offer. As is true each year, we had a dazzlingly diverse set of wines to...",
+        "summ": "The Australian and New Zealand wine sector prides itself on sustainability. The very concept has become the industry’s bread and butter, quite frankly. Look at any winery website and you’ll find a dedicated page filled with paragraphs detailing all the initiatives reducing carbon emissions, saving water and limiting energy use...",
         "urls": [
-          "https://vinepair.com/articles/best-wines-2026/"
+          "https://winetitles.com.au/wine-strives-for-sustainability-right-now-ai-is-anything-but/"
         ],
         "takeaways": [
-          "VinePair's tasting panel ranked its 50 best wines of 2026 at its New York headquarters.",
-          "Wines were judged on quality, value, regional diversity and U.S. availability, not blind, with prices known.",
-          "Trends noted include Nebbiolo from Piedmont, cool-climate Blaufränkisch from Germany and Slovenia, and lesser-known grapes like Mencía."
+          "Australian and New Zealand wine has built its reputation on sustainability, but AI-generated content used in its marketing and labels could damage that image.",
+          "Training one large language model can emit around 300,000 kg of CO₂, roughly equal to 105 cars each driven 15,000 km a year.",
+          "Global e-waste reached 62 million tonnes in 2022, with only 17.4% officially collected and recycled as of 2020 estimates."
         ]
       },
       {
-        "head": "Marlborough viticulturist Anna Kelland wins 2026 Young Horticulturist of the Year title",
+        "head": "Marlborough viticulturist Anna Kelland wins 2026 Young Horticulturist of the Year",
         "date": "2026-11-11",
         "sources": [
           "Winetitles"
@@ -158,31 +193,31 @@
           "https://winetitles.com.au/young-viticulturist-wins-2026-young-horticulturist-of-the-year/"
         ],
         "takeaways": [
-          "Anna Kelland, a Marlborough viticulture technician for Constellation Brands, won the Young Horticulturist of the Year title in Auckland, 4-5 November.",
-          "She beat four rivals from grower, arborist, amenity and plant producer sectors, and also won three special awards including the Woolworths Innovation Project Award.",
-          "Her prizes total more than $25,000, and Phoebe Scherer, a Bay of Plenty kiwifruit grower, took second place."
+          "Anna Kelland, a viticulture technician for Constellation Brands in Marlborough, won the Young Horticulturist of the Year title in Auckland, 4-5 November.",
+          "The two-day competition against four horticulture peers included practical, technical, business and sustainability challenges plus an innovation project.",
+          "Kelland also won three awards and prizes worth more than $25,000, and she is the tenth Young Viticulturist to take the title."
         ]
       },
       {
-        "head": "Seventeen sommeliers name the bottles they always order when spotted",
-        "date": "2026-11-10",
+        "head": "Alison Smith Story recounts her path into the wine business",
+        "date": "2026-11-05",
         "sources": [
           "VinePair"
         ],
-        "summ": "Exploration is one of wine’s greatest virtues. A bottle shop or wine menu can take you from the Rheinessen’s steep hills to the peaks of Mendoza to the sea salt-dusted cliffs of the San Luis Obispo Coast. Even within a single region, drinkers can taste a world of grapes, terroirs, and climates.",
+        "summ": "This episode of Wine 101 is brought to you by Wines of Alsace and Alsace Rocks. Tucked between the Vosges Mountains and the Rhine River in northeastern France, Alsace is one of the most distinctive wine regions on earth, and is home to centuries of family winemaking, some of France’s most certifiably organic vineyards, and a...",
         "urls": [
-          "https://vinepair.com/articles/wa-somms-must-order-wines/"
+          "https://vinepair.com/articles/wine-101-podcast-alison-smith-story/"
         ],
         "takeaways": [
-          "Seventeen sommeliers were asked which wines they always order when they see them on a menu.",
-          "Picks include Lady of the Sunshine Pinot Noir, Les Jardins de la Martinière Shi Ro 2018, and Antinori Tignanello.",
-          "Several choices are small-production or scarce bottles that rarely appear on lists, which sommeliers say makes them worth ordering."
+          "Keith Beavers hosts this episode of the VinePair podcast Wine 101, featuring Alison Smith Story of Smith Story Wines.",
+          "The conversation covers how Smith Story came to work in the wine business.",
+          "The episode is sponsored by Wines of Alsace."
         ]
       }
     ],
     "SCIENCE": [
       {
-        "head": "AWRI updates agrochemical lookup app on Apple and Google stores",
+        "head": "AWRI urges users to update its Agrochemical and MRL Search app",
         "date": "2026-11-09",
         "sources": [
           "AWRI"
@@ -192,24 +227,37 @@
           "https://www.awri.com.au/information_services/ebulletin/2026/11/09/agrochemical-update-apple-and-android-users-time-to-update-your-awri-agrochemical-mrl-search-app/"
         ],
         "takeaways": [
-          "The Australian Wine Research Institute has updated its free AWRI Agrochemical & MRL Search app on Apple App Store and Google Play.",
-          "The app gives rapid access to information in the 'Agrochemicals registered for use in Australian viticulture' booklet, known as the 'Dog book'.",
-          "Users must perform an app update to keep receiving updates for the app on their phone."
+          "The Australian Wine Research Institute has released an updated version of its free Agrochemical & MRL Search app on Apple and Google app stores.",
+          "The app gives rapid access to information from the 'Agrochemicals registered for use in Australian viticulture' booklet, known as the 'Dog book'.",
+          "Users must perform an app update to keep receiving updates, and the AWRI helpdesk can be reached on 08 8313 6600."
         ]
       }
     ],
     "NEWSLETTERS": [
       {
         "source": "wineanorak",
-        "url": "https://wineanorak.com/2026/11/11/gut-oggau-stunningly-original-naturally-made-wines-from-austrias-burgenland/",
-        "date": "2026-11-11",
-        "head": "Gut Oggau: stunningly original, naturally made wines from Austria’s Burgenland",
-        "summ": "Eduard Tscheppe and his wife Stephanie Tscheppe-Eselböck farm 20 hectares of vines in Austria’s Burgenland region, and their",
+        "url": "https://wineanorak.com/2026/11/12/an-austrian-wine-mini-study-with-seven-interesting-bottles/",
+        "date": "2026-11-12",
+        "head": "An Austrian wine mini-study with seven interesting bottles",
+        "summ": "These wines were being poured at the Star Wine List Inspiration Day in Stockholm, November 2026. Mayersistas Pet Nat Zweigelt",
         "author": "Jamie Goode",
         "takeaways": [
-          "Eduard and Stephanie Tscheppe farm 20 hectares in Austria's Burgenland under biodynamics, Demeter certified, at their Gut Oggau winery.",
-          "They began in 2007 by buying an old estate in Oggau, on the west bank of Lake Neusiedl near the Hungarian border.",
-          "Each Gut Oggau wine is named after a fictional character from a family tree, with faces designed by Jung von Matt."
+          "Mayersistas Pet Nat Zweigelt Rosé 2023 from the Kamptal was poured at the Star Wine List Inspiration Day in Stockholm, November 2026.",
+          "Loimer Brut Nature Blanc de Blancs Grosse Reserve 2020 from Langenlois spends 36 months on lees and scored 93/100.",
+          "Muhr Ried Spitzerberg Obere Roterd 1er 2022 from Carnuntum, a Blaufränkisch, received the highest score in the mini-study at 96/100."
+        ]
+      },
+      {
+        "source": "The Morning Claret",
+        "url": "https://themorningclaret.com/p/sixteen-austrian-natural-wines-you-should",
+        "date": "2026-11-11",
+        "head": "Sixteen Austrian Wines You Should Try",
+        "summ": "Delicious recommendations,including old favourites and new discoveries",
+        "author": "Simon J. Woolf",
+        "takeaways": [
+          "Joost Wijn lists Fischer's Sauvignon Blanc St. Anna 2025 at €25, while Weinmoral offers the 2023 vintage at €19.",
+          "Franz Hofstätter's declassified Grüner Veltliner from the Achleiten vineyard in the Wachau is described as uncertified organic.",
+          "Hajszan Neumann's Grüner Veltliner Natural 2025 is 12% ABV and costs €15 from Lebendige Weine (2023 vintage)."
         ]
       },
       {
@@ -220,9 +268,9 @@
         "summ": "In the exciting (other adjectives are available) times we’re living in, we’re often told that writing is passé, people just don’t bother reading words anymore. A few journalistic outlets, especially in the financial press, seem to have finally come clean about the seriousness of their reporting, by auto-summarising their pieces...",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "Tim Atkin argues wine critics owe obligations only to those paying their bills, so consumers who want better reviewing should fund the reviewers they like.",
-          "Atkin says critics' expertise should be a little above their target audience, and that a reviewer tasting 14 aromas may be of no use to readers who cannot taste them.",
-          "Atkin criticises the roughly 30-second tasting ritual used by wine reviewers, comparing judging wine that way to reviewing a movie based on its trailer."
+          "Tim Atkin argues that wine critics' main sins are inadequate expertise, undisclosed conflicts of interest, and the very short time spent assessing each wine.",
+          "Atkin says critics should be slightly more knowledgeable than their target audience, and that American and British models of expertise differ.",
+          "Atkin contends that critics owe loyalty only to those paying their bills, so consumers who want better reviews should fund the reviewers they like."
         ]
       },
       {
@@ -242,9 +290,9 @@
         "summ": "Meet the young winemakers in the heart of Burgundy who are tending the vines and shaping the future of wine",
         "author": "Jonathan Finch",
         "takeaways": [
-          "William Whitehead has taken charge of Domaine Michel Rebourgeon in Pommard, which makes about 20,000 bottles a year from 4.25 hectares.",
-          "Pierre Arcelain runs Domaine Michel Arcelain, where the white wine ages 12 months in a concrete egg.",
-          "Arthur Thibert works alongside his father Pierre in Corgoloin, overseeing a new cuverie and more sustainable farming."
+          "William Whitehead has taken charge of Domaine Michel Rebourgeon in Pommard, a domaine of 4.25 hectares making about 20,000 bottles a year.",
+          "Pierre Arcelain runs Domaine Michel Arcelain, where the white wine spends 12 months in a concrete egg.",
+          "Arthur Thibert works alongside his father Pierre in Corgoloin, overseeing a new cuverie and more sustainable farming since 2018."
         ]
       },
       {
@@ -256,8 +304,8 @@
         "author": "Joe Roberts",
         "takeaways": [
           "1WineDude is partnering with Orpheus Alerts, part of Orpheus Intelligence Labs Inc., to help buyers find rare wines.",
-          "Orpheus monitors sources like local-language catalogues, merchant inventories, auction notices, and cellar consignments that ordinary search may miss.",
-          "Users create alerts using natural-language descriptions and optional images; Orpheus notifies them when a matching wine is found and connects them to the seller."
+          "Orpheus scans sources like local-language catalogues, merchant inventories, auction notices and restaurant sales for hard-to-find bottles.",
+          "Users create alerts using natural-language descriptions and optional images, and Orpheus notifies them when matching wine is available in its network."
         ]
       },
       {
@@ -268,9 +316,9 @@
         "summ": "Through a Burgundian lens, Cabernet Franc becomes a study of place and terroir, parcel by parcel",
         "author": "Cab Franc Chronicles",
         "takeaways": [
-          "Aurélien Revillot is a relative newcomer to the Bourgueil appellation in the Loire Valley, and his domaine is part of Becky Wasserman's portfolio.",
-          "Revillot makes an entry-level cuvée blended from several parcels, while focusing on single-vineyard wines from his best parcels on the slopes.",
-          "His domaine had three finished cuvées in May 2022, with two cuvées parcellaires set to join the range from the 2020 vintage."
+          "Aurélien Revillot is a relatively new producer in the Bourgueil appellation, part of Becky Wasserman's portfolio.",
+          "Revillot makes an entry-level blended cuvée plus single-vineyard wines from his best slope parcels, with two more cuvées parcellaires set to join from 2020.",
+          "Revillot, from a Mâconnais family, trained in Dijon and worked at Domaine Drouhin in Oregon and Newton Johnson in South Africa before reaching the Loire."
         ]
       },
       {
@@ -281,9 +329,9 @@
         "summ": "How a Champagne trip in the 1800s resulted in a new Spanish wine in a league of its own",
         "author": "Eveline Chartier",
         "takeaways": [
-          "Josep Raventós's family in Penedès made wine from 1497; in 1872 he produced Spain's first traditional method sparkling wine.",
-          "Cava is made mainly in Penedès, with 95% from the Penedès region within the Comtats de Barcelona Cava zone, centred on Sant Sadurní d'Anoia.",
-          "Sumarroca Gran Reserva Brut Nature Cava 2022, from Finca Sumarroca, is aged 40 months and priced at $28 Cdn."
+          "Josep Raventós produced Spain's first traditional method sparkling wine in 1872 in Sant Sadurní d'Anoia, Penedès, Catalonia.",
+          "Cava's name comes from the cellars dug to store the wine, informally used from the 1960s and formalized under Spanish law in 1972.",
+          "Cava Gran Reserva requires at least 30 months of lees ageing; the featured Sumarroca 2022 Gran Reserva Brut Nature costs $28 Cdn."
         ]
       },
       {
@@ -294,22 +342,9 @@
         "summ": "Does any nation offer better wine value than Spain? This seems obvious to French bottlers, who import major amounts of Spanish wine each year. Per",
         "author": "Jim Boyce",
         "takeaways": [
-          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing and was set to visit Guangzhou on November 6.",
-          "Spain ranked fifth for wine volume in China last year, narrowly behind Italy but only a quarter of leader Australia, per WBO stats.",
-          "The author highlighted value picks including DCOOP's Airén and Tempranillo, and Piqueras' El Abuelo blend of Alicante Bouschet, Monastrell and Syrah."
-        ]
-      },
-      {
-        "source": "The Morning Claret",
-        "url": "https://themorningclaret.com/p/why-i-enjoy-judging-at-wine-competitions-le-puy-vintage-guide",
-        "date": "2026-11-04",
-        "head": "Why I Enjoy Wine Competition Judging",
-        "summ": "Plus a guide to Le Puy wines - my notes from a recent vertical tasting",
-        "author": "Simon J. Woolf",
-        "takeaways": [
-          "Columnist is judging at the Asia Wine Trophy in Daejeon, South Korea, the only competition he knows with a dedicated orange and amber wine panel.",
-          "A Georgian Khikhvi amber received mid-90s scores from all six judges, earning instant grand gold without discussion.",
-          "Le Puy, a right-bank Bordeaux estate near St. Emilion, left the Francs Côtes de Bordeaux appellation in 2017 and now bottles as Vin de France."
+          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing, with Guangzhou scheduled for November 6, to promote Spanish value wines in China.",
+          "Spain ranked fifth by volume in China last year, narrowly behind Italy but only a quarter of leader Australia, per WBO stats.",
+          "Piqueras' El Abuelo, a blend of Alicante Bouschet, Monastrell and Syrah, impressed the author with elegance and judicious oak use for its price."
         ]
       },
       {
@@ -320,9 +355,9 @@
         "summ": "Outfitting your kitchen with the season’s essential tools, plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Meg Maker says the clocks drop back Sunday, marking the start of what she calls Kitchen Season.",
-          "Kitchen Season runs through November and December, when people cook more to mark occasions and cook for others.",
-          "Maker lists kitchen tools she uses year-round that become more essential during festive cooking."
+          "Meg Maker says the clocks drop back on Sunday, marking the start of what she calls Kitchen Season.",
+          "Kitchen Season runs through November and December, when cooking shifts toward festive cooking for others and new recipes.",
+          "Maker shares a list of kitchen tools she uses year-round, saying none are affiliate links."
         ]
       }
     ]
