@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "items": {
     "MARKET": [
       {
-        "head": "Australian white wine shipments to China more than double in Q3",
+        "head": "Australian white wine shipments to China more than double in third quarter",
         "date": "2026-11-13",
         "sources": [
           "Vino Joy News"
@@ -13,9 +13,28 @@
           "https://vino-joy.com/2026/11/13/australian-white-wine-exports-to-china-surge-over-140-in-q3/"
         ],
         "takeaways": [
-          "Australian wine export value to mainland China rose 1.9% to A$166.33 million in Q3 2026, bucking a global decline.",
-          "White wine export volume to mainland China jumped 143.6% to 5.26 million liters, while white wine value rose 51.9%.",
-          "Mainland China's Q3 gain still left nine-month export value down 10.4% to A$758.59 million."
+          "Australian wine export value to mainland China rose 1.9% in Q3 2026 while global exports fell 7.3%.",
+          "White wine export volumes to mainland China jumped 143.6% in the quarter, to 5.26 million liters, per Wine Australia data.",
+          "White wine still made up only 7.14% of Australian export value to mainland China, against 91.62% for red."
+        ]
+      },
+      {
+        "head": "VinePair roundup covers Stoli, Modelo, spending, Heineken, RNDC and Diageo news",
+        "date": "2026-11-13",
+        "sources": [
+          "VinePair"
+        ],
+        "summ": "This is VinePair’s Booze News Weekly Roundup, where we gather the hottest headlines and product releases every Friday for a snapshot of what’s happening in the beverage alcohol industry. This week, we have updates on Stoli’s return to the U.S., Modelo’s deal with the NCAA, the latest product releases, and more.",
+        "urls": [
+          "https://vinepair.com/booze-news/booze-news-weekly-roundup-modelo-official-ncaa-beer/",
+          "https://vinepair.com/booze-news/booze-news-weekly-roundup-us-household-spending-hits-low/",
+          "https://vinepair.com/booze-news/booze-news-weekly-roundup-heineken-warns-against-weight-loss-drugs/",
+          "https://vinepair.com/booze-news/booze-news-weekly-rounup-supreme-court-home-distilling-ban/"
+        ],
+        "takeaways": [
+          "VinePair's weekly roundup gathers beverage alcohol headlines and product releases, including Stoli's return to the U.S. and Modelo's NCAA deal.",
+          "Other items cover Heineken's memo on weight-loss drugs and drinking, and RNDC's Chapter 11 liquidation.",
+          "The roundup also reports Diageo's toxic chemical spill, SCOTUS reviewing a home distilling case, and EU approval of Chianti rosé."
         ]
       },
       {
@@ -30,12 +49,12 @@
         ],
         "takeaways": [
           "Chalkdown English Sparkling Wine and The B58 Winery, two Hampshire producers, are launching the Hampshire Celebration Collective partnership.",
-          "The Collective offers bespoke pricing per order, a one-case minimum, and mix-and-match wines across both producers.",
-          "Launch is a free tasting at Kingsgate Wines & Provisions in Winchester, Thursday 19 November, 5pm to 7pm, with an on-the-night discount."
+          "The launch is a free tasting at Kingsgate Wines & Provisions in Winchester on Thursday 19 November, 5pm to 7pm.",
+          "The Collective offers bespoke pricing per order, mix-and-match wines, and a minimum order of one case."
         ]
       },
       {
-        "head": "Shanghai wine trader WINEXSH files for bankruptcy liquidation amid falling prices",
+        "head": "Shanghai wine trader WINEXSH files for bankruptcy liquidation amid price slump",
         "date": "2026-11-12",
         "sources": [
           "Vino Joy News"
@@ -45,13 +64,13 @@
           "https://vino-joy.com/2026/11/12/shanghais-leading-wine-trader-and-major-en-primeur-buyer-files-for-bankruptcy/"
         ],
         "takeaways": [
-          "Shanghai fine wine trader WINEXSH applied for bankruptcy liquidation, with a Shanghai Pudong court reviewing the application.",
-          "A supplier reported an unpaid en primeur order, and consumers reported delayed collections and refunds.",
-          "The company, founded in 2012, had built large inventories that lost value as Chinese fine wine prices declined."
+          "Shanghai Free Trade Zone Wine Exchange Co., known as WINEXSH, applied for bankruptcy liquidation, with a notice published October 17.",
+          "The Shanghai Pudong New Area People's Court held a hearing on the application October 29; acceptance is not yet confirmed.",
+          "A Bordeaux supplier says WINEXSH left its latest en primeur order unpaid, amid falling Chinese fine wine prices and large inventories."
         ]
       },
       {
-        "head": "Western Australian wineries sell on the spot at Shanghai festival",
+        "head": "Western Australian wineries sell well at two-day Shanghai festival",
         "date": "2026-11-12",
         "sources": [
           "Vino Joy News"
@@ -61,13 +80,13 @@
           "https://vino-joy.com/2026/11/12/we-could-have-sold-more-western-australian-wineries-find-eager-buyers-in-shanghai/"
         ],
         "takeaways": [
-          "Discover Western Australia Festival in Shanghai on November 7-8 drew nearly 900 visitors, including about 600 consumers and 300 trade professionals.",
-          "Twenty exhibitors, including 17 wineries from Margaret River and Great Southern, sold wines on site and attracted distributor and hotel interest.",
-          "Ferngrove sold flagship wines through Red Note during the event, and Pran Wines reported strong interest in lesser-known 3 Drops."
+          "Discover Western Australia Festival in Shanghai on November 7-8 drew nearly 900 people, including about 600 consumers and 300 trade professionals.",
+          "Twenty exhibitors, including 17 wineries from Margaret River and Great Southern, sold wines on site and through Red Note.",
+          "Distributors including For U Global and Pran Wines reported strong buyer interest, with some sales limited by lack of stock."
         ]
       },
       {
-        "head": "Wine Australia and Wine Victoria partner on three-year Victorian wine projects",
+        "head": "Wine Australia and Wine Victoria fund three-year Victorian wine industry projects",
         "date": "2026-11-12",
         "sources": [
           "Wine Australia",
@@ -79,13 +98,13 @@
           "https://winetitles.com.au/three-year-partnership-between-wine-australia-and-wine-victoria-to-strengthen-states-wine-sector/"
         ],
         "takeaways": [
-          "Wine Australia and Wine Victoria will co-fund Victorian wine industry projects over three years, aligned with the Victorian Wine Strategy 2025-2030.",
+          "Wine Australia and Wine Victoria will co-fund three-year projects supporting Victorian grapegrowers and winemakers, aligned with the Victorian Wine Strategy 2025-2030.",
           "The program combines $540,000 in Victorian Government funding secured by Wine Victoria with $346,667 from Wine Australia's AWFF.",
-          "Projects will cover sustainability, biosecurity preparedness, data-driven decisions and export capability, delivered through workshops, webinars and benchmarking tools."
+          "Projects target sustainability, biosecurity, data-driven decisions and export capability, delivered through workshops, webinars, benchmarking tools and consumer insights."
         ]
       },
       {
-        "head": "Wine remains Australia's most bought alcohol category as drinking moderates",
+        "head": "Wine stays Australia's top-bought alcohol as drinking moderates and spending per visit rises",
         "date": "2026-11-10",
         "sources": [
           "Winetitles"
@@ -95,29 +114,13 @@
           "https://winetitles.com.au/wine-remains-australias-most-purchased-category-as-alcohol-consumption-moderates/"
         ],
         "takeaways": [
-          "Vypr and Shop! ANZ report: 55% of Australians buy wine, ahead of spirits at 46% and beer at 44%.",
-          "41% of Australians drink less than a year ago or have stopped, while only 6% drink more.",
+          "A Vypr and Shop! ANZ report found wine is the most purchased alcohol category in Australia at 55% of shoppers.",
+          "41% of Australians are drinking less than a year ago or have stopped, while only 6% are drinking more.",
           "48% of shoppers now typically spend over $40 per liquor-store visit, up from about 23% a year ago."
         ]
       },
       {
-        "head": "Marnong Estate releases first Reserve Chardonnay alongside new spring range",
-        "date": "2026-11-10",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "Marnong Estate has unveiled its first-ever Reserve Chardonnay as a part its new collection of cool-climate expressions from the estate's Sunbury vineyards. The 2024 Reserve Chardonnay leads the new range which features the 2025 Single Vineyard Chardonnay and 2025 Estate Chardonnay, offering “distinct interpretations of the...",
-        "urls": [
-          "https://winetitles.com.au/marnong-estate-unveils-its-first-ever-reserve-chardonnay/"
-        ],
-        "takeaways": [
-          "Marnong Estate, a Sunbury winery, has released its first-ever Reserve Chardonnay, the 2024 vintage, as part of a new range.",
-          "The spring collection also includes the 2025 Single Vineyard Chardonnay, the 2025 Estate Chardonnay and the 2026 Estate Sangiovese Rosé.",
-          "The wines are sold nationally through independent merchants, at the cellar door and online via the winery's website."
-        ]
-      },
-      {
-        "head": "Moldova pitches indigenous grapes and 23 producers to Chinese buyers at ProWine Shanghai",
+        "head": "Moldova pitches indigenous grapes and competitive prices at ProWine Shanghai",
         "date": "2026-11-05",
         "sources": [
           "Vino Joy News"
@@ -127,13 +130,13 @@
           "https://vino-joy.com/2026/11/05/moldova-makes-its-case-to-chinas-wine-buyers/"
         ],
         "takeaways": [
-          "The National Office for Vine and Wine is bringing 23 Moldovan producers to ProWine Shanghai from November 10 to 12 to seek Chinese importers.",
-          "Moldova's wine imports to China reached US$1.43 million in the first nine months of 2026, per Chinese customs data.",
-          "About 85% of Moldovan wine production is exported, and the EU now takes roughly 60% of those exports."
+          "23 Moldovan wine and spirits producers will seek business with Chinese importers at ProWine Shanghai, November 10 to 12.",
+          "Chinese customs data show Moldovan wine imports reached US$1.43 million in the first nine months of 2026.",
+          "About 85% of Moldova's wine production is exported, and the European Union takes roughly 60% of its wine exports."
         ]
       },
       {
-        "head": "Australian wine packaging sees growth in small formats for convenience and moderation",
+        "head": "Australian wine's small formats gain ground as moderation and single-person households grow",
         "date": "2026-11-04",
         "sources": [
           "Wine Australia"
@@ -143,13 +146,13 @@
           "https://www.wineaustralia.com/news/market-bulletin/issue-376"
         ],
         "takeaways": [
-          "Combined export and domestic off-trade sales of 187mL wine packs rose 22% to almost 1.9 million litres in 2025-26.",
-          "Export volumes of 187mL packs grew 39%, from 450,000 litres in 2023-24 to 620,000 litres in 2025-26.",
-          "Australian single-person households reached 26% of households, up from 18% in 1981, per Census data cited by the Market Bulletin."
+          "Combined export and domestic off-trade sales of 187mL packs rose 22% to almost 1.9 million litres in 2025-26.",
+          "Export volumes of 187mL packs grew 39% from 450,000 litres in 2023-24 to 620,000 litres in 2025-26.",
+          "Census data shows 26% of Australian households are now single-person, up from 18% in 1981."
         ]
       },
       {
-        "head": "EU greenwashing directive bans vague eco claims on wine from September 27",
+        "head": "EU greenwashing directive takes effect, forcing wine labels to drop vague eco claims",
         "date": "2026-11-02",
         "sources": [
           "SevenFifty Daily"
@@ -159,13 +162,44 @@
           "https://daily.sevenfifty.com/europe-is-cracking-down-on-greenwashing-what-does-that-mean-for-wine-labels/"
         ],
         "takeaways": [
-          "EU Directive 2024/825, enforced from September 27, bans vague environmental claims like \"eco-friendly\" and \"green\" on products including wine.",
-          "Unverified sustainability badges and misleading claims are prohibited, with old stock not grandfathered in, so producers are using stickers or point-of-sale notices.",
-          "Member states set enforcement, with fines up to four percent of annual turnover for widespread violations, and wine producers must also avoid such claims in marketing."
+          "EU Directive 2024/825, also called EmpCo, bans vague environmental claims like 'eco-friendly' and 'green' from wine marketing from September 27.",
+          "Unbacked sustainability badges and irrelevant claims are prohibited, and old stock is not grandfathered, so producers use stickers or point-of-sale notices.",
+          "Enforcement is left to individual member states, with fines of up to four percent of annual turnover for widespread violations."
+        ]
+      },
+      {
+        "head": "Bordeaux takes 41% of traded value as Burgundy's share jumps",
+        "date": "2026-11-02",
+        "sources": [
+          "Liv-ex"
+        ],
+        "summ": "Bordeaux strengthened its lead of the market, claiming 41% of traded value. Burgundy’s share also rose compared to last week",
+        "urls": [
+          "https://www.liv-ex.com/bordeaux-strengthens-its-market-lead-mature-vintages-trading-actively/"
+        ],
+        "takeaways": [
+          "Bordeaux claimed 41% of the week's traded value, with 2019 and 2020 vintages the top sellers by value.",
+          "Burgundy's share rose from 15.7% to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive leading its trade.",
+          "Champagne's share fell from 13.0% to 8.5% and Tuscany claimed 11.6%, according to Liv-ex market data."
         ]
       }
     ],
     "CULTURE": [
+      {
+        "head": "VinePair's Keith Beavers reflects on American wine in 2026 and how to keep celebrating it",
+        "date": "2026-11-13",
+        "sources": [
+          "VinePair"
+        ],
+        "summ": "This episode of Wine 101 is brought to you by Wines of Alsace and Alsace Rocks. Tucked between the Vosges Mountains and the Rhine River in northeastern France, Alsace is one of the most distinctive wine regions on earth, and is home to centuries of family winemaking, some of France’s most certifiably organic vineyards, and a...",
+        "urls": [
+          "https://vinepair.com/articles/wine-101-podcast-american-wine-2026-reflection/"
+        ],
+        "takeaways": [
+          "Keith Beavers, host of VinePair's podcast Wine 101, reflects on American wine in 2026.",
+          "He suggests ways to keep celebrating U.S.-made wine going forward."
+        ]
+      },
       {
         "head": "ASVO names 2026 Viticulturist and Winemaker of the Year at awards dinner",
         "date": "2026-11-13",
@@ -177,13 +211,13 @@
           "https://winetitles.com.au/asvo-awards-for-excellence-winners-unveiled-at-industry-dinner/"
         ],
         "takeaways": [
-          "Chris Dent, owner of Gorton Drive Estate and chair of Murray Valley Winegrowers, was named ASVO 2026 Viticulturist of the Year.",
-          "David Bicknell, of Oakridge Wines, was named 2026 Winemaker of the Year after almost 25 years at the winery.",
-          "Tracey Siebert of the AWRI won the Wine Science and Technology Award for her flavour chemistry and aroma research."
+          "The Australian Society of Viticulture and Oenology named its 2026 Viticulturist of the Year as Chris Dent, owner of Gorton Drive Estate vineyard near Swan Hill.",
+          "David Bicknell of Oakridge Wines, with nearly 25 years at the winery, was named 2026 Winemaker of the Year.",
+          "Tracey Siebert, AWRI flavour scientist, received the Wine Science and Technology Award; Sarah Lavelle of Seven Hill Cellars won the Emerging Talent Award."
         ]
       },
       {
-        "head": "AI's energy, e-waste and water footprint threatens wine's sustainability image",
+        "head": "AI's energy, e-waste and water footprint threatens wine's green reputation",
         "date": "2026-11-12",
         "sources": [
           "Winetitles"
@@ -193,13 +227,13 @@
           "https://winetitles.com.au/wine-strives-for-sustainability-right-now-ai-is-anything-but/"
         ],
         "takeaways": [
-          "Australian and New Zealand wine sector promotes sustainability, but AI-generated content in its marketing and labels risks undermining that clean reputation.",
-          "One study estimated training a single large language model emits around 300,000 kg of CO₂, roughly the emissions of 105 cars driven 15,000 km a year.",
-          "Global data centres are estimated to consume 945 terawatt-hours of electricity by 2030, with AI accounting for 40% of that demand."
+          "Australian and New Zealand wineries heavily promote sustainability, but AI-generated wine marketing and labels could undermine that clean reputation.",
+          "Data centres powering AI could consume up to 5 million gallons of water per day and are increasingly drawing on drought-stressed aquifers.",
+          "AI infrastructure could generate up to 2.5 million tonnes of e-waste yearly by 2030, according to a United Nations University study."
         ]
       },
       {
-        "head": "Marlborough viticulture technician Anna Kelland wins 2026 Young Horticulturist of the Year",
+        "head": "Marlborough viticulturist Anna Kelland wins 2026 Young Horticulturist of the Year",
         "date": "2026-11-11",
         "sources": [
           "Winetitles"
@@ -209,15 +243,15 @@
           "https://winetitles.com.au/young-viticulturist-wins-2026-young-horticulturist-of-the-year/"
         ],
         "takeaways": [
-          "Anna Kelland, a viticulture technician for Constellation Brands in Marlborough, won the Young Horticulturist of the Year title in Auckland.",
-          "She beat four rivals from grower, arborist, amenity and plant producer sectors over a two-day competition held 4-5 November.",
-          "Her prizes, including three awards, a scholarship and a glass trophy, total more than $25,000 in cash and value."
+          "Marlborough viticulture technician Anna Kelland won the Young Horticulturist of the Year title at a two-day Auckland competition on 4-5 November.",
+          "Kelland, the 2025 New Zealand Young Viticulturist of the Year, also won three awards including the Woolworths Innovation Project Award.",
+          "Her prizes total more than $25,000, including a professional development scholarship and a glass trophy."
         ]
       }
     ],
     "SCIENCE": [
       {
-        "head": "Burgundy estate uses electrical conductivity mapping to guide soil digging",
+        "head": "Burgundy estate maps soil conductivity to guide vineyard decisions",
         "date": "2026-11-12",
         "sources": [
           "SevenFifty Daily"
@@ -227,19 +261,19 @@
           "https://daily.sevenfifty.com/the-science-of-mapping-vineyard-soils/"
         ],
         "takeaways": [
-          "Domaine du Cellier aux Moines in Givry, Burgundy, used electrical conductivity (EC) mapping from 2021 to guide over 30 soil pits.",
-          "Pits revealed large differences in limestone density about 1.5 metres down, much less visible from the surface.",
-          "In the 2026 vintage, a tressed Pinot Noir parcel reached 13.6% potential alcohol versus 14.5% for a conventionally trimmed neighbour."
+          "Domaine du Cellier aux Moines in Givry, Burgundy, used electrical conductivity mapping from 2021 to guide digging of over 30 soil pits.",
+          "Pinot Noir parcels with the same clone reached 14.5% and 13.6% potential alcohol after trimmed versus tressed canopy management.",
+          "A 2025 Médoc study by geophysicist Myriam Schmutz found the strongest vine links around 50 centimeters deep, varying by season."
         ]
       }
     ],
     "NEWSLETTERS": [
       {
         "source": "Vinography",
-        "url": "https://www.vinography.com/2026/11/vinography-images-bagged-and-tagged",
-        "date": "2026-11-14",
-        "head": "Vinography Images: Bagged and Tagged",
-        "summ": "There’s the glamorous side of the wine industry: the landscape, the people, the amazing farming and craftsmanship that goes into",
+        "url": "https://www.vinography.com/2026/11/vinography-unboxed-week-of-11-8-26",
+        "date": "2026-11-15",
+        "head": "Vinography Unboxed: Week of 11/8/26",
+        "summ": "Hello and welcome to my weekly dig through the pile of wine samples that show up on my doorstep, asking",
         "author": "Alder Yarrow",
         "takeaways": []
       },
@@ -251,9 +285,9 @@
         "summ": "These four Portuguese reds were all purchased from supermarket Pingo Doce and an independent wine shop, while I was teaching",
         "author": "Jamie Goode",
         "takeaways": [
-          "Casa Ferreirinha Vinha Grande 2023 Douro scored 92/100 and costs about €12 in Portugal, roughly £17 in the UK.",
-          "Quinta Nova de Nossa Senhora do Carmo Unoaked 2024 Douro, a Touriga Nacional-led blend, scored 93/100 at €16.90 in Vila Real.",
-          "Pingo Doce's private label Tons de Duorum Talhão 37 2024 Douro, made by Duorum, scored 91/100 at €6.99 down from €13.99."
+          "Four Portuguese reds were tasted, bought from supermarket Pingo Doce and an independent shop while the author taught in Vila Real.",
+          "Casa Ferreirinha Vinha Grande 2023 Douro scored 92/100 and Quinta Nova Unoaked 2024 Douro scored 93/100.",
+          "Tons de Duorum Talhão 37 2024 Douro, a Pingo Doce private label from Duorum, scored 91/100 at €6.99, while Rocim's Alicante Bouschet 2024 Alentejo scored 89/100."
         ]
       },
       {
@@ -265,8 +299,8 @@
         "author": "Cab Franc Chronicles",
         "takeaways": [
           "Forge Cellars, founded 2011 on Seneca Lake in New York's Finger Lakes, began making Cabernet Franc with the 2019 vintage.",
-          "Forge now makes four single-vineyard Cabernet Francs from different soils, including Willow (sand), Railroad (gravel), Arlo (clay) and Bellows (sand and rock).",
-          "In 2023 Forge left stems out entirely to study each site's tannin potential, then reintroduced stems in some wines in 2024."
+          "Forge makes four single-vineyard Cabernet Francs from different soils, including Willow (sand), Railroad (gravel), Arlo (clay) and Bellows (sand and rock).",
+          "In 2023 Forge left stems out entirely to read each site's tannin potential, then reintroduced stems in some wines in 2024."
         ]
       },
       {
@@ -277,9 +311,9 @@
         "summ": "Stocking up before the cooking starts in earnest; plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Meg Maker's Maker's Table piece lists pantry staples for the holiday cooking and baking season, following her earlier kitchen tools list in The Salt.",
-          "She advises checking pantry shelves in mid-November, since baking ingredients do not last indefinitely.",
-          "Spices and herbs should be refreshed regularly and bought in small quantities from bulk aisles, and baking chemicals renewed regularly."
+          "Meg Maker's Maker's Table pantry list for Kitchen Season recommends checking and restocking staples as mid-November holiday cooking begins.",
+          "Baking ingredients and spices lose potency over time, so the author advises refreshing them regularly.",
+          "Spices and herbs are best bought in small quantities from bulk aisles to keep flavor at its peak."
         ]
       },
       {
@@ -290,9 +324,9 @@
         "summ": "Delicious recommendations,including old favourites and new discoveries",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "Austrian wine editor's masterclass in Daejeon, South Korea covered 60 wine professionals, and a tasting in Amsterdam hosted 40 somms, journalists and importers.",
-          "The author tasted 72 wines to select 16 favourites, all herbicide-free and mostly organic or biodynamic certified.",
-          "Fischer's 2025 Sauvignon Blanc St. Anna, made by brothers Klaus and Bernard, is recommended, priced at €25 from Joost Wijn in the Netherlands."
+          "Austrian growers excel at freshness, elegance and drinkability, and the author tasted 72 Austrian wines in Amsterdam to select 16 favourites.",
+          "Fischer's Sauvignon Blanc St. Anna 2025 is made by brothers Klaus and Bernard, unfiltered with no additions, and priced at €25 from Joost Wijn in the Netherlands.",
+          "Franz Hofstätter's declassified Grüner Veltliner from the Achleiten vineyard in the Wachau is uncertified organic, with Weinskandal in Austria offering some Wabi Sabi wines."
         ]
       },
       {
@@ -303,9 +337,9 @@
         "summ": "In the exciting (other adjectives are available) times we’re living in, we’re often told that writing is passé, people just don’t bother reading words anymore. A few journalistic outlets, especially in the financial press, seem to have finally come clean about the seriousness of their reporting, by auto-summarising their pieces...",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "Tim Atkin argues that wine critics should be only slightly more knowledgeable than their target audience, not overly expert.",
-          "Atkin says conflicts of interest matter beyond payments, such as dining, friendships and shared politics, and that disclosure can encourage self-interested views.",
-          "Atkin criticises the 30-second wine tasting ritual, often done across dozens or over a hundred wines, as too brief to assess a wine properly."
+          "Tim Atkin argues wine critics owe obligations only to those paying their bills, so consumers who dislike current reviewing can fund reviewers they prefer.",
+          "Atkin says the reviewing model's weakness is that tasting a wine in about 30 seconds, often among dozens, is too little assessment time.",
+          "He says conflicts of interest extend beyond payment to dining, friendships and shared politics, and that disclosing them can make advisers more self-interested."
         ]
       },
       {
@@ -317,8 +351,8 @@
         "author": "Jonathan Finch",
         "takeaways": [
           "William Whitehead runs Domaine Michel Rebourgeon in Pommard, which works 4.25 hectares across Pommard, Volnay and Beaune and makes about 20,000 bottles a year.",
-          "Pierre Arcelain's Domaine Michel Arcelain ages its white wine for 12 months in a concrete egg, a modern tool the new generation has adopted.",
-          "Julien Cruchandeau, a newcomer from hospitality, founded his estate in 2003 and moved to Chaux in 2009, championing Aligoté and Hautes-Côtes de Nuits."
+          "Pierre Arcelain ages his white wine for 12 months in a concrete egg at Domaine Michel Arcelain, which is run with his wife Charlotte.",
+          "Arthur Thibert joined his father Pierre in Corgoloin in 2018, overseeing a new cuverie and more sustainable farming."
         ]
       },
       {
@@ -330,8 +364,8 @@
         "author": "Joe Roberts",
         "takeaways": [
           "1WineDude is partnering with Orpheus Alerts, part of Orpheus Intelligence Labs Inc., to help buyers find rare wines.",
-          "Orpheus monitors sources like local-language catalogues, merchant inventories, auction and consignment notices, and restaurant sales.",
-          "Users create alerts using natural-language descriptions or images, and Orpheus notifies them when matching wine is available in its network."
+          "Orpheus monitors sources like local-language catalogues, merchant inventories, auction and consignment notices, and private cellar sales.",
+          "Users create alerts using natural-language descriptions and optional images; Orpheus notifies them when matching wine is available and connects them with sellers."
         ]
       },
       {
@@ -342,9 +376,9 @@
         "summ": "How a Champagne trip in the 1800s resulted in a new Spanish wine in a league of its own",
         "author": "Eveline Chartier",
         "takeaways": [
-          "Josep Raventós produced Spain's first traditional method sparkling wine in 1872 in Sant Sadurní d'Anoia, Penedès, Catalonia.",
-          "Cava takes its name from the cellars, or caves, dug to store the wine, and became a formal Spanish label term in 1972.",
-          "Sumarroca Gran Reserva Brut Nature Cava 2022 from Penedès is made from Macabeu, Xarel•lo and Parellada and aged 40 months."
+          "Josep Raventós's family, making wine since 1497, produced Spain's first traditional method sparkling wine in 1872 in Sant Sadurní d'Anoia, Penedès.",
+          "Cava is named after the cellars dug to store the wine, a term used informally from the 1960s and formalised under Spanish law in 1972.",
+          "Finca Sumarroca's 2022 Gran Reserva Brut Nature Cava, made from Macabeu, Xarel•lo and Parellada, aged 40 months and costs $28 Cdn."
         ]
       },
       {
@@ -356,8 +390,8 @@
         "author": "Jim Boyce",
         "takeaways": [
           "The Wines From Castilla, La Mancha Roadshow stopped in Beijing and was set to visit Guangzhou on November 6.",
-          "Spain ranked fifth for wine volume in China last year, narrowly behind Italy and a quarter of leader Australia, per WBO stats.",
-          "Spain's value ranking in China dropped to sixth, below New Zealand and above only Chile among the top eight sources."
+          "Spain ranked fifth for wine volume in China last year, narrowly behind Italy but a quarter of leader Australia, per WBO stats.",
+          "The author highlighted Piqueras' El Abuelo, a blend of Alicante Bouschet, Monastrell and Syrah, as a standout at the roadshow."
         ]
       }
     ]
