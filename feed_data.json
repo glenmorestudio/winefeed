@@ -1,7 +1,88 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "items": {
     "MARKET": [
+      {
+        "head": "Bordeaux holds 41% of weekly fine wine trade value; Burgundy gains",
+        "date": "2026-11-23",
+        "sources": [
+          "Liv-ex"
+        ],
+        "summ": "Bordeaux claimed 35.7% of traded value. Burgundy and Champagne followed closely behind",
+        "urls": [
+          "https://www.liv-ex.com/bordeaux-extends-market-lead-legendary-mature-vintages-dominate/",
+          "https://www.liv-ex.com/bordeaux-strengthens-its-market-lead-mature-vintages-trading-actively/"
+        ],
+        "takeaways": [
+          "Bordeaux claimed 41% of the week's traded value on the Liv-ex fine wine market, extending its lead.",
+          "Burgundy's share rose from 15.7% to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive top-traded by value.",
+          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6% led by Soldera and Sassicaia."
+        ]
+      },
+      {
+        "head": "Top Burgundy wines grow scarce in China as producers tighten allocations",
+        "date": "2026-11-23",
+        "sources": [
+          "Vino Joy News"
+        ],
+        "summ": "Some of Burgundy’s most sought-after wines are becoming harder to source in China, importers told Vino Joy News, as smaller harvests and tighter allocations constrain supply",
+        "urls": [
+          "https://vino-joy.com/2026/11/23/are-top-burgundy-wines-running-short-in-china/"
+        ],
+        "takeaways": [
+          "Importers in China report tighter supplies of DRC, Leroy, Leflaive and Domaine Gros Frère et Sœur since July, per Merveille Business CEO Li Yajun.",
+          "Fine West CEO Wu Xianghua says Leflaive cut 2024-2025 output and reduced China allocations, so fewer bottles reach the market.",
+          "Shanghai Boyun's Lin Jianbing says leading Burgundy prices have fallen considerably over two years, contradicting claims of demand outstripping supply."
+        ]
+      },
+      {
+        "head": "English sparkling wine grows fast but faces oversupply and falling grape prices",
+        "date": "2026-11-23",
+        "sources": [
+          "SevenFifty Daily"
+        ],
+        "summ": "After a decade of rapid growth and rising international recognition, English sparkling wine faces the challenge of turning enthusiasm into sustained sales",
+        "urls": [
+          "https://daily.sevenfifty.com/english-sparkling-wine-is-winning-fans-can-it-win-market-share/"
+        ],
+        "takeaways": [
+          "Wines of Great Britain reports English vineyard plantings rose 510 percent between 2005 and 2024, reaching 4,841 hectares.",
+          "Global English wine exports rose 35 percent from 2023 to 2024, with the US counted as a leading market for some producers.",
+          "Overproduction has pushed grape prices down, with Dermot Sugrue saying they dropped to historic lows by the end of 2025."
+        ]
+      },
+      {
+        "head": "Monichino Wines to close after 64 years as Victorian cellar door sales fall",
+        "date": "2026-11-23",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "According to reporting by The Weekly Times, Monichino Wines at Katunga in the Goulburn Valley will close its doors after 64 years in business. “It’s all become too hard , the costs have blown out, with the red tape and taxes and everything else,” Cellar door manager Anna Sergi told The Weekly Times. The newspaper explained that...",
+        "urls": [
+          "https://winetitles.com.au/monichino-wines-to-close-after-64-years-as-small-victorian-wineries-struggle/"
+        ],
+        "takeaways": [
+          "Monichino Wines at Katunga in the Goulburn Valley will close after 64 years in business, selling its property and vines.",
+          "Owner Anna Sergi cited blowout costs, red tape and taxes; the winery had survived a tornado and pandemic restaurant closures.",
+          "Bigibila Winery in Moonambel reports cellar door trade down 40 per cent in six months, owners Peter Bicknell and Jillian Henderson say."
+        ]
+      },
+      {
+        "head": "Sustainability information lifts willingness to pay for fungus-resistant PIWI wine",
+        "date": "2026-11-23",
+        "sources": [
+          "Regenerative Viticulture Foundation"
+        ],
+        "summ": "This study investigates how providing consumers with information about sustainability impacts their preferences and willingness to pay for wine made from fungus-resistant (PIWI) grapes. Main headlines Methods Results Conclusion To help sustainable fungus-resistant (PIWI) wines grow beyond a small niche market, wineries and...",
+        "urls": [
+          "https://regenerativeviticulture.org/resources/articles-and-blogs/https-doi-org-10-1002-agr-70167/"
+        ],
+        "takeaways": [
+          "A study tested whether telling consumers about sustainability impacts changes their preferences for fungus-resistant (PIWI) grape wine.",
+          "Its finding: sustainability information is enough to drive consumer interest and boost the value of PIWI wines.",
+          "The authors advise wineries to use clear, straightforward sustainability messaging to move PIWI wines beyond a niche market."
+        ]
+      },
       {
         "head": "Guangdong lychee ice wine sells out online after APEC dinner menu circulates",
         "date": "2026-11-20",
@@ -13,13 +94,13 @@
           "https://vino-joy.com/2026/11/20/lychee-wine-sparked-a-buying-frenzy-online-after-apec-dinner/"
         ],
         "takeaways": [
-          "Yueli Lychee Ice Wine from Guangzhou ShunChangYuan saw one online store's revenue rise 93,393.10% after the APEC dinner menu circulated.",
-          "The 375ml bottle, 12% alcohol, sells for RMB 174, and one flagship store logged about 5,000 orders within two hours.",
-          "The producer has begun emergency restocking as several products are listed as sold out."
+          "Yueli Lychee Ice Wine, from Guangzhou ShunChangYuan in Conghua, was served at the APEC welcome dinner in Shenzhen.",
+          "After the November 18 menu circulated online, one Tmall flagship store reported roughly 5,000 orders within two hours.",
+          "The producer says one online store's revenue rose 93,393.10%, though the comparison period was not specified."
         ]
       },
       {
-        "head": "Booze News Weekly Roundup covers Jim Beam pause and record-low wine output",
+        "head": "Weekly drinks roundup covers Jim Beam pause, record-low wine output, and product launches",
         "date": "2026-11-20",
         "sources": [
           "VinePair"
@@ -32,25 +113,9 @@
           "https://vinepair.com/booze-news/booze-news-weekly-roundup-heineken-warns-against-weight-loss-drugs/"
         ],
         "takeaways": [
-          "VinePair's weekly roundup covers the continued production pause at Jim Beam's main facility.",
-          "The roundup cites dismal estimates for 2026 global wine production, which remains at a record low.",
-          "Other items include product releases and the week's latest beverage alcohol industry headlines."
-        ]
-      },
-      {
-        "head": "Château Lynch-Bages releases limited wines honoring Hong Kong panda twins, funding conservation",
-        "date": "2026-11-20",
-        "sources": [
-          "Vino Joy News"
-        ],
-        "summ": "Bordeaux classified growth Château Lynch-Bages has released limited-edition wines featuring Hong Kong’s first giant panda twins, pairing a celebration of their birth with fundraising for panda conservation",
-        "urls": [
-          "https://vino-joy.com/2026/11/20/hong-kongs-panda-twins-find-a-new-home-on-lynch-bages-labels/"
-        ],
-        "takeaways": [
-          "Bordeaux estate Château Lynch-Bages released limited-edition 2024 vintage labels featuring Hong Kong's giant panda twins, Jia Jia and De De.",
-          "The labels were created with Ocean Park, and a charity auction of large-format bottles will fund the park's panda conservation and education programs.",
-          "The wines will be sold in mainland China, Hong Kong and Macau, with Altaya Wines distributing in Hong Kong through retailers including city'super and Watson's Wine."
+          "VinePair's Booze News Weekly Roundup gathers the week's beverage alcohol headlines and product releases every Friday.",
+          "Coverage includes an ongoing production pause at Jim Beam's main facility and dismal estimates for 2026 global wine production.",
+          "Other items cover Stoli's return to the U.S. and Modelo's deal with the NCAA."
         ]
       },
       {
@@ -64,29 +129,13 @@
           "https://vino-joy.com/2026/11/19/dbr-lafite-unites-china-winery-and-sales-operations-under-new-managing-director/"
         ],
         "takeaways": [
-          "Domaines Barons de Rothschild Lafite appointed former Pernod Ricard executive Leo Wang to run its China winery and sales as one unit.",
-          "Wang becomes managing director of Domaine de Long Dai in Shandong and the Chinese market, splitting time between Shanghai and the estate.",
-          "Long Dai general manager Charles Treutenaere, there nine years, leaves at year-end and will help with the handover."
+          "Domaines Barons de Rothschild Lafite appointed ex-Pernod Ricard executive Leo Wang to run its Chinese winery and national sales as one unit.",
+          "Wang becomes managing director of Domaine de Long Dai in Shandong, the group's first single leader for both China operations.",
+          "Long Dai general manager Charles Treutenaere, nine years at the estate, leaves at year end and will assist the handover."
         ]
       },
       {
-        "head": "Melbourne Polytechnic lowers wine degree fees via Commonwealth Supported Places from 2027",
-        "date": "2026-11-19",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "Melbourne Polytechnic is expanding access to tertiary viticulture and winemaking education through Commonwealth Supported Places in its Bachelor of Agriculture and Technology (Viticulture and Winemaking) from 2027. As Victoria's only provider of undergraduate degrees in viticulture and winemaking, Melbourne Polytechnic “plays a...",
-        "urls": [
-          "https://winetitles.com.au/melbourne-polytechnic-expands-access-to-viticulture-and-winemaking-education/"
-        ],
-        "takeaways": [
-          "Melbourne Polytechnic, Victoria's only provider of undergraduate viticulture and winemaking degrees, will offer Commonwealth Supported Places from 2027.",
-          "Annual student contribution for the viticulture and winemaking major falls from $23,160 to $4,908 for eligible domestic students.",
-          "Victorian Wine Show offers a $5,000 annual scholarship; applications for the 2027 intake are now open."
-        ]
-      },
-      {
-        "head": "WineGB to exhibit English and Welsh wines at Amsterdam trade fair in 2027",
+        "head": "WineGB to exhibit English and Welsh wines at Amsterdam trade fair in January 2027",
         "date": "2026-11-19",
         "sources": [
           "WineGB"
@@ -96,12 +145,12 @@
           "https://winegb.co.uk/2026/11/19/winegb-heads-to-amsterdam-to-showcase-the-opportunity-for-uk-wine-in-the-netherlands/"
         ],
         "takeaways": [
-          "WineGB, the English and Welsh wine trade body, will exhibit with the UK government's GREAT programme at Wine Professional in Amsterdam, January 2027.",
-          "The stand targets Dutch wine buyers, importers, distributors and sommeliers, showing a range of sparkling, still white, rosé and red wines."
+          "WineGB, the national association for English and Welsh wine, will exhibit at Wine Professional in Amsterdam in January 2027, with the UK government's GREAT programme.",
+          "The association aims to introduce Dutch buyers, importers, sommeliers and distributors to UK producers and their sparkling, still white, rosé and red wines."
         ]
       },
       {
-        "head": "California Table Grape Commission hires Suzanne Devereaux-McKinstrie as Global Marketing Director",
+        "head": "California Table Grape Commission hires new marketing director for North America",
         "date": "2026-11-18",
         "sources": [
           "Growing Produce"
@@ -111,9 +160,9 @@
           "https://www.growingproduce.com/fruits/grapes/new-hire-to-grow-global-marketing-for-california-table-grapes/"
         ],
         "takeaways": [
-          "The California Table Grape Commission named Suzanne Devereaux-McKinstrie its Global Marketing Director for Canada, Mexico, and Central America.",
-          "She previously served as CEO of the Center for Produce Safety and as international marketing director for American Pistachio Growers.",
-          "She will oversee the commission's marketing programs and work with importers and retailers to increase demand for fresh California table grapes."
+          "The California Table Grape Commission has hired Suzanne Devereaux-McKinstrie as Global Marketing Director for Canada, Mexico and Central America.",
+          "She was previously CEO of the Center for Produce Safety and international marketing director for American Pistachio Growers.",
+          "She will work with importers and retailers to expand promotion and demand for fresh California table grapes."
         ]
       },
       {
@@ -128,7 +177,7 @@
         ],
         "takeaways": [
           "Wine Australia launched an expression of interest for its Research & Innovation Fund, part of the Australian Wine Future Fund.",
-          "The fund targets $35 million over five years through grants and partner co-investment for vineyard, product and efficiency projects.",
+          "The fund targets $35 million over five years via grants and partner co-investment for vineyard, product and efficiency projects.",
           "The current round closes 23 December 2026, with assessments in early 2027 and quarterly rounds after that."
         ]
       },
@@ -144,46 +193,62 @@
         ],
         "takeaways": [
           "ProWine Mumbai runs November 18-19 at Jio World Convention Centre, expecting 200+ exhibitors and 6,000 trade visitors.",
-          "Free trade agreements with Australia, the UK and New Zealand, plus EU talks concluded January 2026, are set to cut tariffs on some imports.",
-          "Organized by Messe Düsseldorf India and All Things Nice, the show includes ProSpirits and ProWine Zero+ alongside wine."
-        ]
-      },
-      {
-        "head": "Australian white wine exports to China more than double in volume in Q3",
-        "date": "2026-11-13",
-        "sources": [
-          "Vino Joy News"
-        ],
-        "summ": "White wine export volumes to the market more than doubled, rising 143.6%, according to Wine Australia data. The growth comes as Australian producers seek a greater foothold among Chinese white wine drinkers, including consumers exploring alternatives to Burgundy",
-        "urls": [
-          "https://vino-joy.com/2026/11/13/australian-white-wine-exports-to-china-surge-over-140-in-q3/"
-        ],
-        "takeaways": [
-          "Australian wine export value to mainland China rose 1.9% to A$166.33 million in Q3 2026, against a global decline.",
-          "White wine export volumes to mainland China rose 143.6% to 5.26 million liters, while red wine value edged down 0.5%.",
-          "South Australia led shipments to China, with value up 32% to A$106.55 million, though nine-month value still fell 10.4%."
+          "Twelve national pavilions and over 1,000 wine and drinks brands will be showcased, with spirits, beer and no-alcohol drinks included.",
+          "Tariffs on some imported wines and spirits are set to fall as free trade agreements with Australia, UK, NZ and the EU take effect."
         ]
       }
     ],
     "CULTURE": [
       {
-        "head": "Guardian tester ranks universal wine glasses from budget to premium",
-        "date": "2026-11-21",
+        "head": "Schloss Johannisberg tops World's Best Vineyards 2026 ranking, up from second",
+        "date": "2026-11-23",
         "sources": [
-          "The Guardian"
+          "Vino Joy News"
         ],
-        "summ": "<p>Searching for a wine glass that can do it all? From short-stemmed to swirlable, dishwasher-friendly to delicate, here’s the glassware that’s a cut above the rest</p><p>• <a href=\"https://www.theguardian.com/thefilter/2025/jul/27/best-non-alcoholic-low-alcohol-wines\"><strong>The best no- and low-alcohol wines for when you’re...",
+        "summ": "Germany’s Schloss Johannisberg has been named the world’s best vineyard for 2026, rising from second place last year. Only one Chinese winery made it onto the extended top 100 list",
         "urls": [
-          "https://www.theguardian.com/thefilter/2026/nov/21/best-wine-glasses-tested-uk"
+          "https://vino-joy.com/2026/11/23/germanys-schloss-johannisberg-named-worlds-best-vineyard-for-2026/"
         ],
         "takeaways": [
-          "Wine columnist tested universal wine glasses across budgets over several weeks with white, sparkling and red wines.",
-          "Glasses were judged on aesthetics, practicality, aroma concentration, visibility, breathing, comfort and enjoyment.",
-          "Jancis Robinson co-designed a tulip-shaped universal glass with Richard Brendon, arguing one glass shape suits all wines."
+          "Germany's Schloss Johannisberg in the Rheingau was named World's Best Vineyard for 2026, rising from second place last year.",
+          "The ranking, run by William Reed and announced November 18 in Chile, weighs history, architecture, hospitality and visitor experience alongside wine.",
+          "Bodegas Ysios in Spain's Rioja ranked second and Chile's Montes third, with Silver Heights from China the only Chinese winery listed."
         ]
       },
       {
-        "head": "ProWine Shanghai shows China's wine buyers seeking distinctive, regional, casual-drinking wines",
+        "head": "Wine Australia launches educator network with 10 specialists across eight Asian markets",
+        "date": "2026-11-23",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Wine Australia has launched the ‘Australian Wine Specialist Educator Program’, a new initiative set to bring trusted professional wine educators together across Asia to deliver “engaging, locally relevant Australian wine education”. It explained that at the heart of the program is the Australian Wine Specialist Educator Network...",
+        "urls": [
+          "https://winetitles.com.au/wine-australia-launches-australian-wine-specialist-educator-program-across-asia/"
+        ],
+        "takeaways": [
+          "Wine Australia launched the Australian Wine Specialist Educator Program to bring local wine educators across Asia together.",
+          "The inaugural network includes 10 educators across eight key Asian markets, building on existing relationships in China.",
+          "Educators will teach Australian wine using Wine Australia's Australian Wine Discovered platform, with Australia visits planned for 2026 and 2027."
+        ]
+      },
+      {
+        "head": "Newbridge Wines' Bendigo Fiano wins People's Choice award again",
+        "date": "2026-11-23",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "A Fiano by Newbridge Wines in Bendigo has taken out the trophy for Best Aromatic White Wine for the second year in a row at The People’s Choice Wine Awards. Organisers explained the show is judged by wine enthusiasts rather than by qualified winemakers or wine industry professionals. “When we planted ten years ago almost nobody...",
+        "urls": [
+          "https://winetitles.com.au/bendigo-fiano-commended-at-peoples-choice-wine-awards-for-second-year-in-a-row/"
+        ],
+        "takeaways": [
+          "The People's Choice Wine Awards, judged by wine enthusiasts rather than industry professionals, named Newbridge Wines' 2026 Fiano Best Aromatic White for a second straight year.",
+          "Heathcote's Peregrine Ridge Winery won Best Shiraz for a second year running, with its 2014 Shiraz taking the trophy.",
+          "Condie's 2021 The Max Shiraz took the Public's Choice Red, ahead of a three-way tie for runner-up."
+        ]
+      },
+      {
+        "head": "ProWine Shanghai shows China's wine buyers seeking distinctive, regional, casual-occasion wines",
         "date": "2026-11-20",
         "sources": [
           "Vino Joy News"
@@ -194,12 +259,12 @@
         ],
         "takeaways": [
           "Exhibitors at ProWine Shanghai say Chinese buyers are becoming more selective, looking beyond quality and price for distinctive wines.",
-          "The three-day show drew over 620 exhibitors from 34 countries and regions, plus 21,800 trade visitors.",
-          "Wine drinking in China is widening beyond business banquets and gifting into casual restaurants, wine bars and drinking at home."
+          "The three-day exhibition drew over 620 exhibitors from 34 countries and regions and 21,800 trade visitors.",
+          "Wine consumption in China is widening beyond business banquets and gifting to casual restaurants, wine bars and drinking at home."
         ]
       },
       {
-        "head": "ASVO ratifies four regional directors, adding Mark O'Callaghan and Lane Williams",
+        "head": "ASVO ratifies four regional directors, including two new appointments, for 2026/27",
         "date": "2026-11-19",
         "sources": [
           "Winetitles"
@@ -209,9 +274,25 @@
           "https://winetitles.com.au/asvo-appoints-new-regional-directors-at-agm/"
         ],
         "takeaways": [
-          "The Australian Society of Viticulture and Oenology ratified four regional directors at its annual general meeting last week.",
-          "New directors Mark O'Callaghan, a Victorian winemaker and consultant, and Lane Williams, Leeuwin Estate head viticulturist in WA, serve three-year terms.",
-          "Alana Seabrook (SA) and Chrissie Smith (NSW/ACT) continue as returning regional directors, with Emily White as executive director since May 2026."
+          "Mark O'Callaghan, a Victorian winemaker and consultant, and Lane Williams, head viticulturist at Leeuwin Estate, were appointed as new ASVO regional directors.",
+          "The Australian Society of Viticulture and Oenology ratified four regional directors at its AGM, each for a three-year term.",
+          "Chrissie Smith and Alana Seabrook continue as regional directors for NSW/ACT and SA respectively, with Sam Scarratt serving as ASVO president."
+        ]
+      },
+      {
+        "head": "Melbourne Polytechnic opens lower-cost wine degree places from 2027",
+        "date": "2026-11-19",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Melbourne Polytechnic is expanding access to tertiary viticulture and winemaking education through Commonwealth Supported Places in its Bachelor of Agriculture and Technology (Viticulture and Winemaking) from 2027. As Victoria's only provider of undergraduate degrees in viticulture and winemaking, Melbourne Polytechnic “plays a...",
+        "urls": [
+          "https://winetitles.com.au/melbourne-polytechnic-expands-access-to-viticulture-and-winemaking-education/"
+        ],
+        "takeaways": [
+          "Melbourne Polytechnic will offer Commonwealth Supported Places in its viticulture and winemaking bachelor degree from 2027.",
+          "It is Victoria's only provider of undergraduate viticulture and winemaking degrees.",
+          "Eligible domestic students' annual contribution falls from $23,160 to $4,908 for the major."
         ]
       },
       {
@@ -225,13 +306,13 @@
           "https://wineeconomist.com/2026/11/17/is-wine-passe/"
         ],
         "takeaways": [
-          "Columnist compares wine's decline in social status to Paul Krugman's 1987 argument that free trade is no longer the unquestioned default.",
-          "He reports that alcoholic beverage sales have fallen sharply and that restaurant tables now often show fewer or no wine bottles.",
-          "He uses coffee's shift from default drink to one option among many, including Dutch Bros. drinks, as a parallel for wine."
+          "The writer argues wine is losing its status as the default social beverage, as sales of wine and alcohol have fallen sharply.",
+          "He observes fewer bottles on restaurant tables and some venues offering longer mocktail lists than wine lists.",
+          "He compares wine to coffee, which has shifted from a default choice to one option among many."
         ]
       },
       {
-        "head": "VinePair host Keith Beavers reflects on American wine's 2026 direction",
+        "head": "VinePair's Keith Beavers reflects on American wine in 2026 and ways to celebrate it",
         "date": "2026-11-13",
         "sources": [
           "VinePair"
@@ -241,68 +322,32 @@
           "https://vinepair.com/articles/wine-101-podcast-american-wine-2026-reflection/"
         ],
         "takeaways": [
-          "Keith Beavers, host of VinePair's podcast Wine 101, reflects on American wine in 2026.",
-          "The episode is sponsored by Wines of Alsace."
-        ]
-      },
-      {
-        "head": "Alison Smith Story recounts her path into the wine business",
-        "date": "2026-11-05",
-        "sources": [
-          "VinePair"
-        ],
-        "summ": "This episode of Wine 101 is brought to you by Wines of Alsace and Alsace Rocks. Tucked between the Vosges Mountains and the Rhine River in northeastern France, Alsace is one of the most distinctive wine regions on earth, and is home to centuries of family winemaking, some of France’s most certifiably organic vineyards, and a...",
-        "urls": [
-          "https://vinepair.com/articles/wine-101-podcast-alison-smith-story/"
-        ],
-        "takeaways": [
-          "Alison Smith Story, of Smith Story Wine Cellars, is the guest on VinePair's podcast Wine 101, hosted by Keith Beavers.",
-          "The episode covers how Story came to work in wine and how she fell into the industry.",
-          "The sponsor for the episode is Wines of Alsace."
+          "Keith Beavers, host of VinePair's podcast Wine 101, reflects on American wine in 2026 in this episode.",
+          "The episode is sponsored by Wines of Alsace, promoting the French region's Riesling, Pinot Gris and Crémant d'Alsace."
         ]
       }
     ],
-    "SCIENCE": [
-      {
-        "head": "Burgundy estate uses electrical conductivity mapping to read vineyard soils",
-        "date": "2026-11-12",
-        "sources": [
-          "SevenFifty Daily"
-        ],
-        "summ": "Electrical conductivity maps can reveal striking differences beneath seemingly uniform vineyards, but understanding what those differences mean is far more complicated",
-        "urls": [
-          "https://daily.sevenfifty.com/the-science-of-mapping-vineyard-soils/"
-        ],
-        "takeaways": [
-          "Domaine du Cellier aux Moines in Givry, Burgundy, uses electrical conductivity (EC) mapping to locate soil differences guiding vineyard work.",
-          "Owner Philippe Pascal, an agronomist and former LVMH executive, bought the 12th-century estate in 2004 and began EC mapping in 2021.",
-          "In the 2026 vintage, a tressed Pinot Noir parcel reached 13.6% potential alcohol versus 14.5% for a conventionally trimmed neighbour."
-        ]
-      },
-      {
-        "head": "AWRI urges users to update its free agrochemical and MRL search app",
-        "date": "2026-11-09",
-        "sources": [
-          "AWRI"
-        ],
-        "summ": "9 November 2026 The Australian Wine Research Institute has updated the version of the AWRI Agrochemical & MRL Search app on both the Apple App … more",
-        "urls": [
-          "https://www.awri.com.au/information_services/ebulletin/2026/11/09/agrochemical-update-apple-and-android-users-time-to-update-your-awri-agrochemical-mrl-search-app/"
-        ],
-        "takeaways": [
-          "The Australian Wine Research Institute has updated its AWRI Agrochemical & MRL Search app on Apple and Google app stores.",
-          "The free app gives rapid access to information from the 'Agrochemicals registered for use in Australian viticulture' booklet.",
-          "Users must perform an app update to keep receiving updates for the app, and the AWRI helpdesk can assist."
-        ]
-      }
-    ],
+    "SCIENCE": [],
     "NEWSLETTERS": [
       {
+        "source": "wineanorak",
+        "url": "https://wineanorak.com/2026/11/22/highlights-the-weyborne-estate-oriana-brut-2022-england/",
+        "date": "2026-11-22",
+        "head": "Highlights: The Weyborne Estate Oriana Brut 2022 England",
+        "summ": "We had a sneak preview of this wine last year, when Weyborne released ‘The Golden Spur’, which is",
+        "author": "Jamie Goode",
+        "takeaways": [
+          "Weyborne Estate's Oriana Brut 2022 from England is a blend of 46% Chardonnay, 53% Pinot Noir and 1% Pinot Meunier.",
+          "The wine was previously previewed last year as 'The Golden Spur', an earlier-disgorged version of the same wine.",
+          "Wineanorak scores the Oriana Brut 2022 94/100, priced at £48 direct from Weyborne, at 12% alcohol."
+        ]
+      },
+      {
         "source": "Vinography",
-        "url": "https://www.vinography.com/2026/11/vinographys-2026-gift-guide-for-discerning-wine-lovers",
-        "date": "2026-11-20",
-        "head": "Vinography’s 2026 Gift Guide for Discerning Wine Lovers",
-        "summ": "Buying a gift for a serious wine lover can be maddening. The more devoted they are, the better the odds",
+        "url": "https://www.vinography.com/2026/11/vinography-unboxed-week-of-11-16-26",
+        "date": "2026-11-22",
+        "head": "Vinography Unboxed: Week of 11/16/26",
+        "summ": "Hello and welcome to my weekly dig through the pile of wine samples that show up on my doorstep, asking",
         "author": "Alder Yarrow",
         "takeaways": []
       },
@@ -314,9 +359,9 @@
         "summ": "The 2026 release of that wine we love to hate and hate to love, plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Beaujolais Nouveau was pushed onto the international stage by vignerons in the 1950s and by négociants like Georges Duboeuf from the 1970s.",
-          "Beaujolais Nouveau is released worldwide on the third Thursday of November, and Gamay is its grape.",
-          "Producers like Marcel Lapierre in Morgon label crus-origin wines as Vin de France due to French labeling laws, calling theirs \"Raisins Gaulois.\"."
+          "Beaujolais Nouveau was pushed onto the world stage by Beaujolais vignerons, with Georges Duboeuf marketing it beyond France by the 1970s.",
+          "Beaujolais Nouveau is released worldwide on the third Thursday of November, with Gamay grapes and carbonic maceration yielding low-tannin, fruity wines.",
+          "Lapierre in Morgon labels its wine a Vin de France, nicknamed \"Raisins Gaulois,\" because French law bars cru wines from the Beaujolais Nouveau label."
         ]
       },
       {
@@ -329,7 +374,7 @@
         "takeaways": [
           "Wine Enthusiast named California's Livermore Valley its 2026 American Wine Region of the Year in its annual Wine Star Awards.",
           "Livermore Valley is known for Sauvignon Blanc and Cabernet Franc, which its regional association named its signature white and red varieties in February 2025.",
-          "A Cabernet Franc claimed top honours at Maryland's Governor's Cup, per the newsletter."
+          "A Cabernet Franc claimed top honours at Maryland's Governor's Cup."
         ]
       },
       {
@@ -340,9 +385,9 @@
         "summ": "A colourful tale of the grape that was born to dye and the father-son team behind it",
         "author": "Eveline Chartier",
         "takeaways": [
-          "Pinot Noir and Pinot Meunier, Champagne's black grapes, have colourless juice, so they can make white 'Blanc de Noirs' Champagne.",
-          "Teinturier grapes have red flesh; Garnacha Tintorera, also called Alicante Bouschet, was bred by Henri Bouschet in the late 1800s from Petit Bouschet and Garnacha Tinto.",
-          "Pago Casa Gran 'Reposo' 2024 from Valencia, Spain is a blend of 60% Garnacha Tintorera, 20% Syrah and 20% Monastrell."
+          "Blanc de Noirs Champagnes are white wines made from black grapes, Pinot Noir and Pinot Meunier, because their juice is colourless and skin contact is minimal.",
+          "Garnacha Tintorera, also called Alicante Bouschet, is a red-fleshed grape bred by Louis and Henri Bouschet in 19th-century France to add colour to wines.",
+          "The featured Pago Casa Gran 'Reposo' 2024 from Valencia, Spain, is a blend of 60% Garnacha Tintorera, 20% Syrah and 20% Monastrell."
         ]
       },
       {
@@ -353,7 +398,7 @@
         "summ": "Let’s play wine tasting note bingo, here’s TMC’s handy guide",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "Tasting-note jargon like 'minerality' is described as a vague term used to avoid saying what a wine actually tastes like."
+          "The author says \"funky\" is a positive term for natural wine fans but a red flag for mainstream drinkers, and Berlin and New York reportedly banned it."
         ]
       },
       {
@@ -365,8 +410,8 @@
         "author": "Jonathan Finch",
         "takeaways": [
           "Comité des Vins de Bourgogne figures show Burgundy white wine sales rose 0.4 per cent in the year to July 2026, while red fell 4.9 per cent.",
-          "Mâconnais bulk prices fell: Mâcon-Villages Blanc down 9 per cent and Bourgogne Blanc down 13 per cent, per regional figures reported in March.",
-          "Pouilly-Fuissé's 2024 reference price was about €817 a hectolitre, versus roughly €3,050 for Puligny-Montrachet."
+          "Mâconnais bulk prices fell: Mâcon-Villages Blanc down 9 per cent and Bourgogne Blanc down 13 per cent, per regional agriculture office figures.",
+          "Pouilly-Fuissé gained 22 Premier Cru climats from the 2020 vintage, the first in the Mâconnais, with more from 2025."
         ]
       },
       {
@@ -377,9 +422,9 @@
         "summ": "In the exciting (other adjectives are available) times we’re living in, we’re often told that writing is passé, people just don’t bother reading words anymore. A few journalistic outlets, especially in the financial press, seem to have finally come clean about the seriousness of their reporting, by auto-summarising their pieces...",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "Tim Atkin argues wine critics should be only slightly more knowledgeable than their target audience, not supertasters writing for ordinary shoppers.",
-          "Atkin says conflicts of interest extend beyond payment to dining, friendships and shared politics, and that disclosure can encourage more self-interested reviews.",
-          "Atkin criticises the brief 30-second tasting ritual, often applied to lineups of tens or over a hundred wines, as too little time to judge a wine."
+          "Tim Atkin argues that wine critics should be only slightly more knowledgeable than their target audience, not far beyond it.",
+          "Atkin says undisclosed conflicts of interest matter beyond payments, including dining, friendships and shared politics.",
+          "Atkin criticises wine reviewers spending about 30 seconds per wine, comparing it to judging a movie by its trailer."
         ]
       },
       {
@@ -391,8 +436,8 @@
         "author": "Joe Roberts",
         "takeaways": [
           "1WineDude is partnering with Orpheus Alerts, part of Orpheus Intelligence Labs Inc., to help buyers find rare wines.",
-          "Orpheus monitors sources like local-language catalogues, merchant inventories, auction and consignment notices, and private cellar sales.",
-          "Users create alerts using natural-language descriptions or images, and Orpheus notifies them when a matching wine is available and connects them to the seller."
+          "Orpheus monitors sources like local-language catalogues, merchant pages, consignment notices, restaurant sales and estate inventories.",
+          "Users create alerts using natural-language descriptions or uploaded images, and Orpheus notifies them when a matching wine is found and connects them to the seller."
         ]
       },
       {
@@ -403,21 +448,9 @@
         "summ": "Does any nation offer better wine value than Spain? This seems obvious to French bottlers, who import major amounts of Spanish wine each year. Per",
         "author": "Jim Boyce",
         "takeaways": [
-          "Spain ranked fifth by volume in China last year, narrowly behind Italy but a quarter of leader Australia, per WBO stats.",
-          "Spain dropped to sixth by value in China, below New Zealand, with only Chile's per-liter value lower among the top eight sources.",
-          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing, with Guangzhou next on November 6, aiming to lift Spain's underperforming China sales."
-        ]
-      },
-      {
-        "source": "Be Wine Curious",
-        "url": "https://letter.hudin.com/p/a-deeper-look-at-underwater-wine",
-        "date": "2026-10-27",
-        "head": "A deeper look at underwater wine aging",
-        "summ": "Is a wine from the depths ‘better’ or does it depend on the boat?",
-        "author": "Miquel Hudin",
-        "takeaways": [
-          "Attis, a winery owned by the Fariña family near O Grove in Galicia, ages its Albariño 'Mar' bottles underwater in the estuary.",
-          "The Attis Albariño 'Mar' is aged five months under water at 13-16C, versus the 'Standard' bottling of about 120,000 bottles annually."
+          "Spain ranked fifth by volume in China last year, narrowly behind Italy but only a quarter of leader Australia, per WBO stats.",
+          "For value, Spain dropped to sixth in China, below New Zealand, with per-liter value above only Chile among the top eight sources.",
+          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing, with Guangzhou next on November 6, showcasing value-priced Spanish wines like DCOOP's Airén and Tempranillo."
         ]
       }
     ]
