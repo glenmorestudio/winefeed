@@ -1,9 +1,57 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "items": {
     "MARKET": [
       {
-        "head": "Australian wine stocks fall 9% to lowest level since 2019-20",
+        "head": "Langtons' first Global Live Auction sells over $400,000, its largest ever",
+        "date": "2026-11-26",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Australian fine wine authority Langtons has unveiled the results of its inaugural Global Live Auction, which has gone down as its largest to date in its 38-year history. The Global Live Auction featured a line-up of first classified wines from both the Langtons Classification of Australian Wine and the newly launched...",
+        "urls": [
+          "https://winetitles.com.au/langtons-marks-largest-auction-result-in-its-38-year-history/"
+        ],
+        "takeaways": [
+          "Langtons' inaugural Global Live Auction, held 6 November at the Art Gallery of NSW, raised over $400,000 against a $277,000 valuation.",
+          "A 2010 Domaine de la Romanee-Conti magnum was the top lot at $112,125, and Krug and Dom Perignon lots sold well above estimate.",
+          "Henschke Hill of Grace ($14,950) and Bass Phillip Reserve Pinot Noir ($5,750) set Australian auction records, with clearance above 80%."
+        ]
+      },
+      {
+        "head": "Billy Button Wines wins two trophies and 25 medals at Mildura show",
+        "date": "2026-11-26",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "Alpine Valleys winery Billy Button Wines enjoyed a successful weekend in early November at the 2026 Australian Alternative Varieties Wine Show (AAVWS) in Mildura, taking home two prestigious trophy awards and an impressive 25 medals. The winery competed against a field of 700 wine entries at the AAVWS, with the show featuring...",
+        "urls": [
+          "https://winetitles.com.au/alpine-valleys-winery-celebrates-double-trophy-success-at-2026-australian-alternative-varieties-wine-show/"
+        ],
+        "takeaways": [
+          "Billy Button Wines won two trophies and 25 medals at the 2026 Australian Alternative Varieties Wine Show in Mildura.",
+          "The winery took the Helen Healy Award for Excellence, given to the top exhibitor across multiple wine classes.",
+          "Its Vermentino won the Provenance Award, judged across the 2016, 2023 and 2025 vintages together."
+        ]
+      },
+      {
+        "head": "Adelaide study says global wine crisis is structural, not cyclical",
+        "date": "2026-11-26",
+        "sources": [
+          "Winetitles"
+        ],
+        "summ": "While boom and bust cycles have characterised national wine industries for decades, new Adelaide University research illustrates that the current global wine crisis is “different from previous downturns and far more concerning”. Adelaide University said that the research draws on “decades of annual data on both non-premium and...",
+        "urls": [
+          "https://winetitles.com.au/adelaide-university-research-calls-current-wine-crisis-far-more-concerning-than-previous-downturns/"
+        ],
+        "takeaways": [
+          "Adelaide University research led by Professor Kym Anderson finds the current global wine crisis differs from past downturns and is more severe.",
+          "Global wine consumption has fallen by a quarter since the 1960s, while beer and spirits volumes have doubled.",
+          "Between 2013 and 2022, premium wine sales grew 3.1% a year while non-premium sales fell 2.2% annually."
+        ]
+      },
+      {
+        "head": "Australian wine stocks fall to lowest since 2019-20 as production drops 18%",
         "date": "2026-11-25",
         "sources": [
           "Winetitles"
@@ -13,9 +61,9 @@
           "https://winetitles.com.au/new-wine-australia-report-shows-national-wine-inventory-is-at-its-lowest-level-since-2019-20/"
         ],
         "takeaways": [
-          "Wine Australia's report shows national wine inventory fell 9% in 2025-26 to 1.87 billion litres, the lowest since 2019-20.",
+          "Wine Australia's 2025-26 report shows national wine inventory fell 9% to 1.87 billion litres, the lowest since 2019-20.",
           "Total wine production fell 18% to 925 million litres, while sales dropped 4% to 1.04 billion litres.",
-          "Wine Australia expects winegrape prices to stay below long-term averages for vintage 2027 as supply adjusts."
+          "Wine Australia expects winegrape prices to stay below long-term averages through vintage 2027."
         ]
       },
       {
@@ -29,13 +77,13 @@
           "https://vino-joy.com/2026/11/24/french-wine-imports-to-china-surge-in-september-but-is-demand-really-back/"
         ],
         "takeaways": [
-          "China imported 4.44 million litres of French wine worth US$73.69 million in September 2026, up 96.61% in volume from August.",
-          "Import value rose 129.70% month on month, pushing France ahead of Australia as China's largest wine source by value that month.",
-          "Importers credit year-end restocking and lower-priced 2024 Bordeaux, such as Carruades de Lafite, cut 25-41% from 2023 release prices."
+          "China imported 4.44 million litres of French wine worth US$73.69 million in September 2026, per Vino Joy News customs data.",
+          "Value rose 129.70% and volume 96.61% from August, with France overtaking Australia as the largest source by value.",
+          "Importers cite year-end restocking and lower 2024 Bordeaux en primeur prices, with Lafite cutting about 29% from 2023."
         ]
       },
       {
-        "head": "Changyu partners with South Korea's Ayoung as home profits slide",
+        "head": "Changyu partners with South Korea's Ayoung as China profits fall 19%",
         "date": "2026-11-24",
         "sources": [
           "Vino Joy News"
@@ -45,31 +93,45 @@
           "https://vino-joy.com/2026/11/24/changyu-turns-to-south-korea-as-profits-slide-at-home/"
         ],
         "takeaways": [
-          "China's Changyu, founded in Yantai in 1892, signed a strategic deal with South Korea's Ayoung Group for distribution and retail.",
-          "Changyu's nine-month 2026 revenue rose 6.51% to RMB 2.254 billion, but net profit fell 19.25% to RMB 151 million.",
-          "South Korea imported 27.07 million kilograms of wine worth US$214.78 million in first-half 2026, with volume down 3.18%."
+          "Changyu, China's largest wine producer, signed a South Korean distribution deal with importer and retailer Ayoung Group.",
+          "Changyu's first nine months of 2026 revenue rose 6.51% to RMB 2.254 billion, but net profit fell 19.25%.",
+          "South Korea's first-half 2026 wine imports fell 3.18% in volume to 27.07 million kilograms, while value rose 1.71%."
         ]
       },
       {
-        "head": "Fungus-resistant grape varieties cut Apulian table grape protection costs by 55%",
+        "head": "SWR completes benchmark of 40-plus global wine sustainability standards",
         "date": "2026-11-24",
         "sources": [
-          "Regenerative Viticulture Foundation",
-          "IVES Open Science"
+          "Sustainable Wine Roundtable"
+        ],
+        "summ": "(5 min read) Over the past three years, SWR has embarked on the mammoth process of benchmarking the more than 40 sustainability standards that exist globally in wine. Mammoth because the documentation of a standard can easily surpass 1500 pages of documents. The rationale for this when we started was simple.",
+        "urls": [
+          "https://swroundtable.org/the-value-of-benchmarking/"
+        ],
+        "takeaways": [
+          "SWR has benchmarked more than 40 global wine sustainability standards over three years, with a few small ones still to evaluate.",
+          "Its Global Reference Framework scores standards across 39 topics, and the OIV is using it to revise its definition of wine sustainability.",
+          "Packaging and logistics is the most widespread gap, with few standards setting more than cursory requirements there."
+        ]
+      },
+      {
+        "head": "Fungus-resistant grape varieties cut Apulian table grape protection costs 55%",
+        "date": "2026-11-24",
+        "sources": [
+          "Regenerative Viticulture Foundation"
         ],
         "summ": "Towards Sustainable Viticulture: Cost Savings and Reduced Chemical Use through Fungus-Resistant Grapevine Varieties",
         "urls": [
-          "https://regenerativeviticulture.org/resources/articles-and-blogs/cost-savings-and-reduced-chemical-use-through-fungus-resistant-grapevine-varieties/",
-          "https://ives-openscience.eu/71971/?utm_source=rss&utm_medium=rss&utm_campaign=71971"
+          "https://regenerativeviticulture.org/resources/articles-and-blogs/cost-savings-and-reduced-chemical-use-through-fungus-resistant-grapevine-varieties/"
         ],
         "takeaways": [
-          "Adopting fungus-resistant grapevine varieties in Apulian table grape production cuts plant protection costs by 55%.",
-          "Extended Gross Margins rise 7%, 8% with no drop in gross revenues, and cost variability also falls, per Galati et al. (2026).",
-          "The study appeared in Wine Economics and Policy."
+          "Galati et al. (2026) found adopting fungus-resistant grapevine varieties in Apulian table grape production cut plant protection costs by 55%.",
+          "The same study found extended gross margins rose 7%-8% without reducing gross revenues, and cost variability fell.",
+          "The study was published in Wine Economics and Policy."
         ]
       },
       {
-        "head": "Sonoma regenerative vineyards match conventional returns over 30 years if yields hold",
+        "head": "Regenerative Sonoma vineyards match conventional farm returns over 30 years",
         "date": "2026-11-24",
         "sources": [
           "Regenerative Viticulture Foundation"
@@ -79,13 +141,13 @@
           "https://regenerativeviticulture.org/resources/research-and-reviews/https-doi-org-10-20870-ives-tr-2026-10355/"
         ],
         "takeaways": [
-          "A 30-year cost-benefit study compared regenerative and conventional management across four Sonoma County vineyards using a 2.5% discount rate.",
-          "Regenerative vineyards had slightly lower establishment costs but higher annual operating costs from compost and sheep grazing.",
-          "Returns came close to conventional farming when grape yields were maintained, with site fit and added grape value deciding success."
+          "A 30-year cost-benefit study compared regenerative and conventional management across four Sonoma County vineyards, published by Herrera et al. in 2026.",
+          "Regenerative vineyards returned financial results close to conventional farming when grape yields were maintained, with site fit and operational strategy deciding success.",
+          "Regenerative vineyards had lower establishment costs but higher annual operating costs from compost and sheep grazing, while labor dominated expenses in both systems."
         ]
       },
       {
-        "head": "Pridham calls for grower-led, regional collaboration to make Australian wine resilient",
+        "head": "Pridham urges grower-led regional collaboration to build a resilient Australian wine industry",
         "date": "2026-11-24",
         "sources": [
           "Winetitles"
@@ -95,13 +157,13 @@
           "https://winetitles.com.au/opinion-out-of-the-zoo-into-the-jungle/"
         ],
         "takeaways": [
-          "Ben Pridham of Pridham Viticulture in McLaren Vale argues Australia's wine industry should move from structures that squeeze growers to resilient, grower-led collaboration.",
-          "He cites Maggie Jarrett's Nuffield report, which found Griffith grape growers paid below cost of production, and Mendoza's region-by-region approach beating top-down San Juan.",
-          "South Australia's $109 million Wine Industry Transition and Growth Package includes a $100 million loan scheme to move unviable vineyards into higher-value uses."
+          "Ben Pridham of Pridham Viticulture in McLaren Vale, the third in a series, argues for regional collaboration and grower-led decisions in Australian wine.",
+          "He cites Argentina, where Mendoza's grower-inclusive approach produced about 61% of national wine and over 90% of exports, versus under 7% for San Juan.",
+          "He points to South Australia's $109 million Wine Industry Transition and Growth Package, including a $100 million loan scheme to move unviable vineyards to other uses."
         ]
       },
       {
-        "head": "Bordeaux holds 41% of fine wine trade as Burgundy share climbs",
+        "head": "Bordeaux holds 41% of traded wine value as Burgundy's share climbs",
         "date": "2026-11-23",
         "sources": [
           "Liv-ex"
@@ -112,13 +174,13 @@
           "https://www.liv-ex.com/bordeaux-strengthens-its-market-lead-mature-vintages-trading-actively/"
         ],
         "takeaways": [
-          "Bordeaux claimed 41% of the week's traded fine wine value, with 2019 and 2020 vintages top-traded by value.",
-          "Burgundy's share of traded value rose from 15.7% to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive leading.",
-          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6%, led by Soldera Case Basse and Sassicaia."
+          "Bordeaux claimed 41% of the week's traded value on Liv-ex, the wine trading exchange, strengthening its lead.",
+          "Burgundy's share rose from 15.7% to 20.8%, with Domaine de la Romanee-Conti and Domaine Leflaive leading by value.",
+          "Champagne's share fell from 13.0% to 8.5%, while Tuscany claimed 11.6% led by Soldera and Sassicaia."
         ]
       },
       {
-        "head": "Burgundy's top estates face tight supply and allocation squeezes in China",
+        "head": "Top Burgundy wines grow scarce in China as allocations tighten",
         "date": "2026-11-23",
         "sources": [
           "Vino Joy News"
@@ -128,13 +190,13 @@
           "https://vino-joy.com/2026/11/23/are-top-burgundy-wines-running-short-in-china/"
         ],
         "takeaways": [
-          "Importers say supplies of DRC, Leroy, Leflaive and Gros Frère et Sœur tightened from July, with Leflaive's entry-level whites selling out.",
-          "Fine West's Wu says Leflaive produced less in 2024 and 2025 and cut allocations to China, so shortages reflect supply, not higher consumption.",
-          "Other merchants, including Shanghai Boyun's Lin, report steady supply and falling prices, so accounts of shortage remain disputed."
+          "Importers in China say supplies of DRC, Leroy, Leflaive and Domaine Gros Frère et Sœur tightened from July this year.",
+          "Fine West CEO Wu Xianghua says Leflaive's entry-level whites sold out after the estate cut allocations to China.",
+          "Shanghai Boyun's Lin Jianbing says prices for leading Burgundy wines fell considerably over the past two years, so demand does not explain shortages."
         ]
       },
       {
-        "head": "English sparkling wine expands plantings but faces oversupply and falling grape prices",
+        "head": "English sparkling wine expands fast, but overproduction is crashing grape prices",
         "date": "2026-11-23",
         "sources": [
           "SevenFifty Daily"
@@ -144,94 +206,13 @@
           "https://daily.sevenfifty.com/english-sparkling-wine-is-winning-fans-can-it-win-market-share/"
         ],
         "takeaways": [
-          "Wines of Great Britain's 2025 report says English vine plantings rose 510 percent from 2005 to 2024, to 4,841 hectares.",
-          "Global exports of English wine rose 35 percent from 2023 to 2024, with the US among leading markets for producers like Gusbourne.",
-          "Grape prices fell about 50 percent after the large 2023 vintage left wineries overstocked, reaching historic lows by end of 2025."
+          "English sparkling wine plantings rose 510 percent from 2005 to 2024, reaching 4,841 hectares, per Wines of Great Britain.",
+          "Overproduction has pushed English grape prices down about 50 percent after the large 2023 harvest, reaching historic lows by end of 2025.",
+          "English wine exports grew 35 percent from 2023 to 2024, with the US a leading market for producers such as Gusbourne."
         ]
       },
       {
-        "head": "Sustainability information lifts consumer willingness to pay for PIWI wine",
-        "date": "2026-11-23",
-        "sources": [
-          "Regenerative Viticulture Foundation"
-        ],
-        "summ": "The Effect of Sustainability Information on Consumers' Preferences for Fungus-Resistant Grape Wine",
-        "urls": [
-          "https://regenerativeviticulture.org/resources/articles-and-blogs/https-doi-org-10-1002-agr-70167/"
-        ],
-        "takeaways": [
-          "A study tested how sustainability information affects consumer preferences for wine made from fungus-resistant (PIWI) grapes.",
-          "Its authors argue wineries should communicate sustainability clearly to move PIWI wines beyond a small niche market."
-        ]
-      },
-      {
-        "head": "Guangdong lychee ice wine sells out online after APEC dinner menu circulates",
-        "date": "2026-11-20",
-        "sources": [
-          "Vino Joy News"
-        ],
-        "summ": "A Guangdong lychee wine became an unexpected online hit after it was served alongside two Changyu wines at the APEC welcome dinner in Shenzhen, with its producer reporting a more than 93,000% jump in revenue at one online store",
-        "urls": [
-          "https://vino-joy.com/2026/11/20/lychee-wine-sparked-a-buying-frenzy-online-after-apec-dinner/"
-        ],
-        "takeaways": [
-          "Yueli Lychee Ice Wine, made by Guangzhou ShunChangYuan in Conghua, was served at the APEC welcome dinner in Shenzhen.",
-          "After the November 18 menu circulated online, one Tmall flagship store logged about 5,000 orders in two hours.",
-          "The producer reported a 93,393.10% revenue jump at one online store, without stating the comparison period."
-        ]
-      },
-      {
-        "head": "DBR Lafite merges China winery and sales under Leo Wang",
-        "date": "2026-11-19",
-        "sources": [
-          "Vino Joy News"
-        ],
-        "summ": "Former Pernod Ricard executive Leo Wang will oversee Domaine de Long Dai and the group’s China sales team as longtime winery chief Charles Treutenaere prepares to leave",
-        "urls": [
-          "https://vino-joy.com/2026/11/19/dbr-lafite-unites-china-winery-and-sales-operations-under-new-managing-director/"
-        ],
-        "takeaways": [
-          "Domaines Barons de Rothschild Lafite appointed former Pernod Ricard executive Leo Wang as managing director of Domaine de Long Dai and China market.",
-          "The move puts the Shandong winery and national sales team under one leader for the first time.",
-          "Long Dai general manager Charles Treutenaere, at the estate nine years, leaves at year end."
-        ]
-      },
-      {
-        "head": "California Table Grape Commission hires Suzanne Devereaux-McKinstrie for North American marketing",
-        "date": "2026-11-18",
-        "sources": [
-          "Growing Produce"
-        ],
-        "summ": "The California Table Grape Commission has added Suzanne Devereaux-McKinstrie as its Global Marketing Director for Canada, Mexico, and Central America",
-        "urls": [
-          "https://www.growingproduce.com/fruits/grapes/new-hire-to-grow-global-marketing-for-california-table-grapes/"
-        ],
-        "takeaways": [
-          "The California Table Grape Commission appointed Suzanne Devereaux-McKinstrie as Global Marketing Director for Canada, Mexico and Central America.",
-          "She previously served as CEO of the Center for Produce Safety and as international marketing director for American Pistachio Growers.",
-          "Her role is to expand promotional opportunities and increase demand for fresh California table grapes in those markets."
-        ]
-      }
-    ],
-    "CULTURE": [
-      {
-        "head": "Mandoon Estate wins 32 trophies and 47 gold medals in 2026",
-        "date": "2026-11-25",
-        "sources": [
-          "Winetitles"
-        ],
-        "summ": "Swan Valley winery Mandoon Estate is celebrating an “extraordinary year of success on the Australian wine show circuit”, collecting a total of 32 trophies and 47 gold medals in 2026. Significantly, Mandoon Estate was named Most Successful Exhibitor at three of Western Australia's major wine shows , the Swan Valley Wine Show,...",
-        "urls": [
-          "https://winetitles.com.au/mandoon-estate-celebrates-successful-year-in-wine-show-circuit/"
-        ],
-        "takeaways": [
-          "Swan Valley winery Mandoon Estate collected 32 trophies and 47 gold medals across Australian wine shows in 2026.",
-          "Mandoon was named Most Successful Exhibitor at the Swan Valley, Margaret River and Wine Show of Western Australia shows.",
-          "Its 2018 Reserve Sparkling won the Dr Tony Jordan Trophy for Best Sparkling at the 2026 Melbourne Royal Wine Awards."
-        ]
-      },
-      {
-        "head": "AWRI re-elects two directors and appoints Steven Weinert to its board",
+        "head": "AWRI re-elects two board directors and appoints Steven Weinert as director",
         "date": "2026-11-25",
         "sources": [
           "Winetitles",
@@ -243,79 +224,49 @@
           "https://www.awri.com.au/information_services/media-releases/2026/11/24/awri-board-election-results-and-new-director-appointment/"
         ],
         "takeaways": [
-          "The Australian Wine Research Institute announced re-elections of Corrina Wright and Brett McClen as directors, both starting 1 January 2027.",
-          "Steven Weinert, a former Pernod Ricard and Wine Australia executive, was appointed director from 1 November 2026 and will chair the audit committee.",
-          "Trish Giannini and Sarah Courtney left the board on 31 October 2026, Courtney after Liberal Party preselection for the Australian Senate."
+          "The AWRI re-elected Corrina Wright and Brett McClen as directors, with new terms starting 1 January 2027.",
+          "Steven Weinert was appointed director from 1 November 2026 and will chair the board audit committee.",
+          "Trish Giannini and Sarah Courtney left the board on 31 October 2026, after Courtney's Liberal Party Senate preselection."
         ]
-      },
+      }
+    ],
+    "CULTURE": [
       {
-        "head": "VinePair names 20 Proseccos to buy in 2026, tasted without blind conditions",
-        "date": "2026-11-24",
+        "head": "VinePair lists 30 wines for Thanksgiving 2026, favoring low-alcohol, high-acid bottles",
+        "date": "2026-11-26",
         "sources": [
           "VinePair"
         ],
-        "summ": "Prosecco continues to be a bright spot for the wine industry, as the Italian sparkling wine manages to keep growing year after year. Between the thirst for affordable bubbly and the unstoppable rise of the Spritz category, it’s no wonder more consumers are looking to this budget-friendly style. Even though the standard DOC...",
+        "summ": "Amid the marathon of planning, prepping, cooking, and baking, finding the perfect wine for Thanksgiving isn’t always the top priority. If wine is on the checklist, venturing into bottle shops this time of year can be especially dizzying and sometimes even stressful. So many choices, so little time to choose, and what’s my budget?",
         "urls": [
-          "https://vinepair.com/buy-this-booze/best-prosecco-2026/"
+          "https://vinepair.com/buy-this-booze/best-thanksgiving-wines-2026/"
         ],
         "takeaways": [
-          "VinePair's tasting panel scored submitted Proseccos on a 100-point scale for aromas, flavors, texture and finish.",
-          "Producers sent samples free of charge, and tastings were not blind, with producer and price known.",
-          "The list of 20 bottles is meant to help drinkers buy affordable Prosecco, with a Prosecco Rosé designation added in 2020."
-        ]
-      },
-      {
-        "head": "ProWine Shanghai shows China's wine buyers seeking distinctive, regional, casual-occasion wines",
-        "date": "2026-11-20",
-        "sources": [
-          "Vino Joy News"
-        ],
-        "summ": "China’s wine market is becoming more selective, more diverse and less dependent on formal drinking occasions, according to exhibitors at this year’s ProWine Shanghai",
-        "urls": [
-          "https://vino-joy.com/2026/11/20/three-shifts-shaping-chinas-wine-market-at-prowine-shanghai/"
-        ],
-        "takeaways": [
-          "Exhibitors at ProWine Shanghai say Chinese buyers are becoming more selective, seeking wines with distinctive character beyond quality and price.",
-          "The three-day exhibition drew over 620 exhibitors from 34 countries and regions and 21,800 trade visitors this year.",
-          "Wine is increasingly drunk at smaller gatherings, casual restaurants, wine bars and at home, not only business banquets and gifting."
-        ]
-      },
-      {
-        "head": "Ten new booze books for holiday gifting, covering spirits, wine, tea and beer",
-        "date": "2026-11-25",
-        "sources": [
-          "VinePair"
-        ],
-        "summ": "Buying gifts for your friends and family every holiday season can be overwhelming. Luckily, avid drinks enthusiasts make it a bit easier to cater to their interests. While the go-to might be a baller bottle of Burgundy or an esoteric bourbon, books are a simple, personal, and effective gift to deepen their knowledge of beverages.",
-        "urls": [
-          "https://vinepair.com/articles/best-alcohol-books-gift-guide-2026/"
-        ],
-        "takeaways": [
-          "Ten booze books selected as holiday gifts, ranging from cocktail manuals to historical accounts.",
-          "Picks include a 400-year history of Chartreuse by Jordan Mackay and Paul Einbund.",
-          "Also featured: Robert Simonson on American whiskey cocktails, and Nick Rowan's guide to Japanese wine regions."
+          "VinePair's tasting staff picked 30 Thanksgiving wines from bottles reviewed across its buying guides this year.",
+          "Selection favors high acidity, lower alcohol and flavours that suit the holiday meal, including American wines like New York Merlot.",
+          "Recommended varieties include Riesling, Cabernet Franc, Pinot Noir, Gamay and Chenin Blanc, with off-dry styles for sweeter dishes."
         ]
       }
     ],
     "SCIENCE": [
       {
-        "head": "Sustainable Wine Reference Group benchmarks 40+ standards, reveals gaps and design differences",
-        "date": "2026-11-24",
+        "head": "Grapevine leaf tissue sampling: when and what to test for nutrients",
+        "date": "2026-11-25",
         "sources": [
-          "Sustainable Wine Roundtable"
+          "Lodi Growers"
         ],
-        "summ": "(5 min read) Over the past three years, SWR has embarked on the mammoth process of benchmarking the more than 40 sustainability standards that exist globally in wine. Mammoth because the documentation of a standard can easily surpass 1500 pages of documents. The rationale for this when we started was simple.",
+        "summ": "WEDNESDAY, NOVEMBER 25, 2026. BY STAN GRANT, VITICULTURIST. This is the third and final article in a series on laboratory analysis as a component of vineyard mineral nutrient management.",
         "urls": [
-          "https://swroundtable.org/the-value-of-benchmarking/"
+          "https://lodigrowers.com/lab-analysis-in-vineyard-mineral-nutrient-management-grapevine-tissue/"
         ],
         "takeaways": [
-          "Sustainable wine body SWR spent three years benchmarking more than 40 global sustainability standards for wine.",
-          "Its Global Reference Framework scores standards across 39 topics, and the OIV now uses it to revise its wine sustainability definition.",
-          "Packaging and logistics are the widest gap, while some standards treat labour issues as matters for national law."
+          "Vineyard nutrient analysis uses grapevine tissues sampled at set growth stages, with bloom the traditional collection time.",
+          "Veraison sampling gives wineries early warning of nitrogen needs before fermentation, plus time to correct ripening nutrients.",
+          "Petioles are customarily sampled in California and the New World, while leaf blades are preferred elsewhere."
         ]
       },
       {
-        "head": "Biochar in vineyard soils: review weighs yield gains and carbon storage",
+        "head": "Biochar in vineyard soils: review weighs productivity and carbon sequestration",
         "date": "2026-11-24",
         "sources": [
           "Regenerative Viticulture Foundation"
@@ -325,12 +276,12 @@
           "https://regenerativeviticulture.org/resources/research-and-reviews/use-of-biochar-on-vineyard-soils-impact-on-productivity-and-carbon-capture-and-sequestration/"
         ],
         "takeaways": [
-          "Leonel J.R. Nunes published a study on biochar use in vineyard soils in Science of The Total Environment in November 2026.",
-          "The paper assesses effects of biochar on vineyard productivity and its potential for carbon capture and sequestration."
+          "Leonel J.R. Nunes's review, published November 2026 in Science of The Total Environment, examines biochar use in agricultural soils.",
+          "The paper assesses effects on vineyard productivity and the potential for carbon capture and sequestration in vineyard soils."
         ]
       },
       {
-        "head": "Review ranks tools for grapevine resilience under dry-farming water stress",
+        "head": "Review assesses tools for keeping dry-farmed vineyards resilient under water stress",
         "date": "2026-11-24",
         "sources": [
           "Regenerative Viticulture Foundation"
@@ -340,13 +291,13 @@
           "https://regenerativeviticulture.org/resources/articles-and-blogs/maintaining-viticulture-under-dry-farming-does-an-upper-limit-exist/"
         ],
         "takeaways": [
-          "Poni et al. published a narrative and critical review in MDPI's Agronomy journal in 2026.",
-          "The review evaluates physiological and agronomic tools that could make dry-farmed vineyards more resilient to water stress.",
-          "It also analyses grapevine strategies for managing water stress under rising temperatures and erratic rainfall."
+          "Poni et al. (2026) in Agronomy review physiological and agronomic tools for dry-farmed vineyard resilience.",
+          "The review analyses grapevine strategies for managing water stress under rainfed conditions.",
+          "Related studies cover biochar, nitrogen-fixing biostimulants, and fungus-resistant grape varieties for sustainable viticulture."
         ]
       },
       {
-        "head": "Winter cover crops plus foliar biostimulant match tilled Syrah yields in Spain",
+        "head": "Winter cover crops plus foliar biostimulant matched tilled Syrah yields in Spain",
         "date": "2026-11-24",
         "sources": [
           "Regenerative Viticulture Foundation"
@@ -356,9 +307,9 @@
           "https://regenerativeviticulture.org/resources/articles-and-blogs/https-www-sciencedirect-com-science-article-pii-s016719872600485x/"
         ],
         "takeaways": [
-          "A 2020-2021 rainfed organic Syrah trial in southern Spain compared tillage with winter-spring cover crops across three foliar Methylobacterium biostimulant doses.",
-          "Cover crops raised soil nutrient enzyme activity and decomposition potential across the 48 focal vines studied.",
-          "High-dose biostimulant combined with cover crops matched or beat tilled yields and suggested synergy in juice Brix and pH, published March 2027."
+          "A 2020-2021 rainfed organic Syrah trial in southern Spain compared year-round tillage with winter-spring cover crops.",
+          "Cover crops raised soil nutrient enzyme activity and decomposition potential, while high-dose Methylobacterium biostimulant matched or beat tilled yields.",
+          "Combining cover crops with the high biostimulant dose also showed possible synergy in juice °Brix and pH, per the study, published March 2027."
         ]
       }
     ],
@@ -368,25 +319,24 @@
         "url": "https://themorningclaret.com/p/rogovila-wine-is-culture-not-commerce",
         "date": "2026-11-25",
         "head": "Rogovila - Wine is Culture",
-        "summ": "Celebrating Slovenian garagiste David Bratož, plus the domaine's new releases",
+        "summ": "Celebrating Slovenian garagiste David Bratož, plus the family's new releases",
         "author": "Simon J. Woolf",
         "takeaways": [
-          "David Bratož, founder of Rogovila in Slovenia's Vipava Valley, died in November 2025 after falling ill with leukaemia.",
-          "Rogovila produces around 4,000 bottles a year from half a hectare of old vines inherited in 1999, bottling its first official vintage in 2021.",
-          "After his death, daughter Lana, who keeps a full-time office job in Nova Gorica, continues the winery with help from her mother and two sisters."
+          "David Bratož, founder of Rogovila in the Vipava Valley, Slovenia, died in November 2025 after falling ill with leukaemia.",
+          "Rogovila produces around 4,000 bottles a year from half a hectare of old vines, with uncertified organic farming and minimal additives.",
+          "After David's death, his daughter Lana, who has a full-time office job, continues the winery with help from her mother and two sisters."
         ]
       },
       {
         "source": "wineanorak",
-        "url": "https://wineanorak.com/2026/11/24/schloss-vaux-this-leading-german-sparkling-wine-house-has-a-new-home-on-the-rhein/",
-        "date": "2026-11-24",
-        "head": "Schloss Vaux: this leading German sparkling wine house has a new home on the Rhein",
-        "summ": "I visited Vaux, one of Germany’s leading sparkling wine houses, in August 2026. They took a group of press to",
+        "url": "https://wineanorak.com/2026/11/25/gonzalo-guzman-a-talented-winemaker-producing-interesting-wines-across-chile-and-an-advocate-of-mencia-and-albarino/",
+        "date": "2026-11-25",
+        "head": "Gonzalo Guzmán, a talented winemaker producing interesting wines across Chile, and an advocate of Mencia and Albariño",
+        "summ": "I caught up with Gonzalo Guzmán over dinner at La Bistrot Lastarria in Santiago, to taste through some",
         "author": "Jamie Goode",
         "takeaways": [
-          "Schloss Vaux has opened VAUX am Rhein, a new visitor venue in Eltville's 12th-century Crass fortress, led by sommelier Florian Richter.",
-          "Vaux, founded in Berlin in 1868, produces about 450,000 bottles of traditional-method sparkling wine annually.",
-          "Vaux sources fruit from its own vineyards, planted since 2014, plus the Rheingau, Pfalz and Nahe, and has no reserve wine programme."
+          "Gonzalo Guzmán left El Principal in Pirque in 2020 after 16 harvests as its winemaker to focus on his own project.",
+          "Guzmán makes his wines at Ojdfjell, where he rents part of the winery, and has planted vines in Itata."
         ]
       },
       {
@@ -397,9 +347,9 @@
         "summ": "Discover the drama and record-breaking moments from this iconic Burgundy charity wine auction, featuring exceptional barrels and the buyers who claimed them",
         "author": "Jonathan Finch",
         "takeaways": [
-          "The 166th Hospices de Beaune auction on 15 November raised €14.4 million at the hammer, down from €18.8 million last year.",
-          "Red barrels averaged €28,931, up 5 per cent, while white barrels averaged €39,893, down from €58,580 as white Burgundy prices corrected.",
-          "The Clos de Vougeot Grand Cru charity barrel sold for €770,000 to Alaor Pereira Lino of Anima Vinum, with Faiveley adding €230,000 for a €1 million total."
+          "The 166th Hospices de Beaune auction raised €14.4 million at the hammer, down from €18.8 million last year, with 348 red and 86 white barrels offered.",
+          "Average white Burgundy barrel price fell to €39,893 from €58,580, while red rose 5 per cent to €28,931.",
+          "The Clos de Vougeot Grand Cru charity barrel sold for €770,000 to Alaor Pereira Lino of Anima Vinum, and the Faiveley family's extra €230,000 brought the charity total to €1 million."
         ]
       },
       {
@@ -419,9 +369,9 @@
         "summ": "The 2026 release of that wine we love to hate and hate to love, plus this week’s favorite stories about food, wine, and culture",
         "author": "Meg Maker",
         "takeaways": [
-          "Beaujolais producers like Georges Duboeuf began marketing Beaujolais Nouveau beyond France in the 1970s with the slogan \"Le Beaujolais Nouveau est arrivé!\".",
-          "Natural winemakers Marcel Lapierre, Jean Foillard, Guy Breton and Pierre-Marie Chermette made Beaujolais in the 1970s and 1980s using sustainable farming and minimal intervention.",
-          "Lapierre in Morgon labels its new red as Vin de France with the nickname \"Raisins Gaulois\", because cru wines cannot carry the Beaujolais Nouveau label."
+          "In the 1970s, Georges Duboeuf and other négociants began marketing Beaujolais Nouveau beyond France, with the slogan \"Le Beaujolais Nouveau est arrivé!\".",
+          "Marcel Lapierre, Jean Foillard, Guy Breton and Pierre-Marie Chermette helped pioneer natural winemaking in Beaujolais, producing Nouveau by low-intervention methods.",
+          "Randall Grahm's documentary The Terroirist covers his plan to plant vines grown from seed on a San Juan Bautista property; Grahm is 73 and has Parkinson's."
         ]
       },
       {
@@ -432,9 +382,8 @@
         "summ": "Livermore wins Region of the Year, Wine Spectator profiles Loire Cabernet Franc, Decanter takes a cross-border look at Ontario and New York, and much more",
         "author": "Cab Franc Chronicles",
         "takeaways": [
-          "Wine Enthusiast named California's Livermore Valley its 2026 American Wine Region of the Year in its annual Wine Star Awards.",
-          "Livermore's regional association named Sauvignon Blanc and Cabernet Franc its signature white and red varieties in February 2025.",
-          "A Cabernet Franc claimed top honours at Maryland's Governor's Cup, per the Cab Franc Chronicles roundup."
+          "Wine Enthusiast's 2026 American Wine Region of the Year award went to California's Livermore Valley.",
+          "Livermore Valley is known for Sauvignon Blanc and Cabernet Franc, which its regional association named its signature white and red varieties in February 2025."
         ]
       },
       {
@@ -445,9 +394,9 @@
         "summ": "A colourful tale of the grape that was born to dye and the father-son team behind it",
         "author": "Eveline Chartier",
         "takeaways": [
-          "Pinot Noir and Pinot Meunier, Champagne's black grapes, have colourless juice, so they can make white 'Blanc de Noirs' Champagne.",
-          "Teinturier grapes have red flesh; Garnacha Tintorera (Alicante Bouschet) was bred in 19th-century France, partly because deeply coloured wines fetched more money.",
-          "The featured Pago Casa Gran 'Reposo' 2024 from Valencia, Spain is a blend of 60% Garnacha Tintorera, 20% Syrah and 20% Monastrell."
+          "Pinot Noir and Pinot Meunier, Champagne's black grapes, have colourless juice, so Blanc de Noirs Champagnes are white wines made from black grapes.",
+          "Garnacha Tintorera, also called Alicante Bouschet, is a teinturier grape with red flesh, bred in 19th-century France by Louis and Henri Bouschet.",
+          "Henry Jeffreys reported that a top Burgundy producer reportedly grows Alicante Bouschet to boost the colour of his Pinot Noir, though it is not authorized in Bourgogne wine."
         ]
       },
       {
@@ -458,9 +407,9 @@
         "summ": "In the exciting (other adjectives are available) times we’re living in, we’re often told that writing is passé, people just don’t bother reading words anymore. A few journalistic outlets, especially in the financial press, seem to have finally come clean about the seriousness of their reporting, by auto-summarising their pieces...",
         "author": "Tim Atkin MW",
         "takeaways": [
-          "Tim Atkin argues wine critics are judged by expertise, but the right level is 'a tad more' than the target audience's own knowledge.",
-          "Atkin says the American critic model favours tasting ability while the British model favours theoretical knowledge and scholarship.",
-          "Atkin criticises wine reviewers spending only about 30 seconds per wine, comparing it to reviewing a movie from its trailer."
+          "Tim Atkin argues wine critics are judged on expertise, with the US favouring tasting ability and Britain favouring knowledge and scholarship.",
+          "Atkin says critics should be slightly more expert than their target audience, and that conflicts of interest extend beyond payment to dining, politics and friendships.",
+          "He criticises the 30-second tasting ritual, comparing judging wine that way to reviewing a movie from its trailer."
         ]
       },
       {
@@ -472,8 +421,8 @@
         "author": "Joe Roberts",
         "takeaways": [
           "1WineDude is partnering with Orpheus Alerts, part of Orpheus Intelligence Labs Inc., to help buyers find rare wines.",
-          "Orpheus monitors sources such as local-language catalogues, merchant inventory, auction notices, and private cellar consignments.",
-          "Users create alerts using natural-language descriptions or images, and Orpheus notifies them when a matching wine is available and connects them with the seller."
+          "Orpheus monitors sources like local-language catalogues, merchant inventories, auction notices, and restaurant or estate sales.",
+          "Users create alerts using natural-language descriptions and can upload images; Orpheus notifies them when a matching wine is available and connects them with the seller."
         ]
       },
       {
@@ -484,9 +433,9 @@
         "summ": "Does any nation offer better wine value than Spain? This seems obvious to French bottlers, who import major amounts of Spanish wine each year. Per",
         "author": "Jim Boyce",
         "takeaways": [
-          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing, with a Guangzhou stop set for November 6.",
-          "Spain ranked fifth for wine volume in China last year, narrowly behind Italy but only a quarter of leader Australia.",
-          "Spain ranked sixth for value in China, with DCOOP's Airén and Tempranillo cited as entry-level options around RMB12 to RMB24."
+          "Spain ranked fifth by volume in China last year, narrowly behind Italy and a quarter of leader Australia, per WBO stats.",
+          "Spain dropped to sixth by value in China, below New Zealand, with per-liter value above only Chile among the top eight sources.",
+          "The Wines From Castilla, La Mancha Roadshow stopped in Beijing and will be in Guangzhou on November 6, with value-priced wines like DCOOP's Airén and Tempranillo."
         ]
       }
     ]
